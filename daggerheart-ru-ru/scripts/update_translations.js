@@ -9,9 +9,8 @@
  * entirely in Node.js to better fit the current toolchain.
  */
 
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
+const fs = require("fs/promises");
+const path = require("path");
 
 const ENDPOINTS = [
   "class",
@@ -46,7 +45,8 @@ const CLASS_ITEM_OVERRIDES = {
   "Totem from Mentor": "Тотем наставника",
   "Trophy from your First Kill": "Трофей первого убийства",
   "Untranslated Book": "Непереведённая книга",
-  "Whispering Orb": "Шепчущий шар"
+  "Whispering Orb": "Шепчущий шар",
+  "Broken Compass": "Сломанный компас"
 };
 
 const SUBCLASS_NAME_ALIASES = {
@@ -63,12 +63,12 @@ const EQUIPMENT_NAME_ALIASES = {
   elundrianchainmail: "elundrianchainarmor"
 };
 
+const LEGACY_ANCESTRY_KEYS = new Set(["Fearless", "Unshakeable"]);
+
 const HTML_LINK_RE = /<a\s+[^>]*>(.*?)<\/a>/gis;
 const MD_LINK_RE = /\[([^\]]+)\]\([^)]+\)/g;
 const CLASS_ATTR_RE = /\sclass="[^"]*"/gi;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const BASE_DIR = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(BASE_DIR, "tmp_data");
 const TRANSLATIONS_DIR = path.join(BASE_DIR, "translations");
@@ -114,6 +114,54 @@ function sanitizeHtml(text) {
 function sanitizeName(text) {
   if (text === null || text === undefined) return text;
   return stripLinks(text).trim();
+}
+
+function unwrapSingleParagraph(html) {
+  if (!html) return html;
+  const match = html.match(/^<p>(.*)<\/p>$/is);
+  if (match) {
+    return match[1];
+  }
+  return html;
+}
+
+function buildFeatureDescription(features) {
+  if (!features || !features.length) return null;
+  const chunks = [];
+  for (const feature of features) {
+    if (!feature) continue;
+    const title = sanitizeName(feature.name || "");
+    const bodyHtml = sanitizeHtml(markdownToHtml(feature.main_body || ""));
+    const bodyInner = unwrapSingleParagraph(bodyHtml);
+    if (title && bodyInner) {
+      chunks.push(`<p><strong>${title}</strong>: ${bodyInner}</p>`);
+    } else if (title) {
+      chunks.push(`<p><strong>${title}</strong></p>`);
+    } else if (bodyHtml) {
+      chunks.push(bodyHtml);
+    }
+  }
+  return chunks.length ? chunks.join("") : null;
+}
+
+function _updateFeature(entry, featureInfo) {
+  if (!featureInfo) return;
+  if (featureInfo.name) {
+    entry.name = sanitizeName(featureInfo.name);
+  }
+  if (featureInfo.description !== null && featureInfo.description !== undefined) {
+    if (featureInfo.description) {
+      const clean = sanitizeHtml(featureInfo.description);
+      entry.description = clean;
+      if (entry.actions) {
+        for (const actionId of Object.keys(entry.actions)) {
+          entry.actions[actionId] = clean;
+        }
+      }
+    } else {
+      delete entry.description;
+    }
+  }
 }
 
 function markdownToHtml(text) {
@@ -164,13 +212,17 @@ function markdownToHtml(text) {
   return stripLinks(out.join(""));
 }
 
-async function downloadEndpoint(endpoint) {
-  const url = `https://daggerheart.su/api/${endpoint}?lang=ru`;
+async function fetchEndpoint(endpoint, lang) {
+  const url = `https://daggerheart.su/api/${endpoint}?lang=${lang}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
   }
   return response.arrayBuffer();
+}
+
+async function downloadEndpoint(endpoint) {
+  return fetchEndpoint(endpoint, "ru");
 }
 
 async function refreshApiCache() {
@@ -186,7 +238,9 @@ async function refreshApiCache() {
 async function loadApi(endpoint) {
   const ruPath = path.join(DATA_DIR, `${endpoint}.json`);
   const ru = JSON.parse(await fs.readFile(ruPath, "utf-8")).data;
-  return { ru, en: ru };
+  const enBuffer = await fetchEndpoint(endpoint, "en");
+  const en = JSON.parse(Buffer.from(enBuffer).toString("utf-8")).data;
+  return { ru, en };
 }
 
 function buildFeatureMap(enEntries, ruBySlug, fields, sourceLabel, featureMap, featureSources, conflicts) {
@@ -236,7 +290,7 @@ function buildFeatureMap(enEntries, ruBySlug, fields, sourceLabel, featureMap, f
         if (featureMap[key]) {
           const existing = featureMap[key];
           if (candidate.description && existing.description && candidate.description !== existing.description) {
-            conflicts.push([nameEn, sourceLabel, featureSources[key]]);
+            conflicts.add(`${nameEn}|||${sourceLabel}|||${featureSources[key]}`);
           }
           continue;
         }
@@ -369,7 +423,7 @@ async function main() {
 
   const featureMap = {};
   const featureSources = {};
-  const conflicts = [];
+  const conflicts = new Set();
 
   const buildFeature = (enEntries, ruEntries, fields, label) => {
     const ruBySlug = new Map();
@@ -389,9 +443,10 @@ async function main() {
   buildFeature(adversaryData.en, adversaryData.ru, ["features"], "adversary");
   buildFeature(environmentData.en, environmentData.ru, ["features"], "environment");
 
-  if (conflicts.length) {
+  if (conflicts.size) {
     console.log("Conflicting feature translations detected:");
-    for (const [name, newSrc, oldSrc] of conflicts) {
+    for (const entry of conflicts) {
+      const [name, newSrc, oldSrc] = entry.split("|||");
       console.log(` - ${name}: ${oldSrc} vs ${newSrc}`);
     }
   }
@@ -424,7 +479,7 @@ async function main() {
   const consumablesOld = oldTranslations["daggerheart.consumables.json"] || {};
   const lootOld = oldTranslations["daggerheart.loot.json"] || {};
 
-  const updateSimpleTop = (topMap, aliases) => (norm, entry, key) =>
+const updateSimpleTop = (topMap, aliases) => (norm, entry, key) =>
     !!topMap[resolveAlias(norm, aliases || {})] &&
     (( () => {
       const info = topMap[resolveAlias(norm, aliases || {})];
@@ -439,6 +494,31 @@ async function main() {
       if (entry.actions) delete entry.actions;
       return true;
     })());
+
+const updateTopWithFeatures = (topMap, featureMap, aliases = {}) => (norm, entry) => {
+  if (!norm) return false;
+  const lookup = resolveAlias(norm, aliases);
+  let handled = false;
+  const topInfo = topMap[lookup];
+  if (topInfo) {
+    entry.name = sanitizeName(topInfo.name);
+    if (topInfo.description !== null && topInfo.description !== undefined) {
+      if (topInfo.description) {
+        entry.description = sanitizeHtml(topInfo.description);
+      } else {
+        delete entry.description;
+      }
+    }
+    if (entry.actions) delete entry.actions;
+    handled = true;
+  }
+  const featureInfo = featureMap[lookup] || featureMap[norm];
+  if (featureInfo) {
+    _updateFeature(entry, featureInfo);
+    handled = true;
+  }
+  return handled;
+};
 
   const classesPath = path.join(TRANSLATIONS_DIR, "daggerheart.classes.json");
   const subclassesPath = path.join(TRANSLATIONS_DIR, "daggerheart.subclasses.json");
@@ -576,8 +656,9 @@ async function main() {
 
   await applySubclassDuplicates(subclassesPath);
 
-  const missingAncestries = await updateEntries(ancestriesPath, updateSimpleTop(ancestryTop));
-  const missingCommunities = await updateEntries(communitiesPath, updateSimpleTop(communityTop));
+  const missingAncestriesRaw = await updateEntries(ancestriesPath, updateTopWithFeatures(ancestryTop, featureMap));
+  const missingAncestries = missingAncestriesRaw.filter((key) => !LEGACY_ANCESTRY_KEYS.has(key));
+  const missingCommunities = await updateEntries(communitiesPath, updateTopWithFeatures(communityTop, featureMap));
 
   const missingDomains = await updateEntries(domainsPath, (norm, entry, key) => {
     if (!norm) return false;
@@ -627,7 +708,12 @@ async function main() {
       const ruBody = normaliseText(ruEntry.main_body || "");
       const enBody = normaliseText(enEntry.main_body || "");
       let description = null;
-      if (ruBody && (!enBody || ruBody !== enBody)) {
+      if (enEntry.type_slug === "combat-wheelchair") {
+        description = buildFeatureDescription(ruEntry.features || []);
+        if (!description && ruBody && (!enBody || ruBody !== enBody)) {
+          description = markdownToHtml(ruEntry.main_body || "");
+        }
+      } else if (ruBody && (!enBody || ruBody !== enBody)) {
         description = markdownToHtml(ruEntry.main_body || "");
       }
       typeMap[norm] = {

@@ -569,7 +569,7 @@ async function main() {
     oldTranslations[file] = JSON.parse(raw);
   }
 
-  const classTop = buildTopLevelMap(classData.en, classData.ru, ["description", "short_description"]);
+  const classTop = buildTopLevelMap(classData.en, classData.ru, ["description"]);
   const subclassTop = buildTopLevelMap(subclassData.en, subclassData.ru, ["description"]);
   const ancestryTop = buildTopLevelMap(ancestryData.en, ancestryData.ru, ["description", "short_description"]);
   const communityTop = buildTopLevelMap(communityData.en, communityData.ru, ["description", "short_description"], "main_body");
@@ -869,7 +869,7 @@ async function updateClassesFile(path, { classTop, featureMap, classItemsMap, ru
     }
 
     const ruleInfo = ruleTop[norm];
-    if (ruleInfo) {
+    if (ruleInfo && (!handled || !entry.description)) {
       entry.name = sanitizeName(ruleInfo.name);
       if (ruleInfo.description !== null && ruleInfo.description !== undefined) {
         if (ruleInfo.description) {

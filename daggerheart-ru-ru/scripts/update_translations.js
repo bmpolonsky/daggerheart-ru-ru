@@ -410,16 +410,30 @@ function buildTopLevelMap(enEntries, ruEntries, descriptionFields, mainField = n
     const ruEntry = ruBySlug.get(slug);
     if (!ruEntry) continue;
 
-    let descRu = "";
-    let descEn = "";
+    const descRuParts = [];
+    const descEnParts = [];
+    const collectPart = (value, target) => {
+      if (!value) return;
+      const trimmed = String(value).trim();
+      if (trimmed) target.push(trimmed);
+    };
     for (const field of descriptionFields) {
-      if (!descRu && ruEntry[field]) descRu = ruEntry[field];
-      if (!descEn && enEntry[field]) descEn = enEntry[field];
+      collectPart(ruEntry[field], descRuParts);
+      collectPart(enEntry[field], descEnParts);
     }
     if (mainField) {
-      if (ruEntry[mainField]) descRu = ruEntry[mainField];
-      if (enEntry[mainField]) descEn = enEntry[mainField];
+      const scrubCommunity = mainField === "main_body" && descriptionFields.includes("short_description");
+      collectPart(
+        scrubCommunity ? prepareCommunityMainBody(ruEntry[mainField]) : ruEntry[mainField],
+        descRuParts
+      );
+      collectPart(
+        scrubCommunity ? prepareCommunityMainBody(enEntry[mainField]) : enEntry[mainField],
+        descEnParts
+      );
     }
+    const descRu = descRuParts.join("\n\n");
+    const descEn = descEnParts.join("\n\n");
 
     const sameText = descRu && descEn && normaliseText(descRu) === normaliseText(descEn);
     const description = descRu && !sameText ? markdownToHtml(descRu) : null;
@@ -431,6 +445,24 @@ function buildTopLevelMap(enEntries, ruEntries, descriptionFields, mainField = n
     };
   }
   return result;
+}
+
+function prepareCommunityMainBody(text) {
+  if (!text) return text;
+  const withoutImages = text
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/<img[^>]*>/gi, "");
+  const chunks = withoutImages
+    .split(/\n\s*\n+/)
+    .map((chunk) => chunk.trim())
+    .filter(Boolean)
+    .slice(0, 2);
+  if (!chunks.length) return "";
+  const selected = [chunks[0]];
+  if (chunks[1] && chunks[1].startsWith("*")) {
+    selected.push(chunks[1]);
+  }
+  return selected.join("\n\n");
 }
 
 async function updateEntries(filePath, updater, sortKeys = false) {
@@ -503,7 +535,7 @@ async function main() {
   const classTop = buildTopLevelMap(classData.en, classData.ru, ["description", "short_description"]);
   const subclassTop = buildTopLevelMap(subclassData.en, subclassData.ru, ["description"]);
   const ancestryTop = buildTopLevelMap(ancestryData.en, ancestryData.ru, ["description", "short_description"]);
-  const communityTop = buildTopLevelMap(communityData.en, communityData.ru, ["description", "short_description"]);
+  const communityTop = buildTopLevelMap(communityData.en, communityData.ru, ["description", "short_description"], "main_body");
   const domainTop = buildTopLevelMap(domainData.en, domainData.ru, [], "main_body");
   const equipmentTop = buildTopLevelMap(equipmentData.en, equipmentData.ru, [], "main_body");
   const beastTop = buildTopLevelMap(beastData.en, beastData.ru, ["main_body", "short_description"]);

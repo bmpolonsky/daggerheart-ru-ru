@@ -192,8 +192,9 @@ function sanitizeName(text) {
 }
 
 const TEMPLATE_TAG_RE = /@Template\[[^\]]+\]/gi;
-const INLINE_ROLL_RE = /\[\[\/r\s*([^\]]+)\]\]/gi;
+const INLINE_ROLL_RE = /\[\[\/([a-z]+)\s*([^\]]+)\]\]/gi;
 const UUID_TAG_RE = /@UUID\[([^\]]+)\]\{([^}]*)\}/gi;
+const SECRET_SECTION_RE = /<section\b[^>]*class=['"][^'"]*\bsecret\b[^'"]*['"][^>]*>[\s\S]*?<\/section>/gi;
 
 function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -222,14 +223,27 @@ function mergeFoundryTags(oldHtml, newHtml) {
   }
 
   const inlineMatches = Array.from(source.matchAll(INLINE_ROLL_RE));
+  const appendedRolls = [];
+  const appendedRollSet = new Set();
   for (const match of inlineMatches) {
     const full = match[0];
-    const expr = (match[1] || "").trim();
+    const command = (match[1] || "").toLowerCase();
+    const expr = (match[2] || "").trim();
     if (!expr || result.includes(full)) continue;
-    const regex = new RegExp(escapeRegExp(expr));
+    const regex = new RegExp(escapeRegExp(expr), "i");
     if (regex.test(result)) {
       result = result.replace(regex, full);
+      continue;
     }
+    if (!result.includes(full)) {
+      if (!appendedRollSet.has(full)) {
+        appendedRollSet.add(full);
+        appendedRolls.push(`<p>${full}</p>`);
+      }
+    }
+  }
+  if (appendedRolls.length) {
+    result = result.replace(/\s*$/, "") + appendedRolls.join("");
   }
 
   const uuidMatches = Array.from(source.matchAll(UUID_TAG_RE));
@@ -241,6 +255,48 @@ function mergeFoundryTags(oldHtml, newHtml) {
     const regex = new RegExp(escapeRegExp(label));
     if (regex.test(result)) {
       result = result.replace(regex, `@UUID[${path}]{${label}}`);
+    }
+  }
+
+  const secretMatches = Array.from(source.matchAll(SECRET_SECTION_RE));
+  if (secretMatches.length) {
+    const appended = [];
+    const seen = new Set();
+    for (const match of secretMatches) {
+      const block = (match[0] || "").trim();
+      if (!block || seen.has(block)) continue;
+      seen.add(block);
+      if (result.includes(block)) continue;
+      const contentMatch = block.match(/^<section[^>]*>([\s\S]*?)<\/section>$/i);
+      const content = contentMatch ? contentMatch[1] : "";
+      const inner = content.trim();
+      if (inner) {
+        const idx = result.indexOf(inner);
+        if (idx !== -1) {
+          const matched = result.slice(idx, idx + inner.length);
+          const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${matched}</section>`);
+          result = `${result.slice(0, idx)}${newBlock}${result.slice(idx + inner.length)}`;
+          continue;
+        }
+      }
+      const questionMatch = result.match(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i);
+      if (questionMatch) {
+        const question = questionMatch[1];
+        const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${question}</section>`);
+        result = result.replace(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i, `${newBlock}`);
+        continue;
+      }
+      const paragraphMatch = result.match(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i);
+      if (paragraphMatch) {
+        const paragraph = paragraphMatch[1];
+        const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${paragraph}</section>`);
+        result = result.replace(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i, `${newBlock}`);
+        continue;
+      }
+      appended.push(block);
+    }
+    if (appended.length) {
+      result = result.replace(/\s*$/, "") + appended.join("");
     }
   }
 
@@ -310,7 +366,7 @@ function stripExperienceBonus(name) {
 
 function cleanAdversaryItemName(name) {
   if (!name) return name;
-  return name.replace(/\s*-\s*(?:action|reaction|passive|действие|реакция|пассив[^\s]*)$/iu, "").trim();
+  return name.replace(/\s*[-–—]\s*(?:action|reaction|passive|действие|реакция|пассив[^\s]*)$/iu, "").trim();
 }
 
 function generateBulletActions(rawFeature) {
@@ -367,7 +423,6 @@ function markdownToHtml(text) {
   }
 
   prepared = prepared.replace(/([^\n])\n([*-]\s)/g, "$1\n\n$2");
-  prepared = prepared.replace(MD_LINK_RE, "$1");
 
   let html = prepared
     .replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>")
@@ -1210,6 +1265,27 @@ async function updateEnvironmentsFile(path, { environmentTop, featureMap }, stat
         setHtmlField(entry, "description", desc);
       } else {
         delete entry.description;
+      }
+      const ruFeatures = raw.features || [];
+      const items = entry.items || {};
+      if (ruFeatures.length && Object.keys(items).length) {
+        const featureList = ruFeatures.slice();
+        for (const itemEntry of Object.values(items)) {
+          const feature = featureList.shift();
+          if (!feature) break;
+          itemEntry.name = sanitizeName(cleanAdversaryItemName(feature.name || ""));
+          const body = markdownToHtml(feature.main_body || "");
+          if (body) {
+            setHtmlField(itemEntry, "description", body);
+            if (itemEntry.actions) {
+              for (const actionId of Object.keys(itemEntry.actions)) {
+                setHtmlField(itemEntry.actions, actionId, body);
+              }
+            }
+          } else {
+            delete itemEntry.description;
+          }
+        }
       }
       if (raw.impulses) setHtmlField(entry, "impulses", raw.impulses);
       return true;

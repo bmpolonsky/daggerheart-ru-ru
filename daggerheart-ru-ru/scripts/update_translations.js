@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 /**
- * Refreshes Russian translations for Daggerheart by pulling data directly
- * from daggerheart.su endpoints and updating the JSON files under
- * daggerheart-ru-ru/translations.
+ * Скрипт для обновления русских переводов Daggerheart.
+ * Он получает данные напрямую с API сайта daggerheart.su и обновляет
+ * JSON файлы в директории daggerheart-ru-ru/translations.
  *
- * The script mirrors the behaviour of the previous Python version but runs
- * entirely in Node.js to better fit the current toolchain.
  */
 
+// Подключение встроенных модулей Node.js для работы с файловой системой и путями.
 const fs = require("fs/promises");
 const path = require("path");
 
+// Список эндпоинтов API, с которых будут загружаться данные.
 const ENDPOINTS = [
   "class",
   "subclass",
@@ -25,6 +25,7 @@ const ENDPOINTS = [
   "rule"
 ];
 
+// Ручные переопределения для названий предметов классов, которые сложно сопоставить автоматически.
 const CLASS_ITEM_OVERRIDES = {
   "50ft of Rope": "Верёвка (15 м)",
   "A Romance Novel": "Любовный роман",
@@ -49,8 +50,9 @@ const CLASS_ITEM_OVERRIDES = {
 };
 
 /**
- * HTML overrides for action entries that the API does not expose separately.
- * Values are already sanitised to only include simple markup.
+ * Ручные переопределения для HTML-содержимого отдельных действий (actions).
+ * Используется в случаях, когда API отдает одну большую способность,
+ * а в системе Foundry она должна быть разделена на несколько отдельных действий.
  */
 const ACTION_OVERRIDES = {
   // Elementalist foundation: flavour text split into two separate actions.
@@ -76,6 +78,8 @@ const ACTION_OVERRIDES = {
     "<p><strong>Потратьте Надежду</strong>, чтобы нанести дополнительный <strong>1d8</strong> урона при успешной атаке в полёте.</p>"
 };
 
+// Генераторы действий для способностей, которые описаны списком.
+// Ключ - ID способности из API.
 const FEATURE_ACTION_GENERATORS = {
   147: generateBulletActions,
   159: generateBulletActions,
@@ -83,24 +87,29 @@ const FEATURE_ACTION_GENERATORS = {
   161: generateBulletActions
 };
 
+// Алиасы для нормализации названий подклассов (исправление опечаток в API или системе).
 const SUBCLASS_NAME_ALIASES = {
   comaraderie: "camaraderie",
   partnerinarms: "partnersinarms"
 };
 
+// Дубликаты ключей для подклассов (чтобы одна и та же запись была доступна под разными ключами).
 const SUBCLASS_DUPLICATE_KEYS = {
   "Comaraderie": "Camaraderie",
   "Partner-in-Arms": "Partners-in-Arms"
 };
 
+// Алиасы для названий снаряжения.
 const EQUIPMENT_NAME_ALIASES = {
   elundrianchainmail: "elundrianchainarmor"
 };
 
+// Алиасы для названий способностей.
 const FEATURE_NAME_ALIASES = {
   unshakeable: "unshakable"
 };
 
+// Ручные переопределения для брони.
 const ARMOR_OVERRIDES = {
   "Bare Bones": {
     name: "Без доспехов",
@@ -109,8 +118,10 @@ const ARMOR_OVERRIDES = {
 
 };
 
+// Устаревшие ключи родословных, которые нужно игнорировать.
 const LEGACY_ANCESTRY_KEYS = new Set(["Fearless", "Unshakeable"]);
 
+// Ручные переопределения для поля "label" в JSON-файлах.
 const LABEL_OVERRIDES = {
   "daggerheart.ancestries.json": "Родословные",
   "daggerheart.beastforms.json": "Звериные формы",
@@ -118,6 +129,7 @@ const LABEL_OVERRIDES = {
   "daggerheart.environments.json": "Окружения"
 };
 
+// Сопоставление названий из API с именами файлов локализации.
 const TRANSLATION_FILES = {
   classes: "daggerheart.classes.json",
   subclasses: "daggerheart.subclasses.json",
@@ -133,15 +145,23 @@ const TRANSLATION_FILES = {
   environments: "daggerheart.environments.json"
 };
 
+// Регулярные выражения для очистки HTML и Markdown.
 const HTML_LINK_RE = /<a\s+[^>]*>(.*?)<\/a>/gis;
 const MD_LINK_RE = /\[([^\]]+)\]\([^)]+\)/g;
 const CLASS_ATTR_RE = /\sclass="[^"]*"/gi;
 const HASH_PLACEHOLDER_RE = /#\{([^}]+)\}#/g;
 
+// Определение базовых директорий проекта.
 const BASE_DIR = path.resolve(__dirname, "..");
-const DATA_DIR = path.join(BASE_DIR, "tmp_data");
-const TRANSLATIONS_DIR = path.join(BASE_DIR, "translations");
+const DATA_DIR = path.join(BASE_DIR, "tmp_data"); // Временная папка для скачанных данных
+const TRANSLATIONS_DIR = path.join(BASE_DIR, "translations"); // Папка с файлами переводов
 
+/**
+ * Нормализует текст для использования в качестве ключа:
+ * приводит к нижнему регистру, удаляет знаки препинания и пробелы.
+ * @param {string} text - Исходный текст.
+ * @returns {string|null} Нормализованный ключ.
+ */
 function normalize(text) {
   if (!text) return null;
   const cleaned = text
@@ -154,16 +174,23 @@ function normalize(text) {
   return key || null;
 }
 
+// Вспомогательная функция для разрешения алиасов.
 function resolveAlias(norm, aliases) {
   if (!norm) return norm;
   return aliases[norm] || norm;
 }
 
+// Нормализует текст: убирает лишние переносы строк и пробелы.
 function normaliseText(text) {
   if (!text) return "";
   return text.replace(/\r\n/g, "\n").trim();
 }
 
+/**
+ * Удаляет из текста HTML/Markdown ссылки и лишние HTML-атрибуты.
+ * @param {string} text - Исходный HTML или Markdown.
+ * @returns {string} Очищенный текст.
+ */
 function stripLinks(text) {
   if (!text) return text;
   let result = text;
@@ -179,30 +206,44 @@ function stripLinks(text) {
   return result;
 }
 
+// Обертка над stripLinks для полной "санитизации" HTML.
 function sanitizeHtml(text) {
   if (text === null || text === undefined) return text;
   return stripLinks(text);
 }
 
+// Очищает название от ссылок и лишних пробелов.
 function sanitizeName(text) {
   if (text === null || text === undefined) return text;
   return stripLinks(text).trim();
 }
 
-const TEMPLATE_TAG_RE = /@Template\[[^\]]+\]/gi;
-const INLINE_ROLL_RE = /\[\[\/([a-z]+)\s*([^\]]+)\]\]/gi;
-const UUID_TAG_RE = /@UUID\[([^\]]+)\]\{([^}]*)\}/gi;
-const SECRET_SECTION_RE = /<section\b[^>]*class=['"][^'"]*\bsecret\b[^'"]*['"][^>]*>[\s\S]*?<\/section>/gi;
+// Регулярные выражения для поиска специфичных для Foundry VTT тегов.
+const TEMPLATE_TAG_RE = /@Template\[[^\]]+\]/gi; // @Template[type:cone|distance:30]
+const INLINE_ROLL_RE = /\[\[\/([a-z]+)\s*([^\]]+)\]\]/gi; // [[/r 1d6]]
+const UUID_TAG_RE = /@UUID\[([^\]]+)\]\{([^}]*)\}/gi; // @UUID[...]{label}
+const SECRET_SECTION_RE = /<section\b[^>]*class=['"][^'"]*\bsecret\b[^'"]*['"][^>]*>[\s\S]*?<\/section>/gi; // <section class="secret">...</section>
 
+// Экранирует строку для использования в регулярном выражении.
 function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+/**
+ * Пытается перенести технические теги Foundry из старого HTML в новый.
+ * ВАЖНО: Эта функция не идеальна и может давать сбои.
+ * @param {string} oldHtml - Старый HTML, содержащий теги.
+ * @param {string} newHtml - Новый HTML, куда нужно перенести теги.
+ * @returns {string} Новый HTML с (надеюсь) перенесенными тегами.
+ */
 function mergeFoundryTags(oldHtml, newHtml) {
   if (!newHtml) return newHtml;
   const source = oldHtml || "";
   let result = newHtml;
 
+  // Обработка тегов @Template
+  // Логика: находит все @Template теги в старом тексте и, если их нет в новом,
+  // добавляет их в конце. Это может привести к тому, что тег окажется не на своем месте.
   const templateMatches = Array.from(source.matchAll(TEMPLATE_TAG_RE));
   if (templateMatches.length) {
     const appended = [];
@@ -220,19 +261,21 @@ function mergeFoundryTags(oldHtml, newHtml) {
     }
   }
 
+  // Обработка инлайн-бросков [[/r ...]]
   const inlineMatches = Array.from(source.matchAll(INLINE_ROLL_RE));
   const appendedRolls = [];
   const appendedRollSet = new Set();
   for (const match of inlineMatches) {
     const full = match[0];
-    const command = (match[1] || "").toLowerCase();
     const expr = (match[2] || "").trim();
     if (!expr || result.includes(full)) continue;
+    // Пытается найти текст броска в новом HTML и заменить его полной версией тега.
     const regex = new RegExp(escapeRegExp(expr), "i");
     if (regex.test(result)) {
       result = result.replace(regex, full);
       continue;
     }
+    // Если не нашел, добавляет в конец.
     if (!result.includes(full)) {
       if (!appendedRollSet.has(full)) {
         appendedRollSet.add(full);
@@ -244,6 +287,10 @@ function mergeFoundryTags(oldHtml, newHtml) {
     result = result.replace(/\s*$/, "") + appendedRolls.join("");
   }
 
+  // Обработка ссылок на документы @UUID
+  // Логика: ищет текст ссылки (label) из старого тега в новом HTML.
+  // Если находит, "оборачивает" его обратно в тег.
+  // ОШИБКА: Если текст ссылки в переводе изменился, сопоставление не сработает и тег пропадет.
   const uuidMatches = Array.from(source.matchAll(UUID_TAG_RE));
   for (const match of uuidMatches) {
     const full = match[0];
@@ -256,6 +303,7 @@ function mergeFoundryTags(oldHtml, newHtml) {
     }
   }
 
+  // Обработка секретных секций
   const secretMatches = Array.from(source.matchAll(SECRET_SECTION_RE));
   if (secretMatches.length) {
     const appended = [];
@@ -301,6 +349,7 @@ function mergeFoundryTags(oldHtml, newHtml) {
   return result;
 }
 
+// Проверяет, есть ли в HTML видимый текст.
 function hasVisibleText(html) {
   if (typeof html !== "string") return false;
   const plain = html
@@ -310,6 +359,13 @@ function hasVisibleText(html) {
   return plain.length > 0;
 }
 
+/**
+ * Устанавливает значение HTML-поля в объекте, предварительно очистив его
+ * и попытавшись перенести теги Foundry.
+ * @param {object} target - Целевой объект (например, entry.actions).
+ * @param {string} key - Ключ в объекте.
+ * @param {string} html - Новое HTML-содержимое.
+ */
 function setHtmlField(target, key, html) {
   if (!target) return;
   if (html === null || html === undefined) {
@@ -329,6 +385,7 @@ function setHtmlField(target, key, html) {
   target[key] = merged;
 }
 
+// Вспомогательная функция, которая убирает тег <p> вокруг текста, если он единственный.
 function unwrapSingleParagraph(html) {
   if (!html) return html;
   const match = html.match(/^<p>(.*)<\/p>$/is);
@@ -338,6 +395,13 @@ function unwrapSingleParagraph(html) {
   return html;
 }
 
+/**
+ * Генерирует HTML-описание из массива способностей (features).
+ * Если способность одна, возвращает ее описание.
+ * Если несколько — создает сводку вида "<p><strong>Название:</strong> Описание</p>".
+ * @param {Array} features - Массив объектов способностей из API.
+ * @returns {string|null} Сгенерированный HTML.
+ */
 function buildFeatureDescription(features) {
   if (!features || !features.length) return null;
   const chunks = [];
@@ -392,6 +456,11 @@ function applyFeatureGeneratedActions(entry, featureInfo) {
   }
 }
 
+/**
+ * Общая функция для обновления одной способности (feature).
+ * @param {object} entry - Запись для обновления.
+ * @param {object} featureInfo - Информация о способности из API.
+ */
 function _updateFeature(entry, featureInfo) {
   if (!featureInfo) return;
   if (featureInfo.name) {
@@ -489,7 +558,7 @@ async function loadApi(endpoint) {
   return { ru, en };
 }
 
-function buildFeatureMap(enEntries, ruBySlug, fields, sourceLabel, featureMap, featureSources, conflicts) {
+function buildFeatureMap(enEntries, ruBySlug, fields, sourceLabel, targetMap, featureSources, conflicts) {
   for (const enEntry of enEntries) {
     let slug = enEntry.slug;
     if (!slug) {
@@ -534,15 +603,15 @@ function buildFeatureMap(enEntries, ruBySlug, fields, sourceLabel, featureMap, f
           raw: ruFeature
         };
 
-        if (featureMap[key]) {
-          const existing = featureMap[key];
+        if (targetMap[key]) {
+          const existing = targetMap[key];
           if (candidate.description && existing.description && candidate.description !== existing.description) {
             conflicts.add(`${nameEn}|||${sourceLabel}|||${featureSources[key]}`);
           }
           continue;
         }
 
-        featureMap[key] = candidate;
+        targetMap[key] = candidate;
         featureSources[key] = sourceLabel;
       }
     }
@@ -753,27 +822,37 @@ async function main() {
   const environmentTop = buildTopLevelMap(environmentData.en, environmentData.ru, ["short_description"]);
   const ruleTop = buildTopLevelMap(ruleData.en, ruleData.ru, ["description"], "main_body");
 
-  const featureMap = {};
-  const featureSources = {};
+  // Создаем объект для хранения раздельных карт способностей.
+  const scopedFeatureMaps = {
+    class: {},
+    subclass: {},
+    ancestry: {},
+    community: {},
+    "domain-card": {},
+    beastform: {},
+    adversary: {},
+    environment: {}
+  };
   const conflicts = new Set();
 
-  const buildFeature = (enEntries, ruEntries, fields, label) => {
+  const buildFeature = (enEntries, ruEntries, fields, label, targetMap) => {
     const ruBySlug = new Map();
     for (const entry of ruEntries) {
       const slug = entry.slug || String(entry.id);
       if (slug) ruBySlug.set(slug, entry);
     }
-    buildFeatureMap(enEntries, ruBySlug, fields, label, featureMap, featureSources, conflicts);
+    // featureSources больше не нужен в глобальном скоупе.
+    buildFeatureMap(enEntries, ruBySlug, fields, label, targetMap, {}, conflicts);
   };
 
-  buildFeature(classData.en, classData.ru, ["features"], "class");
-  buildFeature(subclassData.en, subclassData.ru, ["foundation_features", "specialization_features", "mastery_features"], "subclass");
-  buildFeature(ancestryData.en, ancestryData.ru, ["features"], "ancestry");
-  buildFeature(communityData.en, communityData.ru, ["features"], "community");
-  buildFeature(domainData.en, domainData.ru, ["features"], "domain-card");
-  buildFeature(beastData.en, beastData.ru, ["features"], "beastform");
-  buildFeature(adversaryData.en, adversaryData.ru, ["features"], "adversary");
-  buildFeature(environmentData.en, environmentData.ru, ["features"], "environment");
+  buildFeature(classData.en, classData.ru, ["features"], "class", scopedFeatureMaps.class);
+  buildFeature(subclassData.en, subclassData.ru, ["foundation_features", "specialization_features", "mastery_features"], "subclass", scopedFeatureMaps.subclass);
+  buildFeature(ancestryData.en, ancestryData.ru, ["features"], "ancestry", scopedFeatureMaps.ancestry);
+  buildFeature(communityData.en, communityData.ru, ["features"], "community", scopedFeatureMaps.community);
+  buildFeature(domainData.en, domainData.ru, ["features"], "domain-card", scopedFeatureMaps["domain-card"]);
+  buildFeature(beastData.en, beastData.ru, ["features"], "beastform", scopedFeatureMaps.beastform);
+  buildFeature(adversaryData.en, adversaryData.ru, ["features"], "adversary", scopedFeatureMaps.adversary);
+  buildFeature(environmentData.en, environmentData.ru, ["features"], "environment", scopedFeatureMaps.environment);
 
   if (conflicts.size) {
     console.log("Conflicting feature translations detected:");
@@ -1158,19 +1237,62 @@ async function main() {
   }
 
   async function updateBeastformsFile(path, { beastTop, featureMap }, stats) {
-    return updateEntries(path, (norm, entry) => {
+    return updateEntries(path, (norm, entry, key) => {
       if (!norm) return false;
+
       const info = beastTop[norm];
       if (info) {
+      // 1. Обновляем основную информацию о форме (имя и общее описание)
         entry.name = sanitizeName(info.name);
-        if (info.description !== null && info.description !== undefined) {
+
+        const raw = info.raw;
+        const ruFeatures = raw.features || [];
+        const items = entry.items || {};
+
+        // 2. Определяем, как генерировать описание
+        if (ruFeatures.length > 0 && Object.keys(items).length === 0) {
+        // СЦЕНАРИЙ 1: "Цельная" форма (напр. "Легендарный Зверь")
+          // Есть features в API, но нет вложенных items в JSON.
+          // Значит, features - это и есть основное описание.
+          const descriptionHtml = buildFeatureDescription(ruFeatures);
+          if (descriptionHtml) {
+            setHtmlField(entry, "description", descriptionHtml);
+          } else {
+            delete entry.description;
+          }
+        } else {
+          // СЦЕНАРИЙ 2: "Стандартная" форма (составная или простая)
+          // Обновляем основное описание из short_description, а потом (если нужно) вложенные items.
           if (info.description) {
             setHtmlField(entry, "description", info.description);
           } else {
             delete entry.description;
           }
+
+          // Обновляем вложенные 'items', если они есть
+          if (ruFeatures.length > 0 && Object.keys(items).length > 0) {
+            const featureList = ruFeatures.slice();
+            for (const itemEntry of Object.values(items)) {
+              const feature = featureList.shift();
+              if (!feature) break;
+
+              itemEntry.name = sanitizeName(feature.name || "");
+              const body = markdownToHtml(feature.main_body || "");
+              if (body) {
+                setHtmlField(itemEntry, "description", body);
+                if (itemEntry.actions) {
+                  for (const actionId of Object.keys(itemEntry.actions)) {
+                    setHtmlField(itemEntry.actions, actionId, body);
+                  }
+                }
+              } else {
+                delete itemEntry.description;
+              }
+            }
+          }
         }
-        const raw = info.raw;
+
+        // 3. Добавляем "Примеры" в конец любого сгенерированного описания
         if (raw && raw.examples) {
           const examples = sanitizeHtml(stripLinks(raw.examples));
           if (examples) {
@@ -1180,14 +1302,19 @@ async function main() {
               : examplesHtml;
           }
         }
+
         applyActionOverrides(entry);
         return true;
       }
-      if (featureMap[norm]) {
-        _updateFeature(entry, featureMap[norm]);
+
+    // Фолбэк для редких случаев (когда способность - отдельная запись)
+    const featureInfo = featureMap[norm];
+    if (featureInfo) {
+      _updateFeature(entry, featureInfo);
         applyActionOverrides(entry);
         return true;
       }
+
       applyActionOverrides(entry);
       return false;
     }, { stats });
@@ -1241,8 +1368,9 @@ async function main() {
         applyActionOverrides(entry);
         return true;
       }
-      if (featureMap[norm]) {
-        _updateFeature(entry, featureMap[norm]);
+    const featureInfo = featureMap[norm];
+    if (featureInfo) {
+      _updateFeature(entry, featureInfo);
         applyActionOverrides(entry);
         return true;
       }
@@ -1288,8 +1416,9 @@ async function main() {
         if (raw.impulses) setHtmlField(entry, "impulses", raw.impulses);
         return true;
       }
-      if (featureMap[norm]) {
-        _updateFeature(entry, featureMap[norm]);
+    const featureInfo = featureMap[norm];
+    if (featureInfo) {
+      _updateFeature(entry, featureInfo);
         applyActionOverrides(entry);
         return true;
       }
@@ -1336,7 +1465,7 @@ async function main() {
       run: () =>
         updateClassesFile(filePaths.classes, {
           classTop,
-          featureMap,
+          featureMap: scopedFeatureMaps.class,
           classItemsMap,
           ruleTop
         }, statsByFile.classes)
@@ -1347,7 +1476,7 @@ async function main() {
       run: () =>
         updateSubclassesFile(filePaths.subclasses, {
           subclassTop,
-          featureMap
+          featureMap: scopedFeatureMaps.subclass
         }, statsByFile.subclasses)
     },
     {
@@ -1357,7 +1486,7 @@ async function main() {
         const stats = statsByFile.ancestries;
         const missing = await updateAncestriesFile(filePaths.ancestries, {
           ancestryTop,
-          featureMap
+          featureMap: scopedFeatureMaps.ancestry
         }, stats);
         const filtered = missing.filter((key) => !LEGACY_ANCESTRY_KEYS.has(key));
         const legacyRemoved = stats.missing.length - filtered.length;
@@ -1374,7 +1503,7 @@ async function main() {
       run: () =>
         updateCommunitiesFile(filePaths.communities, {
           communityTop,
-          featureMap
+          featureMap: scopedFeatureMaps.community
         }, statsByFile.communities)
     },
     {
@@ -1383,7 +1512,7 @@ async function main() {
       run: () =>
         updateDomainsFile(filePaths.domains, {
           domainTop,
-          featureMap,
+          featureMap: scopedFeatureMaps["domain-card"],
           oldDomainActions
         }, statsByFile.domains)
     },
@@ -1393,7 +1522,7 @@ async function main() {
       run: () =>
         updateBeastformsFile(filePaths.beastforms, {
           beastTop,
-          featureMap
+          featureMap: scopedFeatureMaps.beastform
         }, statsByFile.beastforms)
     },
     {
@@ -1402,7 +1531,7 @@ async function main() {
       run: () =>
         updateAdversariesFile(filePaths.adversaries, {
           adversaryTop,
-          featureMap
+          featureMap: scopedFeatureMaps.adversary
         }, statsByFile.adversaries)
     },
     {
@@ -1411,7 +1540,7 @@ async function main() {
       run: () =>
         updateEnvironmentsFile(filePaths.environments, {
           environmentTop,
-          featureMap
+          featureMap: scopedFeatureMaps.environment
         }, statsByFile.environments)
     },
     {

@@ -109,6 +109,9 @@ const FEATURE_NAME_ALIASES = {
   unshakeable: "unshakable"
 };
 
+const BARE_BONES_DOMAIN_SNIPPET =
+  "<p>Наденьте указанные ниже доспехи, чтобы использовать эту способность.</p><p>@UUID[Compendium.daggerheart.armors.Item.ITAjcigTcUw5pMCN]{Без доспехов}</p>";
+
 // Ручные переопределения для брони.
 const ARMOR_OVERRIDES = {
   "Bare Bones": {
@@ -1193,44 +1196,193 @@ async function main() {
     return updateEntries(path, updateTopWithFeatures(communityTop, featureMap), { stats });
   }
 
+  function normaliseHtmlForComparison(html) {
+    if (!html) return "";
+    return html
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function deriveActionOrder(currentActions, oldActions) {
+    const actionIds = Object.keys(currentActions || {});
+    const uniqueIds = [];
+    const duplicateMap = {};
+    const seen = new Map();
+
+    for (const actionId of actionIds) {
+      const source =
+        (oldActions && oldActions[actionId] !== undefined ? oldActions[actionId] : currentActions[actionId]) || "";
+      const key = normaliseHtmlForComparison(source) || actionId;
+      if (seen.has(key)) {
+        duplicateMap[actionId] = seen.get(key);
+      } else {
+        seen.set(key, actionId);
+        uniqueIds.push(actionId);
+      }
+    }
+
+    return { uniqueIds, duplicateMap };
+  }
+
+  function splitMarkdownToHtmlSections(markdown) {
+    if (!markdown) return [];
+    const prepared = markdown.replace(/\r\n/g, "\n").trim();
+    if (!prepared) return [];
+    const parts = prepared.split(/\n\s*\n/).map((piece) => piece.trim()).filter(Boolean);
+    if (!parts.length) return [];
+    return parts
+      .map((piece) => markdownToHtml(piece))
+      .filter(Boolean);
+  }
+
+  function buildActionHtmlFromFeature(feature) {
+    if (!feature) return null;
+    const bodyHtml = markdownToHtml(feature.main_body || "");
+    if (!bodyHtml) return null;
+    const name = sanitizeName(feature.name || "");
+    if (!name) return bodyHtml;
+    if (bodyHtml.startsWith("<p>")) {
+      return bodyHtml.replace("<p>", `<p><strong>${name}:</strong> `);
+    }
+    return `<p><strong>${name}:</strong></p>${bodyHtml}`;
+  }
+
+  function buildSegmentsForActions(features, fullMarkdownSource, desiredCount) {
+    let segments = [];
+
+    if (features && features.length) {
+      for (const feature of features) {
+        const chunk = buildActionHtmlFromFeature(feature);
+        if (chunk) segments.push(chunk);
+      }
+    }
+
+    if (!segments.length && fullMarkdownSource) {
+      segments = splitMarkdownToHtmlSections(fullMarkdownSource);
+    }
+
+    if (!segments.length && fullMarkdownSource) {
+      const html = markdownToHtml(fullMarkdownSource);
+      if (html) segments = [html];
+    }
+
+    if (!segments.length) return [];
+
+    if (desiredCount <= 0) {
+      return segments.slice();
+    }
+
+    if (segments.length < desiredCount && fullMarkdownSource) {
+      const fallback = splitMarkdownToHtmlSections(fullMarkdownSource);
+      if (fallback.length >= desiredCount) {
+        segments = fallback;
+      }
+    }
+
+    if (!segments.length) return [];
+
+    const adjusted = segments.slice();
+    if (adjusted.length > desiredCount) {
+      while (adjusted.length > desiredCount) {
+        const extra = adjusted.pop();
+        adjusted[adjusted.length - 1] = `${adjusted[adjusted.length - 1]}${extra}`;
+      }
+    } else if (adjusted.length < desiredCount) {
+      const filler = adjusted[adjusted.length - 1];
+      while (adjusted.length < desiredCount) {
+        adjusted.push(filler);
+      }
+    }
+
+    return adjusted;
+  }
+
   async function updateDomainsFile(path, { domainTop, featureMap, oldDomainActions }, stats) {
     return updateEntries(path, (norm, entry, key) => {
       if (!norm) return false;
       let handled = false;
       const domainInfo = domainTop[norm];
+
       if (domainInfo) {
         entry.name = sanitizeName(domainInfo.name);
         const raw = domainInfo.raw;
-        let descSource = raw.main_body || "";
-        if (!descSource && raw.features && raw.features.length) {
-          descSource = raw.features[0].main_body || "";
+        const features = raw.features || [];
+
+        // ШАГ 1: Собираем полное описание (без изменений)
+        let fullDescSource = raw.main_body || "";
+        if (!fullDescSource && features.length > 0) {
+          fullDescSource = features.map(feature => {
+            const namePart = feature.name ? `**${sanitizeName(feature.name)}:** ` : "";
+            return `${namePart}${feature.main_body || ""}`;
+          }).join('\n\n');
         }
-        const desc = descSource ? markdownToHtml(descSource) : null;
-        if (desc) {
-          setHtmlField(entry, "description", desc);
+        const fullDescHtml = markdownToHtml(fullDescSource);
+        if (fullDescHtml) {
+          setHtmlField(entry, "description", fullDescHtml);
         } else {
           delete entry.description;
         }
+
+        if (key === "Bare Bones" && entry.description) {
+          if (!entry.description.includes("Compendium.daggerheart.armors.Item.ITAjcigTcUw5pMCN")) {
+            const appended = `${entry.description.replace(/\s*$/, "")}${BARE_BONES_DOMAIN_SNIPPET}`;
+            setHtmlField(entry, "description", appended);
+          }
+        }
+
+        // ШАГ 2: Обрабатываем 'actions' с новой "гибкой" логикой
+        if (entry.actions) {
+          const oldActionIds = Object.keys(entry.actions);
+          const numActions = oldActionIds.length;
+          if (numActions) {
+            const previous = oldDomainActions[key] || {};
+            const { uniqueIds, duplicateMap } = deriveActionOrder(entry.actions, previous);
+            const segments = buildSegmentsForActions(features, fullDescSource, uniqueIds.length);
+
+            if (segments.length) {
+              for (let i = 0; i < uniqueIds.length; i += 1) {
+                const actionId = uniqueIds[i];
+                const html = segments[i] || fullDescHtml;
+                if (html) {
+                  setHtmlField(entry.actions, actionId, html);
+                } else if (fullDescHtml) {
+                  setHtmlField(entry.actions, actionId, fullDescHtml);
+                } else {
+                  delete entry.actions[actionId];
+                }
+              }
+
+              for (const [dupId, originalId] of Object.entries(duplicateMap)) {
+                const cloned = entry.actions[originalId] || fullDescHtml;
+                if (cloned) {
+                  setHtmlField(entry.actions, dupId, cloned);
+                } else {
+                  delete entry.actions[dupId];
+                }
+              }
+            } else if (entry.description) {
+              for (const actionId of oldActionIds) {
+                setHtmlField(entry.actions, actionId, entry.description);
+              }
+            } else {
+              for (const actionId of oldActionIds) {
+                delete entry.actions[actionId];
+              }
+            }
+          }
+        }
+
         handled = true;
       }
+
       const featureInfo = featureMap[norm];
-      if (featureInfo) {
+      if (featureInfo && !handled) {
         _updateFeature(entry, featureInfo);
         handled = true;
       }
-      if (handled && entry.actions && Object.keys(entry.actions).length === 0 && oldDomainActions[key]) {
-        entry.actions = oldDomainActions[key];
-      }
-      if (handled && entry.actions) {
-        const raw = domainInfo ? domainInfo.raw : null;
-        if (raw && raw.features && raw.features.length) {
-          updateActionsFromFeatures(entry, raw.features);
-        } else if (entry.description) {
-          for (const actionId of Object.keys(entry.actions)) {
-            setHtmlField(entry.actions, actionId, entry.description);
-          }
-        }
-      }
+
       applyActionOverrides(entry);
       return handled;
     }, { stats });

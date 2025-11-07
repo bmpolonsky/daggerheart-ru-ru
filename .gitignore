@@ -1,11 +1,4 @@
-daggerheart-ru-ru/tmp_data/adversary.json
-daggerheart-ru-ru/tmp_data/ancestry.json
-daggerheart-ru-ru/tmp_data/beastform.json
-daggerheart-ru-ru/tmp_data/class.json
-daggerheart-ru-ru/tmp_data/community.json
-daggerheart-ru-ru/tmp_data/domain-card.json
-daggerheart-ru-ru/tmp_data/environment.json
-daggerheart-ru-ru/tmp_data/equipment.json
-daggerheart-ru-ru/tmp_data/rule.json
-daggerheart-ru-ru/tmp_data/subclass.json
+*/tmp_data/
 /.idea/
+/release/
+*.DS_Store

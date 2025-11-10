@@ -187,6 +187,19 @@ const MD_LINK_RE = /\[([^\]]+)\]\([^)]+\)/g;
 const CLASS_ATTR_RE = /\sclass="[^"]*"/gi;
 const HASH_PLACEHOLDER_RE = /#\{([^}]+)\}#/g;
 
+function parseAdvantagesList(value) {
+  if (!value) return [];
+  return value
+    .split(",")
+    .map((chunk) => sanitizeName(chunk))
+    .filter(Boolean);
+}
+
+function capitalizeFirstLetter(text) {
+  if (!text) return text;
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 // Определение базовых директорий проекта.
 const BASE_DIR = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(BASE_DIR, "tmp_data"); // Временная папка для скачанных данных
@@ -1990,7 +2003,15 @@ async function main() {
           }
         }
 
-        // 3. Добавляем "Примеры"
+        // 3. Обновляем список действий с преимуществом
+        const ruAdvantages = parseAdvantagesList(raw.advantages);
+        if (ruAdvantages.length) {
+          entry.advantageOn = ruAdvantages.map((value) => capitalizeFirstLetter(value));
+        } else {
+          delete entry.advantageOn;
+        }
+
+        // 4. Добавляем "Примеры"
         if (raw && raw.examples) {
           const examples = sanitizeHtml(stripLinks(raw.examples));
           if (examples) {

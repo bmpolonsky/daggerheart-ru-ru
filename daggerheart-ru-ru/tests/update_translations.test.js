@@ -87,28 +87,57 @@ test(
 );
 
 test(
-  "environment item actions sync with feature text",
+  "environment item descriptions update while manual actions remain untouched",
   withWorkspace(async ({ moduleDir }) => {
     const envPath = path.join(moduleDir, "tmp_data", "environment.json");
     const envData = readJson(envPath);
     const envEntry = envData.data.find((item) => item.slug === "abandoned-grove");
     assert.ok(envEntry, "Abandoned Grove environment is present in cache");
-    assert.ok(envEntry.features && envEntry.features.length, "Environment entry should have features");
     const marker = "Специальное описание окружения для автотеста.";
-  envEntry.features[1].main_body = marker;
+    envEntry.features[1].main_body = marker;
     writeJson(envPath, envData);
+
+    const translationsPath = path.join(moduleDir, "translations", "daggerheart.environments.json");
+    const beforeTranslations = readJson(translationsPath);
+    const baselineActions = {};
+    Object.entries(beforeTranslations.entries["Abandoned Grove"].items || {}).forEach(([itemId, item]) => {
+      baselineActions[itemId] = { ...(item.actions || {}) };
+    });
 
     runUpdater(moduleDir);
 
-  const environments = readJson(path.join(moduleDir, "translations", "daggerheart.environments.json"));
-  const updatedEntry = environments.entries["Abandoned Grove"];
-  const descMatches = Object.values(updatedEntry.items || {}).some((item) => (item.description || "").includes(marker));
-  const actionMatches = Object.values(updatedEntry.items || {}).some((item) =>
-    Object.values(item.actions || {}).some((html) => html.includes(marker))
-  );
-  assert.ok(descMatches, "environment item descriptions must reflect updated feature text");
-  assert.ok(actionMatches, "environment item actions must reflect updated feature text");
-})
+    const environments = readJson(translationsPath);
+    const updatedEntry = environments.entries["Abandoned Grove"];
+    const descMatches = Object.values(updatedEntry.items || {}).some((item) => (item.description || "").includes(marker));
+    assert.ok(descMatches, "environment item descriptions must reflect updated feature text");
+    Object.entries(updatedEntry.items || {}).forEach(([itemId, item]) => {
+      assert.deepEqual(item.actions || {}, baselineActions[itemId] || {}, "environment actions should remain manual");
+    });
+  })
+);
+
+test(
+  "environment manual action text is preserved across updater runs",
+  withWorkspace(async ({ moduleDir }) => {
+    const translationsPath = path.join(moduleDir, "translations", "daggerheart.environments.json");
+    const before = readJson(translationsPath);
+    const baselineAsh = before.entries["Burning Heart of the Woods"].items.kYxuTZjH7HDUGeWh.actions;
+    const baselineCliff = before.entries["Cliffside Ascent"].items.EP4FXeQqbqFGQoIX.actions;
+
+    runUpdater(moduleDir);
+
+    const after = readJson(translationsPath);
+    assert.deepEqual(
+      after.entries["Burning Heart of the Woods"].items.kYxuTZjH7HDUGeWh.actions,
+      baselineAsh,
+      "Choking Ash actions should stay untouched"
+    );
+    assert.deepEqual(
+      after.entries["Cliffside Ascent"].items.EP4FXeQqbqFGQoIX.actions,
+      baselineCliff,
+      "Cliffside Ascent actions should stay untouched"
+    );
+  })
 );
 
 test(

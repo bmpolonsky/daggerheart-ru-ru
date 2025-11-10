@@ -324,6 +324,17 @@ const DOMAIN_ACTION_SPLITTERS = (() => {
   return map;
 })();
 
+const ENVIRONMENT_ACTION_SPLITTERS = {
+  kYxuTZjH7HDUGeWh: createMarkdownPhraseSplitter("Когда он срабатывает"),
+  "56qjiKMoN6S9riI6": createMarkdownPhraseSplitter("Чтобы вернуть украденный предмет"),
+  eSTq8Y0v4Dwd13XU: createMarkdownPhraseSplitter("Когда отсчёт срабатывает"),
+  "0OYHJZqT0DlVz5be": createMarkdownPhraseSplitter("Когда он срабатывает"),
+  EP4FXeQqbqFGQoIX: ({ markdown }) => splitCliffsideFallSegments(markdown),
+  IHLJjpOQyWjmCLAL: createMarkdownPhraseSplitter("Когда он срабатывает"),
+  AJdG1krRvixBFCZG: createMarkdownPhraseSplitter("Когда отсчёт завершён"),
+  K8ld4m5yTA6WZwUs: createMarkdownPhraseSplitter("Когда он срабатывает")
+};
+
 // Вспомогательная функция для разрешения алиасов.
 function resolveAlias(norm, aliases) {
   if (!norm) return norm;
@@ -359,7 +370,10 @@ function stripLinks(text) {
 // Обертка над stripLinks для полной "санитизации" HTML.
 function sanitizeHtml(text) {
   if (text === null || text === undefined) return text;
-  return stripLinks(text);
+  let cleaned = stripLinks(text);
+  cleaned = collapseAdjacentInlineTags(cleaned, "em");
+  cleaned = collapseAdjacentInlineTags(cleaned, "strong");
+  return cleaned;
 }
 
 // Очищает название от ссылок и лишних пробелов.
@@ -396,6 +410,59 @@ function renderMarkdownSegments(segments, desiredCount) {
     }
   }
   return chunks;
+}
+
+function normalizeMarkdownText(markdown) {
+  if (!markdown) return "";
+  return markdown.replace(/\r\n/g, "\n").trim();
+}
+
+function splitMarkdownByPhrase(markdown, phrase) {
+  if (!markdown || !phrase) return null;
+  const normalized = normalizeMarkdownText(markdown);
+  const idx = normalized.indexOf(phrase);
+  if (idx === -1) return null;
+  const before = normalized.slice(0, idx).trim();
+  const after = normalized.slice(idx).trim();
+  const segments = [];
+  if (before) segments.push(before);
+  if (after) segments.push(after);
+  return segments.length >= 2 ? segments : null;
+}
+
+function splitMarkdownAndQuestion(markdown) {
+  const normalized = normalizeMarkdownText(markdown);
+  const markerIndex = normalized.lastIndexOf("\n\n*");
+  if (markerIndex === -1) {
+    return { body: normalized, question: "" };
+  }
+  return {
+    body: normalized.slice(0, markerIndex).trim(),
+    question: normalized.slice(markerIndex).trim()
+  };
+}
+
+function createMarkdownPhraseSplitter(phrase) {
+  return ({ markdown }) => splitMarkdownByPhrase(markdown, phrase);
+}
+
+function splitCliffsideFallSegments(markdown) {
+  if (!markdown) return null;
+  const { body, question } = splitMarkdownAndQuestion(markdown);
+  const normalized = normalizeMarkdownText(body);
+  const anchor = "Персонаж получает";
+  const idx = normalized.indexOf(anchor);
+  const intro = idx === -1 ? normalized : normalized.slice(0, idx).trim();
+  const segments = [
+    intro,
+    "Если отсчёт находится между 8 и 12, персонаж получает **1d12** физического урона.",
+    "Если отсчёт находится между 4 и 7, персонаж получает **2d12** физического урона.",
+    "Если отсчёт равен 3 или ниже, персонаж получает **3d12** физического урона."
+  ];
+  if (question) {
+    segments[segments.length - 1] = `${segments[segments.length - 1]}\n\n${question}`;
+  }
+  return segments;
 }
 
 function splitMarkdownWithRegex(markdown, regex) {
@@ -454,6 +521,8 @@ const TEMPLATE_TAG_RE = /@Template\[[^\]]+\]/gi; // @Template[type:cone|distance
 const INLINE_ROLL_RE = /\[\[\/([a-z]+)\s*([^\]]+)\]\]/gi; // [[/r 1d6]]
 const UUID_TAG_RE = /@UUID\[([^\]]+)\]\{([^}]*)\}/gi; // @UUID[...]{label}
 const SECRET_SECTION_RE = /<section\b[^>]*class=['"][^'"]*\bsecret\b[^'"]*['"][^>]*>[\s\S]*?<\/section>/gi; // <section class="secret">...</section>
+const SECRET_SECTION_WRAPPER_RE =
+  /(<section\b[^>]*class=['"][^'"]*\bsecret\b[^'"]*['"][^>]*>)([\s\S]*?)(<\/section>)/gi;
 
 // Экранирует строку для использования в регулярном выражении.
 function escapeRegExp(str) {
@@ -512,18 +581,42 @@ function extractPlainText(html) {
     .toLowerCase();
 }
 
+function fragmentHasQuestion(html) {
+  if (!html) return false;
+  const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  return text.includes("?");
+}
+
+function normalizeSecretSections(html) {
+  if (!html) return html;
+  return html.replace(SECRET_SECTION_WRAPPER_RE, (full, open, inner, close) => {
+    const paragraphMatches = Array.from(inner.matchAll(/<p[^>]*>[\s\S]*?<\/p>/gi));
+    if (!paragraphMatches.length) return full;
+    const questionIndex = paragraphMatches.findIndex((match) => fragmentHasQuestion(match[0]));
+    if (questionIndex <= 0) return full;
+    const anchorMatch = paragraphMatches[questionIndex];
+    const anchorIndex =
+      typeof anchorMatch.index === "number" ? anchorMatch.index : inner.indexOf(anchorMatch[0]);
+    if (anchorIndex <= 0) return full;
+    const before = inner.slice(0, anchorIndex);
+    if (!before.trim()) return full;
+    const after = inner.slice(anchorIndex);
+    return `${before}${open}${after}${close}`;
+  });
+}
+
 function collapseAdjacentInlineTags(html, tagName) {
   if (!html) return html;
   const pattern = new RegExp(
-    `<${tagName}([^>]*)>([^<]*)</${tagName}>(\\s+)<${tagName}[^>]*>([^<]*)</${tagName}>`,
+    `<${tagName}([^>]*)>([^<]*)</${tagName}>((?:\\s|&nbsp;)+)<${tagName}([^>]*)>([^<]*)</${tagName}>`,
     "gi"
   );
   let result = html;
   let previous;
   do {
     previous = result;
-    result = result.replace(pattern, (_match, attrs, left, gap, right) => {
-      const attrString = attrs || "";
+    result = result.replace(pattern, (_match, attrsLeft, left, gap, attrsRight, right) => {
+      const attrString = attrsLeft || attrsRight || "";
       const spacer = gap || "";
       return `<${tagName}${attrString}>${left}${spacer}${right}</${tagName}>`;
     });
@@ -670,14 +763,14 @@ function mergeFoundryTags(oldHtml, newHtml) {
         }
       }
       const questionMatch = result.match(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i);
-      if (questionMatch) {
+      if (questionMatch && fragmentHasQuestion(questionMatch[1])) {
         const question = questionMatch[1];
         const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${question}</section>`);
         result = result.replace(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i, `${newBlock}`);
         continue;
       }
       const paragraphMatch = result.match(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i);
-      if (paragraphMatch) {
+      if (paragraphMatch && fragmentHasQuestion(paragraphMatch[1])) {
         const paragraph = paragraphMatch[1];
         const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${paragraph}</section>`);
         result = result.replace(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i, `${newBlock}`);
@@ -685,10 +778,10 @@ function mergeFoundryTags(oldHtml, newHtml) {
       }
       appended.push(block);
     }
-    if (appended.length) {
-      result = result.replace(/\s*$/, "") + appended.join("");
-    }
+  if (appended.length) {
+    result = result.replace(/\s*$/, "") + appended.join("");
   }
+}
 
   if (source) {
     const plainSource = extractPlainText(source);
@@ -702,7 +795,7 @@ function mergeFoundryTags(oldHtml, newHtml) {
     }
   }
 
-  return result;
+  return normalizeSecretSections(result);
 }
 
 function ensureHtmlFragment(html, fragment, { position }) {
@@ -776,7 +869,9 @@ function setHtmlField(target, key, html) {
     delete target[key];
     return;
   }
-  const merged = mergeFoundryTags(target[key], sanitized);
+  let merged = mergeFoundryTags(target[key], sanitized);
+  merged = collapseAdjacentInlineTags(merged, "em");
+  merged = collapseAdjacentInlineTags(merged, "strong");
   if (!hasVisibleText(merged)) {
     delete target[key];
     return;
@@ -2112,25 +2207,16 @@ async function main() {
         const items = entry.items || {};
         if (ruFeatures.length && Object.keys(items).length) {
           const featureList = ruFeatures.slice();
-          for (const itemEntry of Object.values(items)) {
+          for (const [itemId, itemEntry] of Object.entries(items)) {
             const feature = featureList.shift();
             if (!feature) break;
+            const markdownSource = feature.main_body || "";
+            const body = markdownToHtml(markdownSource);
             itemEntry.name = sanitizeName(cleanAdversaryItemName(feature.name || ""));
-            const body = markdownToHtml(feature.main_body || "");
             if (body) {
               setHtmlField(itemEntry, "description", body);
-              if (itemEntry.actions) {
-                for (const actionId of Object.keys(itemEntry.actions)) {
-                  setHtmlField(itemEntry.actions, actionId, body);
-                }
-              }
             } else {
               delete itemEntry.description;
-              if (itemEntry.actions) {
-                for (const actionId of Object.keys(itemEntry.actions)) {
-                  delete itemEntry.actions[actionId];
-                }
-              }
             }
           }
         }

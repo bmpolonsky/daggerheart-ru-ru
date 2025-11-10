@@ -27,26 +27,32 @@ const ENDPOINTS = [
 
 // Ручные переопределения для названий предметов классов, которые сложно сопоставить автоматически.
 const CLASS_ITEM_OVERRIDES = {
-  "50ft of Rope": "Верёвка (15 м)",
-  "A Romance Novel": "Любовный роман",
-  "A Sharpening Stone": "Точильный камень",
-  "Basic Supplies": "Базовые припасы",
-  "Torch": "Факел",
-  "Bundle of Offerings": "Связка подношений",
-  "Drawing Of A Lover": "Рисунок возлюбленного",
-  "Family Heirloom": "Семейная реликвия",
-  "Grappling Hook": "Крюк кошка",
-  "Letter(Never Opened)": "Письмо (никогда не вскрывалось)",
-  "Secret Key": "Секретный ключ",
-  "Set of Forgery Tools": "Набор для фальсификации",
-  "Sigil of Your God": "Символ вашего бога",
-  "Small Bag (Rocks & Bones)": "Маленький мешочек с камнями и костями",
-  "Strange Dirty Penant": "Странный кулон, найденный в грязи",
-  "Tiny Elemental Pet": "Маленький безобидный питомец элементаль",
-  "Totem from Mentor": "Тотем от вашего наставника",
-  "Trophy from your First Kill": "Трофей вашего первого убийства",
-  "Untranslated Book": "Книга, которую вы пытаетесь перевести",
-  "Broken Compass": "Кажущийся сломанным компас"
+  "50ft of Rope": { name: "Верёвка (15 м)" },
+  "A Romance Novel": { name: "Любовный роман" },
+  "A Sharpening Stone": { name: "Точильный камень" },
+  "Basic Supplies": { name: "Базовые припасы" },
+  "Torch": { name: "Факел" },
+  "Bundle of Offerings": { name: "Связка подношений" },
+  "Drawing Of A Lover": { name: "Рисунок возлюбленного" },
+  "Family Heirloom": { name: "Семейная реликвия" },
+  "Grappling Hook": { name: "Крюк кошка" },
+  "Letter(Never Opened)": { name: "Письмо (никогда не вскрывалось)" },
+  "Secret Key": { name: "Секретный ключ" },
+  "Set of Forgery Tools": { name: "Набор для фальсификации" },
+  "Sigil of Your God": { name: "Символ вашего бога" },
+  "Small Bag (Rocks & Bones)": { name: "Маленький мешочек с камнями и костями" },
+  "Strange Dirty Penant": { name: "Странный кулон, найденный в грязи" },
+  "Tiny Elemental Pet": {
+    name: "Маленький питомец элементаль",
+    description: "Маленький безобидный питомец элементаль"
+  },
+  "Totem from Mentor": { name: "Тотем от вашего наставника" },
+  "Trophy from your First Kill": { name: "Трофей вашего первого убийства" },
+  "Untranslated Book": {
+    name: "Непереведенная книга",
+    description: "<p>Книга, которую вы пытаетесь перевести.</p>"
+  },
+  "Broken Compass": { name: "Кажущийся сломанным компас" }
 };
 
 /**
@@ -97,12 +103,6 @@ const SUBCLASS_NAME_ALIASES = {
   partnerinarms: "partnersinarms"
 };
 
-// Дубликаты ключей для подклассов (чтобы одна и та же запись была доступна под разными ключами).
-const SUBCLASS_DUPLICATE_KEYS = {
-  "Comaraderie": "Camaraderie",
-  "Partner-in-Arms": "Partners-in-Arms"
-};
-
 // Алиасы для названий снаряжения.
 const EQUIPMENT_NAME_ALIASES = {
   elundrianchainmail: "elundrianchainarmor"
@@ -111,6 +111,35 @@ const EQUIPMENT_NAME_ALIASES = {
 // Алиасы для названий способностей.
 const FEATURE_NAME_ALIASES = {
   unshakeable: "unshakable"
+};
+
+const UNSTOPPABLE_NOTE_HTML =
+  "<p>><strong>Примечание:</strong> если ваша кость Неудержимости d4 и на данный момент значение 4 находится сверху, вы убираете кость в следующий раз, когда значение пришлось бы увеличить. Но если ваша кость увеличилась до d6 и значение 4 находится сверху, вы переворачиваете кость на 5 в следующий раз, когда увеличиваете значение. В этом случае вы убираете кость, когда её значение нужно повысить до значения больше 6.</p>";
+
+const MANUAL_ENTRY_PATCHES = {
+  classes: {
+    Bard: {
+      descriptionPrefix:
+        "<p>><strong>Примечание:</strong> Начиная с 5-го уровня, используйте способность «Сплочение (уровень 5)» вместо базовой. На данный момент система не производит замену автоматически.</p>"
+    },
+    Evolution: {
+      descriptionSuffix:
+        "<p>><strong>Примечание:</strong> Не забудьте вручную увеличить выбранную Характеристику на +1 на вашем листе персонажа. Система пока не применяет этот бонус автоматически.</p>",
+      actionSuffix:
+        "<p>><strong>Примечание:</strong> Не забудьте вручную увеличить выбранную Характеристику на +1 на вашем листе персонажа. Система пока не применяет этот бонус автоматически.</p>"
+    },
+    Unstoppable: {
+      descriptionPrefix:
+        "<p>><strong>Примечание:</strong> Механика Кости Неудержимости на данный момент не автоматизирована в системе. Вам необходимо отслеживать её значение вручную.</p>",
+      descriptionReplacements: [
+        {
+          pattern: /<p>><strong>Совет:[\s\S]*?<\/p>/i,
+          value: UNSTOPPABLE_NOTE_HTML
+        }
+      ],
+      descriptionSuffix: UNSTOPPABLE_NOTE_HTML
+    }
+  }
 };
 
 const BARE_BONES_DOMAIN_SNIPPET =
@@ -368,23 +397,6 @@ function splitMarkdownParagraphs(markdown) {
   return source.split(/\n\s*\n+/).map((chunk) => chunk.trim()).filter(Boolean);
 }
 
-function splitIntroWithBullets(markdown) {
-  const source = normalizeMarkdownSource(markdown);
-  if (!source) return [];
-  const firstBulletIndex = source.search(/-\s+/);
-  if (firstBulletIndex === -1) return [];
-  const intro = source.slice(0, firstBulletIndex).trim();
-  const bulletsBlock = source.slice(firstBulletIndex);
-  const bulletRegex = /-\s+[\s\S]*?(?=\n-\s+|\n*$)/g;
-  const matches = bulletsBlock.match(bulletRegex);
-  if (!matches || !matches.length) return [];
-  return matches.map((bullet) => {
-    const cleaned = bullet.trim();
-    const prefix = intro ? `${intro}\n\n${cleaned}` : cleaned;
-    return prefix;
-  });
-}
-
 function splitRestorationSegments(markdown) {
   const source = normalizeMarkdownSource(markdown);
   if (!source) return [];
@@ -434,6 +446,77 @@ function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function appendBeforeSecret(html, fragments) {
+  if (!fragments || !fragments.length) return html;
+  const block = fragments.join("");
+  const secretIndex = html.search(/<section\b/i);
+  if (secretIndex === -1) {
+    return html.replace(/\s*$/, "") + block;
+  }
+  return `${html.slice(0, secretIndex)}${block}${html.slice(secretIndex)}`;
+}
+
+function findBlockIndex(html, index) {
+  if (!html || typeof index !== "number" || Number.isNaN(index)) return null;
+  const blockRegex = /<(?:p|ul|ol)[^>]*>[\s\S]*?<\/(?:p|ul|ol)>/gi;
+  let position = -1;
+  let current = -1;
+  let match;
+  while ((match = blockRegex.exec(html))) {
+    current += 1;
+    if (match.index + match[0].length <= index) {
+      position = current;
+    } else {
+      break;
+    }
+  }
+  return position >= 0 ? position : null;
+}
+
+function insertAfterBlockIndex(html, blockIndex, snippet) {
+  if (!html || blockIndex === null || blockIndex === undefined || blockIndex < 0 || !snippet) {
+    return null;
+  }
+  const blockRegex = /<(?:p|ul|ol)[^>]*>[\s\S]*?<\/(?:p|ul|ol)>/gi;
+  let current = -1;
+  let match;
+  while ((match = blockRegex.exec(html))) {
+    current += 1;
+    if (current === blockIndex) {
+      const insertionPoint = match.index + match[0].length;
+      return `${html.slice(0, insertionPoint)}${snippet}${html.slice(insertionPoint)}`;
+    }
+  }
+  return null;
+}
+
+function extractPlainText(html) {
+  if (!html) return "";
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, "")
+    .toLowerCase();
+}
+
+function collapseAdjacentInlineTags(html, tagName) {
+  if (!html) return html;
+  const pattern = new RegExp(
+    `<${tagName}([^>]*)>([^<]*)</${tagName}>(\\s+)<${tagName}[^>]*>([^<]*)</${tagName}>`,
+    "gi"
+  );
+  let result = html;
+  let previous;
+  do {
+    previous = result;
+    result = result.replace(pattern, (_match, attrs, left, gap, right) => {
+      const attrString = attrs || "";
+      const spacer = gap || "";
+      return `<${tagName}${attrString}>${left}${spacer}${right}</${tagName}>`;
+    });
+  } while (result !== previous);
+  return result;
+}
+
 /**
  * Пытается перенести технические теги Foundry из старого HTML в новый.
  * ВАЖНО: Эта функция не идеальна и может давать сбои.
@@ -451,18 +534,28 @@ function mergeFoundryTags(oldHtml, newHtml) {
   // добавляет их в конце. Это может привести к тому, что тег окажется не на своем месте.
   const templateMatches = Array.from(source.matchAll(TEMPLATE_TAG_RE));
   if (templateMatches.length) {
-    const appended = [];
+    const pendingTemplates = [];
     const seen = new Set();
     for (const match of templateMatches) {
       const tag = match[0];
       if (!tag || seen.has(tag)) continue;
       seen.add(tag);
       if (!result.includes(tag)) {
-        appended.push(`<p>${tag}</p>`);
+        const snippet = `<p>${tag}</p>`;
+        const blockIndex =
+          typeof match.index === "number" ? findBlockIndex(source, match.index) : null;
+        if (blockIndex !== null && blockIndex !== undefined) {
+          const anchored = insertAfterBlockIndex(result, blockIndex, snippet);
+          if (anchored) {
+            result = anchored;
+            continue;
+          }
+        }
+        pendingTemplates.push(snippet);
       }
     }
-    if (appended.length) {
-      result = result.replace(/\s*$/, "") + appended.join("");
+    if (pendingTemplates.length) {
+      result = appendBeforeSecret(result, pendingTemplates);
     }
   }
 
@@ -474,10 +567,42 @@ function mergeFoundryTags(oldHtml, newHtml) {
     const full = match[0];
     const expr = (match[2] || "").trim();
     if (!expr || result.includes(full)) continue;
+    const preferredWrappers = [];
+    if (typeof match.index === "number") {
+      const before = source.slice(0, match.index);
+      const after = source.slice(match.index + full.length);
+      if (/<strong[^>]*>$/.test(before) && /^<\/strong>/i.test(after)) {
+        preferredWrappers.push("strong");
+      }
+      if (/<em[^>]*>$/.test(before) && /^<\/em>/i.test(after)) {
+        preferredWrappers.push("em");
+      }
+    }
+    let replaced = false;
+    for (const tag of preferredWrappers) {
+      const specificWrapper = new RegExp(
+        `(<${tag}[^>]*>)\\s*${escapeRegExp(expr)}\\s*(</${tag}>)`,
+        "i"
+      );
+      if (specificWrapper.test(result)) {
+        result = result.replace(specificWrapper, `$1${full}$2`);
+        replaced = true;
+        break;
+      }
+    }
+    if (replaced) continue;
     // Пытается найти текст броска в новом HTML и заменить его полной версией тега.
     const regex = new RegExp(escapeRegExp(expr), "i");
     if (regex.test(result)) {
       result = result.replace(regex, full);
+      continue;
+    }
+    const wrapperRegex = new RegExp(
+      `(<(?:strong|em)[^>]*>)\\s*${escapeRegExp(expr)}\\s*(</(?:strong|em)>)`,
+      "i"
+    );
+    if (wrapperRegex.test(result)) {
+      result = result.replace(wrapperRegex, `$1${full}$2`);
       continue;
     }
     // Если не нашел, добавляет в конец.
@@ -489,7 +614,7 @@ function mergeFoundryTags(oldHtml, newHtml) {
     }
   }
   if (appendedRolls.length) {
-    result = result.replace(/\s*$/, "") + appendedRolls.join("");
+    result = appendBeforeSecret(result, appendedRolls);
   }
 
   // Обработка ссылок на документы @UUID
@@ -546,12 +671,63 @@ function mergeFoundryTags(oldHtml, newHtml) {
       }
       appended.push(block);
     }
-    if (appended.length) {
-      result = result.replace(/\s*$/, "") + appended.join("");
+  if (appended.length) {
+    result = result.replace(/\s*$/, "") + appended.join("");
+  }
+}
+
+  if (source) {
+    const plainSource = extractPlainText(source);
+    const plainResult = extractPlainText(result);
+    if (plainSource && plainResult && plainSource === plainResult) {
+      return source;
     }
   }
 
   return result;
+}
+
+function ensureHtmlFragment(html, fragment, { position }) {
+  if (!fragment) return html || "";
+  const base = html || "";
+  if (base.includes(fragment)) return base;
+  return position === "prefix" ? `${fragment}${base}` : `${base}${fragment}`;
+}
+
+function applyManualEntryPatches(sectionKey, entryKey, entry) {
+  if (!entry) return;
+  const sectionConfig = MANUAL_ENTRY_PATCHES[sectionKey];
+  if (!sectionConfig) return;
+  const patch = sectionConfig[entryKey];
+  if (!patch) return;
+  if (patch.descriptionReplacements && entry.description) {
+    for (const replacement of patch.descriptionReplacements) {
+      if (!replacement) continue;
+      const { pattern, value } = replacement;
+      if (value === undefined || value === null) continue;
+      if (pattern instanceof RegExp) {
+        entry.description = entry.description.replace(pattern, value);
+      } else if (pattern) {
+        entry.description = entry.description.replace(pattern, value);
+      }
+    }
+  }
+  if (patch.descriptionPrefix) {
+    entry.description = ensureHtmlFragment(entry.description, patch.descriptionPrefix, { position: "prefix" });
+  }
+  if (patch.descriptionSuffix) {
+    entry.description = ensureHtmlFragment(entry.description, patch.descriptionSuffix, { position: "suffix" });
+  }
+  if (entry.actions && (patch.actionPrefix || patch.actionSuffix)) {
+    for (const actionId of Object.keys(entry.actions)) {
+      if (patch.actionPrefix) {
+        entry.actions[actionId] = ensureHtmlFragment(entry.actions[actionId], patch.actionPrefix, { position: "prefix" });
+      }
+      if (patch.actionSuffix) {
+        entry.actions[actionId] = ensureHtmlFragment(entry.actions[actionId], patch.actionSuffix, { position: "suffix" });
+      }
+    }
+  }
 }
 
 // Проверяет, есть ли в HTML видимый текст.
@@ -826,7 +1002,9 @@ function markdownToHtml(text) {
     }
   }
   if (inList) out.push("</ul>");
-  return stripLinks(out.join(""));
+  let resultHtml = out.join("");
+  resultHtml = collapseAdjacentInlineTags(resultHtml, "em");
+  return stripLinks(resultHtml);
 }
 
 async function fetchEndpoint(endpoint, lang) {
@@ -1063,6 +1241,7 @@ async function updateEntries(filePath, updater, options = {}) {
     ({ sortKeys = false, stats = null } = options);
   }
   const raw = await fs.readFile(filePath, "utf-8");
+  const hadTrailingNewline = raw.endsWith("\n");
   const data = JSON.parse(raw);
   const missing = [];
 
@@ -1090,21 +1269,9 @@ async function updateEntries(filePath, updater, options = {}) {
   }
 
   const output = sortKeys ? JSON.stringify(data, Object.keys(data).sort(), 2) : JSON.stringify(data, null, 2);
-  await fs.writeFile(filePath, `${output}`, "utf-8");
+  const suffix = hadTrailingNewline ? "\n" : "";
+  await fs.writeFile(filePath, `${output}${suffix}`, "utf-8");
   return missing;
-}
-
-function applySubclassDuplicates(path) {
-  return fs.readFile(path, "utf-8").then((raw) => {
-    const data = JSON.parse(raw);
-    const entries = data.entries || {};
-    for (const [original, alias] of Object.entries(SUBCLASS_DUPLICATE_KEYS)) {
-      if (entries[original] && !entries[alias]) {
-        entries[alias] = entries[original];
-      }
-    }
-    return fs.writeFile(path, `${JSON.stringify(data, null, 2)}`, "utf-8");
-  });
 }
 
 async function main() {
@@ -1372,10 +1539,13 @@ async function main() {
 
   async function applyLabelOverride(filePath, newLabel) {
     if (!newLabel) return;
-    const raw = JSON.parse(await fs.readFile(filePath, "utf-8"));
+    const source = await fs.readFile(filePath, "utf-8");
+    const hadTrailingNewline = source.endsWith("\n");
+    const raw = JSON.parse(source);
     if (raw.label !== newLabel) {
       raw.label = newLabel;
-      await fs.writeFile(filePath, `${JSON.stringify(raw, null, 2)}`, "utf-8");
+      const suffix = hadTrailingNewline ? "\n" : "";
+      await fs.writeFile(filePath, `${JSON.stringify(raw, null, 2)}${suffix}`, "utf-8");
     }
   }
 
@@ -1445,9 +1615,22 @@ async function main() {
         handled = true;
       }
 
-      if (CLASS_ITEM_OVERRIDES[key]) {
-        entry.name = CLASS_ITEM_OVERRIDES[key];
-        delete entry.description;
+      const staticOverride = CLASS_ITEM_OVERRIDES[key];
+      if (staticOverride) {
+        const override =
+          typeof staticOverride === "string" ? { name: staticOverride } : staticOverride;
+        if (override.name) {
+          entry.name = override.name;
+        }
+        if (override.description !== undefined) {
+          if (override.description) {
+            setHtmlField(entry, "description", override.description);
+          } else {
+            delete entry.description;
+          }
+        } else {
+          delete entry.description;
+        }
         delete entry.actions;
         handled = true;
       }
@@ -1468,6 +1651,7 @@ async function main() {
       if (!handled) {
         // no-op: keep entry for further manual review
       }
+      applyManualEntryPatches("classes", key, entry);
       applyActionOverrides(entry);
 
       return handled;
@@ -1514,7 +1698,6 @@ async function main() {
       applyActionOverrides(entry);
       return handled;
     }, { stats });
-    await applySubclassDuplicates(path);
     return result;
   }
 
@@ -1908,11 +2091,6 @@ async function main() {
             const body = markdownToHtml(feature.main_body || "");
             if (body) {
               setHtmlField(itemEntry, "description", body);
-              if (itemEntry.actions) {
-                for (const actionId of Object.keys(itemEntry.actions)) {
-                  setHtmlField(itemEntry.actions, actionId, body);
-                }
-              }
             } else {
               delete itemEntry.description;
             }

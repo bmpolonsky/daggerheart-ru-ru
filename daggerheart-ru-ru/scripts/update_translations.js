@@ -186,6 +186,7 @@ const HTML_LINK_RE = /<a\s+[^>]*>(.*?)<\/a>/gis;
 const MD_LINK_RE = /\[([^\]]+)\]\([^)]+\)/g;
 const CLASS_ATTR_RE = /\sclass="[^"]*"/gi;
 const HASH_PLACEHOLDER_RE = /#\{([^}]+)\}#/g;
+const FOUNDRY_TAG_RE = /@[A-Za-z]+\[|\[\[\/r|<section[^>]+class=['"]secret/;
 
 function parseAdvantagesList(value) {
   if (!value) return [];
@@ -684,16 +685,20 @@ function mergeFoundryTags(oldHtml, newHtml) {
       }
       appended.push(block);
     }
-  if (appended.length) {
-    result = result.replace(/\s*$/, "") + appended.join("");
+    if (appended.length) {
+      result = result.replace(/\s*$/, "") + appended.join("");
+    }
   }
-}
 
   if (source) {
     const plainSource = extractPlainText(source);
     const plainResult = extractPlainText(result);
+    const sourceHasSpecial = FOUNDRY_TAG_RE.test(source);
+    const resultHasSpecial = FOUNDRY_TAG_RE.test(result);
     if (plainSource && plainResult && plainSource === plainResult) {
-      return source;
+      if (sourceHasSpecial && !resultHasSpecial) {
+        return source;
+      }
     }
   }
 
@@ -1288,7 +1293,9 @@ async function updateEntries(filePath, updater, options = {}) {
 }
 
 async function main() {
-  await refreshApiCache();
+  if (process.env.SKIP_API_REFRESH !== "1") {
+    await refreshApiCache();
+  }
 
   const [
     classData,
@@ -1411,7 +1418,7 @@ async function main() {
 
   const updateSimpleTop = (topMap, aliases) => (norm, entry, key) =>
     !!topMap[resolveAlias(norm, aliases || {})] &&
-    (( () => {
+    ((() => {
       const info = topMap[resolveAlias(norm, aliases || {})];
       entry.name = sanitizeName(info.name);
       if (info.description !== null && info.description !== undefined) {
@@ -1951,7 +1958,7 @@ async function main() {
 
       const info = beastTop[norm];
       if (info) {
-      // 1. Обновляем основную информацию о форме (имя и общее описание)
+        // 1. Обновляем основную информацию о форме (имя и общее описание)
         entry.name = sanitizeName(info.name);
 
         const raw = info.raw;
@@ -1962,7 +1969,7 @@ async function main() {
 
         // 2. Определяем, как генерировать описание
         if (ruFeatures.length > 0 && Object.keys(items).length === 0) {
-        // СЦЕНАРИЙ 1: "Цельная" форма (напр. "Легендарный Зверь")
+          // СЦЕНАРИЙ 1: "Цельная" форма (напр. "Легендарный Зверь")
           // Есть features в API, но нет вложенных items в JSON.
           // Значит, features - это и есть основное описание.
           const descriptionHtml = buildFeatureDescription(ruFeatures);
@@ -2023,10 +2030,10 @@ async function main() {
         return true;
       }
 
-    // Фолбэк для редких случаев (когда способность - отдельная запись)
-    const featureInfo = featureMap[norm];
-    if (featureInfo) {
-      _updateFeature(entry, featureInfo);
+      // Фолбэк для редких случаев (когда способность - отдельная запись)
+      const featureInfo = featureMap[norm];
+      if (featureInfo) {
+        _updateFeature(entry, featureInfo);
         applyActionOverrides(entry);
         return true;
       }
@@ -2112,8 +2119,18 @@ async function main() {
             const body = markdownToHtml(feature.main_body || "");
             if (body) {
               setHtmlField(itemEntry, "description", body);
+              if (itemEntry.actions) {
+                for (const actionId of Object.keys(itemEntry.actions)) {
+                  setHtmlField(itemEntry.actions, actionId, body);
+                }
+              }
             } else {
               delete itemEntry.description;
+              if (itemEntry.actions) {
+                for (const actionId of Object.keys(itemEntry.actions)) {
+                  delete itemEntry.actions[actionId];
+                }
+              }
             }
           }
         }

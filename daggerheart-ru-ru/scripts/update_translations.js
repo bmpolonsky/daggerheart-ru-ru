@@ -11,6 +11,13 @@
 const fs = require("fs/promises");
 const path = require("path");
 
+const QUIET_MODE = process.env.UPDATE_TRANSLATIONS_QUIET === "1";
+const logInfo = (...args) => {
+  if (!QUIET_MODE) {
+    console.log(...args);
+  }
+};
+
 // Список эндпоинтов API, с которых будут загружаться данные.
 const ENDPOINTS = [
   "class",
@@ -937,12 +944,14 @@ function applyManualEntryPatches(sectionKey, entryKey, entry) {
   }
   if (entry.actions && (patch.actionPrefix || patch.actionSuffix)) {
     for (const actionId of Object.keys(entry.actions)) {
+      let updated = getActionHtml(entry.actions, actionId);
       if (patch.actionPrefix) {
-        entry.actions[actionId] = ensureHtmlFragment(entry.actions[actionId], patch.actionPrefix, { position: "prefix" });
+        updated = ensureHtmlFragment(updated, patch.actionPrefix, { position: "prefix" });
       }
       if (patch.actionSuffix) {
-        entry.actions[actionId] = ensureHtmlFragment(entry.actions[actionId], patch.actionSuffix, { position: "suffix" });
+        updated = ensureHtmlFragment(updated, patch.actionSuffix, { position: "suffix" });
       }
+      setActionHtml(entry.actions, actionId, updated);
     }
   }
 }
@@ -983,6 +992,51 @@ function setHtmlField(target, key, html) {
     return;
   }
   target[key] = merged;
+}
+
+function isPlainObject(value) {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function extractActionDescription(value) {
+  if (typeof value === "string") {
+    return value;
+  }
+  if (isPlainObject(value) && typeof value.description === "string") {
+    return value.description;
+  }
+  return "";
+}
+
+function getActionHtml(actions, key) {
+  if (!actions || !key) return "";
+  if (!Object.prototype.hasOwnProperty.call(actions, key)) return "";
+  return extractActionDescription(actions[key]);
+}
+
+function setActionHtml(actions, key, html) {
+  if (!actions || !key) return;
+  if (html === null || html === undefined) {
+    delete actions[key];
+    return;
+  }
+
+  const carrier = { value: getActionHtml(actions, key) };
+  setHtmlField(carrier, "value", html);
+  const processed = carrier.value;
+  if (!processed) {
+    delete actions[key];
+    return;
+  }
+
+  const existing = actions[key];
+  if (isPlainObject(existing)) {
+    actions[key] = { ...existing, description: processed };
+  } else if (typeof existing === "string" || existing === undefined) {
+    actions[key] = processed;
+  } else {
+    actions[key] = { description: processed };
+  }
 }
 
 // Вспомогательная функция, которая убирает тег <p> вокруг текста, если он единственный.
@@ -1078,7 +1132,7 @@ function applyFeatureToItemEntry(itemEntry, feature) {
     setHtmlField(itemEntry, "description", body);
     if (itemEntry.actions) {
       for (const actionId of Object.keys(itemEntry.actions)) {
-        setHtmlField(itemEntry.actions, actionId, body);
+        setActionHtml(itemEntry.actions, actionId, body);
       }
     }
   } else {
@@ -1119,7 +1173,7 @@ function applyBattleBoxOverrides(entry, raw) {
     setHtmlField(target, "description", html);
     if (target.actions) {
       for (const actionId of Object.keys(target.actions)) {
-        setHtmlField(target.actions, actionId, html);
+        setActionHtml(target.actions, actionId, html);
       }
     }
   }
@@ -1149,7 +1203,7 @@ function applyFeatureGeneratedActions(entry, featureInfo) {
   for (let i = 0; i < ids.length && i < generated.length; i += 1) {
     const html = generated[i];
     if (!html) continue;
-    setHtmlField(entry.actions, ids[i], html);
+    setActionHtml(entry.actions, ids[i], html);
   }
 }
 
@@ -1168,7 +1222,7 @@ function _updateFeature(entry, featureInfo) {
       setHtmlField(entry, "description", featureInfo.description);
       if (entry.actions) {
         for (const actionId of Object.keys(entry.actions)) {
-          setHtmlField(entry.actions, actionId, featureInfo.description);
+          setActionHtml(entry.actions, actionId, featureInfo.description);
         }
       }
     } else {
@@ -1576,10 +1630,10 @@ async function main() {
   buildFeature(environmentData.en, environmentData.ru, ["features"], "environment", scopedFeatureMaps.environment);
 
   if (conflicts.size) {
-    console.log("Conflicting feature translations detected:");
+    logInfo("Conflicting feature translations detected:");
     for (const entry of conflicts) {
       const [name, newSrc, oldSrc] = entry.split("|||");
-      console.log(` - ${name}: ${oldSrc} vs ${newSrc}`);
+      logInfo(` - ${name}: ${oldSrc} vs ${newSrc}`);
     }
   }
 
@@ -1744,16 +1798,15 @@ async function main() {
       if (ACTION_OVERRIDES[actionIds[i]]) continue;
       const body = markdownToHtml(feature.main_body || "");
       if (!body) continue;
-      setHtmlField(entry.actions, actionIds[i], body);
+      setActionHtml(entry.actions, actionIds[i], body);
     }
   }
 
   function applyActionOverrides(entry) {
     if (!entry || !entry.actions) return;
-    for (const [actionId, html] of Object.entries(entry.actions)) {
-      if (!html) continue;
+    for (const actionId of Object.keys(entry.actions)) {
       if (ACTION_OVERRIDES[actionId]) {
-        setHtmlField(entry.actions, actionId, ACTION_OVERRIDES[actionId]);
+        setActionHtml(entry.actions, actionId, ACTION_OVERRIDES[actionId]);
       }
     }
   }
@@ -1796,7 +1849,7 @@ async function main() {
             setHtmlField(entry, "description", featureInfo.description);
             if (entry.actions) {
               for (const actionId of Object.keys(entry.actions)) {
-                setHtmlField(entry.actions, actionId, featureInfo.description);
+                setActionHtml(entry.actions, actionId, featureInfo.description);
               }
             }
           } else {
@@ -1813,7 +1866,7 @@ async function main() {
           setHtmlField(entry, "description", info.description);
           if (entry.actions) {
             for (const actionId of Object.keys(entry.actions)) {
-              setHtmlField(entry.actions, actionId, info.description);
+              setActionHtml(entry.actions, actionId, info.description);
             }
           }
         } else {
@@ -1905,7 +1958,7 @@ async function main() {
             setHtmlField(entry, "description", featureInfo.description);
             if (entry.actions) {
               for (const actionId of Object.keys(entry.actions)) {
-                setHtmlField(entry.actions, actionId, featureInfo.description);
+                setActionHtml(entry.actions, actionId, featureInfo.description);
               }
             }
           } else {
@@ -1947,7 +2000,9 @@ async function main() {
 
     for (const actionId of actionIds) {
       const source =
-        (oldActions && oldActions[actionId] !== undefined ? oldActions[actionId] : currentActions[actionId]) || "";
+        oldActions && Object.prototype.hasOwnProperty.call(oldActions, actionId)
+          ? extractActionDescription(oldActions[actionId])
+          : getActionHtml(currentActions, actionId);
       const key = normaliseHtmlForComparison(source) || actionId;
       if (seen.has(key)) {
         duplicateMap[actionId] = seen.get(key);
@@ -2111,25 +2166,25 @@ async function main() {
                 const actionId = uniqueIds[i];
                 const html = segments[i] || fullDescHtml;
                 if (html) {
-                  setHtmlField(entry.actions, actionId, html);
+                  setActionHtml(entry.actions, actionId, html);
                 } else if (fullDescHtml) {
-                  setHtmlField(entry.actions, actionId, fullDescHtml);
+                  setActionHtml(entry.actions, actionId, fullDescHtml);
                 } else {
                   delete entry.actions[actionId];
                 }
               }
 
               for (const [dupId, originalId] of Object.entries(duplicateMap)) {
-                const cloned = entry.actions[originalId] || fullDescHtml;
+                const cloned = getActionHtml(entry.actions, originalId) || fullDescHtml;
                 if (cloned) {
-                  setHtmlField(entry.actions, dupId, cloned);
+                  setActionHtml(entry.actions, dupId, cloned);
                 } else {
                   delete entry.actions[dupId];
                 }
               }
             } else if (entry.description) {
               for (const actionId of oldActionIds) {
-                setHtmlField(entry.actions, actionId, entry.description);
+                setActionHtml(entry.actions, actionId, entry.description);
               }
             } else {
               for (const actionId of oldActionIds) {
@@ -2201,7 +2256,7 @@ async function main() {
                 setHtmlField(itemEntry, "description", body);
                 if (itemEntry.actions) {
                   for (const actionId of Object.keys(itemEntry.actions)) {
-                    setHtmlField(itemEntry.actions, actionId, body);
+                    setActionHtml(itemEntry.actions, actionId, body);
                   }
                 }
               } else {
@@ -2503,16 +2558,16 @@ async function main() {
     taskResults[task.key] = Array.isArray(result) ? result : [];
   }
 
-  console.log("Update summary:");
+  logInfo("Update summary:");
   for (const [key, stats] of Object.entries(statsByFile)) {
     const total = stats.total;
     const updated = stats.updated;
     const unchangedCount = stats.unchanged.length;
     const missingCount = stats.missing.length;
-    console.log(`- ${key}: total ${total}, updated ${updated}, unchanged ${unchangedCount}, missing ${missingCount}`);
+    logInfo(`- ${key}: total ${total}, updated ${updated}, unchanged ${unchangedCount}, missing ${missingCount}`);
     if (!updated && unchangedCount && total) {
       const sample = stats.unchanged.slice(0, 3);
-      console.log(
+      logInfo(
         `  · Entries already matched API (sample unchanged keys: ${sample.join(", ")}${
           stats.unchanged.length > sample.length ? ", ..." : ""
         }`
@@ -2527,13 +2582,13 @@ async function main() {
 
   const missingSummary = taskResults;
 
-  console.log("Missing entries report:");
+  logInfo("Missing entries report:");
   for (const [category, items] of Object.entries(missingSummary)) {
     const remaining = items.filter(Boolean);
     if (!remaining.length) continue;
-    console.log(`- ${category}: ${remaining.length} entries without updates`);
+    logInfo(`- ${category}: ${remaining.length} entries without updates`);
     for (const item of remaining) {
-      console.log(`  * ${item}`);
+      logInfo(`  * ${item}`);
     }
   }
 }

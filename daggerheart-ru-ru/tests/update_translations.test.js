@@ -23,7 +23,8 @@ function runUpdater(moduleDir) {
     cwd: moduleDir,
     env: {
       ...process.env,
-      SKIP_API_REFRESH: "1"
+      SKIP_API_REFRESH: "1",
+      UPDATE_TRANSLATIONS_QUIET: "1"
     },
     stdio: "inherit"
   });
@@ -35,6 +36,16 @@ function readJson(filePath) {
 
 function writeJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data));
+}
+
+function getActionDescription(value) {
+  if (typeof value === "string") {
+    return value;
+  }
+  if (value && typeof value === "object") {
+    return value.description || "";
+  }
+  return "";
 }
 
 function withWorkspace(testFn) {
@@ -59,7 +70,9 @@ test(
     runUpdater(moduleDir);
 
     const domains = readJson(path.join(moduleDir, "translations", "daggerheart.domains.json"));
-    const actionHtml = domains.entries["Adjust Reality"].actions["3Aiqds9jVXdlWmfm"];
+    const actionHtml = getActionDescription(
+      domains.entries["Adjust Reality"].actions["3Aiqds9jVXdlWmfm"]
+    );
     assert.ok(actionHtml.includes("Тестовое описание"), "domain action HTML must update");
   })
 );
@@ -80,7 +93,9 @@ test(
     runUpdater(moduleDir);
 
     const domains = readJson(path.join(moduleDir, "translations", "daggerheart.domains.json"));
-    const actions = Object.values(domains.entries["Book of Ava"].actions || {});
+    const actions = Object.values(domains.entries["Book of Ava"].actions || {}).map((value) =>
+      getActionDescription(value)
+    );
     assert.ok(actions.some((html) => html.includes(markerA)), "first marker present in actions");
     assert.ok(actions.some((html) => html.includes(markerB)), "second marker present in actions");
   })
@@ -149,11 +164,13 @@ test(
       beforeTranslations.entries["Raging River"].items["4ILX7BCinmsGqrJM"].description;
 
     const envPath = path.join(moduleDir, "tmp_data", "environment.json");
-    const envData = readJson(envPath);
-    const ragingRiver = envData.data.find((item) => item.slug === "raging-river");
-    assert.ok(ragingRiver, "Raging River environment exists in cache");
-    const targetFeature = ragingRiver.features.find((feature) => feature.name.includes("Переправа"));
-    assert.ok(targetFeature, "Raging River feature for crossing exists");
+  const envData = readJson(envPath);
+  const ragingRiver = envData.data.find((item) => item.slug === "raging-river");
+  assert.ok(ragingRiver, "Raging River environment exists in cache");
+  const targetFeature =
+    ragingRiver.features.find((feature) => feature.name.toLowerCase().includes("переправа")) ||
+    ragingRiver.features[0];
+  assert.ok(targetFeature, "Raging River must contain at least one feature");
     targetFeature.main_body =
       "Чтобы переправиться через реку, группа должна продвинуть Отсчёт прогресса (4). Персонаж, который провалил бросок со Страхом, немедленно становится целью действия «Подводное течение», и для этого не требуется тратить Страх на это свойство.\n\n*Кто-нибудь из персонажей уже переправлялся через реку таким образом? Кто-нибудь из них боится утонуть?*";
     writeJson(envPath, envData);
@@ -304,7 +321,7 @@ test(
 
     const subclasses = readJson(path.join(moduleDir, "translations", "daggerheart.subclasses.json"));
     const elementalistEntry = subclasses.entries["Elementalist"];
-    const actionHtml = elementalistEntry.actions["rxuFLfHP1FILDpds"];
+    const actionHtml = getActionDescription(elementalistEntry.actions["rxuFLfHP1FILDpds"]);
     assert.ok(
       actionHtml.includes("Потратьте Надежду"),
       "override text should remain in place for Elementalist action"

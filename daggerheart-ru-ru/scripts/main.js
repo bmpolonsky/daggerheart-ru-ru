@@ -9,25 +9,69 @@ Hooks.once('babele.init', (babele) => {
   Babele.get().registerConverters({
     // Переносит имена/описания предметов противника и проставляет описания действиям.
     "toAdversariesItems": (origItems, transItems) => {
-      for (item of origItems) {
-        id = item._id;
-        if (id in transItems){
-          item.name = transItems[id]?.name;
-          item.system.description = transItems[id]?.description;
-
-          // actions if exist
-          for (actionId in item.system.actions){
-            item.system.actions[actionId].description = transItems[id]?.description;
+      if (!Array.isArray(origItems) || !transItems) {
+        return origItems;
+      }
+      for (const item of origItems) {
+        if (!item) continue;
+        const translation = transItems[item._id];
+        if (!translation) continue;
+        if (translation.name) {
+          item.name = translation.name;
+        }
+        if (!item.system) continue;
+        const desc = translation.description;
+        if (desc) {
+          item.system.description = desc;
+          if (item.system.actions) {
+            for (const actionId of Object.keys(item.system.actions)) {
+              const action = item.system.actions[actionId];
+              if (action) action.description = desc;
+            }
           }
         }
       }
       return origItems;
     },
 
-    // Подменяет описания action-узлов переводами из JSON.
+    // Подменяет описания action-узлов переводами из JSON (строковый формат).
     "toActions": (origActions, transActions) => {
-      for (actionId in origActions) {
-        origActions[actionId]["description"] = transActions[actionId];
+      if (!origActions || !transActions) {
+        return origActions;
+      }
+      for (const actionId of Object.keys(origActions)) {
+        const translated = transActions[actionId];
+        if (!translated) continue;
+        const action = origActions[actionId];
+        if (!action) continue;
+        if (typeof translated === "string") {
+          action.description = translated;
+        } else if (typeof translated === "object") {
+          const { name, description } = translated;
+          if (name) action.name = name;
+          if (description) action.description = description;
+        }
+      }
+      return origActions;
+    },
+
+    // Поддерживает объектную структуру action-переводов с полями name/description.
+    "toActionsObj": (origActions, transActions) => {
+      if (!origActions || !transActions) {
+        return origActions;
+      }
+      for (const actionId of Object.keys(origActions)) {
+        const translated = transActions[actionId];
+        if (!translated) continue;
+        const action = origActions[actionId];
+        if (!action) continue;
+        if (typeof translated === "string") {
+          action.description = translated;
+        } else if (typeof translated === "object") {
+          const { name, description } = translated;
+          if (name) action.name = name;
+          if (description) action.description = description;
+        }
       }
       return origActions;
     },

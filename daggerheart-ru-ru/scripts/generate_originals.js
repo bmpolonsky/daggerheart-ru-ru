@@ -79,6 +79,13 @@ const FILE_CONFIGS = [
     file: "daggerheart.journals.json",
     label: "Journals",
     build: buildJournalEntries
+  },
+  {
+    file: "daggerheart.json",
+    label: "System",
+    translationPath: path.join(BASE_DIR, "i18n", "systems", "daggerheart.json"),
+    build: buildSystemLang,
+    skipPayload: true
   }
 ];
 
@@ -88,10 +95,15 @@ async function main() {
 
   for (const config of FILE_CONFIGS) {
     console.log(`Generating original/${config.file}`);
-    const translationPath = path.join(TRANSLATIONS_DIR, config.file);
+    const translationPath = config.translationPath || path.join(TRANSLATIONS_DIR, config.file);
     const translation = JSON.parse(await fs.readFile(translationPath, "utf-8"));
-    const entries = await config.build();
-  const payload = buildOriginalPayload(config.label, translation, entries);
+    let payload;
+    if (config.skipPayload) {
+      payload = await config.build(translation);
+    } else {
+      const entries = await config.build();
+      payload = buildOriginalPayload(config.label, translation, entries);
+    }
     await fs.writeFile(path.join(ORIGINAL_DIR, config.file), JSON.stringify(payload, null, 2) + "\n");
   }
 
@@ -406,6 +418,39 @@ function convertEffects(payload) {
     }
   }
   return result.length ? result : null;
+}
+
+function alignWithTemplate(template, source) {
+  const result = {};
+  const seen = new Set();
+  if (template && typeof template === "object" && !Array.isArray(template)) {
+    for (const key of Object.keys(template)) {
+      if (source && Object.prototype.hasOwnProperty.call(source, key)) {
+        result[key] =
+          typeof template[key] === "object" && !Array.isArray(template[key]) && typeof source[key] === "object"
+            ? alignWithTemplate(template[key], source[key])
+            : source[key];
+      } else {
+        result[key] = template[key];
+      }
+      seen.add(key);
+    }
+  }
+  if (source && typeof source === "object") {
+    for (const key of Object.keys(source)) {
+      if (!seen.has(key)) {
+        result[key] = source[key];
+      }
+    }
+  }
+  return result;
+}
+
+async function buildSystemLang(template) {
+  const langPath = path.join(REMOTE_REPO_DIR, "lang", "en.json");
+  const content = await fs.readFile(langPath, "utf-8");
+  const source = JSON.parse(content);
+  return alignWithTemplate(template || {}, source || {});
 }
 
 function extractAdvantageList(payload) {

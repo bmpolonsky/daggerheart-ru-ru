@@ -141,6 +141,37 @@ test(
 );
 
 test(
+  "environment descriptions dedupe duplicate secret paragraphs",
+  withWorkspace(async ({ moduleDir }) => {
+    const translationsPath = path.join(moduleDir, "translations", "daggerheart.environments.json");
+    const beforeTranslations = readJson(translationsPath);
+    const baselineDesc =
+      beforeTranslations.entries["Raging River"].items["4ILX7BCinmsGqrJM"].description;
+
+    const envPath = path.join(moduleDir, "tmp_data", "environment.json");
+    const envData = readJson(envPath);
+    const ragingRiver = envData.data.find((item) => item.slug === "raging-river");
+    assert.ok(ragingRiver, "Raging River environment exists in cache");
+    const targetFeature = ragingRiver.features.find((feature) => feature.name.includes("Переправа"));
+    assert.ok(targetFeature, "Raging River feature for crossing exists");
+    targetFeature.main_body =
+      "Чтобы переправиться через реку, группа должна продвинуть Отсчёт прогресса (4). Персонаж, который провалил бросок со Страхом, немедленно становится целью действия «Подводное течение», и для этого не требуется тратить Страх на это свойство.\n\n*Кто-нибудь из персонажей уже переправлялся через реку таким образом? Кто-нибудь из них боится утонуть?*";
+    writeJson(envPath, envData);
+
+    runUpdater(moduleDir);
+
+    const afterTranslations = readJson(translationsPath);
+    const updatedDesc =
+      afterTranslations.entries["Raging River"].items["4ILX7BCinmsGqrJM"].description;
+    assert.equal(
+      updatedDesc,
+      baselineDesc,
+      "description should remain identical after deduplication"
+    );
+  })
+);
+
+test(
   "adversary feature changes propagate into translated items",
   withWorkspace(async ({ moduleDir }) => {
     const adversaryPath = path.join(moduleDir, "tmp_data", "adversary.json");

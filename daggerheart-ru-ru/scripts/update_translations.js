@@ -587,6 +587,47 @@ function fragmentHasQuestion(html) {
   return text.includes("?");
 }
 
+function removePlainTextOutsideSecrets(html, plainText) {
+  if (!html || !plainText) {
+    return { html, removed: false };
+  }
+  const placeholders = [];
+  const placeholderToken = (index) => `__SECRET_BLOCK_${index}__`;
+  let transformed = html.replace(SECRET_SECTION_RE, (match) => {
+    const token = placeholderToken(placeholders.length);
+    placeholders.push(match);
+    return token;
+  });
+  if (!transformed.includes(plainText)) {
+    return { html, removed: false };
+  }
+  transformed = transformed.replace(plainText, "");
+  let restored = transformed;
+  placeholders.forEach((section, index) => {
+    const token = placeholderToken(index);
+    restored = restored.replace(token, section);
+  });
+  return { html: restored, removed: true };
+}
+
+function dedupeSecretContent(html) {
+  if (!html) return html;
+  let result = html;
+  const matches = Array.from(result.matchAll(SECRET_SECTION_RE));
+  if (!matches.length) return result;
+  for (const match of matches) {
+    const block = match[0];
+    const innerMatch = block.match(/^<section[^>]*>([\s\S]*?)<\/section>$/i);
+    const inner = innerMatch ? innerMatch[1].trim() : "";
+    if (!inner) continue;
+    const plainInner = stripLinks(inner).replace(/\s+/g, " ").trim();
+    if (!plainInner) continue;
+    const removal = removePlainTextOutsideSecrets(result, plainInner);
+    result = removal.html;
+  }
+  return result;
+}
+
 function normalizeSecretSections(html) {
   if (!html) return html;
   return html.replace(SECRET_SECTION_WRAPPER_RE, (full, open, inner, close) => {
@@ -605,6 +646,51 @@ function normalizeSecretSections(html) {
   });
 }
 
+function preserveSecretSectionsFromSource(newHtml, oldHtml) {
+  if (!newHtml || !oldHtml) return newHtml;
+  const secretMatches = Array.from(oldHtml.matchAll(SECRET_SECTION_RE));
+  if (!secretMatches.length) return newHtml;
+  let result = newHtml;
+  const pending = [];
+  for (const match of secretMatches) {
+    const block = (match[0] || "").trim();
+    if (!block || result.includes(block)) continue;
+    const idMatch = block.match(/\bid=['"]([^'"]+)['"]/i);
+    if (idMatch) {
+      const id = idMatch[1];
+      const sectionById = new RegExp(
+        `<section\\b[^>]*id=['"]${escapeRegExp(id)}['"][^>]*>[\\s\\S]*?<\\/section>`,
+        "i"
+      );
+      if (sectionById.test(result)) {
+        result = result.replace(sectionById, block);
+        continue;
+      }
+    }
+    const innerMatch = block.match(/^<section[^>]*>([\s\S]*?)<\/section>$/i);
+    const inner = innerMatch ? innerMatch[1].trim() : "";
+    if (inner) {
+      const idx = result.indexOf(inner);
+      if (idx !== -1) {
+        result = `${result.slice(0, idx)}${result.slice(idx + inner.length)}`;
+      } else {
+        const plainInner = stripLinks(inner)
+          .replace(/\s+/g, " ")
+          .trim();
+        if (plainInner) {
+          const removalResult = removePlainTextOutsideSecrets(result, plainInner);
+          result = removalResult.html;
+        }
+      }
+    }
+    pending.push(block);
+  }
+  if (pending.length) {
+    result = result.replace(/\s*$/, "") + pending.join("");
+  }
+  return result;
+}
+
 function collapseAdjacentInlineTags(html, tagName) {
   if (!html) return html;
   const pattern = new RegExp(
@@ -617,8 +703,25 @@ function collapseAdjacentInlineTags(html, tagName) {
     previous = result;
     result = result.replace(pattern, (_match, attrsLeft, left, gap, attrsRight, right) => {
       const attrString = attrsLeft || attrsRight || "";
-      const spacer = gap || "";
-      return `<${tagName}${attrString}>${left}${spacer}${right}</${tagName}>`;
+      const leftTrimmed = left.replace(/\s+$/, "");
+      const rightTrimmed = right.replace(/^\s+/, "");
+      const leftEnd = leftTrimmed.slice(-1);
+      const rightStart = rightTrimmed.slice(0, 1);
+      const gapHasNbsp = /&nbsp;/.test(gap || "");
+      let spacer = "";
+      if (gapHasNbsp) {
+        spacer = "&nbsp;";
+      } else if (
+        !leftTrimmed ||
+        !rightTrimmed ||
+        /[([{«]$/.test(leftEnd) ||
+        /^[)\]},.:;!?]/.test(rightStart)
+      ) {
+        spacer = "";
+      } else {
+        spacer = " ";
+      }
+      return `<${tagName}${attrString}>${leftTrimmed}${spacer}${rightTrimmed}</${tagName}>`;
     });
   } while (result !== previous);
   return result;
@@ -753,6 +856,7 @@ function mergeFoundryTags(oldHtml, newHtml) {
       const contentMatch = block.match(/^<section[^>]*>([\s\S]*?)<\/section>$/i);
       const content = contentMatch ? contentMatch[1] : "";
       const inner = content.trim();
+      const blockHasQuestion = fragmentHasQuestion(inner);
       if (inner) {
         const idx = result.indexOf(inner);
         if (idx !== -1) {
@@ -762,26 +866,28 @@ function mergeFoundryTags(oldHtml, newHtml) {
           continue;
         }
       }
-      const questionMatch = result.match(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i);
-      if (questionMatch && fragmentHasQuestion(questionMatch[1])) {
-        const question = questionMatch[1];
-        const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${question}</section>`);
-        result = result.replace(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i, `${newBlock}`);
-        continue;
-      }
-      const paragraphMatch = result.match(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i);
-      if (paragraphMatch && fragmentHasQuestion(paragraphMatch[1])) {
-        const paragraph = paragraphMatch[1];
-        const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${paragraph}</section>`);
-        result = result.replace(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i, `${newBlock}`);
-        continue;
+      if (blockHasQuestion) {
+        const questionMatch = result.match(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i);
+        if (questionMatch && fragmentHasQuestion(questionMatch[1])) {
+          const question = questionMatch[1];
+          const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${question}</section>`);
+          result = result.replace(/(<p[^>]*><em>[\s\S]*?<\/em><\/p>)\s*$/i, `${newBlock}`);
+          continue;
+        }
+        const paragraphMatch = result.match(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i);
+        if (paragraphMatch && fragmentHasQuestion(paragraphMatch[1])) {
+          const paragraph = paragraphMatch[1];
+          const newBlock = block.replace(/>([\s\S]*?)<\/section>/i, `>${paragraph}</section>`);
+          result = result.replace(/(<p[^>]*>[\s\S]*?<\/p>)\s*$/i, `${newBlock}`);
+          continue;
+        }
       }
       appended.push(block);
     }
-  if (appended.length) {
-    result = result.replace(/\s*$/, "") + appended.join("");
+    if (appended.length) {
+      result = result.replace(/\s*$/, "") + appended.join("");
+    }
   }
-}
 
   if (source) {
     const plainSource = extractPlainText(source);
@@ -2211,10 +2317,23 @@ async function main() {
             const feature = featureList.shift();
             if (!feature) break;
             const markdownSource = feature.main_body || "";
-            const body = markdownToHtml(markdownSource);
+            let body = markdownToHtml(markdownSource);
+            const previousDescription = itemEntry.description;
+            if (previousDescription) {
+              const prevPlain = extractPlainText(previousDescription);
+              const nextPlain = extractPlainText(body);
+              if (prevPlain && nextPlain && prevPlain === nextPlain) {
+                body = previousDescription;
+              } else {
+                body = preserveSecretSectionsFromSource(body, previousDescription);
+              }
+            }
             itemEntry.name = sanitizeName(cleanAdversaryItemName(feature.name || ""));
             if (body) {
               setHtmlField(itemEntry, "description", body);
+              if (itemEntry.description) {
+                itemEntry.description = dedupeSecretContent(itemEntry.description);
+              }
             } else {
               delete itemEntry.description;
             }

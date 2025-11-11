@@ -34,6 +34,51 @@ Hooks.once('babele.init', (babele) => {
       return origItems;
     },
 
+    // Переносит переводы окружений. Если ручных описаний действий нет, просто заливает общий текст.
+    "toEnvItems": (origItems, transItems) => {
+      if (!Array.isArray(origItems) || !transItems) {
+        return origItems;
+      }
+      for (const item of origItems) {
+        if (!item) continue;
+        const translation = transItems[item._id];
+        if (!translation) continue;
+        if (translation.name) {
+          item.name = translation.name;
+        }
+        if (!item.system) continue;
+        const system = item.system;
+        const desc = translation.description;
+        if (desc) {
+          system.description = desc;
+        }
+        const actions = system.actions;
+        if (!actions) continue;
+        const translatedActions = translation.actions;
+        if (translatedActions && typeof translatedActions === "object") {
+          for (const actionId of Object.keys(actions)) {
+            const action = actions[actionId];
+            if (!action) continue;
+            const translated = translatedActions[actionId];
+            if (!translated) continue;
+            if (typeof translated === "string") {
+              action.description = translated;
+            } else if (typeof translated === "object") {
+              const { name, description } = translated;
+              if (name) action.name = name;
+              if (description) action.description = description;
+            }
+          }
+        } else if (desc) {
+          for (const actionId of Object.keys(actions)) {
+            const action = actions[actionId];
+            if (action) action.description = desc;
+          }
+        }
+      }
+      return origItems;
+    },
+
     // Подменяет описания action-узлов переводами из JSON (строковый формат).
     "toActions": (origActions, transActions) => {
       if (!origActions || !transActions) {

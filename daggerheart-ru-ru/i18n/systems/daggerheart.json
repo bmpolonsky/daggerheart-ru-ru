@@ -21,7 +21,7 @@
       "companion": "Компаньон",
       "adversary": "Противник",
       "environment": "Окружение",
-      "party": "Party"
+      "party": "Группа"
     }
   },
   "CONTROLS": {
@@ -67,12 +67,12 @@
         },
         "displayInChat": "Отображать в чате",
         "damage": {
-          "multiplier": "Multiplier",
-          "flatMultiplier": "Flat Multiplier"
+          "multiplier": "Множитель",
+          "flatMultiplier": "Фиксированный множитель"
         },
         "general": {
-          "customFormula": "Custom Formula",
-          "formula": "Formula"
+          "customFormula": "Пользовательская формула",
+          "formula": "Формула"
         }
       },
       "RollField": {
@@ -104,7 +104,7 @@
         "cost": {
           "stepTooltip": "+{step} за шаг"
         },
-        "saveHint": "Set a default Trait to enable Reaction Roll. It can be changed later in Reaction Roll Dialog."
+        "saveHint": "Укажите характеристику по умолчанию, чтобы включить бросок реакции. Ее можно будет изменить позже в диалоговом окне броска реакции."
       }
     },
     "ACTIVEEFFECT": {
@@ -244,9 +244,9 @@
         },
         "InvalidOldCharacterImportTitle": "Импорт старого персонажа",
         "InvalidOldCharacterImportText": "Данные персонажа, экспортированные до версии системы 1.1, не позволят создать полноценного персонажа. Желаете продолжить?",
-        "backgroundQuestions": "Backgrounds",
-        "connections": "Connections",
-        "viewLevelups": "View Levelups"
+        "backgroundQuestions": "Предыстория",
+        "connections": "Связи",
+        "viewLevelups": "Просмотр повышений уровня"
       },
       "Companion": {
         "FIELDS": {
@@ -310,7 +310,7 @@
           "traits": "Характеристики",
           "domainCards": "Карты домена",
           "equipment": "Снаряжение",
-          "story": "Story"
+          "story": "История"
         },
         "ancestryNamePlaceholder": "Название вашей родословной",
         "buttonTitle": "Создание персонажа",
@@ -338,14 +338,14 @@
         "suggestedWeapons": "Рекомендуемое оружие",
         "title": "{actor} - Создание персонажа",
         "traitIncreases": "Увеличение характеристик",
-        "storyExplanation": "Select which background and connection prompts you want to copy into your character's background."
+        "storyExplanation": "Выберите, какие зацепки предыстории и связей вы хотите скопировать в историю вашего персонажа."
       },
       "CombatTracker": {
         "combatStarted": "Активно",
         "giveSpotlight": "Активировать",
         "requestingSpotlight": "Запрашивает активацию",
         "requestSpotlight": "Запросить активацию",
-        "openCountdowns": "Обратные отсчёты"
+        "openCountdowns": "Отсчёты"
       },
       "ContextMenu": {
         "disableEffect": "Отключить эффект",
@@ -356,10 +356,10 @@
         "toVault": "Отправить в хранилище",
         "unequip": "Снять",
         "useItem": "Использовать предмет",
-        "cancelBeastform": "Cancel Beastform"
+        "cancelBeastform": "Отменить звериную форму"
       },
       "Countdown": {
-        "addCountdown": "Добавить обратный отсчёт",
+        "addCountdown": "Добавить отсчёт",
         "FIELDS": {
           "countdowns": {
             "element": {
@@ -384,16 +384,16 @@
                 }
               },
               "type": {
-                "label": "Countdown Type"
+                "label": "Тип отсчёта"
               }
             }
           }
         },
-        "newCountdown": "Новый обратный отсчёт",
+        "newCountdown": "Новый отсчёт",
         "openOwnership": "Изменить права игроков",
-        "removeCountdownText": "Вы уверены, что хотите удалить обратный отсчёт: {name}?",
-        "removeCountdownTitle": "Удалить обратный отсчёт",
-        "title": "Обратные отсчёты: {type}",
+        "removeCountdownText": "Вы уверены, что хотите удалить отсчёт: {name}?",
+        "removeCountdownTitle": "Удалить отсчёт",
+        "title": "Отсчёты: {type}",
         "toggleSimple": "Переключить упрощённый вид",
         "types": {
           "narrative": "Повествовательные",
@@ -472,8 +472,8 @@
       "HUD": {
         "tokenHUD": {
           "genericEffects": "Эффекты Foundry",
-          "depositPartyTokens": "Deposit Party Tokens",
-          "retrievePartyTokens": "Retrieve Party Tokens"
+          "depositPartyTokens": "Выложить токены группы",
+          "retrievePartyTokens": "Забрать токены группы"
         }
       },
       "Levelup": {
@@ -578,7 +578,7 @@
           "posttext": "Возьмите дополнительную карту домена вашего уровня или ниже из домена, к которому у вас есть доступ."
         },
         "title": "{actor} Повышение уровня",
-        "viewModeTitle": "{actor} Level Up (View Mode)"
+        "viewModeTitle": "{actor} Повышение уровня (режим просмотра)"
       },
       "MulticlassChoice": {
         "title": "Мультиклассирование - {actor}",
@@ -602,43 +602,43 @@
         "rerollDice": "Перебросить кости"
       },
       "Attribution": {
-        "title": "Attribution"
+        "title": "Источники"
       },
       "CountdownEdit": {
-        "title": "Countdown Edit",
-        "viewTitle": "Countdowns",
-        "editTitle": "Edit Countdowns",
-        "newCountdown": "New Countdown",
-        "removeCountdownTitle": "Remove Countdown",
-        "removeCountdownText": "Are you sure you want to remove the countdown: {name}?",
-        "current": "Current",
-        "max": "Max",
-        "currentCountdownValue": "Current: {value}",
-        "currentCountdownMax": "Max: {value}",
-        "category": "Category",
-        "type": "Type",
-        "defaultOwnershipTooltip": "The default player ownership of countdowns",
-        "hideNewCountdowns": "Hide New Countdowns"
+        "title": "Редактирование отсчёта",
+        "viewTitle": "Отсчёты",
+        "editTitle": "Редактировать отсчёты",
+        "newCountdown": "Новый отсчёт",
+        "removeCountdownTitle": "Удалить отсчёт",
+        "removeCountdownText": "Вы уверены, что хотите удалить отсчёт: {name}?",
+        "current": "Текущее",
+        "max": "Макс.",
+        "currentCountdownValue": "Текущее: {value}",
+        "currentCountdownMax": "Макс.: {value}",
+        "category": "Категория",
+        "type": "Тип",
+        "defaultOwnershipTooltip": "Владение отсчётами для игроков по умолчанию",
+        "hideNewCountdowns": "Скрывать новые отсчёты"
       },
       "DaggerheartMenu": {
-        "title": "GM Tools"
+        "title": "Инструменты Мастера"
       },
       "ImageSelect": {
-        "title": "Select Image",
-        "selectImage": "Select Image"
+        "title": "Выбор изображения",
+        "selectImage": "Выбрать изображение"
       },
       "TagTeamSelect": {
-        "title": "Tag Team Roll",
-        "leaderTitle": "Initiating Character",
-        "membersTitle": "Participants",
-        "partyTeam": "Party Team",
-        "hopeCost": "Hope Cost",
-        "initiatingCharacter": "Initiating Character",
-        "linkMessageHint": "Make a roll from your character sheet to link it to the Tag Team Roll",
-        "damageNotRolled": "Damage not rolled in chat message yet",
-        "insufficientHope": "The initiating character doesn't have enough hope",
-        "createTagTeam": "Create TagTeam Roll",
-        "chatMessageRollTitle": "Roll"
+        "title": "Командный бросок",
+        "leaderTitle": "Инициирующий персонаж",
+        "membersTitle": "Участники",
+        "partyTeam": "Команда группы",
+        "hopeCost": "Стоимость в Надежде",
+        "initiatingCharacter": "Инициирующий персонаж",
+        "linkMessageHint": "Сделайте бросок с вашего листа персонажа, чтобы связать его с командным броском",
+        "damageNotRolled": "Урон еще не брошен в сообщении чата",
+        "insufficientHope": "У инициирующего персонажа недостаточно Надежды",
+        "createTagTeam": "Создать командный бросок",
+        "chatMessageRollTitle": "Бросок"
       }
     },
     "CLASS": {
@@ -984,9 +984,9 @@
           "abbreviation": "Маг"
         },
         "direct": {
-          "name": "Direct Damage",
-          "short": "Direct",
-          "abbreviation": "Dir"
+          "name": "Прямой урон",
+          "short": "Прямой",
+          "abbreviation": "Прям"
         }
       },
       "DeathMoves": {
@@ -1037,27 +1037,27 @@
         "hitPoints": {
           "name": "Раны",
           "abbreviation": "РАН",
-          "inChatRoll": "Damage"
+          "inChatRoll": "Урон"
         },
         "stress": {
           "name": "Стресс",
           "abbreviation": "СТР",
-          "inChatRoll": "Stress"
+          "inChatRoll": "Стресс"
         },
         "hope": {
           "name": "Надежда",
           "abbreviation": "НД",
-          "inChatRoll": "Hope"
+          "inChatRoll": "Надежда"
         },
         "armor": {
           "name": "Ячейка брони",
           "abbreviation": "ЯБ",
-          "inChatRoll": "Armor Slot"
+          "inChatRoll": "Броня"
         },
         "fear": {
           "name": "Страх",
           "abbreviation": "СТХ",
-          "inChatRoll": "Fear"
+          "inChatRoll": "Страх"
         }
       },
       "ItemResourceProgression": {
@@ -1066,7 +1066,7 @@
       },
       "ItemResourceType": {
         "simple": "Простой",
-        "diceValue": "Значение кубика"
+        "diceValue": "Значение кости"
       },
       "Range": {
         "self": {
@@ -1661,7 +1661,7 @@
           "effects": {
             "serrated": {
               "name": "Зазубренное",
-              "description": "Когда на кубике урона выпадает 1, вместо этого наносится 8 урона."
+              "description": "Когда на кости урона выпадает 1, вместо этого наносится 8 урона."
             }
           }
         },
@@ -2025,13 +2025,13 @@
         "rules": "Правила",
         "configuration": "Конфигурация",
         "base": "Базовое",
-        "resources": "Resources",
-        "roll": "Roll",
-        "partyMembers": "Party Members",
-        "projects": "Projects",
-        "types": "Types",
-        "itemFeatures": "Item Features",
-        "questions": "Questions"
+        "resources": "Ресурсы",
+        "roll": "Бросок",
+        "partyMembers": "Члены группы",
+        "projects": "Проекты",
+        "types": "Типы",
+        "itemFeatures": "Свойства предмета",
+        "questions": "Вопросы"
       },
       "Tiers": {
         "1": "Ранг 1",
@@ -2156,21 +2156,21 @@
       "weapons": "Оружие",
       "withThing": "С {thing}",
       "SpotlightRequests": {
-        "singular": "Spotlight Request",
-        "plural": "Spotlight Requests"
+        "singular": "Запрос на активацию",
+        "plural": "Запросы на активацию"
       },
-      "armorFeatures": "Armor Features",
-      "artistAttribution": "Artwork By: {artist}",
-      "custom": "Custom",
-      "gm": "GM",
-      "itemQuantity": "Item Quantity",
+      "armorFeatures": "Свойства брони",
+      "artistAttribution": "Художник: {artist}",
+      "custom": "Пользовательский",
+      "gm": "Мастер",
+      "itemQuantity": "Количество предметов",
       "player": {
-        "single": "Player",
-        "plurial": "Players"
+        "single": "Игрок",
+        "plurial": "Игроки"
       },
-      "refresh": "Refresh",
-      "traitModifier": "Trait Modifier",
-      "weaponFeatures": "Weapon Features"
+      "refresh": "Обновить",
+      "traitModifier": "Модификатор Характеристики",
+      "weaponFeatures": "Свойства оружия"
     },
     "ITEMS": {
       "FIELDS": {
@@ -2202,13 +2202,13 @@
         },
         "attribution": {
           "source": {
-            "label": "Source"
+            "label": "Источник"
           },
           "page": {
-            "label": "Page"
+            "label": "Страница"
           },
           "artist": {
-            "label": "Artist"
+            "label": "Художник"
           }
         }
       },
@@ -2284,7 +2284,7 @@
         "evolve": "Эволюционировать",
         "evolvedFeatureTitle": "Эволюционировавшая",
         "evolvedDrag": "Перетащите форму сюда, чтобы развить её.",
-        "hybridize": "Гибридизировать",
+        "hybridize": "Создать гибрид",
         "hybridizeFeatureTitle": "Гибридные свойства",
         "hybridizeDrag": "Перетащите форму сюда для создания гибрида."
       },
@@ -2304,7 +2304,7 @@
       },
       "Consumable": {
         "consumeOnUse": "Расходуется при использовании",
-        "destroyOnEmpty": "Destroy On Empty"
+        "destroyOnEmpty": "Уничтожить, когда закончится"
       },
       "DomainCard": {
         "type": "Тип",
@@ -2348,25 +2348,25 @@
             "label": "Предметы"
           },
           "hideAttribution": {
-            "label": "Hide Attribution"
+            "label": "Скрыть источники"
           },
           "expandRollMessage": {
-            "title": "Auto-expand Message Sections",
+            "title": "Авто-раскрытие секций в сообщениях",
             "desc": {
-              "label": "Description"
+              "label": "Описание"
             },
             "roll": {
-              "label": "Formula"
+              "label": "Формула"
             },
             "damage": {
-              "label": "Damage/Healing"
+              "label": "Урон/Исцеление"
             },
             "target": {
-              "label": "Target"
+              "label": "Цель"
             }
           },
           "useResourcePips": {
-            "label": "Pip Display For Resources"
+            "label": "Отображать ресурсы точками"
           }
         },
         "fearDisplay": {
@@ -2431,7 +2431,7 @@
           },
           "resourceScrollTexts": {
             "label": "Показывать прокручиваемый текст изменения ресурсов",
-            "hint": "Когда персонаж получает урон, использует броню и т.д., рядом с жетоном ненадолго появится прокручиваемый текст, чтобы обозначить это."
+            "hint": "Когда персонаж получает урон, использует броню и т.д., рядом с токеном ненадолго появится прокручиваемый текст, чтобы обозначить это."
           },
           "playerCanEditSheet": {
             "label": "Игроки могут вручную редактировать характеристики персонажа",
@@ -2439,35 +2439,35 @@
           },
           "roll": {
             "roll": {
-              "label": "Roll",
-              "hint": "Auto behavior for rolls like Attack, Spellcast, etc."
+              "label": "Бросок",
+              "hint": "Автоматизация для бросков Атаки, Заклинаний и т.д."
             },
             "damage": {
-              "label": "Damage/Healing Roll",
-              "hint": "Auto behavior for Damage & Healing rolls after the Attack/Spellcast."
+              "label": "Бросок урона/исцеления",
+              "hint": "Автоматизация для бросков урона и исцеления после Атаки/Заклинания."
             },
             "save": {
-              "label": "Reaction Roll",
-              "hint": "Auto behavior if a Reaction Roll is needed. Targets must be selected before the action is made"
+              "label": "Бросок Реакции",
+              "hint": "Автоматизация для бросков Реакции. Цели должны быть выбраны до совершения действия."
             },
             "damageApply": {
-              "label": "Apply Damage/Healing",
-              "hint": "Automatically apply damages & healings. Targets must be selected before the action is made and Reaction Roll Automation must be different than Never. Bypass users permissions."
+              "label": "Применение урона/исцеления",
+              "hint": "Автоматически применять урон и исцеление. Цели должны быть выбраны до совершения действия, а автоматизация Броска Реакции должна быть включена. Обходит права доступа игроков."
             },
             "effect": {
-              "label": "Apply Effects",
-              "hint": "Automatically apply effects. Targets must be selected before the action is made and Reaction Roll Automation must be different than Never. Bypass users permissions."
+              "label": "Применение эффектов",
+              "hint": "Автоматически применять эффекты. Цели должны быть выбраны до совершения действия, а автоматизация Броска Реакции должна быть включена. Обходит права доступа игроков."
             }
           },
           "summaryMessages": {
-            "label": "Summary Messages"
+            "label": "Итоговые сообщения"
           }
         },
         "defeated": {
           "title": "Обработка побеждённых"
         },
         "roll": {
-          "title": "Actions"
+          "title": "Действия"
         }
       },
       "Homebrew": {
@@ -2513,11 +2513,11 @@
           "deleteDomainText": "Вы уверены, что хотите удалить домен {name}? Он будет немедленно удалён у всех персонажей в этом мире, где он сейчас используется. Компендиумы не затрагиваются.",
           "duplicateDomain": "Домен с таким идентификатором уже существует."
         },
-        "newFeature": "New ItemFeature",
-        "itemFeatures": "Item Features",
+        "newFeature": "Новое свойство предмета",
+        "itemFeatures": "Свойства предмета",
         "adversaryType": {
-          "title": "Custom Adversary Types",
-          "newType": "Adversary Type"
+          "title": "Пользовательские типы противников",
+          "newType": "Тип противника"
         }
       },
       "Menu": {
@@ -2590,12 +2590,12 @@
         "FIELDS": {
           "rangeMeasurement": {
             "setting": {
-              "label": "Setting"
+              "label": "Настройка"
             }
           }
         },
-        "disabledText": "Daggerheart Measurements are disabled in System Settings - Variant Rules",
-        "rangeMeasurement": "Range Measurement"
+        "disabledText": "Измерения дистанции Daggerheart отключены в системных настройках - Вариативные правила",
+        "rangeMeasurement": "Измерение дистанции"
       }
     },
     "UI": {
@@ -2646,34 +2646,34 @@
         "resourceRoll": {
           "playerMessage": "{user} перебросил(а) свой {name}"
         },
-        "appliedTo": "Applied To",
-        "clearResource": "Clear {quantity} {resource}",
+        "appliedTo": "Применено к",
+        "clearResource": "Очистить {quantity} {resource}",
         "damageSummary": {
-          "title": "Damage Applied",
-          "healingTitle": "Healing Applied"
+          "title": "Нанесенный урон",
+          "healingTitle": "Примененное исцеление"
         },
         "effectSummary": {
-          "title": "Effects Applied"
+          "title": "Примененные эффекты"
         },
         "groupRoll": {
-          "title": "Group Roll",
-          "leader": "Leader",
-          "partyTeam": "Party Team",
-          "team": "Team",
-          "selectLeader": "Select a Leader",
-          "selectMember": "Select a Member",
-          "rerollTitle": "Reroll Group Roll",
-          "rerollContent": "Are you sure you want to reroll your {trait} check?",
-          "rerollTooltip": "Reroll"
+          "title": "Групповой бросок",
+          "leader": "Лидер",
+          "partyTeam": "Команда группы",
+          "team": "Команда",
+          "selectLeader": "Выберите лидера",
+          "selectMember": "Выберите участника",
+          "rerollTitle": "Перебросить групповой бросок",
+          "rerollContent": "Вы уверены, что хотите перебросить вашу проверку {trait}?",
+          "rerollTooltip": "Перебросить"
         },
-        "markResource": "Mark {quantity} {resource}",
+        "markResource": "Отметить {quantity} {resource}",
         "refreshMessage": {
-          "title": "Feature Refresh",
-          "header": "Refreshed"
+          "title": "Восстановление свойства",
+          "header": "Восстановлено"
         },
         "tagTeam": {
-          "title": "Tag Team",
-          "membersTitle": "Members"
+          "title": "Командный бросок",
+          "membersTitle": "Участники"
         }
       },
       "Notifications": {
@@ -2733,21 +2733,21 @@
         "beastformToManyAdvantages": "Вы не можете выбрать больше преимуществ.",
         "beastformToManyFeatures": "Вы не можете выбрать больше свойств.",
         "beastformEquipWeapon": "Вы не можете использовать оружие, находясь в звериной форме.",
-        "loadoutMaxReached": "Вы достигли максимального снаряжения. Переместите хотя бы одну карту домена в хранилище или увеличьте лимит в настройках хоумбрю, если хотите.",
+        "loadoutMaxReached": "Вы достигли лимита карт в снаряжении. Переместите хотя бы одну карту домена в хранилище или увеличьте лимит в настройках хоумбрю, если хотите.",
         "domainMaxReached": "Вы достигли максимального количества доменов для этого класса. Увеличьте лимит в настройках хоумбрю, если хотите.",
         "insufficientResources": "У вас недостаточно ресурсов",
         "multiclassAlreadyPresent": "У вас уже есть класс и мультикласс",
         "subclassesAlreadyPresent": "У вас уже есть подкласс класса и мультикласса",
         "noDiceSystem": "В выбранной вами системе костей {system} нет кости с {faces} гранями",
         "subclassAlreadyLinked": "{name} уже является подклассом класса {class}. Удалите его оттуда, если хотите назначить его этому классу.",
-        "noTargetsSelectedOrPerm": "No targets are selected or with the update permission.",
-        "duplicateCharacter": "This actor is already registered in the party members list.",
-        "onlyCharactersInPartySheet": "You can drag only characters to a party sheet.",
-        "actionNoUsesRemaining": "That action doesn't have remaining uses.",
-        "gmMenuRefresh": "You refreshed all actions and resources {types}",
-        "gmRequired": "This action requires an online GM",
-        "gmOnly": "This can only be accessed by the GM",
-        "noActorOwnership": "You do not have permissions for this character"
+        "noTargetsSelectedOrPerm": "Цели не выбраны или у вас нет прав на их изменение.",
+        "duplicateCharacter": "Этот персонаж уже добавлен в список членов группы.",
+        "onlyCharactersInPartySheet": "Вы можете перетаскивать только персонажей на лист группы.",
+        "actionNoUsesRemaining": "У этого действия не осталось использований.",
+        "gmMenuRefresh": "Вы обновили все действия и ресурсы: {types}",
+        "gmRequired": "Для этого действия требуется Мастер в сети.",
+        "gmOnly": "Доступно только Мастеру.",
+        "noActorOwnership": "У вас нет прав на этого персонажа"
       },
       "Tooltip": {
         "disableEffect": "Отключить эффект",
@@ -2775,64 +2775,64 @@
         "remainingUses": "Использования восстанавливаются при {type}",
         "rightClickExtand": "Щелкните правой кнопкой мыши, чтобы развернуть",
         "companionPartnerLevelBlock": "Компаньону нужен назначенный партнёр для повышения уровня.",
-        "configureAttribution": "Configure Attribution",
-        "deleteItem": "Delete Item"
+        "configureAttribution": "Настроить источники",
+        "deleteItem": "Удалить предмет"
       },
       "ChatLog": {
-        "rerollDamage": "Reroll Damage",
-        "assignTagRoll": "Assign as Tag Roll"
+        "rerollDamage": "Перебросить урон",
+        "assignTagRoll": "Назначить командным броском"
       },
       "Countdowns": {
-        "title": "Countdowns",
-        "toggleIconMode": "Toggle Icon Only",
-        "noPlayerAccess": "This countdown isn't visible to any players"
+        "title": "Отсчёты",
+        "toggleIconMode": "Переключить режим иконок",
+        "noPlayerAccess": "Этот отсчёт не виден ни одному из игроков"
       },
       "ItemBrowser": {
-        "title": "Daggerheart Compendium Browser",
-        "hint": "Select a Folder in sidebar to start browsing through the compendium",
-        "searchPlaceholder": "Search...",
-        "columnName": "Name",
-        "tooltipFilters": "Filters",
-        "tooltipErase": "Erase",
-        "difficultyMin": "Difficulty (Min)",
-        "difficultyMax": "Difficulty (Max)",
-        "hitPointsMin": "Hit Points (Min)",
-        "hitPointsMax": "Hit Points (Max)",
-        "stressMin": "Stress (Min)",
-        "stressMax": "Stress (Max)",
-        "armorScoreMin": "Armor Score (Min)",
-        "armorScoreMax": "Armor Score (Max)",
-        "levelMin": "Level (Min)",
-        "levelMax": "Level (Max)",
-        "recallCostMin": "Recall Cost (Min)",
-        "recallCostMax": "Recall Cost (Max)",
-        "evasionMin": "Evasion (Min)",
-        "evasionMax": "Evasion (Max)",
-        "subtype": "Subtype",
+        "title": "Обозреватель компендиума Daggerheart",
+        "hint": "Выберите папку в боковой панели, чтобы начать просмотр компендиума",
+        "searchPlaceholder": "Поиск...",
+        "columnName": "Название",
+        "tooltipFilters": "Фильтры",
+        "tooltipErase": "Стереть",
+        "difficultyMin": "Сложность (мин.)",
+        "difficultyMax": "Сложность (макс.)",
+        "hitPointsMin": "Раны (мин.)",
+        "hitPointsMax": "Раны (макс.)",
+        "stressMin": "Стресс (мин.)",
+        "stressMax": "Стресс (макс.)",
+        "armorScoreMin": "Показатель брони (мин.)",
+        "armorScoreMax": "Показатель брони (макс.)",
+        "levelMin": "Уровень (мин.)",
+        "levelMax": "Уровень (макс.)",
+        "recallCostMin": "Стоимость призыва (мин.)",
+        "recallCostMax": "Стоимость призыва (макс.)",
+        "evasionMin": "Уклонение (мин.)",
+        "evasionMax": "Уклонение (макс.)",
+        "subtype": "Подтип",
         "folders": {
-          "characters": "Characters",
-          "adversaries": "Adversaries",
-          "ancestries": "Ancestries",
-          "equipment": "Equipment",
-          "classes": "Classes",
-          "subclasses": "Subclasses",
-          "domainCards": "Domain Cards",
-          "communities": "Communities",
-          "environments": "Environments",
-          "beastforms": "Beastforms",
-          "features": "Features",
-          "items": "Items",
-          "weapons": "Weapons",
-          "armors": "Armors",
-          "consumables": "Consumables",
-          "loots": "Loots"
+          "characters": "Персонажи",
+          "adversaries": "Противники",
+          "ancestries": "Родословные",
+          "equipment": "Снаряжение",
+          "classes": "Классы",
+          "subclasses": "Подклассы",
+          "domainCards": "Карты Домена",
+          "communities": "Сообщества",
+          "environments": "Окружения",
+          "beastforms": "Звериные формы",
+          "features": "Свойства",
+          "items": "Предметы",
+          "weapons": "Оружие",
+          "armors": "Броня",
+          "consumables": "Расходники",
+          "loots": "Добыча"
         }
       },
       "Sidebar": {
         "daggerheartMenu": {
-          "title": "Daggerheart Menu",
-          "startSession": "Start Session",
-          "startScene": "Start Scene"
+          "title": "Меню Daggerheart",
+          "startSession": "Начать сессию",
+          "startScene": "Начать сцену"
         }
       }
     }

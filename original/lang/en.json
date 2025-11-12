@@ -2367,6 +2367,9 @@
           },
           "useResourcePips": {
             "label": "Pip Display For Resources"
+          },
+          "displayCountdownUI": {
+            "label": "Display Countdown UI"
           }
         },
         "fearDisplay": {
@@ -2518,7 +2521,10 @@
         "adversaryType": {
           "title": "Custom Adversary Types",
           "newType": "Adversary Type"
-        }
+        },
+        "downtimeMove": "Downtime Move",
+        "armorFeature": "Armor Feature",
+        "weaponFeature": "Weapon Feaure"
       },
       "Menu": {
         "title": "Daggerheart Game Settings",

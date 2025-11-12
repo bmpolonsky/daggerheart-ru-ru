@@ -217,7 +217,8 @@
       "description": "<p>Your movement is silent, and you can <strong>spend a Hope</strong> to move up to Far range without rolling.</p>",
       "actions": {
         "4yQ56hSL5LBkzrV6": {
-          "name": "Spend Hope"
+          "name": "Spend Hope",
+          "description": "<p><strong>Spend a Hope</strong> to move up to Far range without rolling.</p>"
         }
       }
     },
@@ -296,7 +297,8 @@
       "description": "<p>When an attack roll against you would succeed, you can <strong>mark a Stress</strong> and roll a <strong>d4</strong>. Add the result to your Evasion against this attack.</p>",
       "actions": {
         "9lvrqQKTEB3NRwvM": {
-          "name": "Mark Stress"
+          "name": "Mark Stress",
+          "description": "<p>When an attack roll against you would succeed, you can <strong>mark a Stress</strong> and roll a <strong>d4</strong>. Add the result to your Evasion against this attack.</p>"
         }
       }
     },
@@ -319,7 +321,8 @@
       "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>mark a Stress</strong> to make the target temporarily <em>Vulnerable</em>.</p>",
       "actions": {
         "p8DESOMGA6dLwEMz": {
-          "name": "Mark Stress"
+          "name": "Mark Stress",
+          "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>mark a Stress</strong> to make the target temporarily <em>Vulnerable</em>.</p>"
         }
       }
     },
@@ -412,7 +415,8 @@
       "description": "<p>When you succeed on an attack against a target within Melee range, the target becomes temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> direct physical damage each time they act.</p>",
       "actions": {
         "eow90DYK6cUWOk7g": {
-          "name": "Poison"
+          "name": "Poison",
+          "description": "<p>When you succeed on an attack against a target within Melee range, the target becomes temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> direct physical damage each time they act.</p>"
         }
       }
     },
@@ -451,7 +455,8 @@
       "description": "<p>You can create a strong web material useful for both adventuring and battle. The web is resilient enough to support one creature. You can temporarily <em>Restrain</em> a target within Close range by succeeding on a Finesse Roll against them.</p>",
       "actions": {
         "vRU6xutkp3VYxZ0i": {
-          "name": "Restrain"
+          "name": "Restrain",
+          "description": "<p>You can temporarily <em>Restrain</em> a target within Close range by succeeding on a Finesse Roll against them.</p>"
         }
       }
     }

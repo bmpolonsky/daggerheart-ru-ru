@@ -13,13 +13,13 @@ const PROJECT_ROOT = path.resolve(path.join(__dirname, ".."));
 
 function createWorkspace() {
   const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "daggerheart-test-"));
-  const tempModuleDir = path.join(tempRoot, "daggerheart-ru-ru");
-  fs.cpSync(PROJECT_ROOT, tempModuleDir, { recursive: true });
+  const tempModuleDir = path.join(tempRoot, "module");
+  fs.cpSync(PROJECT_ROOT, tempRoot, { recursive: true });
   return { tempRoot, moduleDir: tempModuleDir };
 }
 
 function runUpdater(moduleDir) {
-  execFileSync("node", ["scripts/update_translations.js"], {
+  execFileSync("node", ["../scripts/update_translations.js"], {
     cwd: moduleDir,
     env: {
       ...process.env,
@@ -49,7 +49,7 @@ function getActionDescription(value) {
 }
 
 function tmpDataPath(moduleDir, file) {
-  return path.join(moduleDir, "tmp_data", "api", file);
+  return path.join(moduleDir, "..", "tmp_data", "api", file);
 }
 
 function withWorkspace(testFn) {

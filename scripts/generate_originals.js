@@ -6,7 +6,8 @@ const path = require("path");
 const { spawnSync } = require("child_process");
 
 const BASE_DIR = path.resolve(__dirname, "..");
-const TRANSLATIONS_DIR = path.join(BASE_DIR, "translations");
+const MODULE_DIR = path.join(BASE_DIR, "module");
+const TRANSLATIONS_DIR = path.join(BASE_DIR, "module", "translations");
 const ORIGINAL_DIR = path.join(BASE_DIR, "original");
 const TMP_DATA_DIR = path.join(BASE_DIR, "tmp_data");
 const REMOTE_REPO_DIR = path.join(TMP_DATA_DIR, "original-daggerheart");
@@ -81,9 +82,9 @@ const FILE_CONFIGS = [
     build: buildJournalEntries
   },
   {
-    file: "daggerheart.json",
+    file: "lang/en.json",
     label: "System",
-    translationPath: path.join(BASE_DIR, "i18n", "systems", "daggerheart.json"),
+    translationPath: path.join(MODULE_DIR, "i18n", "systems", "daggerheart.json"),
     build: buildSystemLang,
     skipPayload: true
   }

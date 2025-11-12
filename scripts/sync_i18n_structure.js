@@ -4,8 +4,8 @@ const fs = require("fs/promises");
 const path = require("path");
 
 const BASE_DIR = path.resolve(__dirname, "..");
-const SOURCE_PATH = path.join(BASE_DIR, "original", "daggerheart.json");
-const TARGET_PATH = path.join(BASE_DIR, "i18n", "systems", "daggerheart.json");
+const SOURCE_PATH = path.join(BASE_DIR, "original", "lang/en.json");
+const TARGET_PATH = path.join(BASE_DIR, "module", "i18n", "systems", "daggerheart.json");
 
 async function main() {
   const sourceRaw = await fs.readFile(SOURCE_PATH, "utf-8");

@@ -3,7 +3,7 @@
 /**
  * Скрипт для обновления русских переводов Daggerheart.
  * Он получает данные напрямую с API сайта daggerheart.su и обновляет
- * JSON файлы в директории daggerheart-ru-ru/translations.
+ * JSON файлы в директории module/translations.
  *
  */
 
@@ -212,7 +212,7 @@ function capitalizeFirstLetter(text) {
 const BASE_DIR = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(BASE_DIR, "tmp_data"); // Временная папка для скачанных данных
 const API_CACHE_DIR = path.join(DATA_DIR, "api"); // Отдельная папка для API-данных
-const TRANSLATIONS_DIR = path.join(BASE_DIR, "translations"); // Папка с файлами переводов
+const TRANSLATIONS_DIR = path.join(BASE_DIR, "module", "translations"); // Папка с файлами переводов
 
 /**
  * Нормализует текст для использования в качестве ключа:

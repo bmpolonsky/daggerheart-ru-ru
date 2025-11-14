@@ -1,52 +1,261 @@
 #!/usr/bin/env node
 
+/**
+ * Синхронизирует структуру локализаций с официальными оригиналами и нормализует эффекты.
+ *
+ * 1. module/i18n/systems/daggerheart.json сверяется с original/lang/en.json.
+ * 2. Все файлы в module/translations приводятся к структуре файлов original/.
+ * 3. Любые массивы effects конвертируются в объекты { effectId: effectData }, чтобы
+ *    у переводов был стабильный ключ, как у Foundry EmbeddedCollection.
+ */
+
 const fs = require("fs/promises");
 const path = require("path");
 
 const BASE_DIR = path.resolve(__dirname, "..");
-const SOURCE_PATH = path.join(BASE_DIR, "original", "lang/en.json");
-const TARGET_PATH = path.join(BASE_DIR, "module", "i18n", "systems", "daggerheart.json");
+const UI_SOURCE_PATH = path.join(BASE_DIR, "original", "lang", "en.json");
+const UI_TARGET_PATH = path.join(BASE_DIR, "module", "i18n", "systems", "daggerheart.json");
+const ORIGINAL_TRANSLATIONS_DIR = path.join(BASE_DIR, "original");
+const TARGET_TRANSLATIONS_DIR = path.join(BASE_DIR, "module", "translations");
 
 async function main() {
-  const sourceRaw = await fs.readFile(SOURCE_PATH, "utf-8");
-  const targetRaw = await fs.readFile(TARGET_PATH, "utf-8");
-  const source = JSON.parse(sourceRaw);
-  const target = JSON.parse(targetRaw);
+  const results = [];
 
-  const added = [];
-  mergeStructure(source, target, "", added);
+  results.push(
+    await syncFile({
+      label: "UI локализация",
+      sourcePath: UI_SOURCE_PATH,
+      targetPath: UI_TARGET_PATH
+    })
+  );
 
-  if (!added.length) {
-    console.log("UI structure already up to date.");
-    return;
+  const translationFiles = await listOriginalTranslationFiles();
+  for (const fileName of translationFiles) {
+    const sourcePath = path.join(ORIGINAL_TRANSLATIONS_DIR, fileName);
+    const targetPath = path.join(TARGET_TRANSLATIONS_DIR, fileName);
+    results.push(
+      await syncFile({
+        label: `Перевод ${fileName}`,
+        sourcePath,
+        targetPath
+      })
+    );
   }
 
-  await fs.writeFile(TARGET_PATH, `${JSON.stringify(target, null, 2)}\n`, "utf-8");
-  console.log(`Added ${added.length} missing fields to daggerheart.json:`);
-  for (const key of added) {
-    console.log(`  · ${key}`);
+  const anyChanges = results.some((result) => result.changed);
+  for (const result of results) {
+    logResult(result);
+  }
+
+  if (!anyChanges) {
+    console.log("Все файлы локализации уже совпадают с оригинальной структурой.");
   }
 }
 
-function mergeStructure(source, target, prefix, added) {
-  if (!isPlainObject(source) || !isPlainObject(target)) return;
+async function listOriginalTranslationFiles() {
+  const entries = await fs.readdir(ORIGINAL_TRANSLATIONS_DIR, { withFileTypes: true });
+  return entries.filter((entry) => entry.isFile() && entry.name.endsWith(".json")).map((entry) => entry.name);
+}
+
+async function syncFile({ label, sourcePath, targetPath }) {
+  const sourceRaw = await readJson(sourcePath);
+  const source = normalizeEffectsDeep(sourceRaw);
+  if (!isPlainObject(source)) {
+    throw new Error(`Source file ${sourcePath} должен содержать JSON-объект на верхнем уровне.`);
+  }
+
+  const targetExists = await fileExists(targetPath);
+  let target = null;
+  let hadInvalidShape = false;
+  if (targetExists) {
+    const parsed = await readJson(targetPath);
+    const normalized = normalizeEffectsDeep(parsed);
+    if (isPlainObject(normalized)) {
+      target = normalized;
+    } else {
+      hadInvalidShape = true;
+    }
+  }
+
+  const stats = {
+    label,
+    path: targetPath,
+    created: !targetExists,
+    added: [],
+    removed: [],
+    replaced: []
+  };
+
+  if (!targetExists || hadInvalidShape) {
+    target = deepClone(source);
+    stats.changed = true;
+    if (hadInvalidShape) {
+      stats.replaced.push("<root>");
+    }
+  } else {
+    syncStructures(source, target, "", stats);
+    stats.changed = Boolean(stats.added.length || stats.removed.length || stats.replaced.length);
+  }
+
+  if (stats.changed) {
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(targetPath, `${JSON.stringify(target, null, 2)}\n`, "utf-8");
+  }
+
+  return stats;
+}
+
+function syncStructures(source, target, prefix, stats) {
+  const sourceKeys = new Set(Object.keys(source));
+
+  for (const key of Object.keys(target)) {
+    if (sourceKeys.has(key)) continue;
+    const fullKey = prefix ? `${prefix}.${key}` : key;
+    delete target[key];
+    stats.removed.push(fullKey);
+  }
+
   for (const key of Object.keys(source)) {
     const fullKey = prefix ? `${prefix}.${key}` : key;
     const sourceValue = source[key];
-    const targetHasKey = Object.prototype.hasOwnProperty.call(target, key);
-    if (!targetHasKey) {
-      target[key] = sourceValue;
-      added.push(fullKey);
+    const hasKey = Object.prototype.hasOwnProperty.call(target, key);
+
+    if (!hasKey) {
+      target[key] = deepClone(sourceValue);
+      stats.added.push(fullKey);
       continue;
     }
-    if (isPlainObject(sourceValue) && isPlainObject(target[key])) {
-      mergeStructure(sourceValue, target[key], fullKey, added);
+
+    const targetValue = target[key];
+    const sourceKind = getNodeKind(sourceValue);
+    const targetKind = getNodeKind(targetValue);
+
+    if (sourceKind === "object" && targetKind === "object") {
+      syncStructures(sourceValue, targetValue, fullKey, stats);
+      continue;
+    }
+
+    if (sourceKind !== targetKind) {
+      target[key] = deepClone(sourceValue);
+      stats.replaced.push(fullKey);
     }
   }
+}
+
+function normalizeEffectsDeep(node) {
+  if (Array.isArray(node)) {
+    return node.map((entry) => normalizeEffectsDeep(entry));
+  }
+  if (!isPlainObject(node)) {
+    return node;
+  }
+  const result = {};
+  for (const [key, value] of Object.entries(node)) {
+    if (key === "effects" && Array.isArray(value)) {
+      const effectsObject = {};
+      for (const effect of value) {
+        if (!effect || typeof effect !== "object") continue;
+        const effectId = effect._id || generateEffectKey(effect, effectsObject);
+        effectsObject[effectId] = normalizeEffectsDeep(effect);
+      }
+      result.effects = effectsObject;
+    } else {
+      result[key] = normalizeEffectsDeep(value);
+    }
+  }
+  return result;
+}
+
+function generateEffectKey(effect, existing) {
+  const base = effect?.name ? slugify(effect.name) : "effect";
+  let suffix = 1;
+  let candidate = base;
+  while (Object.prototype.hasOwnProperty.call(existing, candidate)) {
+    suffix += 1;
+    candidate = `${base}_${suffix}`;
+  }
+  return candidate;
+}
+
+function slugify(text) {
+  if (!text) return "effect";
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/--+/g, "-") || "effect";
+}
+
+function getNodeKind(value) {
+  if (Array.isArray(value)) return "array";
+  if (isPlainObject(value)) return "object";
+  return "primitive";
 }
 
 function isPlainObject(value) {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function deepClone(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => deepClone(item));
+  }
+  if (isPlainObject(value)) {
+    const result = {};
+    for (const [key, val] of Object.entries(value)) {
+      result[key] = deepClone(val);
+    }
+    return result;
+  }
+  return value;
+}
+
+async function fileExists(filePath) {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return false;
+    }
+    throw error;
+  }
+}
+
+async function readJson(filePath) {
+  const raw = await fs.readFile(filePath, "utf-8");
+  return JSON.parse(raw);
+}
+
+
+function logResult(result) {
+  const relativePath = path.relative(BASE_DIR, result.path);
+  if (!result.changed) {
+    console.log(`✓ ${result.label} (${relativePath}) уже синхронизирован.`);
+    return;
+  }
+  console.log(`• ${result.label} (${relativePath}) обновлён.`);
+  if (result.created) {
+    console.log("  - создан новый файл по образцу оригинала.");
+  }
+  if (result.added.length) {
+    console.log(`  - добавлено ${result.added.length} ключей:`);
+    for (const key of result.added) {
+      console.log(`     · ${key}`);
+    }
+  }
+  if (result.removed.length) {
+    console.log(`  - удалено ${result.removed.length} ключей:`);
+    for (const key of result.removed) {
+      console.log(`     · ${key}`);
+    }
+  }
+  if (result.replaced.length) {
+    console.log(`  - заменено ${result.replaced.length} веток:`);
+    for (const key of result.replaced) {
+      console.log(`     · ${key}`);
+    }
+  }
 }
 
 main().catch((error) => {

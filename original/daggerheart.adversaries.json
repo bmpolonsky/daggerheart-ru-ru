@@ -13,7 +13,7 @@
     "attack": "system.attack.name",
     "items": {
       "path": "items",
-      "converter": "toAdversariesItems"
+      "converter": "toItemsWithActions"
     }
   },
   "entries": {
@@ -47,11 +47,11 @@
               "description": "<p><strong>Mark a Stress</strong> to have the Burrower burst out of the ground. All creatures within Very Close range must succeed on an Agility Reaction Roll or be knocked over, making them Vulnerable until they next act.</p><p>@Template[type:emanation|range:vc]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "9PsnogEPsp1OOK64": {
               "name": "Earth Eruption"
             }
-          ]
+          }
         },
         "UpFsnlbZkyvM2Ftv": {
           "name": "Spit Acid",
@@ -104,12 +104,12 @@
               "description": "<p>When the Flickerfly makes an attack, the target’s Evasion is halved against the attack.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "ia0NUIOxE3RHb45P": {
               "name": "Never Misses",
               "description": "<p>When the Flickerfl y makes an attack, the target’s Evasion is halved against the attack.</p>"
             }
-          ]
+          }
         },
         "BuL6ndgaiJtjaM2T": {
           "name": "Whirlwind",
@@ -204,12 +204,12 @@
               "description": "<p>Make an attack against a target within Far range. On a success, <strong>mark a Stress</strong> to deal <strong>1d12+3</strong> physical damage. If the target marks HP from this attack, they have disadvantage on Agility Rolls until they clear at least 1 HP.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "wGuxOLokMqdxVSOo": {
               "name": "Hobbling Shot",
               "description": "<p>You have disadvantage on Agility Rolls until you clear at least 1 HP.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -281,12 +281,12 @@
               "name": "Gain Fear"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "KGdf2eqcXkdigg0u": {
               "name": "Beam Of Decay",
               "description": "<p><em>Vulnerable</em> until you roll with Hope.</p>"
             }
-          ]
+          }
         },
         "XxXOrFovbCz9zFxR": {
           "name": "Open the Gates of Death",
@@ -344,22 +344,22 @@
               "description": "<p>Targets who mark HP from the Assassin’s attacks are Vulnerable until they clear a HP.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "2iBVUGHtGW3I9VIj": {
               "name": "Grindletooth Venom",
               "description": "<p> <em>Vulnerable</em> until you clear a HP.</p>"
             }
-          ]
+          }
         },
         "of6g4piugKzTI4dv": {
           "name": "Assassin Poisoner",
           "description": "<p>The Assassin has advantage on attacks if they are <em>Hidden</em>.</p>",
-          "effects": [
-            {
+          "effects": {
+            "qT5nh7OcQ6aGdiWS": {
               "name": "Out of Nowhere",
               "description": "<p>The Assassin has advantage on attacks if they are <em>Hidden.</em></p>"
             }
-          ]
+          }
         },
         "lAmiK8wVxjyHwKlp": {
           "name": "Fumigation",
@@ -370,12 +370,12 @@
               "description": "<p>Drop a smoke bomb that fills the air within Close range with smoke, Dizzying all targets in this area. Dizzied targets have disadvantage on their next action roll, then clear the condition.</p><p>@Template[type:emanation|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "yP4ot8VqS56RnxnE": {
               "name": "Dizzy",
               "description": "<p>Dizzied targets have disadvantage on their next action roll, then clear the condition.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -439,12 +439,12 @@
               "description": "<p>The Box rockets around erratically. Make an attack against all PCs within Close range. Targets the Box succeeds against take <strong>1d6+5</strong> physical damage and are Vulnerable until their next roll with Hope.</p><p>@Template[type:emanation|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "9NQcCXMhjyBReJRd": {
               "name": "TRampled",
               "description": "<p><em>Vulnerable</em> until your next roll with Hope. </p>"
             }
-          ]
+          }
         },
         "3bPURmuwQs06fThQ": {
           "name": "Shocking Gas",
@@ -465,12 +465,12 @@
               "description": "<p>The Box leaps and their sides clap, creating a small sonic boom. All targets within Very Close range must succeed on a Strength Reaction Roll or become <em>Vulnerable</em> until the cube is defeated.</p><p>@Template[type:emanation|range:vc]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "S7kJlhnV8Nexzi8l": {
               "name": "Stunned",
               "description": "<p><em>Vulnerable</em> until the cube is defeated. </p>"
             }
-          ]
+          }
         },
         "JCue4ko61bjhedXv": {
           "name": "Psionic Whine",
@@ -531,12 +531,12 @@
               "description": "<p><strong>Mark a Stress</strong> to make an attack against a target within Melee range. On a success, deal <strong>3d4+10</strong> physical damage and the target is <em>Restrained</em> until they break free with a successful Strength Roll.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "U50Ccm9emMqAxma6": {
               "name": "Bite",
               "description": "<p>You are <em>Restrained</em> until you break free with a successful Strength Roll.</p>"
             }
-          ]
+          }
         },
         "4hJbq9WCwJn78frt": {
           "name": "Momentum",
@@ -580,12 +580,12 @@
               "description": "<p>Make an attack against a target within Very Close range. On a success, <strong>mark a Stress</strong> to Restrain the target until they break free with a successful attack, Finesse Roll, or Strength Roll.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "LmzztuktRkwOCy1a": {
               "name": "Detain",
               "description": "<p>You are <em>Restrained</em> until you break free with a successful attack, Finesse Roll, or Strength Roll.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -626,11 +626,11 @@
               "description": "<p>When the Zombies makes a successful standard attack, you can <strong>mark a Stress</strong> to temporarily Restrain the target and force them to mark 2 Stress.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "CjMrSdL6kgD8mKRQ": {
               "name": "Rip and Tear"
             }
-          ]
+          }
         }
       }
     },
@@ -697,12 +697,12 @@
         "LNVlf1BeqC3XyTrV": {
           "name": "Wards",
           "description": "<p> The Skull is resistant to magic damage.</p>",
-          "effects": [
-            {
+          "effects": {
+            "4rj6PM0AGrrlbxSc": {
               "name": "Wards",
               "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">The Skull is resistant to magic damage.</p>"
             }
-          ]
+          }
         },
         "Zn25zBr96y1hrmnr": {
           "name": "Magic Burst",
@@ -787,12 +787,12 @@
               "description": "<p>Before rolling damage for the Construct’s attack, you can <strong>mark a Stress</strong> to gain a +10 bonus to the damage roll. The Construct can then take the spotlight again.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "xkDIZk9u2ipDHvOL": {
               "name": "Overload",
               "description": "<p>Gain a +10 bonus to the damage roll</p>"
             }
-          ]
+          }
         },
         "UlGLuV1L33tDWkli": {
           "name": "Death Quake",
@@ -829,12 +829,12 @@
               "description": "<p>When a PC within Close range makes a Presence Roll, you can <strong>mark a Stress</strong> to cast a gaze toward the aftermath. On the target’s failure, they must mark 2 Stress and are <em>Vulnerable</em> until the scene ends or they succeed on a social action against the Courtesan. On the target’s success, they must mark a Stress.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "blcRqns0PHqiuPac": {
               "name": "Searing Glance",
               "description": "<p><em>Vulnerable</em> until the scene ends or they succeed on a social action against the Courtesan.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -858,11 +858,11 @@
               "description": "<p><strong>Mark a Stress</strong> to say something mocking and force a target within Close range to make a Presence Reaction Roll (14) to see if they can save face. On a failure, the target must mark 2 Stress and is Vulnerable until the scene ends.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "YNMhgBZW8ndrCjIp": {
               "name": "Mockery"
             }
-          ]
+          }
         },
         "Ux42ELBBuSYwm4yW": {
           "name": "Scapegoat",
@@ -909,12 +909,12 @@
               "description": "<p><strong>Mark a Stress</strong> to wrap an ally within Close range in a shroud of Protection until the Adept marks their last HP. While Protected, the target has resistance to all damage.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "U9lWz1LgeAiK5L85": {
               "name": "Shroud of the Fallen",
               "description": "<p>Resistance to all damage until the Adept marks their last HP</p>"
             }
-          ]
+          }
         },
         "JpSrduK3vjd9h098": {
           "name": "Shadow Shackles",
@@ -925,12 +925,12 @@
               "description": "<p><strong>Spend a Fear</strong> and choose a point within Far range. All targets within Close range of that point are <em>Restrained</em> in smoky chains until they break free with a successful Strength or Instinct Roll. A target Restrained by this feature must spend a Hope to make an action roll.</p><p>@Template[type:circle|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "lNH6srSPyEprXZ4o": {
               "name": "Shadow Shackles",
               "description": "<p>You are<em> Restrained</em> in smoky chains until you break free with a successful Strength or Instinct Roll. A target Restrained by this feature must spend a Hope to make an action roll.</p>"
             }
-          ]
+          }
         },
         "x6FbcrfOscb3er6P": {
           "name": "Fear Is Fuel",
@@ -969,11 +969,11 @@
               "description": "<p><strong>Mark a Stress</strong> to cause a target within Melee range to make an Instinct Reaction Roll. On a failure, the target must mark 2 Stress and is teleported with the Fang to a shadow within Far range, making them temporarily Vulnerable. On a success, the target must mark a Stress.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "LwWxRz7FTMA80VdA": {
               "name": "Pick Off the Straggler"
             }
-          ]
+          }
         }
       }
     },
@@ -1029,12 +1029,12 @@
               "description": "<p>Make an attack against a target within Close range. On a success, <strong>spend a Fear</strong> to pull them into Melee range, deal <strong>1d6+2</strong> physical damage, and <em>Restrain</em> them until the Defender takes Severe damage.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "F3E7fiz01AbF2kr5": {
               "name": "Grab and Drag",
               "description": "<p>You are <em>Restrained </em>until the Defender takes Severe damage.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -1093,12 +1093,12 @@
         "ILocyy5hvyQXXjhs": {
           "name": "Number Must Go Up",
           "description": "<p>Add a bonus to the Demon’s attack rolls equal to the number of handfuls of gold they have.</p>",
-          "effects": [
-            {
+          "effects": {
+            "iLeiOlUtWvYsgbDQ": {
               "name": "Numbers Must Go Up",
               "description": "<p>Add a bonus to the Demon’s attack rolls equal to the number of handfuls of gold they have.</p>"
             }
-          ]
+          }
         },
         "BKgv2D1IdI813R8k": {
           "name": "Money Is Time",
@@ -1130,12 +1130,12 @@
               "description": "<p><strong>Spend a Fear</strong> to weigh down the spirits of all PCs within Far range. All targets affected replace their Hope Die with a <strong>d8</strong> until they roll a success with Hope or their next rest.</p><p>@Template[type:emanation|range:f]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "6WSx03mFbpbPWnOI": {
               "name": "Your Struggle is Pointless",
               "description": "<p>All targets aff ected replace their Hope Die with a <strong>d8</strong> until they roll a success with Hope or their next rest.</p>"
             }
-          ]
+          }
         },
         "dlMdfUjy2GaqgeOJ": {
           "name": "Your Friends Will Fail You",
@@ -1318,12 +1318,12 @@
         "gx22MpD8fWoi8klZ": {
           "name": "Flying",
           "description": "<p>While flying, the Bat gains a +3 bonus to their Difficulty.</p>",
-          "effects": [
-            {
+          "effects": {
+            "qZfNiqw1iAIxeuYg": {
               "name": "Flying",
               "description": "<p>While flying, the Bat gains a +3 bonus to their Difficulty.</p>"
             }
-          ]
+          }
         },
         "o69lipskvBwGVhe4": {
           "name": "Screech",
@@ -1377,11 +1377,11 @@
               "description": "<p><strong>Mark a Stress</strong> to make an attack against a target within Melee range. On a success, deal <strong>3d4+10</strong> direct physical damage and make them <em>Vulnerable</em> until they clear at least 1 HP.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "YNKHEFQ4ucGr4Rmc": {
               "name": "Hobbling Strike"
             }
-          ]
+          }
         }
       }
     },
@@ -1516,12 +1516,12 @@
         "nCIGFPFOKzyznL0O": {
           "name": "Warped Fortitude",
           "description": "<p>The Experiment is resistant to physical damage.</p>",
-          "effects": [
-            {
+          "effects": {
+            "3QLH2EEtcUEZolFz": {
               "name": "Warped Fortitude",
               "description": "<p>The Experiment is resistant to physical damage.</p>"
             }
-          ]
+          }
         },
         "1fE6xo8yIOmZkGNE": {
           "name": "Overwhelm",
@@ -1600,12 +1600,12 @@
               "description": "<p><strong>Mark a Stress</strong> to trap a target within Far range in a powerful illusion of their worst fears. While trapped, the target is <em>Restrained</em> and <em>Vulnerable</em> until they break free, ending both conditions, with a successful Instinct Roll.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "Q99saHj6NOY2PSXf": {
               "name": "Nightmare Tableau",
               "description": "<p><em>Restrained</em> and <em>Vulnerable</em> until you break free, ending both conditions, with a successful Instinct Roll.</p>"
             }
-          ]
+          }
         },
         "C74czwNeWF5vS1DZ": {
           "name": "Slippery",
@@ -1624,12 +1624,12 @@
               "description": "<p>When the countdown triggers, all targets within Far range become Vulnerable and must mark a Stress as they relive their greatest regrets. A target can break free from their regret with a successful Presence or Strength Roll. When a PC fails to break free, they lose a Hope.</p><p>@Template[type:emanation|range:f]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "pWDg0MADoohKu40O": {
               "name": "Shackles of Guilt",
               "description": "<p><em>Vulnerable</em> until you break free from your regret with a successful Presence or Strength Roll. If you fail to break free, you lose a Hope.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -1780,12 +1780,12 @@
               "description": "<p>When the countdown triggers, activate a magical circle covering an area within Far range of the Champion. A target within that area is Vulnerable until they leave the circle. The circle can be removed by dealing Severe damage to the Undefeated Champion.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "eZp1PSCHZzdb47oM": {
               "name": "Circle of Defilement",
               "description": "<p><em>Vulnerable</em> until you leave the circle. The circle can be removed by dealing Severe damage to the Undefeated Champion.</p>"
             }
-          ]
+          }
         },
         "ReWtcLE5akrSauI1": {
           "name": "Momentum",
@@ -1833,12 +1833,12 @@
               "description": "<p>Make a standard attack against a target. On a success, you can <strong>mark a Stress</strong> to pin them to a nearby surface. The pinned target is <em>Restrained</em> until they break free with a successful Finesse or Strength Roll.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "vb1sZCOLwDNLsr3j": {
               "name": "Pinning Strike",
               "description": "<p>You are <em>Restrained</em> until you break free with a successful Finesse or Strength Roll.</p>"
             }
-          ]
+          }
         },
         "w1oHm0NoEavQgUzl": {
           "name": "Deadly Companion",
@@ -1904,12 +1904,12 @@
         "wdNrstuoh4MFShYG": {
           "name": "Flight",
           "description": "<p>While flying, the Eagle gains a +3 bonus to their Difficulty.</p>",
-          "effects": [
-            {
+          "effects": {
+            "odAyKY0BSAkcO3Dd": {
               "name": "Flying",
               "description": "<p>While flying, the Eagle gains a +3 bonus to their Difficulty.</p>"
             }
-          ]
+          }
         },
         "MabIQE1Kjn60j08J": {
           "name": "Deadly Dive",
@@ -1920,12 +1920,12 @@
               "description": "<p><strong>Mark a Stress</strong> to attack a target within Far range. On a success, deal <strong>2d10+2</strong> physical damage and knock the target over, making them <em>Vulnerable</em> until they next act.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "m6qqQZxukDPVcGdQ": {
               "name": "Deadly Dive",
               "description": "<p><em>Vulnerable</em> until the next time you act.</p>"
             }
-          ]
+          }
         },
         "NEOQ0E9AGSSIDm4v": {
           "name": "Take Off",
@@ -1936,11 +1936,11 @@
               "description": "<p>Make an attack against a target within Very Close range. On a success, deal <strong>2d4+3</strong> physical damage and the target must succeed on an Agility Reaction Roll or become temporarily Restrained within the Eagle’s massive talons. If the target is Restrained, the Eagle immediately lifts into the air to Very Far range above the battlefi eld while holding them.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "Sd34xywRqiF5w9sX": {
               "name": "Take Off"
             }
-          ]
+          }
         },
         "jY0ynjYvbS6E3NgJ": {
           "name": "Deadly Drop",
@@ -1972,12 +1972,12 @@
         "gxYV6iTMM1S9Vv5v": {
           "name": "Flying",
           "description": "<p>While flying, the Mosquitoes have a +2 bonus to their Difficulty.</p>",
-          "effects": [
-            {
+          "effects": {
+            "aATxfjeOzUYtKuU6": {
               "name": "Flying",
               "description": "<p>While flying, the Mosquitoes have a +2 bonus to their Difficulty.</p>"
             }
-          ]
+          }
         },
         "BTlMLjG65KQs0Jk2": {
           "name": "Bloodsucker",
@@ -2070,12 +2070,12 @@
               "description": "<p>Make an attack against a target within Very Close range. On a success, <strong>spend a Fear</strong> to deal <strong>1d4+4</strong> physical damage and Poison them until their next rest or they succeed on a Knowledge Roll (16). While Poisoned, the target must roll a <strong>d6</strong> before they make an action roll. On a result of 4 or lower, they must mark a Stress.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "oILkLJlGNZl7KI1R": {
               "name": "Poisoned",
               "description": "<p>You are <em>Poisoned</em> until your next rest or until you succeed on a Knowledge Roll (16). While Poisoned, you must roll a <strong>d6</strong> before you make an action roll. On a result of 4 or lower, you must mark a Stress.</p><p>[[/dr trait=knowledge difficulty=16]]</p>"
             }
-          ]
+          }
         },
         "TmDpAY5t3PjhEv9K": {
           "name": "Momentum",
@@ -2132,12 +2132,12 @@
               "description": "<p>When the Snake is in the spotlight, roll the spitter die. On a result of 5 or higher, do a spit Attack.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "Mchd23xNQ4nSWw9X": {
               "name": "Spitter Die",
               "description": "<p>You have a <strong>d6</strong> Spitter Die. When the Snake is in the spotlight, roll this die. On a result of 5 or higher, all targets in front of the Snake within Far range must succeed on an Agility Reaction Roll or take <strong>1d4</strong> physical damage. The Snake can take the spotlight a second time this GM turn.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -2171,12 +2171,12 @@
               "description": "<p>When the Gorgon makes a successful standard attack, the target Glows until the end of the scene and can’t become <em>Hidden</em>. Attack rolls made against a Glowing target have advantage.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "bYBrgiSwHwYfQyjn": {
               "name": "Glowing",
               "description": "<p> You Glow until the end of the scene and can’t become <em>Hidden</em>. Attack rolls made against you have advantage.</p>"
             }
-          ]
+          }
         },
         "9SO2ov36lFH2YV0S": {
           "name": "Crown of Serpents",
@@ -2233,12 +2233,12 @@
         "PVdHySLhIJ8uDrmg": {
           "name": "Immovable Object",
           "description": "<p>An attack that would move the Elemental moves them two fewer ranges (for example, Far becomes Very Close). When the Elemental takes physical damage, reduce it by 7.</p>",
-          "effects": [
-            {
+          "effects": {
+            "7V7qMq9in3AArwiM": {
               "name": "Immovable Object",
               "description": "<p>When the Elemental takes physical damage, reduce it by 7.</p>"
             }
-          ]
+          }
         },
         "q45DiEFlXqcXZ5hv": {
           "name": "Rockslide",
@@ -2249,12 +2249,12 @@
               "description": "<p><strong>Mark a Stress</strong> to create a rockslide that buries the land in front of Elemental within Close range with rockfall. All targets in this area must make an Agility Reaction Roll (19). Targets who fail take <strong>2d12+5</strong> physical damage and become Vulnerable until their next roll with Hope. Targets who succeed take half damage.</p><p>@Template[type:inFront|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "38MUzfbH64EMLVse": {
               "name": "Rockslide",
               "description": "<p><em>Vulnerable</em> until your next roll with Hope.</p>"
             }
-          ]
+          }
         },
         "ag7t5EW358M0qiSL": {
           "name": "Momentum",
@@ -2283,12 +2283,12 @@
               "description": "<p><strong>Mark a Stress</strong> to attack a target within Very Close range. On a success, deal <strong>2d4+7</strong> physical damage and the target’s next action has disadvantage. On a failure, the target must mark a Stress.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "WYqjt1tVqPEdVV5l": {
               "name": "Water Jet",
               "description": "<p>Your next action has disadvantage. On a failure, you must mark a Stress.</p>"
             }
-          ]
+          }
         },
         "bcwFQeuU6ZfIGjau": {
           "name": "Drowning Embrace",
@@ -2299,12 +2299,12 @@
               "description": "<p><strong>Spend a Fear</strong> to make an attack against all targets within Very Close range. Targets the Elemental succeeds against become <em>Restrained</em> and <em>Vulnerable</em> as they begin drowning. A target can break free, ending both conditions, with a successful Strength or Instinct Roll.</p><p>@Template[type:emanation|range:vc]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "X8NF2OB23mSpDvlx": {
               "name": "Drowning Embrace",
               "description": "<p>You are<em> Restrained</em> and <em>Vulnerable</em> as you are drowning. You can break free, ending both conditions, with a successful Strength or Instinct Roll.</p>"
             }
-          ]
+          }
         },
         "BGE42W1XPd0vpimR": {
           "name": "High Tide",
@@ -2352,12 +2352,12 @@
               "description": "<p>Make a standard attack against a target within Melee range. On a success, the Ooze envelops them and the target must mark 2 Stress. The target must mark an additional Stress when they make an action roll. If the Ooze takes Severe damage, the target is freed.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "yk5kR5OVLCgDWfgY": {
               "name": "Envelop",
               "description": "<p>You must mark an additional Stress when you make an action roll. If the Ooze takes Severe damage, you are freed.</p>"
             }
-          ]
+          }
         },
         "qNhrEK2YF8e3ljU6": {
           "name": "Split",
@@ -2595,12 +2595,12 @@
               "description": "<p><strong>Spend a Fear</strong> to make a target Guilty in the eyes of the Seraph’s god until the Seraph is defeated. While Guilty, the target doesn’t gain Hope on a result with Hope. When the Seraph succeeds on a standard attack against a Guilty target, they deal Severe damage instead of their standard damage. The Seraph can only mark one target at a time.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "O8G0oOf9f3qzNOAT": {
               "name": "Guilty",
               "description": "<p>While Guilty, you don’t gain Hope on a result with Hope. </p>"
             }
-          ]
+          }
         },
         "Vrb8dIJcOJ3ClwO5": {
           "name": "God Rays",
@@ -2657,12 +2657,12 @@
               "name": "Attack"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "EwZ8owroJxFpg81e": {
               "name": "Envelop",
               "description": "<p>While Enveloped, you must mark an additional Stress every time you make an action roll. When the Ooze takes Severe damage, all Enveloped targets are freed and the condition is cleared.</p>"
             }
-          ]
+          }
         },
         "Mq90kFBM5ix2pzzh": {
           "name": "Split",
@@ -2718,12 +2718,12 @@
               "name": "Become Dazed"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "iBJ3YhEkVsGKEIVk": {
               "name": "Dazed",
               "description": "<p>While Dazed, they can’t use their Regeneration action but are immune to magic damage.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -2774,12 +2774,12 @@
               "description": "<p>Choose a target within Far range and temporarily Curse them. While the target is Cursed, you can <strong>mark a Stress</strong> when that target rolls with Hope to make the roll be with Fear instead.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "ihy3kvEGSOEKdNfT": {
               "name": "Curse",
               "description": "<p>Whenever you roll with Hope, the hexer can <strong>mark a stress</strong> to make the roll be with Fear instead.</p>"
             }
-          ]
+          }
         },
         "d8uVdKpTm9yw6TZS": {
           "name": "Chaotic Flux",
@@ -2820,11 +2820,11 @@
               "description": "<p>Make an attack against a target within Melee range. On a success, the target takes no damage but is Restrained and <em>Vulnerable</em>. The target can break free, clearing both conditions, with a successful Strength Roll or is freed automatically if the Kneebreaker takes Major or greater damage.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "d7sB1Qa1kJMnglqu": {
               "name": "Hold Them Down"
             }
-          ]
+          }
         }
       }
     },
@@ -2932,12 +2932,12 @@
               "description": "<p>Become <em>Hidden</em> until after the Shadow’s next attack. Attacks made while Hidden from this feature have advantage.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "w5VTwlHmUjl8XCQ4": {
               "name": "Cloaked",
               "description": "<p>Become <em>Hidden</em> until after the Shadow’s next attack. Attacks made while Hidden from this feature have advantage.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -2989,12 +2989,12 @@
               "description": "<p>Before the Flickerfly makes an attack, roll a d6. On a result of 4 or higher, the target’s Evasion is halved against this attack.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "pZUEkMkCus4U7h8W": {
               "name": "Peerless Accuracy",
               "description": "<p>Your evasion is halved against this attack.</p>"
             }
-          ]
+          }
         },
         "Bt7MqMkPpPpzWksK": {
           "name": "Mind Dance",
@@ -3038,22 +3038,22 @@
         "5ag5tOemPJToOoUq": {
           "name": "Chevalier",
           "description": "<p>While the Knight is on a mount, they gain a +2 bonus to their Difficulty. When they take Severe damage, they’re knocked from their mount and lose this benefit until they’re next spotlighted.</p>",
-          "effects": [
-            {
+          "effects": {
+            "w8wLcSsTiTU3mS7e": {
               "name": "Chevalier",
               "description": "<p>While the Knight is on a mount, they gain a +2 bonus to their Difficulty</p>"
             }
-          ]
+          }
         },
         "ErWO4lqni81aRo7k": {
           "name": "Heavily Armored",
           "description": "<p> When the Knight takes physical damage, reduce it by 3.</p>",
-          "effects": [
-            {
+          "effects": {
+            "xZjvrNRRjskY3n3j": {
               "name": "Heavily Armored",
               "description": "<p>When the Knight takes physical damage, reduce it by 3.</p>"
             }
-          ]
+          }
         },
         "djKDZawLnGF1zkbY": {
           "name": "Cavalry Charge",
@@ -3110,12 +3110,12 @@
               "name": "Attack"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "Xes6ZIE01CCN67KF": {
               "name": "Grapple and Drown",
               "description": "<p>You are <em>Restrained</em> and <em>Vulnerable</em> until you break free with a successful Strength Roll or the Kraken takes Major or greater damage. While <em>Restrained</em> and <em>Vulnerable</em> in this way, you must mark a Stress when you make an action roll.</p>"
             }
-          ]
+          }
         },
         "eksa3E2ecBgdib6h": {
           "name": "Boiling Blast",
@@ -3169,12 +3169,12 @@
               "description": "<p><strong>Mark a Stress</strong> to reveal a snare trap set anywhere on the battlefi eld by the Thief. All targets within Very Close range of the trap must succeed on an Agility Reaction Roll (13) or be pulled off their feet and suspended upside down. A target is Restrained and Vulnerable until they break free, ending both conditions, with a successful Finesse or Strength Roll (13).</p><p>@Template[type:rect|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "zMut1PRphlwE0xOa": {
               "name": "Escape Plan",
               "description": "<p>You are <em>Restrained</em> and <em>Vulnerable</em> until you break free, ending both conditions, with a successful Finesse or Strength Roll (13).</p><p>[[/dr trait=finesse difficulty=13]]<br />[[/dr trait=strength difficulty=13]]</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -3300,12 +3300,12 @@
         "4Rw5KC5klRseiLvn": {
           "name": "Arcane Form",
           "description": "<p>The Elemental is resistant to magic damage.</p>",
-          "effects": [
-            {
+          "effects": {
+            "vwc93gtzFoFZj4XT": {
               "name": "Arcane Form",
               "description": "<p>The Elemental is resistant to magic damage.</p>"
             }
-          ]
+          }
         },
         "oAxhAawgcK7DAdpa": {
           "name": "Sickening Flux",
@@ -3316,12 +3316,12 @@
               "description": "<p><strong>Mark a HP</strong> to force all targets within Close range to mark a Stress and become <em>Vulnerable</em> until their next rest or they clear a HP.</p><p>@Template[type:emanation|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "KIyV2eXDmmymXY5y": {
               "name": "Sickening Flux",
               "description": "<p><em>Vulnerable</em> until your next rest or you clear a HP.</p>"
             }
-          ]
+          }
         },
         "updQuIK8sybf4YmW": {
           "name": "Remake Reality",
@@ -3602,12 +3602,12 @@
               "description": "<p><strong>Spend a Fear</strong> to curse a target within Very Close range with a necrotic Deathlock until the end of the scene. Attacks made by the Hunter against a Deathlocked target deal direct damage. The Hunter can only maintain one Deathlock at a time.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "YznseQP43jNrk07h": {
               "name": "Deathlock",
               "description": "<p>Attacks made by the Hunter against a Deathlocked target deal direct damage.</p>"
             }
-          ]
+          }
         },
         "5AQTqW1GDidHfU3a": {
           "name": "Inevitable Death",
@@ -3664,12 +3664,12 @@
               "description": "<p><strong>Mark a Stress</strong> to Root the Treant in place. The Treant is Restrained while Rooted and can end this effect instead of moving while they are spotlighted. While Rooted the Treant has resistance to physical damage.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "3PY5KIG6d3dr3dty": {
               "name": "Take Root",
               "description": "<p><strong>Mark a Stress</strong> to Root the Treant in place. The Treant is Restrained while Rooted and can end this effect instead of moving while they are spotlighted. While Rooted the Treant has resistance to physical damage.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -3759,12 +3759,12 @@
               "description": "<p>When a target takes damage from the Abomination, they must make an Instinct Reaction Roll. On a failure, they gain disadvantage on their next action roll and you gain a Fear.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "rpkjVdlJYI5dB99B": {
               "name": "Disorienting Presence",
               "description": "<p>Disadvantage on your next action roll.</p>"
             }
-          ]
+          }
         },
         "K3MQO1I42nmfM2F2": {
           "name": "Reality Quake",
@@ -3775,12 +3775,12 @@
               "description": "<p><strong>Spend a Fear</strong> to rattle the edges of reality within Far range of the Abomination. All targets within that area must succeed on a Knowledge Reaction Roll or become Unstuck from reality until the end of the scene. When an Unstuck target spends Hope or marks Armor Slots, HP, or Stress, they must double the amount spent or marked.</p><p>@Template[type:emanation|range:f]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "edEZER9ImWicMwRb": {
               "name": "Unstuck From Reality",
               "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">Unstuck from reality until the end of the scene. When you spend Hope or mark Armor Slots, HP, or Stress, you must double the amount spent or marked.</p>"
             }
-          ]
+          }
         },
         "u9dR2Qh3swHZalXj": {
           "name": "Unreal Form",
@@ -3922,12 +3922,12 @@
               "description": "<p><strong>Mark a Stress </strong>to make a standard attack against all targets within Very Close range. Targets the Zombie succeeds against are <em>Vulnerable</em> until their next rest.</p><p>@Template[type:emanation|range:vc]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "Q5eeh0B6qaXFS1Ck": {
               "name": "Perfect Strike",
               "description": "<p><em>Vulnerable</em> until yournext rest.</p>"
             }
-          ]
+          }
         },
         "hWxjmdc1O5J1otLM": {
           "name": "Skilled Opportunist",
@@ -4122,12 +4122,12 @@
               "description": "<p>While Ignited, the target takes <strong>1d4</strong> magic damage when they make an action roll.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "9UBLk9M87VIUziAQ": {
               "name": "Ignited",
               "description": "<p>You are <em>Ignited</em> until you are extinguished with a successful Finesse Roll (14). While <em>Ignited</em>, you take <strong>1d4</strong> magic damage whenever you make an action roll.</p><p>[[/dr trait=finesse difficulty=14]]</p>"
             }
-          ]
+          }
         },
         "M9gAcPrgKfSg9Tjb": {
           "name": "Split",
@@ -4381,12 +4381,12 @@
               "description": "<p><strong>Spend a Fear</strong> to sing a song that affects all targets within Close range. Targets must succeed on an Instinct Reaction Roll or become Entranced until they mark 2 Stress. Other Sirens within Close range of the target can <strong>mark a Stress</strong> to each add a +1 bonus to the Difficulty of the reaction roll. While Entranced, a target can’t act and is <em>Vulnerable</em>.</p><p>@Template[type:emanation|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "xrm5786ckKbMYHjn": {
               "name": "Entranced",
               "description": "<p>While Entranced, you can’t act and are <em>Vulnerable</em>. </p>"
             }
-          ]
+          }
         }
       }
     },
@@ -4481,12 +4481,12 @@
         "ouvJweENF1kLYcOT": {
           "name": "Only Bones",
           "description": "<p>The Warrior is resistant to physical damage.</p>",
-          "effects": [
-            {
+          "effects": {
+            "zTepuF1Z5OObQdSi": {
               "name": "Only Bones",
               "description": "<p>The Warrior is resistant to physical damage.</p>"
             }
-          ]
+          }
         },
         "hYl31ThCmZdc0MFa": {
           "name": "Won't Stay Dead",
@@ -4520,12 +4520,12 @@
               "description": "<p><strong>Mark a Stress</strong> to move up to Close range through solid objects.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "xNkkl7nwKFkiB9Rv": {
               "name": "Ghost",
               "description": "<p>The Archer has resistance to physical damage.</p>"
             }
-          ]
+          }
         },
         "0h4IVmCgWXyQngAw": {
           "name": "Pick Your Target",
@@ -4559,12 +4559,12 @@
               "description": "<p><strong>Mark a Stress</strong> to move up to Close range through solid objects.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "kZhvwDvfcYQ10reO": {
               "name": "Ghost",
               "description": "<p>The Captain has resistance to physical damage.</p>"
             }
-          ]
+          }
         },
         "7YVe4DfEWMNLXNvu": {
           "name": "Unending Battle",
@@ -4618,12 +4618,12 @@
               "description": "<p><strong>Mark a Stress</strong> to move up to Close range through solid objects.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "QDXyAMk33kJGe6hU": {
               "name": "Ghost",
               "description": "<p>The Guardian has resistance to physical damage.</p>"
             }
-          ]
+          }
         },
         "L48tQmj5O3s2pjBn": {
           "name": "Ghost Blade",
@@ -4788,11 +4788,11 @@
               "description": "<p>While <em>Hidden</em>, <strong>mark a Stress</strong> to leap into Melee range with a target within Very Close range. The target must succeed on an Agility or Instinct Reaction Roll (15) or take <strong>2d8</strong> physical damage and become temporarily Restrained.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "6UgMuuJ8ZygbCsDh": {
               "name": "Rocky Ambush"
             }
-          ]
+          }
         },
         "9Z0i0uURfBMVIapJ": {
           "name": "Avalanche Roar",
@@ -4872,12 +4872,12 @@
               "description": "<p>When the Soldier makes a successful attack, you can <strong>mark a Stress</strong> to become Hidden until the Soldier’s next attack or a PC succeeds on an Instinct Roll (14) to find them.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "xyXPmPIOtqXYF1TJ": {
               "name": "Blend In",
               "description": "<p>Become Hidden until the Soldier’s next attack or a PC succeeds on an Instinct Roll (14) to fi nd them.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -4915,12 +4915,12 @@
               "description": "<p>When the Swarm succeeds on an attack, give the target a bramble token. If a target has any bramble tokens, they are Restrained. If a target has 3 or more bramble tokens, they are also Vulnerable. All bramble tokens can be removed by succeeding on a Finesse Roll (12 + the number of bramble tokens) or dealing Major or greater damage to the Swarm. If bramble tokens are removed from a target using a Finesse Roll, a number of Tangle Bramble Minions spawn within Melee range equal to the number of tokens removed.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "PdkhaTw2j15KJwBf": {
               "name": "Encumber",
               "description": "<p> If a target has any bramble tokens, they are Restrained. If a target has 3 or more bramble tokens, they are also Vulnerable. All bramble tokens can be removed by succeeding on a Finesse Roll (12 + the number of bramble tokens) or dealing Major or greater damage to the Swarm. If bramble tokens are removed from a target using a Finesse Roll, a number of Tangle Bramble Minions spawn within Melee range equal to the number of tokens removed.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -5059,12 +5059,12 @@
               "description": "<p><strong>Mark a Stress</strong> to make an attack against a target within Very Close range. On a success, the target is <em>Restrained</em> within the Gaoler until freed with a successful Strength Roll (18). While <em>Restrained</em>, the target can only attack the Gaoler. </p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "6TZlstmWJPbeoL7i": {
               "name": "Lock Up",
               "description": "<p>You are<strong> </strong><em>Restrained</em> within the Gaoler until freed with a successful Strength Roll (18). While <em>Restrained</em>, you can only attack the Gaoler. </p>"
             }
-          ]
+          }
         }
       }
     },
@@ -5087,12 +5087,12 @@
               "description": "<p><strong>Mark a Stress</strong> to choose a target within Very Close range to focus on. That target has disadvantage on attack rolls when they’re within Very Close range of the Sentinel. The Sentinel can only focus on one target at a time.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "Fo5bLYlmYGtQFAGg": {
               "name": "Box In",
               "description": "<p>You have<strong> </strong>disadvantage on attack rolls while you're within Very Close range of the Sentinel. The Sentinel can only focus on one target at a time.</p>"
             }
-          ]
+          }
         },
         "LVFZ4AfVhS6Q9hRy": {
           "name": "Mana Bolt",
@@ -5135,12 +5135,12 @@
               "description": "<p><strong>Spend a Fear</strong> to Mark a target within Far range until the Turret is destroyed or the Marked target becomes Hidden. While the target is Marked, their Evasion is halved.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "yQ85C0JHRG1pwu8a": {
               "name": "Marked",
               "description": "<p>Marked until the Turret is destroyed or you become <em>Hidden</em>. While you are Marked, your Evasion is halved.</p>"
             }
-          ]
+          }
         },
         "G7qZ9RHPyNns3axX": {
           "name": "Concentrate Fire",
@@ -5198,12 +5198,12 @@
         "jOojMjb779Kea1ZV": {
           "name": "Injured Wings",
           "description": "<p>While flying, the Ashen Tyrant gains a +1 bonus to their Difficulty.</p>",
-          "effects": [
-            {
+          "effects": {
+            "zCi90lgFAaA7yrJG": {
               "name": "Injured Wings",
               "description": "<p>While flying, the Ashen Tyrant gains a +1 bonus to their Difficulty.</p>"
             }
-          ]
+          }
         },
         "LeOYwp1GhN59NIHa": {
           "name": "Ashes to Ashes",
@@ -5248,12 +5248,12 @@
               "description": "<p>When the countdown triggers, the Ashen Tyrant thrashes about, causing environmental damage (such as an earthquake, avalanche, or collapsing walls). All targets within Far range must make a Strength Reaction Roll. Targets who fail take 2d10+10 physical damage and are Restrained by the rubble until they break free with a successful Strength Roll. Targets who succeed take half damage. If the Ashen Tyrant is defeated while this countdown is active, trigger the countdown immediately as the destruction caused by their death throes.</p><p>@Template[type:emanation|range:f]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "YUjdwrEZ4zn7WR9X": {
               "name": "Apocalyptic Thrasing",
               "description": "<p><em>Restrained</em> by the rubble until you break free with a successful Strength Roll.</p>"
             }
-          ]
+          }
         }
       }
     },
@@ -5315,12 +5315,12 @@
               "description": "<p>The Molten Scourge breathes a flow of lava in front of them within Far range. All targets in that area must make an Agility Reaction Roll. Targets who fail take <strong>2d10+4</strong> physical damage, mark <strong>1d4</strong> Stress, and are Vulnerable until they clear a Stress. Targets who succeed take half damage and must mark a Stress.</p><p>@Template[type:inFront|range:f]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "xmzA6NC9zrulhzQs": {
               "name": "Volcanic Breath",
               "description": "<p><em>Vulnerable</em> until you clear a Stress.</p>"
             }
-          ]
+          }
         },
         "3VdQdUDULZCQPvLZ": {
           "name": "Lava Splash",
@@ -5362,22 +5362,22 @@
         "oN5za5NKi2qAXJ0e": {
           "name": "Flying",
           "description": "<p> While flying, the Obsidian Predator gains a +3 bonus to their Difficulty.</p>",
-          "effects": [
-            {
+          "effects": {
+            "8o8yG73ZfrZ3hb5i": {
               "name": "Flying",
               "description": "<p>While flying, the Obsidian Predator gains a +3 bonus to their Difficulty.</p>"
             }
-          ]
+          }
         },
         "rh4cZ8EKTUmZ7Y6T": {
           "name": "Obsidian Scales",
           "description": "<p>The Obsidian Predator is resistant to physical damage.</p>",
-          "effects": [
-            {
+          "effects": {
+            "Jr9SlkRnkroulYhy": {
               "name": "Obsidian Scales",
               "description": "<p>The Obsidian Predator is resistant to physical damage.</p>"
             }
-          ]
+          }
         },
         "8bMOItTuL7PfAYcJ": {
           "name": "Avalanche Tail",
@@ -5388,12 +5388,12 @@
               "description": "<p><strong>Mark a Stress</strong> to make an attack against all targets within Close range. Targets the Obsidian Predator succeeds against take <strong>4d6+4</strong> physical damage and are knocked.</p><p>@Template[type:emanation|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "qtIaAZDW8QsjILgb": {
               "name": "Avalanche Tail",
               "description": "<p> <em>Vulnerable</em> until your next roll with Hope.</p>"
             }
-          ]
+          }
         },
         "5wLxyaWJuUhkx1EX": {
           "name": "Dive-Bomb",
@@ -5492,12 +5492,12 @@
               "description": "<p>Make a standard attack against a target. On a success, <strong>mark a Stress</strong> to Taunt the target until their next successful attack. The next time the Taunted target attacks, they have disadvantage against targets other than the Weaponmaster.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "j2jYmYbtWXvq32yX": {
               "name": "Taunted",
               "description": "<p>The next time the Taunted target attacks, they have disadvantage against targets other than the Weaponmaster.</p>"
             }
-          ]
+          }
         },
         "UsC0vtOBbf9Kut4v": {
           "name": "Adrenaline Burst",
@@ -5551,12 +5551,12 @@
               "description": "<p><strong>Spend a Fear</strong> to form a cage around a target within Very Close range and Restrain them until they’re freed with a successful Strength Roll. When a creature makes an action roll against the cage, they must mark a Stress.</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "k8LzBWRZo6VPqvpH": {
               "name": "Thorny Cage",
               "description": "<p>You are <em>Restrained</em> until you're freed with a successful Strength Roll. When a creature makes an action roll against the cage, they must mark a Stress. </p>"
             }
-          ]
+          }
         },
         "4f79icB7Dd1xLEZQ": {
           "name": "Momentum",
@@ -5614,12 +5614,12 @@
               "description": "<p><strong>Spend 2 Fear</strong> to release an icy whorl in front of the Dragon within Close range. All targets in this area must make an Agility Reaction Roll. Targets who fail take <strong>4d6+5</strong> magic damage and are Restrained by ice until they break free with a successful Strength Roll. Targets who succeed must mark 2 Stress or take half damage.</p><p>@Template[type:inFront|range:c]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "g9bUvmw3jet6T99e": {
               "name": "Blizzard Breath",
               "description": "<p><em>Restrained</em> by ice until you break free with a successful Strength Roll.</p>"
             }
-          ]
+          }
         },
         "CcRTxCDCJskiu3fI": {
           "name": "Avalanche",
@@ -5630,12 +5630,12 @@
               "description": "<p><strong>Spend a Fear</strong> to have the Dragon unleash a huge downfall of snow and ice, covering all other creatures within Far range. All targets within this area must succeed on an Instinct Reaction Roll or be buried in snow and rocks, becoming <em>Vulnerable</em> until they dig themselves out from the debris. For each PC that fails the reaction roll, you gain a Fear.</p><p>@Template[type:emanation|range:f]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "40cFHuNdEvbUZ9rs": {
               "name": "Avalance",
               "description": "<p><em>Vulnerable</em> until you dig yourself out from the debris.</p>"
             }
-          ]
+          }
         },
         "nXZHOfcYvjg3YMNU": {
           "name": "Frozen Scales",
@@ -5645,12 +5645,12 @@
               "name": "Damage"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "1JlRxa07i8T1a9x6": {
               "name": "Chilled",
               "description": "<p>Chilled until your next rest or you clear a Stress. While you are Chilled, you have disadvantage on attack rolls.</p>"
             }
-          ]
+          }
         },
         "QHdJgT2fvwqquyf7": {
           "name": "Momentum",
@@ -5677,12 +5677,12 @@
         "o1qQhASA882Fn9HN": {
           "name": "Unyielding",
           "description": "<p>The Legion has resistance to physical damage.</p>",
-          "effects": [
-            {
+          "effects": {
+            "D1lCoe9WVr6vYuD9": {
               "name": "Unyielding",
               "description": "<p>The Legion has resistance to physical damage.</p>"
             }
-          ]
+          }
         },
         "fCYLZKeTn0YSpVDI": {
           "name": "Relentless (2)",

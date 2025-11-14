@@ -13,30 +13,30 @@
   "entries": {
     "Advanced Chainmail Armor": {
       "name": "Advanced Chainmail Armor",
-      "effects": [
-        {
+      "effects": {
+        "qlzHOAnpBYzosQxK": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Advanced Full Plate Armor": {
       "name": "Advanced Full Plate Armor",
-      "effects": [
-        {
+      "effects": {
+        "awdHgEaM54G3emOU": {
           "name": "Very Heavy",
           "description": "-2 to Evasion; -1 to Agility"
         }
-      ]
+      }
     },
     "Advanced Gambeson Armor": {
       "name": "Advanced Gambeson Armor",
-      "effects": [
-        {
+      "effects": {
+        "Fq9Q93IHCchhfSss": {
           "name": "Flexible",
           "description": "+1 to Evasion"
         }
-      ]
+      }
     },
     "Advanced Leather Armor": {
       "name": "Advanced Leather Armor"
@@ -44,48 +44,48 @@
     "Bare Bones": {
       "name": "Bare Bones",
       "description": "<p></p><p class=\"Body-Foundation\">When you choose not to equip armor, you have a base Armor Score of 3 + your Strength and use the following as your base damage thresholds:</p><ul><li class=\"vertical-card-list-found\"><em><strong>Tier 1:</strong></em> 9/19</li><li class=\"vertical-card-list-found\"><em><strong>Tier 2:</strong></em> 11/24</li><li class=\"vertical-card-list-found\"><em><strong>Tier 3:</strong></em> 13/31</li><li class=\"vertical-card-list-found\"><em><strong>Tier 4:</strong></em> 15/38</li></ul>",
-      "effects": [
-        {
+      "effects": {
+        "8ze88zUwdkQSKKJq": {
           "name": "Bare Bones",
           "description": "<p></p><p class=\"Body-Foundation\">When you choose not to equip armor, you have a base Armor Score of 3 + your Strength and use the following as your base damage thresholds:</p><ul><li class=\"vertical-card-list-found\"><em><strong>Tier 1:</strong></em> 9/19</li><li class=\"vertical-card-list-found\"><em><strong>Tier 2:</strong></em> 11/24</li><li class=\"vertical-card-list-found\"><em><strong>Tier 3:</strong></em> 13/31</li><li class=\"vertical-card-list-found\"><em><strong>Tier 4:</strong></em> 15/38</li></ul>"
         }
-      ]
+      }
     },
     "Bellamoi Fine Armor": {
       "name": "Bellamoi Fine Armor",
-      "effects": [
-        {
+      "effects": {
+        "Hy0sNtFS1JAXxgwC": {
           "name": "Gilded",
           "description": "+1 to Presence"
         }
-      ]
+      }
     },
     "Bladefare Armor": {
       "name": "Bladefare Armor",
-      "effects": [
-        {
+      "effects": {
+        "s8KtTIngTjnOlaTP": {
           "name": "Physical",
           "description": "You can't mark an Armor Slot to reduce magic damage."
         }
-      ]
+      }
     },
     "Chainmail Armor": {
       "name": "Chainmail Armor",
-      "effects": [
-        {
+      "effects": {
+        "ZfO5NjpqEIzZVlPq": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Channeling Armor": {
       "name": "Channeling Armor",
-      "effects": [
-        {
+      "effects": {
+        "8bwf1Ri3jYkjphEv": {
           "name": "Channeling",
           "description": "+1 to Spellcast Rolls"
         }
-      ]
+      }
     },
     "Dragonscale Armor": {
       "name": "Dragonscale Armor"
@@ -95,126 +95,126 @@
     },
     "Elundrian Chain Mail": {
       "name": "Elundrian Chain Mail",
-      "effects": [
-        {
+      "effects": {
+        "xGxqTCO8MjNq5Cw6": {
           "name": "Warded",
           "description": "You reduce incoming magic damage by your Armor Score before applying it to your damage thresholds."
         }
-      ]
+      }
     },
     "Emberwoven Armor": {
       "name": "Emberwoven Armor"
     },
     "Full Fortified Armor": {
       "name": "Full Fortified Armor",
-      "effects": [
-        {
+      "effects": {
+        "QIefVb73cm9gYju8": {
           "name": "Fortified",
           "description": "When you mark an Armor Slot, you reduce the severity of an attack by two thresholds instead of one."
         }
-      ]
+      }
     },
     "Full Plate Armor": {
       "name": "Full Plate Armor",
-      "effects": [
-        {
+      "effects": {
+        "mfKMW9SX3Mnos1nY": {
           "name": "Very Heavy",
           "description": "-2 to Evasion; -1 to Agility"
         }
-      ]
+      }
     },
     "Gambeson Armor": {
       "name": "Gambeson Armor",
-      "effects": [
-        {
+      "effects": {
+        "v1FNEsypRF5W6vVc": {
           "name": "Flexible",
           "description": "+1 to Evasion"
         }
-      ]
+      }
     },
     "Harrowbone Armor": {
       "name": "Harrowbone Armor"
     },
     "Improved Chainmail Armor": {
       "name": "Improved Chainmail Armor",
-      "effects": [
-        {
+      "effects": {
+        "JHupzYULxdQzFzuj": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Improved Full Plate Armor": {
       "name": "Improved Full Plate Armor",
-      "effects": [
-        {
+      "effects": {
+        "wstJ1aKKtmXgCwxB": {
           "name": "Very Heavy",
           "description": "-2 to Evasion; -1 to Agility"
         }
-      ]
+      }
     },
     "Improved Gambeson Armor": {
       "name": "Improved Gambeson Armor",
-      "effects": [
-        {
+      "effects": {
+        "BFwU3ErPaajUSMUz": {
           "name": "Flexible",
           "description": "+1 to Evasion"
         }
-      ]
+      }
     },
     "Improved Leather Armor": {
       "name": "Improved Leather Armor"
     },
     "Irontree Breastplate Armor": {
       "name": "Irontree Breastplate Armor",
-      "effects": [
-        {
+      "effects": {
+        "P3aCN8PQgPXP4C9M": {
           "name": "Reinforced",
           "description": "<p>When you mark your last Armor Slot, increase your damage thresholds by +2 until you clear at least 1 Armor Slot.</p>"
         }
-      ]
+      }
     },
     "Leather Armor": {
       "name": "Leather Armor"
     },
     "Legendary Chainmail Armor": {
       "name": "Legendary Chainmail Armor",
-      "effects": [
-        {
+      "effects": {
+        "8Oa6Y375X8UpcPph": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Legendary Full Plate Armor": {
       "name": "Legendary Full Plate Armor",
-      "effects": [
-        {
+      "effects": {
+        "zvzkRX2Uevemmbz4": {
           "name": "Very Heavy",
           "description": "-2 to Evasion; -1 to Agility"
         }
-      ]
+      }
     },
     "Legendary Gambeson Armor": {
       "name": "Legendary Gambeson Armor",
-      "effects": [
-        {
+      "effects": {
+        "3AUNxBoj7mp1ziJQ": {
           "name": "Flexible",
           "description": "+1 to Evasion"
         }
-      ]
+      }
     },
     "Legendary Leather Armor": {
       "name": "Legendary Leather Armor"
     },
     "Monett's Cloak": {
       "name": "Monett's Cloak",
-      "effects": [
-        {
+      "effects": {
+        "3n4O7PyAWMEFdr5p": {
           "name": "Magical",
           "description": "You can't mark an Armor Slot to reduce physical damage."
         }
-      ]
+      }
     },
     "Rosewild Armor": {
       "name": "Rosewild Armor"
@@ -227,21 +227,21 @@
     },
     "Savior Chainmail": {
       "name": "Savior Chainmail",
-      "effects": [
-        {
+      "effects": {
+        "rkrqlwqtR9REgRx7": {
           "name": "Difficult",
           "description": "-1 to all character traits and Evasion"
         }
-      ]
+      }
     },
     "Spiked Plate Armor": {
       "name": "Spiked Plate Armor",
-      "effects": [
-        {
+      "effects": {
+        "V8CcTcVAIxHq8KNd": {
           "name": "Sharp",
           "description": "On a successful attack against a target within Melee range, add a d4 to the damage roll."
         }
-      ]
+      }
     },
     "Tyris Soft Armor": {
       "name": "Tyris Soft Armor"

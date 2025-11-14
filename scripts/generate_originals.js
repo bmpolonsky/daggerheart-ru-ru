@@ -90,6 +90,8 @@ const FILE_CONFIGS = [
   }
 ];
 
+const generationWarnings = [];
+
 async function main() {
   await ensureRemoteRepo();
   await fs.mkdir(ORIGINAL_DIR, { recursive: true });
@@ -109,6 +111,12 @@ async function main() {
   }
 
   console.log("Original snapshots updated.");
+  if (generationWarnings.length) {
+    console.warn("Получены предупреждения во время генерации:");
+    for (const warning of generationWarnings) {
+      console.warn(` - ${warning}`);
+    }
+  }
 }
 
 function buildOriginalPayload(label, translation, entries) {
@@ -265,7 +273,7 @@ async function buildItemEntries(relativePath, acceptedType) {
   return gatherEntries(relativePath, [acceptedType], (entry) => {
     const result = { name: entry.name };
     addDescription(result, entry.system?.description);
-    const effects = convertEffects(entry.effects || entry.system?.effects);
+    const effects = convertEffects(entry.effects || entry.system?.effects, `${relativePath}:${entry.name}`);
     if (effects) {
       result.effects = effects;
     }
@@ -378,7 +386,7 @@ function convertItemList(items) {
     if (actions) {
       child.actions = actions;
     }
-    const effects = convertEffects(item.effects);
+    const effects = convertEffects(item.effects, `item:${item._id}`);
     if (effects) {
       child.effects = effects;
     }
@@ -399,11 +407,11 @@ function convertExperiences(payload) {
   return Object.keys(result).length ? result : null;
 }
 
-function convertEffects(payload) {
+function convertEffects(payload, context = "effects") {
   if (!Array.isArray(payload) || !payload.length) return null;
-  const result = [];
-  for (const effect of payload) {
-    if (!effect) continue;
+  const result = {};
+  payload.forEach((effect, index) => {
+    if (!effect) return;
     const entry = {};
     if (effect.name) {
       entry.name = effect.name;
@@ -414,11 +422,42 @@ function convertEffects(payload) {
         entry.description = trimmed;
       }
     }
-    if (Object.keys(entry).length) {
-      result.push(entry);
+    if (!Object.keys(entry).length) return;
+    let effectId = typeof effect._id === "string" && effect._id.trim() ? effect._id.trim() : null;
+    if (!effectId) {
+      generationWarnings.push(
+        `Effect без _id (${entry.name || "без имени"}) в ${context}. Использую сгенерированный ключ.`
+      );
+      effectId = makeGeneratedEffectKey(entry.name, index, result);
+    } else if (Object.prototype.hasOwnProperty.call(result, effectId)) {
+      generationWarnings.push(
+        `Дублирующийся effect id ${effectId} в ${context}. Использую уникальный суффикс.`
+      );
+      effectId = makeGeneratedEffectKey(effectId, index, result, effectId);
     }
+    result[effectId] = entry;
+  });
+  return Object.keys(result).length ? result : null;
+}
+
+function makeGeneratedEffectKey(name, index, existing, baseOverride) {
+  const baseSlug = baseOverride || slugify(name) || `effect-${index + 1}`;
+  let candidate = baseSlug;
+  let suffix = 2;
+  while (Object.prototype.hasOwnProperty.call(existing, candidate)) {
+    candidate = `${baseSlug}-${suffix}`;
+    suffix += 1;
   }
-  return result.length ? result : null;
+  return candidate;
+}
+
+function slugify(text) {
+  if (!text) return "";
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/--+/g, "-");
 }
 
 function alignWithTemplate(template, source) {

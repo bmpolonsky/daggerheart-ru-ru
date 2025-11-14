@@ -20,21 +20,21 @@
     },
     "Aantari Bow": {
       "name": "Aantari Bow",
-      "effects": [
-        {
+      "effects": {
+        "nRNnU57i7RMJoklC": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Advanced Arcane-Frame Wheelchair": {
       "name": "Advanced Arcane-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "VnV5X9MBMabhz47b": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Advanced Arcane Gauntlets": {
       "name": "Advanced Arcane Gauntlets"
@@ -44,12 +44,12 @@
     },
     "Advanced Broadsword": {
       "name": "Advanced Broadsword",
-      "effects": [
-        {
+      "effects": {
+        "wu2AmDvgeWI3hmRQ": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Advanced Crossbow": {
       "name": "Advanced Crossbow"
@@ -71,30 +71,30 @@
     },
     "Advanced Greatstaff": {
       "name": "Advanced Greatstaff",
-      "effects": [
-        {
+      "effects": {
+        "sGVVxSM68Fmr1sSM": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Advanced Greatsword": {
       "name": "Advanced Greatsword",
-      "effects": [
-        {
+      "effects": {
+        "E0PjC15OP55vIype": {
           "name": "Massive",
           "description": "-1 to Evasion; on a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Advanced Halberd": {
       "name": "Advanced Halberd",
-      "effects": [
-        {
+      "effects": {
+        "pdRt0nO1ooGPO3cm": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Advanced Hallowed Axe": {
       "name": "Advanced Hallowed Axe"
@@ -107,24 +107,24 @@
     },
     "Advanced Heavy-Frame Wheelchair": {
       "name": "Advanced Heavy-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "1godgiqdDADyR0Tw": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Advanced Light-Frame Wheelchair": {
       "name": "Advanced Light-Frame Wheelchair"
     },
     "Advanced Longbow": {
       "name": "Advanced Longbow",
-      "effects": [
-        {
+      "effects": {
+        "CUpkNgCUE6CWAXc3": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Advanced Longsword": {
       "name": "Advanced Longsword"
@@ -143,12 +143,12 @@
     },
     "Advanced Round Shield": {
       "name": "Advanced Round Shield",
-      "effects": [
-        {
+      "effects": {
+        "i5HfkF5aKQuUCTEG": {
           "name": "Protective",
           "description": "<p>Add the item's Tier to your Armor Score</p>"
         }
-      ]
+      }
     },
     "Advanced Scepter": {
       "name": "Advanced Scepter"
@@ -161,57 +161,57 @@
     },
     "Advanced Shortsword": {
       "name": "Advanced Shortsword",
-      "effects": [
-        {
+      "effects": {
+        "zQMaG3JcUWJR9k2L": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Advanced Small Dagger": {
       "name": "Advanced Small Dagger",
-      "effects": [
-        {
+      "effects": {
+        "6tJmTBsumbPmEwkY": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Advanced Spear": {
       "name": "Advanced Spear"
     },
     "Advanced Tower Shield": {
       "name": "Advanced Tower Shield",
-      "effects": [
-        {
+      "effects": {
+        "87gedjJZGdFY81Mt": {
           "name": "Barrier",
           "description": "Gain Weapon Tier + 1 to Armor Score; -1 to Evasion"
         }
-      ]
+      }
     },
     "Advanced Wand": {
       "name": "Advanced Wand"
     },
     "Advanced Warhammer": {
       "name": "Advanced Warhammer",
-      "effects": [
-        {
+      "effects": {
+        "S6jedo3xSQhFBQH0": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Advanced Whip": {
       "name": "Advanced Whip"
     },
     "Arcane-Frame Wheelchair": {
       "name": "Arcane-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "dXHsy9qr5FWZqsVq": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Arcane Gauntlets": {
       "name": "Arcane Gauntlets"
@@ -239,30 +239,30 @@
     },
     "Bravesword": {
       "name": "Bravesword",
-      "effects": [
-        {
+      "effects": {
+        "lLM5uyDAGk3zVxoa": {
           "name": "Brave",
           "description": "-1 to Evasion; + Weapon Tier to Severe damage threshold"
         }
-      ]
+      }
     },
     "Broadsword": {
       "name": "Broadsword",
-      "effects": [
-        {
+      "effects": {
+        "mqcpj2cFAprf2AmY": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Buckler": {
       "name": "Buckler",
-      "effects": [
-        {
+      "effects": {
+        "Anbxt99bL9IWnlGh": {
           "name": "Deflecting",
           "description": "Gain a bonus to your Evasion equal to your Armor Score against the attack"
         }
-      ]
+      }
     },
     "Casting Sword": {
       "name": "Casting Sword"
@@ -272,12 +272,12 @@
     },
     "Curved Dagger": {
       "name": "Curved Dagger",
-      "effects": [
-        {
+      "effects": {
+        "X3a0PAJ9Tk4zVyxz": {
           "name": "Serrated",
           "description": "When you roll a 1 on a damage die, it deals 8 damage instead."
         }
-      ]
+      }
     },
     "Cutlass": {
       "name": "Cutlass"
@@ -290,12 +290,12 @@
     },
     "Double Flail": {
       "name": "Double Flail",
-      "effects": [
-        {
+      "effects": {
+        "DCie5eR1dZH2Qvln": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Dualstaff": {
       "name": "Dualstaff"
@@ -308,75 +308,75 @@
     },
     "Elder Bow": {
       "name": "Elder Bow",
-      "effects": [
-        {
+      "effects": {
+        "sZ1XotFlGdkPPDG4": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Extended Polearm": {
       "name": "Extended Polearm"
     },
     "Finehair Bow": {
       "name": "Finehair Bow",
-      "effects": [
-        {
+      "effects": {
+        "7bvIKGGQvmSGeg4O": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Firestaff": {
       "name": "Firestaff"
     },
     "Flickerfly Blade": {
       "name": "Flickerfly Blade",
-      "effects": [
-        {
+      "effects": {
+        "jMIrOhpPUncn7dWg": {
           "name": "Sharpwing",
           "description": "Gain a bonus to your damage rolls equal to your Agility."
         }
-      ]
+      }
     },
     "Floating Bladeshards": {
       "name": "Floating Bladeshards",
-      "effects": [
-        {
+      "effects": {
+        "T831j6kZiMnpMNmv": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Fusion Gloves": {
       "name": "Fusion Gloves",
-      "effects": [
-        {
+      "effects": {
+        "7ltP049dqxCaedyX": {
           "name": "Weapon Bond",
           "description": "Gain a bonus to your damage rolls equal to your level."
         }
-      ]
+      }
     },
     "Ghostblade": {
       "name": "Ghostblade"
     },
     "Gilded Bow": {
       "name": "Gilded Bow",
-      "effects": [
-        {
+      "effects": {
+        "zoWZsD4ogzfPSPi7": {
           "name": "Self Correcting",
           "description": "When you roll a 1 on a damage die, it deals 6 damage instead."
         }
-      ]
+      }
     },
     "Gilded Falchion": {
       "name": "Gilded Falchion",
-      "effects": [
-        {
+      "effects": {
+        "ir4iKLIQ4CH1Qckn": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Glowing Rings": {
       "name": "Glowing Rings"
@@ -386,39 +386,39 @@
     },
     "Greatbow": {
       "name": "Greatbow",
-      "effects": [
-        {
+      "effects": {
+        "K4VgrDjVj1U1m9Ie": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Greatstaff": {
       "name": "Greatstaff",
-      "effects": [
-        {
+      "effects": {
+        "904orawScurM9GjG": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Greatsword": {
       "name": "Greatsword",
-      "effects": [
-        {
+      "effects": {
+        "cffkpiwGpEGhjiUC": {
           "name": "Massive",
           "description": "-1 to Evasion; on a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Halberd": {
       "name": "Halberd",
-      "effects": [
-        {
+      "effects": {
+        "YxaGOWcQEesO9zPR": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Hallowed Axe": {
       "name": "Hallowed Axe"
@@ -443,12 +443,12 @@
     },
     "Heavy-Frame Wheelchair": {
       "name": "Heavy-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "1godgiqdDADyR0Tw": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Ilmari's Rifle": {
       "name": "Ilmari's Rifle"
@@ -458,12 +458,12 @@
     },
     "Improved Arcane-Frame Wheelchair": {
       "name": "Improved Arcane-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "1f6fFhOLwZrmA6e5": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Improved Arcane Gauntlets": {
       "name": "Improved Arcane Gauntlets"
@@ -473,12 +473,12 @@
     },
     "Improved Broadsword": {
       "name": "Improved Broadsword",
-      "effects": [
-        {
+      "effects": {
+        "228lcQpohdJ3Bbga": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Improved Crossbow": {
       "name": "Improved Crossbow"
@@ -500,30 +500,30 @@
     },
     "Improved Greatstaff": {
       "name": "Improved Greatstaff",
-      "effects": [
-        {
+      "effects": {
+        "hnayB09P25ZW3gVY": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Improved Greatsword": {
       "name": "Improved Greatsword",
-      "effects": [
-        {
+      "effects": {
+        "2nl35v8sPAudiOIb": {
           "name": "Massive",
           "description": "-1 to Evasion; on a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Improved Halberd": {
       "name": "Improved Halberd",
-      "effects": [
-        {
+      "effects": {
+        "POQepSxCro9T9OYT": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Improved Hallowed Axe": {
       "name": "Improved Hallowed Axe"
@@ -536,24 +536,24 @@
     },
     "Improved Heavy-Frame Wheelchair": {
       "name": "Improved Heavy-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "1godgiqdDADyR0Tw": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Improved Light-Frame Wheelchair": {
       "name": "Improved Light-Frame Wheelchair"
     },
     "Improved Longbow": {
       "name": "Improved Longbow",
-      "effects": [
-        {
+      "effects": {
+        "TC4yGDrnOisOpDQu": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Improved Longsword": {
       "name": "Improved Longsword"
@@ -572,12 +572,12 @@
     },
     "Improved Round Shield": {
       "name": "Improved Round Shield",
-      "effects": [
-        {
+      "effects": {
+        "cXWSV50apzaNQkdA": {
           "name": "Protective",
           "description": "<p>Add the item's Tier to your Armor Score</p>"
         }
-      ]
+      }
     },
     "Improved Scepter": {
       "name": "Improved Scepter"
@@ -590,57 +590,57 @@
     },
     "Improved Shortsword": {
       "name": "Improved Shortsword",
-      "effects": [
-        {
+      "effects": {
+        "UW2fqbhBqvnK1coG": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Improved Small Dagger": {
       "name": "Improved Small Dagger",
-      "effects": [
-        {
+      "effects": {
+        "PMXG4l85UkXRf41E": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Improved Spear": {
       "name": "Improved Spear"
     },
     "Improved Tower Shield": {
       "name": "Improved Tower Shield",
-      "effects": [
-        {
+      "effects": {
+        "tkNEA1PO3jEFhKCa": {
           "name": "Barrier",
           "description": "Gain Weapon Tier + 1 to Armor Score; -1 to Evasion"
         }
-      ]
+      }
     },
     "Improved Wand": {
       "name": "Improved Wand"
     },
     "Improved Warhammer": {
       "name": "Improved Warhammer",
-      "effects": [
-        {
+      "effects": {
+        "KvdwqkM3ErLxMzDq": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Improved Whip": {
       "name": "Improved Whip"
     },
     "Keeper's Staff": {
       "name": "Keeper's Staff",
-      "effects": [
-        {
+      "effects": {
+        "LvxPAfrKuRfgubGV": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Knuckle Blades": {
       "name": "Knuckle Blades"
@@ -650,21 +650,21 @@
     },
     "Labrys Axe": {
       "name": "Labrys Axe",
-      "effects": [
-        {
+      "effects": {
+        "qTxADRsQnKiYfOiQ": {
           "name": "Protective",
           "description": "Add your character's Tier to your Armor Score"
         }
-      ]
+      }
     },
     "Legendary Arcane-Frame Wheelchair": {
       "name": "Legendary Arcane-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "TvsoAiqHCwgtYat1": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Legendary Arcane Gauntlets": {
       "name": "Legendary Arcane Gauntlets"
@@ -674,12 +674,12 @@
     },
     "Legendary Broadsword": {
       "name": "Legendary Broadsword",
-      "effects": [
-        {
+      "effects": {
+        "ujb6VAqjyXmfnnjy": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Legendary Crossbow": {
       "name": "Legendary Crossbow"
@@ -701,30 +701,30 @@
     },
     "Legendary Greatstaff": {
       "name": "Legendary Greatstaff",
-      "effects": [
-        {
+      "effects": {
+        "OV1Ly7vX4owBUgLQ": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Legendary Greatsword": {
       "name": "Legendary Greatsword",
-      "effects": [
-        {
+      "effects": {
+        "oRCiXSElN5xufUfn": {
           "name": "Massive",
           "description": "-1 to Evasion; on a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Legendary Halberd": {
       "name": "Legendary Halberd",
-      "effects": [
-        {
+      "effects": {
+        "MmVRlnSLFWBfNJlB": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Legendary Hallowed Axe": {
       "name": "Legendary Hallowed Axe"
@@ -737,24 +737,24 @@
     },
     "Legendary Heavy-Frame Wheelchair": {
       "name": "Legendary Heavy-Frame Wheelchair",
-      "effects": [
-        {
+      "effects": {
+        "1godgiqdDADyR0Tw": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Legendary Light-Frame Wheelchair": {
       "name": "Legendary Light-Frame Wheelchair"
     },
     "Legendary Longbow": {
       "name": "Legendary Longbow",
-      "effects": [
-        {
+      "effects": {
+        "004BkCQeQzuMVGS3": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Legendary Longsword": {
       "name": "Legendary Longsword"
@@ -773,12 +773,12 @@
     },
     "Legendary Round Shield": {
       "name": "Legendary Round Shield",
-      "effects": [
-        {
+      "effects": {
+        "Z2p00q5h6x6seXys": {
           "name": "Protective",
           "description": "<p>Add the item's Tier to your Armor Score</p>"
         }
-      ]
+      }
     },
     "Legendary Scepter": {
       "name": "Legendary Scepter"
@@ -791,45 +791,45 @@
     },
     "Legendary Shortsword": {
       "name": "Legendary Shortsword",
-      "effects": [
-        {
+      "effects": {
+        "ebloMf4gItx38xkZ": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Legendary Small Dagger": {
       "name": "Legendary Small Dagger",
-      "effects": [
-        {
+      "effects": {
+        "WAqE3sZFkTefglDq": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Legendary Spear": {
       "name": "Legendary Spear"
     },
     "Legendary Tower Shield": {
       "name": "Legendary Tower Shield",
-      "effects": [
-        {
+      "effects": {
+        "lBJMzxdGO2nJdTQS": {
           "name": "Barrier",
           "description": "Gain Weapon Tier + 1 to Armor Score; -1 to Evasion"
         }
-      ]
+      }
     },
     "Legendary Wand": {
       "name": "Legendary Wand"
     },
     "Legendary Warhammer": {
       "name": "Legendary Warhammer",
-      "effects": [
-        {
+      "effects": {
+        "hKvwLqCltaPV1C7n": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "Legendary Whip": {
       "name": "Legendary Whip"
@@ -839,12 +839,12 @@
     },
     "Longbow": {
       "name": "Longbow",
-      "effects": [
-        {
+      "effects": {
+        "9gKDF96uId07289w": {
           "name": "Cumbersome",
           "description": "-1 to Finesse"
         }
-      ]
+      }
     },
     "Longsword": {
       "name": "Longsword"
@@ -854,12 +854,12 @@
     },
     "Mage Orb": {
       "name": "Mage Orb",
-      "effects": [
-        {
+      "effects": {
+        "2J6vzNUel78JFypp": {
           "name": "Powerful",
           "description": "On a successful attack, roll an additional damage die and discard the lowest result."
         }
-      ]
+      }
     },
     "Magus Revolver": {
       "name": "Magus Revolver"
@@ -869,24 +869,24 @@
     },
     "Midas Scythe": {
       "name": "Midas Scythe",
-      "effects": [
-        {
+      "effects": {
+        "1C5o1D5JYgLdt2eU": {
           "name": "Greed",
           "description": "Spend a handful of gold to gain a +1 bonus to your Proficiency on a damage roll."
         }
-      ]
+      }
     },
     "Parrying Dagger": {
       "name": "Parrying Dagger"
     },
     "Powered Gauntlet": {
       "name": "Powered Gauntlet",
-      "effects": [
-        {
+      "effects": {
+        "n5EB7pI0kv2Zx35G": {
           "name": "Charged",
           "description": "Mark a Stress to gain a +1 bonus to your Proficiency on a primary weapon attack."
         }
-      ]
+      }
     },
     "Primer Shard": {
       "name": "Primer Shard"
@@ -911,12 +911,12 @@
     },
     "Round Shield": {
       "name": "Round Shield",
-      "effects": [
-        {
+      "effects": {
+        "M70a81e0Mg66jHRL": {
           "name": "Protective",
           "description": "<p>Add the item's Tier to your Armor Score</p>"
         }
-      ]
+      }
     },
     "Runes of Ruination": {
       "name": "Runes of Ruination"
@@ -935,33 +935,33 @@
     },
     "Shortsword": {
       "name": "Shortsword",
-      "effects": [
-        {
+      "effects": {
+        "djNtNpasgNDRP8Dd": {
           "name": "Paired",
           "description": "<p>Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range</p>"
         }
-      ]
+      }
     },
     "Siphoning Gauntlets": {
       "name": "Siphoning Gauntlets"
     },
     "Sledge Axe": {
       "name": "Sledge Axe",
-      "effects": [
-        {
+      "effects": {
+        "dhhIibfRBwCGZ6Ab": {
           "name": "Destructive",
           "description": "DAGGERHEART.CONFIG.WeaponFeature.destructive.effects.agility"
         }
-      ]
+      }
     },
     "Small Dagger": {
       "name": "Small Dagger",
-      "effects": [
-        {
+      "effects": {
+        "HKh73AHxImdgxgTg": {
           "name": "Paired",
           "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
         }
-      ]
+      }
     },
     "Spear": {
       "name": "Spear"
@@ -971,12 +971,12 @@
     },
     "Spiked Shield": {
       "name": "Spiked Shield",
-      "effects": [
-        {
+      "effects": {
+        "d3TJtlpoHBCztbom": {
           "name": "Double Duty",
           "description": "+1 to Armor Score; +1 to primary weapon damage within Melee range"
         }
-      ]
+      }
     },
     "Steelforged Halberd": {
       "name": "Steelforged Halberd"
@@ -992,21 +992,21 @@
     },
     "Thistlebow": {
       "name": "Thistlebow",
-      "effects": [
-        {
+      "effects": {
+        "G9mMGxBSexwjWTYV": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Tower Shield": {
       "name": "Tower Shield",
-      "effects": [
-        {
+      "effects": {
+        "8r0TcKWXboFV0eqS": {
           "name": "Barrier",
           "description": "Gain Weapon Tier + 1 to Armor Score; -1 to Evasion"
         }
-      ]
+      }
     },
     "Urok Broadsword": {
       "name": "Urok Broadsword"
@@ -1016,33 +1016,33 @@
     },
     "Wand of Enthrallment": {
       "name": "Wand of Enthrallment",
-      "effects": [
-        {
+      "effects": {
+        "hrJJzzepVs2BPYf5": {
           "name": "Persuasive",
           "description": "Gain a +2 bonus to the Presence roll"
         }
-      ]
+      }
     },
     "Wand of Essek": {
       "name": "Wand of Essek"
     },
     "Warhammer": {
       "name": "Warhammer",
-      "effects": [
-        {
+      "effects": {
+        "HT0SAlTBGKwolAOp": {
           "name": "Heavy",
           "description": "-1 to Evasion"
         }
-      ]
+      }
     },
     "War Scythe": {
       "name": "War Scythe",
-      "effects": [
-        {
+      "effects": {
+        "cOYeI9TxHXpDwszu": {
           "name": "Reliable",
           "description": "+1 to attack rolls"
         }
-      ]
+      }
     },
     "Whip": {
       "name": "Whip"

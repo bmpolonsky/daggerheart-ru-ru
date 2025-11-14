@@ -5,7 +5,7 @@
     "impulses": "system.impulses",
     "items": {
       "path": "items",
-      "converter": "toEnvItems"
+      "converter": "toItemsWithActions"
     }
   },
   "folders": {
@@ -33,12 +33,12 @@
               "description": "<p>Pick a point within the grove. All targets within Very Close range of that point must succeed on an Agility Reaction Roll or take 1d8+3 physical damage and become Restrained by barbed vines. Restrained lasts until they’re freed with a successful Finesse or Strength roll or by dealing at least 6 damage to the vines.</p><p>@Template[type:rect|range:vc]</p>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "LSeftEwgBbXXkLw3": {
               "name": "Barbed Vines",
               "description": "<p><em>Restrained</em> lasts until you’re freed with a successful Finesse or Strength roll or by dealing at least 6 damage to the vines.</p>"
             }
-          ]
+          }
         },
         "uG5A2XQuUcPsXzgP": {
           "name": "You Are Not Welcome Here",
@@ -120,12 +120,12 @@
               "description": "<p>Animate vines bristling with thorns whip out from the underbrush to ensnare the PCs. A target must succeed on an Agility Reaction Roll or become <em>Restrained</em> and <em>Vulnerable</em> until they break free, clearing both conditions, with a successful Finesse or Strength Roll or by dealing 10 damage to the vines. When the target makes a roll to escape, they take <strong>1d8+4</strong> physical damage and lose a Hope.</p><section class=\"secret\" id=\"secret-MEwPtrJUdIHjgb1k\"><p><em>What painful memories do the vines bring to the surface as they pierce flesh?</em></p></section>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "gCkqvBUljsOsYacB": {
               "name": "Grasping Vines",
               "description": "<p><em>Restrained</em> and <em>Vulnerable</em> until you break free, clearing both conditions, with a successful Finesse or Strength Roll or by dealing 10 damage to the vines. When the target makes a roll to escape, they take <strong>1d8+4</strong> physical damage and lose a Hope.</p><section class=\"secret\" id=\"secret-Eui1zx8GKoUhEXq6\"><p><em>What painful memories do the vines bring to the surface as they pierce flesh?</em></p></section>"
             }
-          ]
+          }
         },
         "JKFkDvwUOP35Tsr1": {
           "name": "Charcoal Constructs",
@@ -350,15 +350,15 @@
               "description": "<p>A portion of the ritual’s power is diverted into a cult member to fight off interlopers. Choose one adversary to become Imbued with terrible magic until the scene ends or they’re defeated. An Imbued adversary immediately takes the spotlight and gains one of the following benefits, or all three if you <strong>spend a Fear</strong>:</p><ul><li><p>They gain advantage on all attacks.</p></li><li><p>They deal an extra <strong>1d10</strong> damage on a successful attack.</p></li><li><p>They gain the following feature: <strong>Relentless (2) - Passive</strong>. This adversary can be spotlighted up to two times per GM turn. Spend Fear as usual to spotlight them.</p></li></ul><section class=\"secret\" id=\"secret-5wFIFufzFAPrIDaq\"><p><em>How does the enemy change in appearance? What fears do their blows bring to the surface?</em></p></section>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "dYQBQq1xIysM0qLo": {
               "name": "Blashemous Might",
               "description": "<p>An Imbued adversary immediately takes the spotlight and gains one of the following benefits, or all three if you <strong>spend a Fear</strong>:</p><ul><li><p>They gain advantage on all attacks.</p></li><li><p>They deal an extra <strong>1d10</strong> damage on a successful attack.</p></li><li><p>They gain the following feature: <strong>Relentless (2) - Passive</strong>. This adversary can be spotlighted up to two times per GM turn. Spend Fear as usual to spotlight them.</p></li></ul><section class=\"secret\" id=\"secret-YOHA68Na64uXDAxu\"><p><em>How does the enemy change in appearance? What fears do their blows bring to the surface?</em></p></section>"
             },
-            {
+            "Hxw5lXE77bGzuaOu": {
               "name": "Blashemous Might - Damage"
             }
-          ]
+          }
         },
         "oFfu3hUhp4ta4qwT": {
           "name": "The Summoning",
@@ -412,15 +412,15 @@
               "description": "<p>If the Divine Siege Countdown (see “Beginning of the End”) has triggered, you can <strong>spend 3 Fear</strong> to describe the Usurper slaying one of the gods of the Hallows Above, feasting upon their power and growing stronger. The Usurper clears 2 HP. Increase their Difficulty, damage, attack modifier, or give them a new feature from the slain god. </p><section class=\"secret\" id=\"secret-SDqxukOa9Sz8zbGZ\"><p><em>Which god meets their end? What are their last words? How does the Usurper’s new stolen power manifest?</em></p></section>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "znFFS76Nopwb8Yi7": {
               "name": "Godslayer"
             },
-            {
+            "i3KYskkA9D4GHbXi": {
               "name": "Godslayer",
               "description": "<p>Increase their Difficulty, damage, attack modifier, or give them a new feature from the slain god.</p><section class=\"secret\" id=\"secret-BLw5aVqkkCtUQXnk\"><p><em>Which god meets their end? What are their last words? How does the Usurper’s new stolen power manifest?</em></p></section>"
             }
-          ]
+          }
         },
         "AJdG1krRvixBFCZG": {
           "name": "Beginning of the End",
@@ -507,12 +507,12 @@
               "description": "<p>Adversaries who appear here are of a ghostly form. They have resistance to physical damage and can <strong>mark a Stress</strong> to move up to Close range through solid objects.</p><section class=\"secret\" id=\"secret-Ol8146pzjrPjVjqt\"><p><em>What injuries to their physical form speak to their cause of death? What unfulfi lled purpose holds them in the Mortal Plane?</em></p></section>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "S9gl4jqdrziC1F0h": {
               "name": "Ghostly Form",
               "description": "<p>Adversaries who appear here are of a ghostly form. They have resistance to physical damage and can <strong>mark a Stress</strong> to move up to Close range through solid objects.</p><section class=\"secret\" id=\"secret-o5a4SMwemuVEfDMq\"><p><em>What injuries to their physical form speak to their cause of death? What unfulfi lled purpose holds them in the Mortal Plane?</em></p></section>"
             }
-          ]
+          }
         },
         "ZA2RzxH5FlnrcYLN": {
           "name": "Dead Ends",
@@ -783,12 +783,12 @@
               "description": "<p><strong>Spend a Fear</strong> to catch a PC in the undertow. They must make an Agility Reaction Roll. On a failure, they take <strong>1d6+1</strong> physical damage and are moved a Close distance down the river, becoming Vulnerable until they get out of the river. On a success, they must mark a Stress.</p><section class=\"secret\" id=\"secret-FmZbu6m2gtachqyE\"><p><em>What trinkets and baubles lie along the bottom of the riverbed? Do predators swim these rivers?</em></p></section>"
             }
           },
-          "effects": [
-            {
+          "effects": {
+            "T0ouSQyR8cVpAn79": {
               "name": "Undertow",
               "description": "<p><em>Vulnerable</em> until you get out of the river.</p>"
             }
-          ]
+          }
         },
         "SDTS3LOPMVJOt1S1": {
           "name": "Patient Hunter",

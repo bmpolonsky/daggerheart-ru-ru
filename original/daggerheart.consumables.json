@@ -15,21 +15,21 @@
     "Attune Potion": {
       "name": "Attune Potion",
       "description": "<p>You gain a +1 bonus to your next Instinct Roll.</p>",
-      "effects": [
-        {
+      "effects": {
+        "I5vgALTNDVApxy9d": {
           "name": "Attune Potion"
         }
-      ]
+      }
     },
     "Blinding Orb": {
       "name": "Blinding Orb",
       "description": "<p>You can activate this orb to create a flash of bright light. All targets within Close range become Vulnerable until they mark HP.</p><p>@Template[type:emanation|range:c]</p>",
-      "effects": [
-        {
+      "effects": {
+        "nryJhrF26hyFQUxH": {
           "name": "Blinding Orb",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You are Vulnerable until you mark a Hit Point.</p>"
         }
-      ]
+      }
     },
     "Blood of the Yorgi": {
       "name": "Blood of the Yorgi",
@@ -38,11 +38,11 @@
     "Bolster Potion": {
       "name": "Bolster Potion",
       "description": "<p>You gain a +1 bonus to your next Strength Roll.</p>",
-      "effects": [
-        {
+      "effects": {
+        "HVCJp9Tkhr1i4Oc1": {
           "name": "Bolster Potion"
         }
-      ]
+      }
     },
     "Bonding Honey": {
       "name": "Bonding Honey",
@@ -59,11 +59,11 @@
     "Charm Potion": {
       "name": "Charm Potion",
       "description": "<p>You gain a +1 bonus to your next Presence Roll.</p>",
-      "effects": [
-        {
+      "effects": {
+        "COrKb7gBin4Ro6r6": {
           "name": "Charm Potion"
         }
-      ]
+      }
     },
     "Circle of the Void": {
       "name": "Circle of the Void",
@@ -72,21 +72,21 @@
     "Control Potion": {
       "name": "Control Potion",
       "description": "<p>You gain a +1 bonus to your next Finesse Roll.</p>",
-      "effects": [
-        {
+      "effects": {
+        "1VAQYZ1YYc9ew9UR": {
           "name": "Control Potion"
         }
-      ]
+      }
     },
     "Death Tea": {
       "name": "Death Tea",
       "description": "<p>After you drink this tea, you instantly kill your target when you critically succeed on an attack. If you don’t critically succeed on an attack before your next long rest, you die.</p>",
-      "effects": [
-        {
+      "effects": {
+        "IqlpqsgurXsUEQhs": {
           "name": "Death Tea",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">After you drink this tea, you instantly kill your target when you critically succeed on an attack. If you don’t critically succeed on an attack before your next long rest, you die.</p>"
         }
-      ]
+      }
     },
     "Dragonbloom Tea": {
       "name": "Dragonbloom Tea",
@@ -99,11 +99,11 @@
     "Enlighten Potion": {
       "name": "Enlighten Potion",
       "description": "<p>You gain a +1 bonus to your next Knowledge Roll.</p>",
-      "effects": [
-        {
+      "effects": {
+        "QNzVrDW73jF1d5wE": {
           "name": "Enlighten Potion"
         }
-      ]
+      }
     },
     "Feast of Xuria": {
       "name": "Feast of Xuria",
@@ -112,41 +112,41 @@
     "Featherbone": {
       "name": "Featherbone",
       "description": "<p>You can use this bone to control your falling speed for a number of minutes equal to your level.</p>",
-      "effects": [
-        {
+      "effects": {
+        "VfJIJBW96e45xQHY": {
           "name": "Featherbone",
           "description": "<p>You can use this bone to control your falling speed for a number of minutes equal to your level.</p>"
         }
-      ]
+      }
     },
     "Gill Salve": {
       "name": "Gill Salve",
       "description": "<p>You can apply this salve to your neck to breathe underwater for a number of minutes equal to your level.</p>",
-      "effects": [
-        {
+      "effects": {
+        "5rL9CY5GO9SJcEZq": {
           "name": "Gill Salve",
           "description": "<p>You can apply this salve to your neck to breathe underwater for a number of minutes equal to your level.</p>"
         }
-      ]
+      }
     },
     "Grindletooth Venom": {
       "name": "Grindletooth Venom",
       "description": "<p>You can apply this venom to a weapon that deals physical damage to add a d6 to your next damage roll with that weapon.</p>",
-      "effects": [
-        {
+      "effects": {
+        "yx4ZkXeuXgw2KvV4": {
           "name": "Grindletooth Venom",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d6 additional physical damage on your next damage roll with the weapon the venom was applied to.</p>"
         }
-      ]
+      }
     },
     "Growing Potion": {
       "name": "Growing Potion",
       "description": "<p>You can drink this potion to double your size until you choose to drop this form or your next rest. While in this form, you have a +2 bonus to Strength and a +1 bonus to your Proficiency.</p>",
-      "effects": [
-        {
+      "effects": {
+        "YEGd74Lssj7rCmpF": {
           "name": "Growing Potion"
         }
-      ]
+      }
     },
     "Health Potion": {
       "name": "Health Potion",
@@ -155,12 +155,12 @@
     "Homet’s Secret Potion": {
       "name": "Homet’s Secret Potion",
       "description": "<p>After drinking this potion, the next successful attack you make critically succeeds.</p>",
-      "effects": [
-        {
+      "effects": {
+        "QyzXAnvho7lVQQtP": {
           "name": "Homet’s Secret Potion",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">The next successful attack you make critically succeeds.</p>"
         }
-      ]
+      }
     },
     "Hopehold Flare": {
       "name": "Hopehold Flare",
@@ -173,12 +173,12 @@
     "Improved Grindletooth Venom": {
       "name": "Improved Grindletooth Venom",
       "description": "<p>You can apply this venom to a weapon that deals physical damage to add a d8 to your next damage roll with that weapon.</p>",
-      "effects": [
-        {
+      "effects": {
+        "P7tbNjq58bQ9R1Cc": {
           "name": "Improved Grindletooth Venom",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d8 additional physical damage on your next damage roll with the weapon the venom was applied to.</p>"
         }
-      ]
+      }
     },
     "Jar of Lost Voices": {
       "name": "Jar of Lost Voices",
@@ -199,47 +199,47 @@
     "Major Attune Potion": {
       "name": "Major Attune Potion",
       "description": "<p>You gain a +1 bonus to your Instinct until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "v2EXGXbJaewaMxFC": {
           "name": "Major Attune Potion"
         }
-      ]
+      }
     },
     "Major Bolster Potion": {
       "name": "Major Bolster Potion",
       "description": "<p>You gain a +1 bonus to your Strength until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "3PfXBJy0ZjLBDAIn": {
           "name": "Major Bolster Potion"
         }
-      ]
+      }
     },
     "Major Charm Potion": {
       "name": "Major Charm Potion",
       "description": "<p>You gain a +1 bonus to your Presence until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "3iXv9QiuLGOfDCi2": {
           "name": "Major Charm Potion"
         }
-      ]
+      }
     },
     "Major Control Potion": {
       "name": "Major Control Potion",
       "description": "<p>You gain a +1 bonus to your Finesse until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "YOgojNdjARXUUrky": {
           "name": "Major Control Potion"
         }
-      ]
+      }
     },
     "Major Enlighten Potion": {
       "name": "Major Enlighten Potion",
       "description": "<p>You gain a +1 bonus to your Knowledge until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "Ul5brgnx88npVGNj": {
           "name": "Major Enlighten Potion"
         }
-      ]
+      }
     },
     "Major Health Potion": {
       "name": "Major Health Potion",
@@ -252,11 +252,11 @@
     "Major Stride Potion": {
       "name": "Major Stride Potion",
       "description": "<p>You gain a +1 bonus to your Agility until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "L9dAw8pws1o02XkE": {
           "name": "Major Stride Potion"
         }
-      ]
+      }
     },
     "Minor Health Potion": {
       "name": "Minor Health Potion",
@@ -273,51 +273,51 @@
     "Morphing Clay": {
       "name": "Morphing Clay",
       "description": "<p>You can spend a Hope to use this clay, altering your face enough to make you unrecognizable until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "rMno0zO5Cbwlu4zn": {
           "name": "Morphing Clay",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">Your face is unrecognizable until your next rest.</p>"
         }
-      ]
+      }
     },
     "Mythic Dust": {
       "name": "Mythic Dust",
       "description": "<p>You can apply this dust to a weapon that deals magic damage to add a d12 to your next damage roll with that weapon.</p>",
-      "effects": [
-        {
+      "effects": {
+        "L68lFhuWdS3ppDxR": {
           "name": "Mythic Dust",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d12 additional magical damage on your next damage roll with the weapon the venom was applied to.</p>"
         }
-      ]
+      }
     },
     "Ogre Musk": {
       "name": "Ogre Musk",
       "description": "<p>You can use this musk to prevent anyone from tracking you by mundane or magical means until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "n73d0J4oMCBIPWHN": {
           "name": "Ogre Musk",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You cannot be tracked by mundane or magical means until your next rest.</p>"
         }
-      ]
+      }
     },
     "Potion of Stability": {
       "name": "Potion of Stability",
       "description": "<p>You can drink this potion to choose one additional downtime move.</p>",
-      "effects": [
-        {
+      "effects": {
+        "PjjGC4TpzjSz9z8s": {
           "name": "Potion of Stability"
         }
-      ]
+      }
     },
     "Redthorn Saliva": {
       "name": "Redthorn Saliva",
       "description": "<p>You can apply this saliva to a weapon that deals physical damage to add a d12 to your next damage roll with that weapon.</p>",
-      "effects": [
-        {
+      "effects": {
+        "tWf00ezdpxQQLuZ1": {
           "name": "Redthorn Saliva",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d12 additional physical damage on your next damage roll with the weapon the saliva was applied to.</p>"
         }
-      ]
+      }
     },
     "Replication Parchment": {
       "name": "Replication Parchment",
@@ -326,11 +326,11 @@
     "Shrinking Potion": {
       "name": "Shrinking Potion",
       "description": "<p>You can drink this potion to halve your size until you choose to drop this form or your next rest. While in this form, you have a +2 bonus to Agility and a −1 penalty to your Proficiency.</p>",
-      "effects": [
-        {
+      "effects": {
+        "yaRLd7eHWYm2MHRM": {
           "name": "Shrinking Potion"
         }
-      ]
+      }
     },
     "Sleeping Sap": {
       "name": "Sleeping Sap",
@@ -351,11 +351,11 @@
     "Stride Potion": {
       "name": "Stride Potion",
       "description": "<p>You gain a +1 bonus to your next Agility Roll.</p>",
-      "effects": [
-        {
+      "effects": {
+        "xQ0xPDxskzZH4jeK": {
           "name": "Stride Potion"
         }
-      ]
+      }
     },
     "Sun Tree Sap": {
       "name": "Sun Tree Sap",
@@ -380,22 +380,22 @@
     "Vial of Moondrip": {
       "name": "Vial of Moondrip",
       "description": "<p>When you drink the contents of this vial, you can see in total darkness until your next rest.</p>",
-      "effects": [
-        {
+      "effects": {
+        "548KAUPcSbQLsivh": {
           "name": "Vial of Moondrip",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You can see in total darkness until your next rest.</p>"
         }
-      ]
+      }
     },
     "Wingsprout": {
       "name": "Wingsprout",
       "description": "<p>You gain magic wings that allow you to fly for a number of minutes equal to your level.</p>",
-      "effects": [
-        {
+      "effects": {
+        "80F8gAn7ejhhNL7R": {
           "name": "Wingsprout",
           "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You gain magic wings that allow you to fly for a number of minutes equal to your level.</p>"
         }
-      ]
+      }
     }
   }
 }

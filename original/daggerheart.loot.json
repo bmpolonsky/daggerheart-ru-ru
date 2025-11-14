@@ -6,7 +6,12 @@
   "entries": {
     "Airblade Charm": {
       "name": "Airblade Charm",
-      "description": "<p>You can attach this charm to a weapon with a Melee range. Three times per rest, you can activate the charm and attack a target within Close range.</p>"
+      "description": "<p>You can attach this charm to a weapon with a Melee range. Three times per rest, you can activate the charm and attack a target within Close range.</p>",
+      "actions": {
+        "nlAfmdgfHTmsOdPb": {
+          "name": "Activate"
+        }
+      }
     },
     "Alistair’s Torch": {
       "name": "Alistair’s Torch",
@@ -19,6 +24,11 @@
     "Arcane Prism": {
       "name": "Arcane Prism",
       "description": "<p>Position this prism in a location of your choosing and activate it. All allies within Close range of it gain a +1 bonus to their Spellcast Rolls. While activated, the prism can’t be moved. Once the prism is deactivated, it can’t be activated again until your next long rest.</p>",
+      "actions": {
+        "QgBDJh0laEvOB94w": {
+          "name": "Activate"
+        }
+      },
       "effects": {
         "Ee3Z0PnyERiNFgjU": {
           "name": "Arcane Prism"
@@ -38,6 +48,11 @@
     "Bag of Ficklesand": {
       "name": "Bag of Ficklesand",
       "description": "<p>You can convince this small bag of sand to be much heavier or lighter with a successful <code>[[/dr trait=\"presence\" difficulty=\"10\"]]</code>. Additionally, on a successful <code>[[/dr trait=\"finesse\" difficulty=\"10\"]]</code>, you can blow a bit of sand into a target’s face to make them temporarily Vulnerable.</p>",
+      "actions": {
+        "vPXp3uifPTpZxcvt": {
+          "name": "Blow Sand"
+        }
+      },
       "effects": {
         "Ouq3xWzj5rf6olVs": {
           "name": "Bag of Ficklesand"
@@ -46,7 +61,12 @@
     },
     "Belt of Unity": {
       "name": "Belt of Unity",
-      "description": "<p>Once per session, you can spend 5 Hope to lead a Tag Team Roll with three PCs instead of two.</p>"
+      "description": "<p>Once per session, you can spend 5 Hope to lead a Tag Team Roll with three PCs instead of two.</p>",
+      "actions": {
+        "SuaYNEUO9U9TIZWb": {
+          "name": "Use"
+        }
+      }
     },
     "Bloodstone": {
       "name": "Bloodstone",
@@ -64,11 +84,21 @@
     },
     "Box of Many Goods": {
       "name": "Box of Many Goods",
-      "description": "<p>Once per long rest, you can open this small box and roll a [[/r d12]]. On a result of 1–6, it’s empty. On a result of 7–10, it contains one random common consumable. On a result of 11–12, it contains two random common consumables.</p>"
+      "description": "<p>Once per long rest, you can open this small box and roll a [[/r d12]]. On a result of 1–6, it’s empty. On a result of 7–10, it contains one random common consumable. On a result of 11–12, it contains two random common consumables.</p>",
+      "actions": {
+        "lt1iEma1OVUNZ77o": {
+          "name": "Open"
+        }
+      }
     },
     "Calming Pendant": {
       "name": "Calming Pendant",
-      "description": "<p>When you would mark your last Stress, roll a [[/r d6]]. On a result of 5 or higher, don’t mark it.</p>"
+      "description": "<p>When you would mark your last Stress, roll a [[/r d6]]. On a result of 5 or higher, don’t mark it.</p>",
+      "actions": {
+        "wIlkGuUddWSUp4nN": {
+          "name": "Use"
+        }
+      }
     },
     "Charging Quiver": {
       "name": "Charging Quiver",
@@ -109,7 +139,12 @@
     },
     "Corrector Sprite": {
       "name": "Corrector Sprite",
-      "description": "<p>This tiny sprite sits in the curve of your ear canal and whispers helpful advice during combat. Once per short rest, you can gain advantage on an attack roll.</p>"
+      "description": "<p>This tiny sprite sits in the curve of your ear canal and whispers helpful advice during combat. Once per short rest, you can gain advantage on an attack roll.</p>",
+      "actions": {
+        "saCkJzt1fb9GnEre": {
+          "name": "Listen"
+        }
+      }
     },
     "Dual Flask": {
       "name": "Dual Flask",
@@ -118,6 +153,11 @@
     "Elusive Amulet": {
       "name": "Elusive Amulet",
       "description": "<p>Once per long rest, you can activate this amulet to become Hidden until you move. While Hidden in this way, you remain unseen even if an adversary moves to where they would normally see you.</p>",
+      "actions": {
+        "vitnEzfU3gCzsRem": {
+          "name": "Activate"
+        }
+      },
       "effects": {
         "YBkYjxU0Vn5JEsMK": {
           "name": "Elusive Amulet",
@@ -141,7 +181,12 @@
     },
     "Fire Jar": {
       "name": "Fire Jar",
-      "description": "<p>You can pour out the strange liquid contents of this jar to instantly produce fire. The contents regenerate when you take a long rest.</p>"
+      "description": "<p>You can pour out the strange liquid contents of this jar to instantly produce fire. The contents regenerate when you take a long rest.</p>",
+      "actions": {
+        "nzXMuxD8DpT1dMXF": {
+          "name": "Pour"
+        }
+      }
     },
     "Flickerfly Pendant": {
       "name": "Flickerfly Pendant",
@@ -178,6 +223,12 @@
     "Glamour Stone": {
       "name": "Glamour Stone",
       "description": "<p>Activate this pebble-sized stone to memorize the appearance of someone you can see. Spend a Hope to magically recreate this guise on yourself as an illusion.</p>",
+      "actions": {
+        "ATQgH12mufTOQLKs": {
+          "name": "Create Illusion",
+          "description": "<p>Activate this pebble-sized stone to memorize the appearance of someone you can see. Spend a Hope to magically recreate this guise on yourself as an illusion.</p>"
+        }
+      },
       "effects": {
         "K5SB6tfuDkdVaQYe": {
           "name": "Glamour Stone",
@@ -187,7 +238,12 @@
     },
     "Glider": {
       "name": "Glider",
-      "description": "<p>While falling, you can <strong>mark a Stress</strong> to deploy this small parachute and glide safely to the ground.</p>"
+      "description": "<p>While falling, you can <strong>mark a Stress</strong> to deploy this small parachute and glide safely to the ground.</p>",
+      "actions": {
+        "Adz50oihGEMJxbyA": {
+          "name": "Mark Stress"
+        }
+      }
     },
     "Greatstone": {
       "name": "Greatstone",
@@ -203,7 +259,15 @@
     },
     "Hopekeeper Locket": {
       "name": "Hopekeeper Locket",
-      "description": "<p>During a long rest, if you have 6 Hope, you can spend a Hope to imbue this locket with your bountiful resolve.</p><p>When you have 0 Hope, you can use the locket to immediately gain a Hope. The locket must be re-imbued before it can be used this way again.</p>"
+      "description": "<p>During a long rest, if you have 6 Hope, you can spend a Hope to imbue this locket with your bountiful resolve.</p><p>When you have 0 Hope, you can use the locket to immediately gain a Hope. The locket must be re-imbued before it can be used this way again.</p>",
+      "actions": {
+        "iwDm6P1ABr7vojGr": {
+          "name": "Imbue"
+        },
+        "xof31iSNIfxhbZH9": {
+          "name": "Use"
+        }
+      }
     },
     "Infinite Bag": {
       "name": "Infinite Bag",
@@ -235,7 +299,12 @@
     },
     "Paragon’s Chain": {
       "name": "Paragon’s Chain",
-      "description": "<p>As a downtime move, you can meditate on an ideal or principle you hold dear and focus your will into this chain.</p><p>Once per long rest, you can spend a Hope to roll a d20 as your Hope Die for rolls that directly align with that principle.</p>"
+      "description": "<p>As a downtime move, you can meditate on an ideal or principle you hold dear and focus your will into this chain.</p><p>Once per long rest, you can spend a Hope to roll a d20 as your Hope Die for rolls that directly align with that principle.</p>",
+      "actions": {
+        "esnUuqMcvyOvI6PV": {
+          "name": "Use"
+        }
+      }
     },
     "Phoenix Feather": {
       "name": "Phoenix Feather",
@@ -244,6 +313,12 @@
     "Piercing Arrows": {
       "name": "Piercing Arrows",
       "description": "<p>Three times per rest when you succeed on an attack with one of these arrows, you can add your Proficiency to the damage roll.</p>",
+      "actions": {
+        "DW5AqEM0F8XaUqpn": {
+          "name": "Use",
+          "description": "<p>Three times per rest when you succeed on an attack with one of these arrows, you can add your Proficiency to the damage roll.</p>"
+        }
+      },
       "effects": {
         "lRfqfbwlfxzPbE6U": {
           "name": "Piercing Arrows",
@@ -261,11 +336,22 @@
     },
     "Premium Bedroll": {
       "name": "Premium Bedroll",
-      "description": "<p>During downtime, you automatically clear a Stress.</p>"
+      "description": "<p>During downtime, you automatically clear a Stress.</p>",
+      "actions": {
+        "Xe0zhVbSzZLgX1nC": {
+          "name": "Take a nap"
+        }
+      }
     },
     "Ring of Resistance": {
       "name": "Ring of Resistance",
       "description": "<p>Once per long rest, you can activate this ring after a successful attack against you to halve the damage.</p>",
+      "actions": {
+        "4swwe8SZeh2KyPtl": {
+          "name": "Activate",
+          "description": "<p>Once per long rest, you can activate this ring after a successful attack against you to halve the damage.</p>"
+        }
+      },
       "effects": {
         "Sj7uGf560T7u4rlX": {
           "name": "Ring of Resistance",
@@ -276,6 +362,12 @@
     "Ring of Silence": {
       "name": "Ring of Silence",
       "description": "<p>Spend a Hope to activate this ring. Your footsteps are silent until your next rest.</p>",
+      "actions": {
+        "Y4mvuJ4tncrKhyjY": {
+          "name": "Activate",
+          "description": "<p><strong>Spend a Hope</strong> to activate this ring. Your footsteps are silent until your next rest.</p>"
+        }
+      },
       "effects": {
         "9JSLRu7amQ4iuIO7": {
           "name": "Ring of Silence",
@@ -285,15 +377,30 @@
     },
     "Ring of Unbreakable Resolve": {
       "name": "Ring of Unbreakable Resolve",
-      "description": "<p>Once per session, when the GM spends a Fear, you can spend 4 Hope to cancel the effects of that spent Fear.</p>"
+      "description": "<p>Once per session, when the GM spends a Fear, you can spend 4 Hope to cancel the effects of that spent Fear.</p>",
+      "actions": {
+        "R92d0DSVEwmqNJhM": {
+          "name": "Use"
+        }
+      }
     },
     "Shard of Memory": {
       "name": "Shard of Memory",
-      "description": "<p>Once per long rest, you can <strong>spend 2 Hope</strong> to recall a domain card from your vault instead of paying its Recall Cost.</p>"
+      "description": "<p>Once per long rest, you can <strong>spend 2 Hope</strong> to recall a domain card from your vault instead of paying its Recall Cost.</p>",
+      "actions": {
+        "YNRybKQC51muVHYH": {
+          "name": "Use"
+        }
+      }
     },
     "Skeleton Key": {
       "name": "Skeleton Key",
-      "description": "<p>When you use this key to open a locked door, you gain advantage on the Finesse Roll.</p>"
+      "description": "<p>When you use this key to open a locked door, you gain advantage on the Finesse Roll.</p>",
+      "actions": {
+        "lV6W9M1CX6N8jSpt": {
+          "name": "Use Key"
+        }
+      }
     },
     "Speaking Orbs": {
       "name": "Speaking Orbs",
@@ -324,6 +431,11 @@
     "Woven Net": {
       "name": "Woven Net",
       "description": "<p>You can make a Finesse Roll using this net to trap a small creature. A trapped target can break free with a successful Attack Roll (16).</p>",
+      "actions": {
+        "yv0l43uUDB2gWFd1": {
+          "name": "Throw"
+        }
+      },
       "effects": {
         "KjAianGutrQuJNs3": {
           "name": "Woven Net"

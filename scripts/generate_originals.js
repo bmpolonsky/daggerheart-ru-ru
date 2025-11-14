@@ -273,6 +273,10 @@ async function buildItemEntries(relativePath, acceptedType) {
   return gatherEntries(relativePath, [acceptedType], (entry) => {
     const result = { name: entry.name };
     addDescription(result, entry.system?.description);
+    const actions = convertActions(entry.system?.actions);
+    if (actions) {
+      result.actions = actions;
+    }
     const effects = convertEffects(entry.effects || entry.system?.effects, `${relativePath}:${entry.name}`);
     if (effects) {
       result.effects = effects;

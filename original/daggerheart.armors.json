@@ -88,10 +88,22 @@
       }
     },
     "Dragonscale Armor": {
-      "name": "Dragonscale Armor"
+      "name": "Dragonscale Armor",
+      "actions": {
+        "J1MCpcfXByKaSSgx": {
+          "name": "Impenetrable",
+          "description": "Once per short rest, when you would mark your last Hit Point, you can instead mark a Stress."
+        }
+      }
     },
     "Dunamis Silkchain": {
-      "name": "Dunamis Silkchain"
+      "name": "Dunamis Silkchain",
+      "actions": {
+        "8PD5JQuS05IA6HJT": {
+          "name": "Slow Time",
+          "description": "Mark an Armor Slot to roll a d4 and add its result as a bonus to your Evasion against an incoming attack."
+        }
+      }
     },
     "Elundrian Chain Mail": {
       "name": "Elundrian Chain Mail",
@@ -103,7 +115,13 @@
       }
     },
     "Emberwoven Armor": {
-      "name": "Emberwoven Armor"
+      "name": "Emberwoven Armor",
+      "actions": {
+        "L8mHf4A8SylyxsMH": {
+          "name": "Burn",
+          "description": "When an adversary attacks you within Melee range, they mark a Stress."
+        }
+      }
     },
     "Full Fortified Armor": {
       "name": "Full Fortified Armor",
@@ -133,7 +151,13 @@
       }
     },
     "Harrowbone Armor": {
-      "name": "Harrowbone Armor"
+      "name": "Harrowbone Armor",
+      "actions": {
+        "IzM88FIxQ35P5VB2": {
+          "name": "Resilient",
+          "description": "Before you mark your last Armor Slot, roll a d6. On a result of 6, reduce the severity by one threshold without marking an Armor Slot."
+        }
+      }
     },
     "Improved Chainmail Armor": {
       "name": "Improved Chainmail Armor",
@@ -217,13 +241,31 @@
       }
     },
     "Rosewild Armor": {
-      "name": "Rosewild Armor"
+      "name": "Rosewild Armor",
+      "actions": {
+        "QRTnCYxJfuJHdnyV": {
+          "name": "Hope",
+          "description": "When you would spend a Hope, you can mark an Armor Slot instead."
+        }
+      }
     },
     "Runes of Fortification": {
-      "name": "Runes of Fortification"
+      "name": "Runes of Fortification",
+      "actions": {
+        "37KLF2bim9nRdPTU": {
+          "name": "Pain",
+          "description": "Each time you mark an Armor Slot, you must mark a Stress."
+        }
+      }
     },
     "Runetan Floating Armor": {
-      "name": "Runetan Floating Armor"
+      "name": "Runetan Floating Armor",
+      "actions": {
+        "Nn33zCIcWe6LQMDH": {
+          "name": "Shift",
+          "description": "When you are targeted for an attack, you can mark an Armor Slot to give the attack roll against you disadvantage."
+        }
+      }
     },
     "Savior Chainmail": {
       "name": "Savior Chainmail",
@@ -244,10 +286,22 @@
       }
     },
     "Tyris Soft Armor": {
-      "name": "Tyris Soft Armor"
+      "name": "Tyris Soft Armor",
+      "actions": {
+        "Ch6IhuPewBeseGez": {
+          "name": "Quiet",
+          "description": "You gain a +2 bonus to rolls you make to move silently."
+        }
+      }
     },
     "Veritas Opal Armor": {
-      "name": "Veritas Opal Armor"
+      "name": "Veritas Opal Armor",
+      "actions": {
+        "sY3W5JYspN5Du5ag": {
+          "name": "Truthseeking",
+          "description": "This armor glows when another creature within Close range tells a lie."
+        }
+      }
     }
   }
 }

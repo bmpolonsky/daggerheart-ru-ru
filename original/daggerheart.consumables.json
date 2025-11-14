@@ -6,15 +6,33 @@
   "entries": {
     "Acidpaste": {
       "name": "Acidpaste",
-      "description": "<p>This paste eats away walls and other surfaces in bright flashes.</p>"
+      "description": "<p>This paste eats away walls and other surfaces in bright flashes.</p>",
+      "actions": {
+        "FQ2Ty0pP3z6JrBr6": {
+          "name": "Use",
+          "description": "<p>This paste eats away walls and other surfaces in bright flashes.</p>"
+        }
+      }
     },
     "Armor Stitcher": {
       "name": "Armor Stitcher",
-      "description": "<p>You can use this stitcher to spend any number of Hope and clear that many Armor Slots.</p>"
+      "description": "<p>You can use this stitcher to spend any number of Hope and clear that many Armor Slots.</p>",
+      "actions": {
+        "htoGx8qrv8trds81": {
+          "name": "Stitch",
+          "description": "<p>You can use this stitcher to spend any number of Hope and clear that many Armor Slots.</p>"
+        }
+      }
     },
     "Attune Potion": {
       "name": "Attune Potion",
       "description": "<p>You gain a +1 bonus to your next Instinct Roll.</p>",
+      "actions": {
+        "aiyNOQZbVpTDagXy": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your next Instinct Roll.</p>"
+        }
+      },
       "effects": {
         "I5vgALTNDVApxy9d": {
           "name": "Attune Potion"
@@ -24,6 +42,12 @@
     "Blinding Orb": {
       "name": "Blinding Orb",
       "description": "<p>You can activate this orb to create a flash of bright light. All targets within Close range become Vulnerable until they mark HP.</p><p>@Template[type:emanation|range:c]</p>",
+      "actions": {
+        "vk4dE0C8bjNdTwAF": {
+          "name": "Activate",
+          "description": "<p>You can activate this orb to create a flash of bright light. All targets within Close range become Vulnerable until they mark HP.</p><p>@Template[type:emanation|range:c]</p>"
+        }
+      },
       "effects": {
         "nryJhrF26hyFQUxH": {
           "name": "Blinding Orb",
@@ -33,11 +57,23 @@
     },
     "Blood of the Yorgi": {
       "name": "Blood of the Yorgi",
-      "description": "<p>You can drink this blood to disappear from where you are and immediately reappear at a point you can see within Very Far range.</p>"
+      "description": "<p>You can drink this blood to disappear from where you are and immediately reappear at a point you can see within Very Far range.</p>",
+      "actions": {
+        "6QGfkGkFqqzuVOOY": {
+          "name": "Drink",
+          "description": "<p>You can drink this blood to disappear from where you are and immediately reappear at a point you can see within Very Far range.</p>"
+        }
+      }
     },
     "Bolster Potion": {
       "name": "Bolster Potion",
       "description": "<p>You gain a +1 bonus to your next Strength Roll.</p>",
+      "actions": {
+        "YqbQKTgblItoZOm8": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your next Strength Roll.</p>"
+        }
+      },
       "effects": {
         "HVCJp9Tkhr1i4Oc1": {
           "name": "Bolster Potion"
@@ -46,19 +82,43 @@
     },
     "Bonding Honey": {
       "name": "Bonding Honey",
-      "description": "<p>This honey can be used to glue two objects together permanently.</p>"
+      "description": "<p>This honey can be used to glue two objects together permanently.</p>",
+      "actions": {
+        "SWrgUGHIWCXpED1b": {
+          "name": "Use",
+          "description": "<p>This honey can be used to glue two objects together permanently.</p>"
+        }
+      }
     },
     "Bridge Seed": {
       "name": "Bridge Seed",
-      "description": "<p>Thick vines grow from your location to a point of your choice within Far range, allowing you to climb up or across them. The vines dissipate on your next short rest.</p>"
+      "description": "<p>Thick vines grow from your location to a point of your choice within Far range, allowing you to climb up or across them. The vines dissipate on your next short rest.</p>",
+      "actions": {
+        "dk7fhkfA4m5lqNWB": {
+          "name": "Plant",
+          "description": "<p>Thick vines grow from your location to a point of your choice within Far range, allowing you to climb up or across them. The vines dissipate on your next short rest.</p>"
+        }
+      }
     },
     "Channelstone": {
       "name": "Channelstone",
-      "description": "<p>You can use this stone to take a spell or grimoire from your vault, use it once, and return it to your vault.</p>"
+      "description": "<p>You can use this stone to take a spell or grimoire from your vault, use it once, and return it to your vault.</p>",
+      "actions": {
+        "X4KtBG5Uve09hRoj": {
+          "name": "Use",
+          "description": "<p>You can use this stone to take a spell or grimoire from your vault, use it once, and return it to your vault.</p>"
+        }
+      }
     },
     "Charm Potion": {
       "name": "Charm Potion",
       "description": "<p>You gain a +1 bonus to your next Presence Roll.</p>",
+      "actions": {
+        "2trd3JYIb527LIrn": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your next Presence Roll.</p>"
+        }
+      },
       "effects": {
         "COrKb7gBin4Ro6r6": {
           "name": "Charm Potion"
@@ -67,11 +127,23 @@
     },
     "Circle of the Void": {
       "name": "Circle of the Void",
-      "description": "<p>Mark a Stress to create a void that extends up to Far range. No magic can be cast inside the void, and creatures within the void are immune to magic damage.</p>"
+      "description": "<p>Mark a Stress to create a void that extends up to Far range. No magic can be cast inside the void, and creatures within the void are immune to magic damage.</p>",
+      "actions": {
+        "ovR11FWCpXaFMPVx": {
+          "name": "Use",
+          "description": "<p>Mark a Stress to create a void that extends up to Far range. No magic can be cast inside the void, and creatures within the void are immune to magic damage.</p>"
+        }
+      }
     },
     "Control Potion": {
       "name": "Control Potion",
       "description": "<p>You gain a +1 bonus to your next Finesse Roll.</p>",
+      "actions": {
+        "l5dx5uYsH0btLDJq": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your next Finesse Roll.</p>"
+        }
+      },
       "effects": {
         "1VAQYZ1YYc9ew9UR": {
           "name": "Control Potion"
@@ -81,6 +153,12 @@
     "Death Tea": {
       "name": "Death Tea",
       "description": "<p>After you drink this tea, you instantly kill your target when you critically succeed on an attack. If you don’t critically succeed on an attack before your next long rest, you die.</p>",
+      "actions": {
+        "U7da5R4pgVkEQJVj": {
+          "name": "Drink",
+          "description": "<p>After you drink this tea, you instantly kill your target when you critically succeed on an attack. If you don’t critically succeed on an attack before your next long rest, you die.</p>"
+        }
+      },
       "effects": {
         "IqlpqsgurXsUEQhs": {
           "name": "Death Tea",
@@ -90,15 +168,33 @@
     },
     "Dragonbloom Tea": {
       "name": "Dragonbloom Tea",
-      "description": "<p>You can drink this tea to unleash a fiery breath attack. Make an Instinct Roll against all adversaries in front of you within Close range. Targets you succeed against take d20 physical damage using your Proficiency.</p>"
+      "description": "<p>You can drink this tea to unleash a fiery breath attack. Make an Instinct Roll against all adversaries in front of you within Close range. Targets you succeed against take d20 physical damage using your Proficiency.</p>",
+      "actions": {
+        "rcHEz3ImUDwo6lPC": {
+          "name": "Drink",
+          "description": "<p>You can drink this tea to unleash a fiery breath attack. Make an Instinct Roll against all adversaries in front of you within Close range. Targets you succeed against take d20 physical damage using your Proficiency.</p><p>@Template[type:emanation|range:c]</p>"
+        }
+      }
     },
     "Dripfang Poison": {
       "name": "Dripfang Poison",
-      "description": "<p>A creature who consumes this poison takes 8d10 direct magic damage.</p>"
+      "description": "<p>A creature who consumes this poison takes 8d10 direct magic damage.</p>",
+      "actions": {
+        "F8CUhhCuZMnXVCrw": {
+          "name": "Consume",
+          "description": "<p>A creature who consumes this poison takes 8d10 direct magic damage.</p>"
+        }
+      }
     },
     "Enlighten Potion": {
       "name": "Enlighten Potion",
       "description": "<p>You gain a +1 bonus to your next Knowledge Roll.</p>",
+      "actions": {
+        "F3K719gxEwQH697e": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your next Knowledge Roll.</p>"
+        }
+      },
       "effects": {
         "QNzVrDW73jF1d5wE": {
           "name": "Enlighten Potion"
@@ -107,11 +203,23 @@
     },
     "Feast of Xuria": {
       "name": "Feast of Xuria",
-      "description": "<p>You can eat this meal to clear all HP and Stress and gain 1d4 Hope.</p>"
+      "description": "<p>You can eat this meal to clear all HP and Stress and gain 1d4 Hope.</p>",
+      "actions": {
+        "TL1fJitAJmDzrnHT": {
+          "name": "Eat",
+          "description": "<p>You can eat this meal to clear all HP and Stress and gain 1d4 Hope.</p>"
+        }
+      }
     },
     "Featherbone": {
       "name": "Featherbone",
       "description": "<p>You can use this bone to control your falling speed for a number of minutes equal to your level.</p>",
+      "actions": {
+        "MC0EA6TDZpEHMz11": {
+          "name": "Use",
+          "description": "<p>You can use this bone to control your falling speed for a number of minutes equal to your level.</p>"
+        }
+      },
       "effects": {
         "VfJIJBW96e45xQHY": {
           "name": "Featherbone",
@@ -122,6 +230,12 @@
     "Gill Salve": {
       "name": "Gill Salve",
       "description": "<p>You can apply this salve to your neck to breathe underwater for a number of minutes equal to your level.</p>",
+      "actions": {
+        "57IIcyhEs2ByoENx": {
+          "name": "Apply",
+          "description": "<p>You can apply this salve to your neck to breathe underwater for a number of minutes equal to your level.</p>"
+        }
+      },
       "effects": {
         "5rL9CY5GO9SJcEZq": {
           "name": "Gill Salve",
@@ -132,6 +246,12 @@
     "Grindletooth Venom": {
       "name": "Grindletooth Venom",
       "description": "<p>You can apply this venom to a weapon that deals physical damage to add a d6 to your next damage roll with that weapon.</p>",
+      "actions": {
+        "BuzdaD4vLsbBS2gy": {
+          "name": "Apply",
+          "description": "<p>You can apply this venom to a weapon that deals physical damage to add a d6 to your next damage roll with that weapon.</p>"
+        }
+      },
       "effects": {
         "yx4ZkXeuXgw2KvV4": {
           "name": "Grindletooth Venom",
@@ -142,6 +262,12 @@
     "Growing Potion": {
       "name": "Growing Potion",
       "description": "<p>You can drink this potion to double your size until you choose to drop this form or your next rest. While in this form, you have a +2 bonus to Strength and a +1 bonus to your Proficiency.</p>",
+      "actions": {
+        "A8wHvMnKnewQ2J3m": {
+          "name": "Drink",
+          "description": "<p>You can drink this potion to double your size until you choose to drop this form or your next rest. While in this form, you have a +2 bonus to Strength and a +1 bonus to your Proficiency.</p>"
+        }
+      },
       "effects": {
         "YEGd74Lssj7rCmpF": {
           "name": "Growing Potion"
@@ -150,11 +276,23 @@
     },
     "Health Potion": {
       "name": "Health Potion",
-      "description": "<p>Clear 1d4+1 HP.</p>"
+      "description": "<p>Clear 1d4+1 HP.</p>",
+      "actions": {
+        "O5MYyHpkiEz9uf6A": {
+          "name": "Drink",
+          "description": "<p>Clear 1d4+1 HP.</p>"
+        }
+      }
     },
     "Homet’s Secret Potion": {
       "name": "Homet’s Secret Potion",
       "description": "<p>After drinking this potion, the next successful attack you make critically succeeds.</p>",
+      "actions": {
+        "NCcqIcPhEsUnFh7S": {
+          "name": "Drink",
+          "description": "<p>After drinking this potion, the next successful attack you make critically succeeds.</p>"
+        }
+      },
       "effects": {
         "QyzXAnvho7lVQQtP": {
           "name": "Homet’s Secret Potion",
@@ -164,15 +302,33 @@
     },
     "Hopehold Flare": {
       "name": "Hopehold Flare",
-      "description": "<p>When you use this flare, allies within Close range roll a d6 when they spend a Hope. On a result of 6, they gain the effect of that Hope without spending it. The flare lasts until the end of the scene.</p><p>@Template[type:emanation|range:c]</p>"
+      "description": "<p>When you use this flare, allies within Close range roll a d6 when they spend a Hope. On a result of 6, they gain the effect of that Hope without spending it. The flare lasts until the end of the scene.</p><p>@Template[type:emanation|range:c]</p>",
+      "actions": {
+        "hTF2K4uWcrUypLbs": {
+          "name": "Use",
+          "description": "<p>When you use this flare, allies within Close range roll a d6 when they spend a Hope. On a result of 6, they gain the effect of that Hope without spending it. The flare lasts until the end of the scene.</p><p>@Template[type:emanation|range:c]</p>"
+        }
+      }
     },
     "Improved Arcane Shard": {
       "name": "Improved Arcane Shard",
-      "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 2d20 magic damage.</p>"
+      "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 2d20 magic damage.</p>",
+      "actions": {
+        "g3sQoxS6sL3mut3u": {
+          "name": "Throw",
+          "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 2d20 magic damage.</p>"
+        }
+      }
     },
     "Improved Grindletooth Venom": {
       "name": "Improved Grindletooth Venom",
       "description": "<p>You can apply this venom to a weapon that deals physical damage to add a d8 to your next damage roll with that weapon.</p>",
+      "actions": {
+        "KhZ4WVT9cLA1a1y8": {
+          "name": "Apply",
+          "description": "<p>You can apply this venom to a weapon that deals physical damage to add a d8 to your next damage roll with that weapon.</p>"
+        }
+      },
       "effects": {
         "P7tbNjq58bQ9R1Cc": {
           "name": "Improved Grindletooth Venom",
@@ -182,23 +338,53 @@
     },
     "Jar of Lost Voices": {
       "name": "Jar of Lost Voices",
-      "description": "<p>You can open this jar to release a deafening echo of voices for a number of minutes equal to your Instinct. Creatures within Far range unprepared for the sound take 6d8 magic damage.</p><p>@Template[type:emanation|range:f]</p>"
+      "description": "<p>You can open this jar to release a deafening echo of voices for a number of minutes equal to your Instinct. Creatures within Far range unprepared for the sound take 6d8 magic damage.</p><p>@Template[type:emanation|range:f]</p>",
+      "actions": {
+        "QEk4TaJeN9FX8cZN": {
+          "name": "Open",
+          "description": "<p>You can open this jar to release a deafening echo of voices for a number of minutes equal to your Instinct. Creatures within Far range unprepared for the sound take 6d8 magic damage.</p><p>@Template[type:emanation|range:f]</p>"
+        }
+      }
     },
     "Jumping Root": {
       "name": "Jumping Root",
-      "description": "<p>Eat this root to leap up to Far range once without needing to roll.</p>"
+      "description": "<p>Eat this root to leap up to Far range once without needing to roll.</p>",
+      "actions": {
+        "TT4jzve7o2ykPcQO": {
+          "name": "Eat",
+          "description": "<p>Eat this root to leap up to Far range once without needing to roll.</p>"
+        }
+      }
     },
     "Knowledge Stone": {
       "name": "Knowledge Stone",
-      "description": "<p>If you die while holding this stone, an ally can take a card from your loadout to place in their loadout or vault. After they take this knowledge, the stone crumbles.</p>"
+      "description": "<p>If you die while holding this stone, an ally can take a card from your loadout to place in their loadout or vault. After they take this knowledge, the stone crumbles.</p>",
+      "actions": {
+        "We38aIuxBrv8zhfr": {
+          "name": "Use",
+          "description": "<p>If you die while holding this stone, an ally can take a card from your loadout to place in their loadout or vault. After they take this knowledge, the stone crumbles.</p>"
+        }
+      }
     },
     "Major Arcane Shard": {
       "name": "Major Arcane Shard",
-      "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 4d20 magic damage.</p>"
+      "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 4d20 magic damage.</p>",
+      "actions": {
+        "8JHqtEYD0uOGwHdd": {
+          "name": "Throw",
+          "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 4d20 magic damage.</p>"
+        }
+      }
     },
     "Major Attune Potion": {
       "name": "Major Attune Potion",
       "description": "<p>You gain a +1 bonus to your Instinct until your next rest.</p>",
+      "actions": {
+        "zerWKpcBvtiaUfaw": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your Instinct until your next rest.</p>"
+        }
+      },
       "effects": {
         "v2EXGXbJaewaMxFC": {
           "name": "Major Attune Potion"
@@ -208,6 +394,12 @@
     "Major Bolster Potion": {
       "name": "Major Bolster Potion",
       "description": "<p>You gain a +1 bonus to your Strength until your next rest.</p>",
+      "actions": {
+        "Z7ehTbRegQvq74tl": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your Strength until your next rest.</p>"
+        }
+      },
       "effects": {
         "3PfXBJy0ZjLBDAIn": {
           "name": "Major Bolster Potion"
@@ -217,6 +409,12 @@
     "Major Charm Potion": {
       "name": "Major Charm Potion",
       "description": "<p>You gain a +1 bonus to your Presence until your next rest.</p>",
+      "actions": {
+        "Bz6oZUN317mLvQSk": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your Presence until your next rest.</p>"
+        }
+      },
       "effects": {
         "3iXv9QiuLGOfDCi2": {
           "name": "Major Charm Potion"
@@ -226,6 +424,12 @@
     "Major Control Potion": {
       "name": "Major Control Potion",
       "description": "<p>You gain a +1 bonus to your Finesse until your next rest.</p>",
+      "actions": {
+        "fk272mE2zHIHq8qR": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your Finesse until your next rest.</p>"
+        }
+      },
       "effects": {
         "YOgojNdjARXUUrky": {
           "name": "Major Control Potion"
@@ -235,6 +439,12 @@
     "Major Enlighten Potion": {
       "name": "Major Enlighten Potion",
       "description": "<p>You gain a +1 bonus to your Knowledge until your next rest.</p>",
+      "actions": {
+        "cZL1A3hNXHbjfwi3": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your Knowledge until your next rest.</p>"
+        }
+      },
       "effects": {
         "Ul5brgnx88npVGNj": {
           "name": "Major Enlighten Potion"
@@ -243,15 +453,33 @@
     },
     "Major Health Potion": {
       "name": "Major Health Potion",
-      "description": "<p>Clear 1d4+2 HP.</p>"
+      "description": "<p>Clear 1d4+2 HP.</p>",
+      "actions": {
+        "Xm2ldAlmUQY4jlLb": {
+          "name": "Drink",
+          "description": "<p>Clear 1d4+2 HP.</p>"
+        }
+      }
     },
     "Major Stamina Potion": {
       "name": "Major Stamina Potion",
-      "description": "<p>Clear 1d4+2 Stress.</p>"
+      "description": "<p>Clear 1d4+2 Stress.</p>",
+      "actions": {
+        "3duuNVqCeQaUUKTo": {
+          "name": "Drink",
+          "description": "<p>Clear 1d4+2 Stress.</p>"
+        }
+      }
     },
     "Major Stride Potion": {
       "name": "Major Stride Potion",
       "description": "<p>You gain a +1 bonus to your Agility until your next rest.</p>",
+      "actions": {
+        "UIVnvI726LJnlK86": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your Agility until your next rest.</p>"
+        }
+      },
       "effects": {
         "L9dAw8pws1o02XkE": {
           "name": "Major Stride Potion"
@@ -260,19 +488,43 @@
     },
     "Minor Health Potion": {
       "name": "Minor Health Potion",
-      "description": "<p>Clear 1d4 HP.</p>"
+      "description": "<p>Clear 1d4 HP.</p>",
+      "actions": {
+        "9HVL2MPFX9VGiSsV": {
+          "name": "Drink",
+          "description": "<p>Clear 1d4 HP.</p>"
+        }
+      }
     },
     "Minor Stamina Potion": {
       "name": "Minor Stamina Potion",
-      "description": "<p>Clear 1d4 Stress.</p>"
+      "description": "<p>Clear 1d4 Stress.</p>",
+      "actions": {
+        "fdjpkjhzHQOrZPm0": {
+          "name": "Drink",
+          "description": "<p>Clear 1d4 Stress.</p>"
+        }
+      }
     },
     "Mirror of Marigold": {
       "name": "Mirror of Marigold",
-      "description": "<p>When you take damage, you can spend a Hope to negate that damage, after which the mirror shatters.</p>"
+      "description": "<p>When you take damage, you can spend a Hope to negate that damage, after which the mirror shatters.</p>",
+      "actions": {
+        "EPN43cQmNC97cCw9": {
+          "name": "Use",
+          "description": "<p>When you take damage, you can spend a Hope to negate that damage, after which the mirror shatters.</p>"
+        }
+      }
     },
     "Morphing Clay": {
       "name": "Morphing Clay",
       "description": "<p>You can spend a Hope to use this clay, altering your face enough to make you unrecognizable until your next rest.</p>",
+      "actions": {
+        "S4wEG1RzfLNtvcg7": {
+          "name": "Use",
+          "description": "<p>You can spend a Hope to use this clay, altering your face enough to make you unrecognizable until your next rest.</p>"
+        }
+      },
       "effects": {
         "rMno0zO5Cbwlu4zn": {
           "name": "Morphing Clay",
@@ -283,6 +535,12 @@
     "Mythic Dust": {
       "name": "Mythic Dust",
       "description": "<p>You can apply this dust to a weapon that deals magic damage to add a d12 to your next damage roll with that weapon.</p>",
+      "actions": {
+        "oHph7e6VrOwPetbE": {
+          "name": "Use",
+          "description": "<p>You can apply this dust to a weapon that deals magic damage to add a d12 to your next damage roll with that weapon.</p>"
+        }
+      },
       "effects": {
         "L68lFhuWdS3ppDxR": {
           "name": "Mythic Dust",
@@ -293,6 +551,12 @@
     "Ogre Musk": {
       "name": "Ogre Musk",
       "description": "<p>You can use this musk to prevent anyone from tracking you by mundane or magical means until your next rest.</p>",
+      "actions": {
+        "t0vgSnAuIcj7IevQ": {
+          "name": "Use",
+          "description": "<p>You can use this musk to prevent anyone from tracking you by mundane or magical means until your next rest.</p>"
+        }
+      },
       "effects": {
         "n73d0J4oMCBIPWHN": {
           "name": "Ogre Musk",
@@ -303,6 +567,12 @@
     "Potion of Stability": {
       "name": "Potion of Stability",
       "description": "<p>You can drink this potion to choose one additional downtime move.</p>",
+      "actions": {
+        "ifj42z5FhfMVyyd1": {
+          "name": "Drink",
+          "description": "<p>You can drink this potion to choose one additional downtime move.</p>"
+        }
+      },
       "effects": {
         "PjjGC4TpzjSz9z8s": {
           "name": "Potion of Stability"
@@ -312,6 +582,12 @@
     "Redthorn Saliva": {
       "name": "Redthorn Saliva",
       "description": "<p>You can apply this saliva to a weapon that deals physical damage to add a d12 to your next damage roll with that weapon.</p>",
+      "actions": {
+        "kOU2DpAIHvQsFY5A": {
+          "name": "Apply",
+          "description": "<p>You can apply this saliva to a weapon that deals physical damage to add a d12 to your next damage roll with that weapon.</p>"
+        }
+      },
       "effects": {
         "tWf00ezdpxQQLuZ1": {
           "name": "Redthorn Saliva",
@@ -321,11 +597,23 @@
     },
     "Replication Parchment": {
       "name": "Replication Parchment",
-      "description": "<p>By touching this piece of parchment to another, you can perfectly copy the second parchment’s contents. Once used, this parchment becomes mundane paper.</p>"
+      "description": "<p>By touching this piece of parchment to another, you can perfectly copy the second parchment’s contents. Once used, this parchment becomes mundane paper.</p>",
+      "actions": {
+        "j5gIVHXvcGu7PEZZ": {
+          "name": "Use",
+          "description": "<p>By touching this piece of parchment to another, you can perfectly copy the second parchment’s contents. Once used, this parchment becomes mundane paper.</p>"
+        }
+      }
     },
     "Shrinking Potion": {
       "name": "Shrinking Potion",
       "description": "<p>You can drink this potion to halve your size until you choose to drop this form or your next rest. While in this form, you have a +2 bonus to Agility and a −1 penalty to your Proficiency.</p>",
+      "actions": {
+        "F9vKFVwtJfR4Q8Kh": {
+          "name": "Drink",
+          "description": "<p>You can drink this potion to halve your size until you choose to drop this form or your next rest. While in this form, you have a +2 bonus to Agility and a −1 penalty to your Proficiency.</p>"
+        }
+      },
       "effects": {
         "yaRLd7eHWYm2MHRM": {
           "name": "Shrinking Potion"
@@ -334,23 +622,53 @@
     },
     "Sleeping Sap": {
       "name": "Sleeping Sap",
-      "description": "<p>You can drink this potion to fall asleep for a full night’s rest. You clear all Stress upon waking.</p>"
+      "description": "<p>You can drink this potion to fall asleep for a full night’s rest. You clear all Stress upon waking.</p>",
+      "actions": {
+        "0cqzI66ChzO6x8WF": {
+          "name": "Wake",
+          "description": "<p>You can drink this potion to fall asleep for a full night’s rest. You clear all Stress upon waking.</p>"
+        }
+      }
     },
     "Snap Powder": {
       "name": "Snap Powder",
-      "description": "<p>Mark a Stress and clear a HP.</p>"
+      "description": "<p>Mark a Stress and clear a HP.</p>",
+      "actions": {
+        "FVn1NAbzHHyX2lsM": {
+          "name": "Imbibe",
+          "description": "<p>Mark a Stress and clear a HP.</p>"
+        }
+      }
     },
     "Stamina Potion": {
       "name": "Stamina Potion",
-      "description": "<p>Clear 1d4+1 Stress.</p>"
+      "description": "<p>Clear 1d4+1 Stress.</p>",
+      "actions": {
+        "BnYXCo5zr50Sw8gj": {
+          "name": "Drink",
+          "description": "<p>Clear 1d4+1 Stress.</p>"
+        }
+      }
     },
     "Stardrop": {
       "name": "Stardrop",
-      "description": "<p>You can use this stardrop to summon a hailstorm of comets that deals 8d20 physical damage to all targets within Very Far range.</p><p>@Template[type:emanation|range:vf]</p>"
+      "description": "<p>You can use this stardrop to summon a hailstorm of comets that deals 8d20 physical damage to all targets within Very Far range.</p><p>@Template[type:emanation|range:vf]</p>",
+      "actions": {
+        "pt5U6hlyx4T7MUOa": {
+          "name": "Use",
+          "description": "<p>You can use this stardrop to summon a hailstorm of comets that deals 8d20 physical damage to all targets within Very Far range.</p><p>@Template[type:emanation|range:vf]</p>"
+        }
+      }
     },
     "Stride Potion": {
       "name": "Stride Potion",
       "description": "<p>You gain a +1 bonus to your next Agility Roll.</p>",
+      "actions": {
+        "GwQgdB3E1HogFKvD": {
+          "name": "Drink",
+          "description": "<p>You gain a +1 bonus to your next Agility Roll.</p>"
+        }
+      },
       "effects": {
         "xQ0xPDxskzZH4jeK": {
           "name": "Stride Potion"
@@ -359,27 +677,67 @@
     },
     "Sun Tree Sap": {
       "name": "Sun Tree Sap",
-      "description": "<p>Consume this sap to roll a [[/r d6]]. On a result of 5–6, clear 2 HP. On a result of 2–4, clear 3 Stress. On a result of 1, see through the veil of death and return changed, gaining one scar.</p>"
+      "description": "<p>Consume this sap to roll a [[/r d6]]. On a result of 5–6, clear 2 HP. On a result of 2–4, clear 3 Stress. On a result of 1, see through the veil of death and return changed, gaining one scar.</p>",
+      "actions": {
+        "Fh7OR8ZmiLNvRPHa": {
+          "name": "Consume",
+          "description": "<p>Consume this sap to roll a [[/r d6]]. On a result of 5–6, clear 2 HP. On a result of 2–4, clear 3 Stress. On a result of 1, see through the veil of death and return changed, gaining one scar.</p>"
+        }
+      }
     },
     "Sweet Moss": {
       "name": "Sweet Moss",
-      "description": "<p>You can consume this moss during a rest to clear 1d10 HP or 1d10 Stress.</p>"
+      "description": "<p>You can consume this moss during a rest to clear 1d10 HP or 1d10 Stress.</p>",
+      "actions": {
+        "Sft4HkhlqsYH5qKI": {
+          "name": "Clear Hit Points",
+          "description": "<p>You can consume this moss during a rest to clear 1d10 HP.</p>"
+        },
+        "IolxVguij8PjHSVt": {
+          "name": "Clear Stress",
+          "description": "<p>You can consume this moss during a rest to clear 1d10 Stress.</p>"
+        }
+      }
     },
     "Unstable Arcane Shard": {
       "name": "Unstable Arcane Shard",
-      "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 1d20 magic damage.</p>"
+      "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 1d20 magic damage.</p>",
+      "actions": {
+        "D7BTCUV5DOXmqC0l": {
+          "name": "Throw",
+          "description": "<p>You can make a Finesse Roll to throw this shard at a group of adversaries within Far range. Targets you succeed against take 1d20 magic damage.</p>"
+        }
+      }
     },
     "Varik Leaves": {
       "name": "Varik Leaves",
-      "description": "<p>You can eat these paired leaves to immediately gain 2 Hope.</p>"
+      "description": "<p>You can eat these paired leaves to immediately gain 2 Hope.</p>",
+      "actions": {
+        "9e4l2Yiy8uV26SQF": {
+          "name": "Eat",
+          "description": "<p>You can eat these paired leaves to immediately gain 2 Hope.</p>"
+        }
+      }
     },
     "Vial of Darksmoke": {
       "name": "Vial of Darksmoke",
-      "description": "<p>When an adversary attacks you, use  this vial and roll a number of d6s equal to your Agility. Add the highest result to your Evasion against the attack.</p>"
+      "description": "<p>When an adversary attacks you, use  this vial and roll a number of d6s equal to your Agility. Add the highest result to your Evasion against the attack.</p>",
+      "actions": {
+        "4nFnAoyH5dENizsx": {
+          "name": "Use",
+          "description": "<p>When an adversary attacks you, use this vial and roll a number of d6s equal to your Agility. Add the highest result to your Evasion against the attack.</p>"
+        }
+      }
     },
     "Vial of Moondrip": {
       "name": "Vial of Moondrip",
       "description": "<p>When you drink the contents of this vial, you can see in total darkness until your next rest.</p>",
+      "actions": {
+        "6Ny75zR1b8I8Ycsb": {
+          "name": "Drink",
+          "description": "<p>When you drink the contents of this vial, you can see in total darkness until your next rest.</p>"
+        }
+      },
       "effects": {
         "548KAUPcSbQLsivh": {
           "name": "Vial of Moondrip",
@@ -390,6 +748,12 @@
     "Wingsprout": {
       "name": "Wingsprout",
       "description": "<p>You gain magic wings that allow you to fly for a number of minutes equal to your level.</p>",
+      "actions": {
+        "HopgGHn12CHiDNuk": {
+          "name": "Use",
+          "description": "<p>You gain magic wings that allow you to fly for a number of minutes equal to your level.</p>"
+        }
+      },
       "effects": {
         "80F8gAn7ejhhNL7R": {
           "name": "Wingsprout",

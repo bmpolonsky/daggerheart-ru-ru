@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * Синхронизирует структуру локализаций с официальными оригиналами и нормализует эффекты.
+ * Синхронизирует структуру локализаций с официальными оригиналами.
  *
  * 1. module/i18n/systems/daggerheart.json сверяется с original/lang/en.json.
  * 2. Все файлы в module/translations приводятся к структуре файлов original/.
- * 3. Любые массивы effects конвертируются в объекты { effectId: effectData }, чтобы
- *    у переводов был стабильный ключ, как у Foundry EmbeddedCollection.
  */
 
 const fs = require("fs/promises");
@@ -58,8 +56,7 @@ async function listOriginalTranslationFiles() {
 }
 
 async function syncFile({ label, sourcePath, targetPath }) {
-  const sourceRaw = await readJson(sourcePath);
-  const source = normalizeEffectsDeep(sourceRaw);
+  const source = await readJson(sourcePath);
   if (!isPlainObject(source)) {
     throw new Error(`Source file ${sourcePath} должен содержать JSON-объект на верхнем уровне.`);
   }
@@ -69,9 +66,8 @@ async function syncFile({ label, sourcePath, targetPath }) {
   let hadInvalidShape = false;
   if (targetExists) {
     const parsed = await readJson(targetPath);
-    const normalized = normalizeEffectsDeep(parsed);
-    if (isPlainObject(normalized)) {
-      target = normalized;
+    if (isPlainObject(parsed)) {
+      target = parsed;
     } else {
       hadInvalidShape = true;
     }
@@ -140,50 +136,6 @@ function syncStructures(source, target, prefix, stats) {
       stats.replaced.push(fullKey);
     }
   }
-}
-
-function normalizeEffectsDeep(node) {
-  if (Array.isArray(node)) {
-    return node.map((entry) => normalizeEffectsDeep(entry));
-  }
-  if (!isPlainObject(node)) {
-    return node;
-  }
-  const result = {};
-  for (const [key, value] of Object.entries(node)) {
-    if (key === "effects" && Array.isArray(value)) {
-      const effectsObject = {};
-      for (const effect of value) {
-        if (!effect || typeof effect !== "object") continue;
-        const effectId = effect._id || generateEffectKey(effect, effectsObject);
-        effectsObject[effectId] = normalizeEffectsDeep(effect);
-      }
-      result.effects = effectsObject;
-    } else {
-      result[key] = normalizeEffectsDeep(value);
-    }
-  }
-  return result;
-}
-
-function generateEffectKey(effect, existing) {
-  const base = effect?.name ? slugify(effect.name) : "effect";
-  let suffix = 1;
-  let candidate = base;
-  while (Object.prototype.hasOwnProperty.call(existing, candidate)) {
-    suffix += 1;
-    candidate = `${base}_${suffix}`;
-  }
-  return candidate;
-}
-
-function slugify(text) {
-  if (!text) return "effect";
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/--+/g, "-") || "effect";
 }
 
 function getNodeKind(value) {

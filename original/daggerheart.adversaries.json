@@ -243,6 +243,11 @@
             }
           }
         }
+      },
+      "effects": {
+        "bq8hTzQoCXmA3xad": {
+          "name": "Horde"
+        }
       }
     },
     "Arch-Necromancer": {
@@ -314,7 +319,7 @@
           "actions": {
             "Gd70IsPckAFOw0ha": {
               "name": "Countdown",
-              "description": "<p><span style=\"color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\">Countdown (Loop 2d6). When the Necromancer has marked 6 or more of their HP, activate the countdown.</span></p>"
+              "description": "<p><span>Countdown (Loop 2d6). When the Necromancer has marked 6 or more of their HP, activate the countdown.</span></p>"
             },
             "YzepYov9vEMcBPU1": {
               "name": "Damage",
@@ -700,7 +705,7 @@
           "effects": {
             "4rj6PM0AGrrlbxSc": {
               "name": "Wards",
-              "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">The Skull is resistant to magic damage.</p>"
+              "description": "<p><span>The Skull is resistant to magic damage.</p>"
             }
           }
         },
@@ -1073,6 +1078,11 @@
             }
           }
         }
+      },
+      "effects": {
+        "dPZ7PwvTERjtG92P": {
+          "name": "Horde"
+        }
       }
     },
     "Demon of Avarice": {
@@ -1406,7 +1416,7 @@
             },
             "cpZ5c9d3opSA4BN9": {
               "name": "Damage",
-              "description": "<p><span style=\"color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\">All targets within the area take </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong>2d6+2</strong></span><span style=\"color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\"> physical damage when they act.</p>"
+              "description": "<p><span>All targets within the area take </span><span><strong>2d6+2</strong></span><span> physical damage when they act.</p>"
             }
           }
         },
@@ -1450,6 +1460,11 @@
               "description": "<p><strong>Mark a Stress</strong> to make a standard attack against all targets within Very Close range. You gain a Fear for each target that marks HP.</p>"
             }
           }
+        }
+      },
+      "effects": {
+        "xoal60Ed3Ih7saBJ": {
+          "name": "Horde"
         }
       }
     },
@@ -1988,6 +2003,11 @@
               "description": "<p>When the Mosquitoes’ attack causes a target to mark HP, you can <strong>mark a Stress</strong> to force the target to mark an additional HP.</p>"
             }
           }
+        }
+      },
+      "effects": {
+        "dQgcYTz5vmV25Y6G": {
+          "name": "Horde"
         }
       }
     },
@@ -3778,7 +3798,7 @@
           "effects": {
             "edEZER9ImWicMwRb": {
               "name": "Unstuck From Reality",
-              "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">Unstuck from reality until the end of the scene. When you spend Hope or mark Armor Slots, HP, or Stress, you must double the amount spent or marked.</p>"
+              "description": "<p><span>Unstuck from reality until the end of the scene. When you spend Hope or mark Armor Slots, HP, or Stress, you must double the amount spent or marked.</p>"
             }
           }
         },
@@ -4058,6 +4078,11 @@
               "description": "<p>When the Raiders mark 2 or fewer HP from an attack within Melee range, the attacker must mark a Stress.</p>"
             }
           }
+        }
+      },
+      "effects": {
+        "OU05YZwFQffawtna": {
+          "name": "Horde"
         }
       }
     },
@@ -4830,6 +4855,11 @@
           "name": "In Your Face",
           "description": "<p>All targets within Melee range have disadvantage on attacks against targets other than the Swarm.</p>"
         }
+      },
+      "effects": {
+        "FOV6AzngiR0PZyuN": {
+          "name": "Horde"
+        }
       }
     },
     "Sylvan Soldier": {
@@ -4921,6 +4951,11 @@
               "description": "<p> If a target has any bramble tokens, they are Restrained. If a target has 3 or more bramble tokens, they are also Vulnerable. All bramble tokens can be removed by succeeding on a Finesse Roll (12 + the number of bramble tokens) or dealing Major or greater damage to the Swarm. If bramble tokens are removed from a target using a Finesse Roll, a number of Tangle Bramble Minions spawn within Melee range equal to the number of tokens removed.</p>"
             }
           }
+        }
+      },
+      "effects": {
+        "ki4vrzrFcEYtGeJu": {
+          "name": "Horde"
         }
       }
     },
@@ -5704,6 +5739,11 @@
             }
           }
         }
+      },
+      "effects": {
+        "9D6SteWlhbfMPhvt": {
+          "name": "Horde"
+        }
       }
     },
     "Zombie Pack": {
@@ -5725,6 +5765,11 @@
               "description": "<p>When the Zombies mark HP from an attack within Melee range, you can <strong>mark a Stress</strong> to make a standard attack against the attacker.</p>"
             }
           }
+        }
+      },
+      "effects": {
+        "aWWZTlNS9zYoUay7": {
+          "name": "Horde"
         }
       }
     }

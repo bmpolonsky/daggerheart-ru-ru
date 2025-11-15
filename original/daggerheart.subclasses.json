@@ -35,6 +35,11 @@
           "name": "Mark Adversary",
           "description": "<p>When an adversary damages an ally within Melee range, you gain a +1 bonus to your Proficiency for the next successful attack you make against that adversary.</p>"
         }
+      },
+      "effects": {
+        "9Uo0yOYGn3vandPp": {
+          "name": "Act of Reprisal"
+        }
       }
     },
     "Adept": {
@@ -49,7 +54,13 @@
     },
     "Adrenaline": {
       "name": "Adrenaline",
-      "description": "<p>While you're Vulnerable, add your level to your damage rolls.</p>"
+      "description": "<p>While you're Vulnerable, add your level to your damage rolls.</p>",
+      "effects": {
+        "HMx9uZ54mvMiH95x": {
+          "name": "Adrenaline",
+          "description": "<p>While you're Vulnerable, add your level to your damage rolls.</p>"
+        }
+      }
     },
     "Advanced Training": {
       "name": "Advanced Training",
@@ -67,23 +78,53 @@
     },
     "Arcane Charge": {
       "name": "Arcane Charge",
-      "description": "<p>You can gather magical energy to enhance your capabilities. When you take magic damage, you become Charged. Alternatively, you can spend 2 Hope to become Charged. When you successfully make an attack that deals magic damage while Charged, you can clear your Charge to either gain a +10 bonus to the damage roll or gain a +3 bonus to the Difficulty of a reaction roll the spell causes the target to make. You stop being Charged at your next long rest.</p>"
+      "description": "<p>You can gather magical energy to enhance your capabilities. When you take magic damage, you become Charged. Alternatively, you can spend 2 Hope to become Charged. When you successfully make an attack that deals magic damage while Charged, you can clear your Charge to either gain a +10 bonus to the damage roll or gain a +3 bonus to the Difficulty of a reaction roll the spell causes the target to make. You stop being Charged at your next long rest.</p>",
+      "effects": {
+        "z49V45ir45HGHOBB": {
+          "name": "Charged",
+          "description": "<p>When you successfully make an attack that deals magic damage while Charged, you can clear your Charge to either gain a +10 bonus to the damage roll or gain a +3 bonus to the Difficulty of a reaction roll the spell causes the target to make. You stop being Charged at your next long rest.</p>"
+        }
+      }
     },
     "Ascendant": {
       "name": "Ascendant",
-      "description": "<p>Gain a permanent +4 bonus to your Severe damage threshold.</p>"
+      "description": "<p>Gain a permanent +4 bonus to your Severe damage threshold.</p>",
+      "effects": {
+        "7M8UsvVweRtT3E85": {
+          "name": "Ascendant",
+          "description": "<p><span>Gain a permanent +4 bonus to your Severe damage threshold.</p>"
+        }
+      }
     },
     "At Ease": {
       "name": "At Ease",
-      "description": "<p>Gain an additional Stress slot.</p>"
+      "description": "<p>Gain an additional Stress slot.</p>",
+      "effects": {
+        "xbS4Lr3dWpXUCHEi": {
+          "name": "At Ease",
+          "description": "<p>Gain an additional Stress slot.</p>"
+        }
+      }
     },
     "Battlemage": {
       "name": "Battlemage",
-      "description": "<p>You’ve focused your studies on becoming an unconquerable force on the battlefield. Gain an additional Hit Point slot.</p>"
+      "description": "<p>You’ve focused your studies on becoming an unconquerable force on the battlefield. Gain an additional Hit Point slot.</p>",
+      "effects": {
+        "6jjKzvBxAJTHHGoX": {
+          "name": "Battlemage",
+          "description": "<p>Gain an additional Hit Point slot.</p>"
+        }
+      }
     },
     "Battle-Bonded": {
       "name": "Battle-Bonded",
-      "description": "<p>When an adversary attacks you while they’re within your companion’s Melee range, you gain a +2 bonus to your Evasion against the attack.</p>"
+      "description": "<p>When an adversary attacks you while they’re within your companion’s Melee range, you gain a +2 bonus to your Evasion against the attack.</p>",
+      "effects": {
+        "IZhakv6EuG8DO4a3": {
+          "name": "Battle Bonded",
+          "description": "<p>When an adversary attacks you while they’re within your companion’s Melee range, you gain a +2 bonus to your Evasion against the attack.</p>"
+        }
+      }
     },
     "Battle Ritual": {
       "name": "Battle Ritual",
@@ -125,7 +166,13 @@
     },
     "Conjure Shield": {
       "name": "Conjure Shield",
-      "description": "<p>You can maintain a protective barrier of magic. While you have at least 2 Hope, you add your Proficiency to your Evasion. </p>"
+      "description": "<p>You can maintain a protective barrier of magic. While you have at least 2 Hope, you add your Proficiency to your Evasion. </p>",
+      "effects": {
+        "0i7GVOvjH6bK5AUM": {
+          "name": "Conjure Shield",
+          "description": "<p>While you have at least 2 Hope, you add your Proficiency to your Evasion.</p>"
+        }
+      }
     },
     "Contacts Everywhere": {
       "name": "Contacts Everywhere",
@@ -177,6 +224,16 @@
           "name": "Bonus to Damage",
           "description": "<p>S<strong>pend a Hope</strong> and describe how your control over this element helps an action roll you’re about to make, gain a +3 bonus to the roll’s damage.</p>"
         }
+      },
+      "effects": {
+        "EY87mY6ULfIt3XC8": {
+          "name": "Bonus to Roll",
+          "description": "<p>+2 to an action roll</p>"
+        },
+        "WwibpgaO6Kkks7aZ": {
+          "name": "Bonus to Damage",
+          "description": "<p>+3 to damage</p>"
+        }
       }
     },
     "Elemental Aura": {
@@ -198,6 +255,20 @@
         "hAsKFFewtTqd1gg9": {
           "name": "Air",
           "description": "<p>When you or an ally takes damage from an attack beyond Melee range, reduce the damage by 1d8.</p>"
+        }
+      },
+      "effects": {
+        "WRuijfHxmUscAa69": {
+          "name": "Elemental Aura (Earth)"
+        },
+        "H7W52ps5d3UGmaFr": {
+          "name": "Elemental Aura (Water)"
+        },
+        "WX5AMEpmUAutB9Hm": {
+          "name": "Elemental Aura (Fire)"
+        },
+        "mJBA2QTyM9SM5NVS": {
+          "name": "Elemental Aura (Air)"
         }
       }
     },
@@ -221,6 +292,23 @@
           "name": "Air",
           "description": "<p>You gain a +1 bonus to your Evasion and can fly.</p>"
         }
+      },
+      "effects": {
+        "FoBFRSXRfGa1zkiX": {
+          "name": "Elemental Dominion (Fire)",
+          "description": "<p>You gain a +1 bonus to your Proficiency for attacks and spells that deal damage.</p>"
+        },
+        "bGwFZZT4juuaIRmZ": {
+          "name": "Elemental Dominion (Water)",
+          "description": "<p>When an attack against you succeeds, you can mark a Stress to make the attacker temporarily Vulnerable.</p>"
+        },
+        "edF2zvvlcGf54r2n": {
+          "name": "Elemental Dominion (Air)",
+          "description": "<p>You gain a +1 bonus to your Evasion and can fly</p>"
+        },
+        "p5FoUb4JKQFP405d": {
+          "name": "Elemental Dominion (Earth)"
+        }
       }
     },
     "Elemental Incarnation": {
@@ -243,6 +331,21 @@
           "name": "Air",
           "description": "<p>You can hover, gaining advantage on Agility Rolls.</p>"
         }
+      },
+      "effects": {
+        "7xyUtUbBk5jbNnqY": {
+          "name": "Elemental Incarnation (Earth)"
+        },
+        "3ck6CeapLxQVjE2W": {
+          "name": "Elemental Incarnation (Air)",
+          "description": "<p>You can hover, gaining advantage on Agility Rolls.</p>"
+        },
+        "Jy6dpEbzkZ2eRDf5": {
+          "name": "Elemental Incarnation (Water)"
+        },
+        "ANle8tuOEZIevTWv": {
+          "name": "Elemental Incarnation (Fire)"
+        }
       }
     },
     "Eloquent": {
@@ -256,7 +359,13 @@
     },
     "Elusive Predator": {
       "name": "Elusive Predator",
-      "description": "<p>When your Focus makes an attack against you, you gain a +2 bonus to your Evasion against the attack.</p>"
+      "description": "<p>When your Focus makes an attack against you, you gain a +2 bonus to your Evasion against the attack.</p>",
+      "effects": {
+        "X4llFOcAcdJLbear": {
+          "name": "Elusive Predator",
+          "description": "<p>When your Focus makes an attack against you, you gain a +2 bonus to your Evasion against the attack.</p>"
+        }
+      }
     },
     "Enchanted Aid": {
       "name": "Enchanted Aid",
@@ -270,11 +379,23 @@
     },
     "Epic Poetry": {
       "name": "Epic Poetry",
-      "description": "<p>Your Rally Die increases to a d10. Additionally, when you Help an Ally, you can narrate the moment as if you were writing the tale of their heroism in a memoir. When you do, roll a d10 as your advantage die.</p>"
+      "description": "<p>Your Rally Die increases to a d10. Additionally, when you Help an Ally, you can narrate the moment as if you were writing the tale of their heroism in a memoir. When you do, roll a d10 as your advantage die.</p>",
+      "effects": {
+        "RSmscgGyuHJucF6C": {
+          "name": "Rally:d10",
+          "description": "<p>Rally die increased to d10.</p>"
+        }
+      }
     },
     "Ethereal Visage": {
       "name": "Ethereal Visage",
-      "description": "<p>Your supernatural visage strikes awe and fear. While flying, you have advantage on Presence Rolls. When you succeed with Hope on a Presence Roll, you can remove a Fear from the GM’s Fear pool instead of gaining Hope.</p>"
+      "description": "<p>Your supernatural visage strikes awe and fear. While flying, you have advantage on Presence Rolls. When you succeed with Hope on a Presence Roll, you can remove a Fear from the GM’s Fear pool instead of gaining Hope.</p>",
+      "effects": {
+        "Ns1DcQ8wo47LhlL3": {
+          "name": "Ethereal Visage",
+          "description": "<p><span>While flying, you have advantage on Presence Rolls.</p>"
+        }
+      }
     },
     "Expert Training": {
       "name": "Expert Training",
@@ -286,7 +407,13 @@
     },
     "Fleeting Shadow": {
       "name": "Fleeting Shadow",
-      "description": "<p>Gain a permanent +1 bonus to your Evasion. You can use your “Shadow Stepper” feature to move within Very Far range.</p>"
+      "description": "<p>Gain a permanent +1 bonus to your Evasion. You can use your “Shadow Stepper” feature to move within Very Far range.</p>",
+      "effects": {
+        "hsEwoHkNr2qVwm2H": {
+          "name": "Fleeting Shadow",
+          "description": "<p>Gain a permanent +1 bonus to your Evasion. You can use your “Shadow Stepper” feature to move within Very Far range.</p>"
+        }
+      }
     },
     "Fueled by Fear": {
       "name": "Fueled by Fear",
@@ -307,6 +434,12 @@
         "QTTgKnhpNE2XHz4u": {
           "name": "Heartbreaking Song",
           "description": "<p><strong>You and all allies</strong> within <strong>Close</strong> range <strong>gain a Hope</strong>.</p>"
+        }
+      },
+      "effects": {
+        "FK4IdbxluRErfYor": {
+          "name": "Epic Song",
+          "description": "<p>Make a target within Close range temporarily Vulnerable.</p>"
         }
       }
     },
@@ -336,7 +469,13 @@
     },
     "Iron Will": {
       "name": "Iron Will",
-      "description": "<p>When you take physical damage, you can <strong>mark an additional Armor Slot</strong> to reduce the severity.</p>"
+      "description": "<p>When you take physical damage, you can <strong>mark an additional Armor Slot</strong> to reduce the severity.</p>",
+      "effects": {
+        "htEDIjCEWYtznpRV": {
+          "name": "Iron Will",
+          "description": "<p>When you take physical damage, you can <strong>mark an additional Armor Slot</strong> to reduce the severity.</p>"
+        }
+      }
     },
     "Loyal Friend": {
       "name": "Loyal Friend",
@@ -393,6 +532,12 @@
         "Rgc7kBmU3kjHKvfx": {
           "name": "Spend Hope",
           "description": "<p><strong>Spend 2 Hope</strong> to Prioritize an adversary until your next rest. When you make an attack against your Prioritized adversary, you can swap the results of your Hope and Fear Dice. You can only Prioritize one adversary at a time.</p>"
+        }
+      },
+      "effects": {
+        "JoBFHkhLbm4JyuZm": {
+          "name": "Nemesis",
+          "description": "<p>When you make an attack against your Prioritized adversary, you can swap the results of your Hope and Fear Dice. You can only Prioritize one adversary at a time.</p>"
         }
       }
     },
@@ -466,7 +611,7 @@
       "actions": {
         "WNtHiko4DRGbxKnm": {
           "name": "Talk to your allies!",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong>Once per long rest</strong></span>, you can give a heartfelt, inspiring speech. </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong>All allies</strong></span> within </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong>Far</strong></span> range </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong>clear 2 Stress</strong></span><strong>.</strong></p>"
+          "description": "<p><span><strong>Once per long rest</strong></span>, you can give a heartfelt, inspiring speech. </span><span><strong>All allies</strong></span> within </span><span><strong>Far</strong></span> range </span><span><strong>clear 2 Stress</strong></span><strong>.</strong></p>"
         }
       }
     },
@@ -476,6 +621,12 @@
       "actions": {
         "0YRLL1HC4XS3tX00": {
           "name": "Mark Stress",
+          "description": "<p>When you make a damage roll, you can mark a Stress to gain a +1 bonus to your Proficiency. Additionally, when you deal Severe damage to an adversary, they must mark a Stress.</p>"
+        }
+      },
+      "effects": {
+        "8BNwCS7ueIQuvn2M": {
+          "name": "Ruthless Predator",
           "description": "<p>When you make a damage roll, you can mark a Stress to gain a +1 bonus to your Proficiency. Additionally, when you deal Severe damage to an adversary, they must mark a Stress.</p>"
         }
       }
@@ -490,6 +641,12 @@
       "actions": {
         "g1VIG6VjYKkm11qJ": {
           "name": "Mark Stress",
+          "description": "<p>You can move from shadow to shadow. When you move into an area of darkness or a shadow cast by another creature or object, you can mark a Stress to disappear from where you are and reappear inside another shadow within Far range. When you reappear, you are Cloaked.</p>"
+        }
+      },
+      "effects": {
+        "RYri0b9z5kq74U5n": {
+          "name": "Shadow Stepper: Cloaked",
           "description": "<p>You can move from shadow to shadow. When you move into an area of darkness or a shadow cast by another creature or object, you can mark a Stress to disappear from where you are and reappear inside another shadow within Far range. When you reappear, you are Cloaked.</p>"
         }
       }
@@ -518,7 +675,7 @@
       "actions": {
         "TDvWFqAxu7V33UIC": {
           "name": "Target Additional Adversary",
-          "description": "<p>You can </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a Stress</span> to target an additional adversary within range with the same attack roll.</p>"
+          "description": "<p>You can </span><span>mark a Stress</span> to target an additional adversary within range with the same attack roll.</p>"
         }
       }
     },
@@ -540,19 +697,55 @@
           "name": "Transform",
           "description": "<p>Once per long rest, you can transform into a physical manifestation of your element. When you do, describe your transformation and choose two of the following benefits to gain until your next rest:</p><ul><li><p>+4 bonus to your Severe threshold</p></li><li><p>+1 bonus to a character trait of your choice</p></li><li><p>+1 bonus to your Proficiency</p></li><li><p>+2 bonus to your Evasion</p></li></ul>"
         }
+      },
+      "effects": {
+        "zFOpzO3tBJPcZcRc": {
+          "name": "Bonus to Threshold",
+          "description": "<p><span>+4 bonus to your Severe threshold</p>"
+        },
+        "cTgSmxkTi89y6sbc": {
+          "name": "Bonus to Trait",
+          "description": "<p><span>+1 bonus to a character trait of your choice</p>"
+        },
+        "oWf3iXf4dawdbmzd": {
+          "name": "Bonus to Proficiency",
+          "description": "<p><span>+1 bonus to your Proficiency</p>"
+        },
+        "2LCF6lSnWFqNiPs5": {
+          "name": "Bonus to Evasion",
+          "description": "<p><span>+2 bonus to your Evasion</p>"
+        }
       }
     },
     "Undaunted": {
       "name": "Undaunted",
-      "description": "<p>Gain a permanent +3 bonus to your damage thresholds.</p>"
+      "description": "<p>Gain a permanent +3 bonus to your damage thresholds.</p>",
+      "effects": {
+        "zggFRaerHCj1e5F5": {
+          "name": "Undaunted",
+          "description": "<p>Gain a permanent +3 bonus to your damage thresholds.</p>"
+        }
+      }
     },
     "Unrelenting": {
       "name": "Unrelenting",
-      "description": "<p>Gain a permanent +2 bonus to your damage thresholds.</p>"
+      "description": "<p>Gain a permanent +2 bonus to your damage thresholds.</p>",
+      "effects": {
+        "IKb6yutns8EJZ49M": {
+          "name": "Unrelenting",
+          "description": "<p>Gain a permanent +2 bonus to your damage thresholds.</p>"
+        }
+      }
     },
     "Unwavering": {
       "name": "Unwavering",
-      "description": "<p>Gain a permanent +1 bonus to your damage thresholds.</p>"
+      "description": "<p>Gain a permanent +1 bonus to your damage thresholds.</p>",
+      "effects": {
+        "3wexvo6La4V46aiX": {
+          "name": "Unwavering",
+          "description": "<p>Gain a permanent +1 bonus to your damage thresholds.</p>"
+        }
+      }
     },
     "Vanishing Act": {
       "name": "Vanishing Act",
@@ -561,6 +754,12 @@
         "BjAECQULugmbVqXU": {
           "name": "Mark Stress",
           "description": "<p><strong>Mark a Stress</strong> to become Cloaked at any time. When Cloaked from this feature, you automatically clear the Restrained condition if you have it. You remain Cloaked in this way until you roll with Fear or until your next rest.</p>"
+        }
+      },
+      "effects": {
+        "czrwqq44sEr0uJ8O": {
+          "name": "Vanishing Act: Cloaked",
+          "description": "<p>When Cloaked from this feature, you automatically clear the Restrained condition if you have it. You remain Cloaked in this way until you roll with Fear or until your next rest.</p>"
         }
       }
     },
@@ -607,6 +806,12 @@
         "1qjnoz5I7NqrWMkp": {
           "name": "Spend Hope",
           "description": "<p>Spend a Hope to deal an extra 1d8 damage on a successful attack.</p>"
+        }
+      },
+      "effects": {
+        "PfCwuVbKLxhnrm9X": {
+          "name": "Wings of Light",
+          "description": "<p>Deal an extra 1d8 damage on a successful attack.</p>"
         }
       }
     },

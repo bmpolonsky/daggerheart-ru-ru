@@ -211,6 +211,10 @@ async function buildDomainEntries() {
     addDescription(result, entry.system?.description);
     const actions = convertActions(entry.system?.actions);
     if (actions) result.actions = actions;
+    const effects = convertEffects(entry.effects || entry.system?.effects, `domainCard:${entry.name}`);
+    if (effects) {
+      result.effects = effects;
+    }
     return result;
   });
 }
@@ -241,6 +245,10 @@ async function buildBeastformEntries() {
       result.advantageOn = advantageOn;
     }
     addDescription(result, entry.system?.description);
+    const effects = convertEffects(entry.effects || entry.system?.effects, `beastform:${entry.name}`);
+    if (effects) {
+      result.effects = effects;
+    }
     return result;
   });
   const features = await gatherEntries("beastforms", ["feature"], featureEntry);
@@ -264,6 +272,10 @@ async function buildAdversaryEntries() {
     const items = convertItemList(entry.items);
     if (items && Object.keys(items).length) {
       result.items = items;
+    }
+    const effects = convertEffects(entry.effects || entry.system?.effects, `adversary:${entry.name}`);
+    if (effects) {
+      result.effects = effects;
     }
     return result;
   });
@@ -311,7 +323,7 @@ async function buildJournalEntries() {
         const name = page.name || "";
         pages[name] = {
           name,
-          text: String(page.text?.content ?? "")
+          text: sanitizeRichText(page.text?.content ?? "")
         };
       }
     }
@@ -340,6 +352,10 @@ function featureEntry(entry) {
   if (actions) {
     result.actions = actions;
   }
+  const effects = convertEffects(entry.effects || entry.system?.effects, `feature:${entry.name}`);
+  if (effects) {
+    result.effects = effects;
+  }
   return result;
 }
 
@@ -351,7 +367,7 @@ function simpleEntry(entry) {
 
 function addDescription(target, value) {
   if (!value) return;
-  const trimmed = String(value).trim();
+  const trimmed = sanitizeRichText(value).trim();
   if (trimmed) {
     target.description = trimmed;
   }
@@ -367,7 +383,7 @@ function convertActions(payload) {
       entry.name = action.name;
     }
     if (action.description) {
-      const trimmed = String(action.description).trim();
+      const trimmed = sanitizeRichText(action.description).trim();
       if (trimmed) {
         entry.description = trimmed;
       }
@@ -421,7 +437,7 @@ function convertEffects(payload, context = "effects") {
       entry.name = effect.name;
     }
     if (effect.description) {
-      const trimmed = String(effect.description).trim();
+      const trimmed = sanitizeRichText(effect.description).trim();
       if (trimmed) {
         entry.description = trimmed;
       }
@@ -521,6 +537,11 @@ function sortObject(value) {
       acc[key] = sortObject(value[key]);
       return acc;
     }, {});
+}
+
+function sanitizeRichText(value) {
+  if (value == null) return "";
+  return String(value).replace(/\sstyle=("[^"]*"|'[^']*')/gi, "");
 }
 
 main().catch((error) => {

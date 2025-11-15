@@ -16,6 +16,8 @@ const UI_TARGET_PATH = path.join(BASE_DIR, "module", "i18n", "systems", "daggerh
 const ORIGINAL_TRANSLATIONS_DIR = path.join(BASE_DIR, "original");
 const TARGET_TRANSLATIONS_DIR = path.join(BASE_DIR, "module", "translations");
 
+const TOP_LEVEL_ENTRY_OPTIONAL_KEYS = new Set(["description"]);
+
 async function main() {
   const results = [];
 
@@ -107,6 +109,7 @@ function syncStructures(source, target, prefix, stats) {
   for (const key of Object.keys(target)) {
     if (sourceKeys.has(key)) continue;
     const fullKey = prefix ? `${prefix}.${key}` : key;
+    if (shouldKeepExtraField(prefix, key)) continue;
     delete target[key];
     stats.removed.push(fullKey);
   }
@@ -136,6 +139,13 @@ function syncStructures(source, target, prefix, stats) {
       stats.replaced.push(fullKey);
     }
   }
+}
+
+function shouldKeepExtraField(prefix, key) {
+  if (!prefix || !TOP_LEVEL_ENTRY_OPTIONAL_KEYS.has(key)) return false;
+  const segments = prefix.split(".");
+  if (segments.length !== 2) return false;
+  return segments[0] === "entries";
 }
 
 function getNodeKind(value) {

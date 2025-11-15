@@ -59,7 +59,7 @@
       "effects": {
         "nryJhrF26hyFQUxH": {
           "name": "Blinding Orb",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You are Vulnerable until you mark a Hit Point.</p>"
+          "description": "<p><span>You are Vulnerable until you mark a Hit Point.</p>"
         }
       }
     },
@@ -170,7 +170,7 @@
       "effects": {
         "IqlpqsgurXsUEQhs": {
           "name": "Death Tea",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">After you drink this tea, you instantly kill your target when you critically succeed on an attack. If you don’t critically succeed on an attack before your next long rest, you die.</p>"
+          "description": "<p><span>After you drink this tea, you instantly kill your target when you critically succeed on an attack. If you don’t critically succeed on an attack before your next long rest, you die.</p>"
         }
       }
     },
@@ -263,7 +263,7 @@
       "effects": {
         "yx4ZkXeuXgw2KvV4": {
           "name": "Grindletooth Venom",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d6 additional physical damage on your next damage roll with the weapon the venom was applied to.</p>"
+          "description": "<p><span>You deal 1d6 additional physical damage on your next damage roll with the weapon the venom was applied to.</p>"
         }
       }
     },
@@ -304,7 +304,7 @@
       "effects": {
         "QyzXAnvho7lVQQtP": {
           "name": "Homet’s Secret Potion",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">The next successful attack you make critically succeeds.</p>"
+          "description": "<p><span>The next successful attack you make critically succeeds.</p>"
         }
       }
     },
@@ -340,7 +340,7 @@
       "effects": {
         "P7tbNjq58bQ9R1Cc": {
           "name": "Improved Grindletooth Venom",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d8 additional physical damage on your next damage roll with the weapon the venom was applied to.</p>"
+          "description": "<p><span>You deal 1d8 additional physical damage on your next damage roll with the weapon the venom was applied to.</p>"
         }
       }
     },
@@ -536,7 +536,7 @@
       "effects": {
         "rMno0zO5Cbwlu4zn": {
           "name": "Morphing Clay",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">Your face is unrecognizable until your next rest.</p>"
+          "description": "<p><span>Your face is unrecognizable until your next rest.</p>"
         }
       }
     },
@@ -552,7 +552,7 @@
       "effects": {
         "L68lFhuWdS3ppDxR": {
           "name": "Mythic Dust",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d12 additional magical damage on your next damage roll with the weapon the venom was applied to.</p>"
+          "description": "<p><span>You deal 1d12 additional magical damage on your next damage roll with the weapon the venom was applied to.</p>"
         }
       }
     },
@@ -568,7 +568,7 @@
       "effects": {
         "n73d0J4oMCBIPWHN": {
           "name": "Ogre Musk",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You cannot be tracked by mundane or magical means until your next rest.</p>"
+          "description": "<p><span>You cannot be tracked by mundane or magical means until your next rest.</p>"
         }
       }
     },
@@ -599,7 +599,7 @@
       "effects": {
         "tWf00ezdpxQQLuZ1": {
           "name": "Redthorn Saliva",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You deal 1d12 additional physical damage on your next damage roll with the weapon the saliva was applied to.</p>"
+          "description": "<p><span>You deal 1d12 additional physical damage on your next damage roll with the weapon the saliva was applied to.</p>"
         }
       }
     },
@@ -749,7 +749,7 @@
       "effects": {
         "548KAUPcSbQLsivh": {
           "name": "Vial of Moondrip",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You can see in total darkness until your next rest.</p>"
+          "description": "<p><span>You can see in total darkness until your next rest.</p>"
         }
       }
     },
@@ -765,7 +765,7 @@
       "effects": {
         "80F8gAn7ejhhNL7R": {
           "name": "Wingsprout",
-          "description": "<p><span style=\"color:rgb(239, 230, 216);font-family:Montserrat, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(24, 22, 46, 0.376);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">You gain magic wings that allow you to fly for a number of minutes equal to your level.</p>"
+          "description": "<p><span>You gain magic wings that allow you to fly for a number of minutes equal to your level.</p>"
         }
       }
     }

@@ -45,7 +45,13 @@
       "actions": {
         "hBh4Lt0Bdd9CtJY7": {
           "name": "Switch Duality Results",
-          "description": "<p><span class=\"vertical-card-list-found\" style=\"box-sizing: border-box; margin: 0px 0px 0.25rem; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif\">Once per rest, you can switch the results of your Hope and Fear Dice.</p>"
+          "description": "<p><span class=\"vertical-card-list-found\">Once per rest, you can switch the results of your Hope and Fear Dice.</p>"
+        }
+      },
+      "effects": {
+        "vTW98Xha0HP8ITrs": {
+          "name": "Arcana-Touched",
+          "description": "<p>When 4 or more of the domain cards in your loadout are from the Arcana domain, gain the following benefits:</p><ul><li class=\"vertical-card-list-found\"><p>+1 bonus to your Spellcast Rolls</p></li><li class=\"vertical-card-list-found\"><p>Once per rest, you can switch the results of your Hope and Fear Dice.</p></li></ul>"
         }
       }
     },
@@ -66,6 +72,12 @@
         "Z864RtY6fR5Cnrx9": {
           "name": "Repair Armor",
           "description": "<p class=\"Body-Foundation\">During a rest, when you choose to repair your armor as a downtime move, your allies also clear an Armor Slot.</p>"
+        }
+      },
+      "effects": {
+        "cED730OjuMW5haJR": {
+          "name": "Armorer",
+          "description": "<p><span>While you’re wearing armor, gain a +1 bonus to your </span><span class=\"tooltip-convert\">Armor Score</span><span>.</p>"
         }
       }
     },
@@ -111,6 +123,11 @@
           "name": "Clear Stress & Gain Hope",
           "description": "<p class=\"Body-Foundation\">Once per long rest, while you’re charging into danger, you can muster a rousing call that inspires your allies. All allies who can hear you each clear a Stress and gain a Hope. Additionally, your allies gain advantage on attack rolls until you or an ally rolls a failure with Fear.</p>"
         }
+      },
+      "effects": {
+        "s7ma4TNgAvt0ZgEW": {
+          "name": "Battle Cry"
+        }
       }
     },
     "Battle-Hardened": {
@@ -135,7 +152,12 @@
     },
     "Blade-Touched": {
       "name": "Blade-Touched",
-      "description": "<p class=\"Body-Foundation-No-BOLDITALIC\">When 4 or more of the domain cards in your loadout are from the Blade domain, gain the following benefits:</p><ul><li class=\"vertical-card-list-found\"><p>+2 bonus to your attack rolls</p></li><li class=\"vertical-card-list-found\"><p>+4 bonus to your Severe damage threshold</p></li></ul>"
+      "description": "<p class=\"Body-Foundation-No-BOLDITALIC\">When 4 or more of the domain cards in your loadout are from the Blade domain, gain the following benefits:</p><ul><li class=\"vertical-card-list-found\"><p>+2 bonus to your attack rolls</p></li><li class=\"vertical-card-list-found\"><p>+4 bonus to your Severe damage threshold</p></li></ul>",
+      "effects": {
+        "fBpLkCWGsB8MbymR": {
+          "name": "Blade-Touched"
+        }
+      }
     },
     "Blink Out": {
       "name": "Blink Out",
@@ -149,7 +171,13 @@
     },
     "Body Basher": {
       "name": "Body Basher",
-      "description": "<p class=\"Body-Foundation\">You use the full force of your body in a fight. On a successful attack using a weapon with a Melee range, gain a bonus to your damage roll equal to your Strength.</p>"
+      "description": "<p class=\"Body-Foundation\">You use the full force of your body in a fight. On a successful attack using a weapon with a Melee range, gain a bonus to your damage roll equal to your Strength.</p>",
+      "effects": {
+        "8uOMyEczlY2OrKau": {
+          "name": "Body Basher",
+          "description": "<p><span>On a successful attack using a weapon with a </span><span class=\"tooltip-convert\">Melee</span><span> range, gain a bonus to your damage roll equal to your </span><span class=\"tooltip-convert\">Strength</span><span>.</p>"
+        }
+      }
     },
     "Bold Presence": {
       "name": "Bold Presence",
@@ -163,6 +191,12 @@
           "name": "Avoid Condition",
           "description": "<p>Additionally, once per rest when you would gain a condition, you can describe how your bold presence aids you in the situation and avoid gaining the condition.</p>"
         }
+      },
+      "effects": {
+        "2XEYhuAcRGTtqvED": {
+          "name": "Bold Presence",
+          "description": "<p class=\"Body-Foundation\">Add your Strength to the presence roll roll.</p>"
+        }
       }
     },
     "Bolt Beacon": {
@@ -171,7 +205,13 @@
       "actions": {
         "zrGLlwmpuUIBrSXy": {
           "name": "Cast",
-          "description": "<p>Make a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll</strong></span> against a target within </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Far</span> range. On a success, </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">spend a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Hope</strong></span> to send a bolt of shimmering light toward them, dealing </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">d8+2</span> magic damage using your </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Proficiency</span>. The target becomes temporarily </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><em style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Vulnerable</em></span> and glows brightly until this condition is cleared.</p>"
+          "description": "<p>Make a </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span> against a target within </span><span class=\"tooltip-convert\">Far</span> range. On a success, </span><span>spend a </span><span class=\"tooltip-convert\"><strong>Hope</strong></span> to send a bolt of shimmering light toward them, dealing </span><span>d8+2</span> magic damage using your </span><span class=\"tooltip-convert\">Proficiency</span>. The target becomes temporarily </span><span class=\"tooltip-convert\"><em>Vulnerable</em></span> and glows brightly until this condition is cleared.</p>"
+        }
+      },
+      "effects": {
+        "veZpnhnF8NRRhKG4": {
+          "name": "Vulnerable",
+          "description": "<p><span>Temporarily </span><span>Vulnerable</span><span> and glows brightly until this condition is cleared.</p>"
         }
       }
     },
@@ -182,6 +222,12 @@
         "pRSiIoh4Bzk5I9ej": {
           "name": "Spend Hope",
           "description": "<p>Once per rest, you can <strong>spend 3 Hope</strong> to cause an attack that succeeded against you to fail instead.</p>"
+        }
+      },
+      "effects": {
+        "P6hYkkI64FqIcMoP": {
+          "name": "Bone Touched",
+          "description": "<p class=\"Body-Foundation-No-BOLDITALIC\">+1 bonus to Agility</p>"
         }
       }
     },
@@ -204,6 +250,12 @@
         "enit3ZkPp0nY5lN1": {
           "name": "Ice Spike (Attack)",
           "description": "<p>Make a <strong>Spellcast Roll (12)</strong> to summon a large ice spike within Far range. If you use it as a weapon, make the Spellcast Roll against the target’s Difficulty instead. On a success, deal <strong>d6</strong> physical damage using your Proficiency.</p>"
+        }
+      },
+      "effects": {
+        "LdcT1nrkd5ORCU4n": {
+          "name": "Tava's Armor",
+          "description": "<p>+1 bonus to your Armor Score until your next rest, or the caster cast's Tava’s Armor again.</p>"
         }
       }
     },
@@ -273,6 +325,16 @@
           "name": "Telepathy",
           "description": "<p class=\"Card-Feature\"><strong>Spend a Hope</strong> to open a line of mental communication with one target you can see. This connection lasts until your next rest or you cast Telepathy again.</p>"
         }
+      },
+      "effects": {
+        "zAEaETYSOE2fmcyB": {
+          "name": "Telepathy",
+          "description": "<p>Lasts until your next rest or the caster casts Telepathy again.</p>"
+        },
+        "gfZTHSgwYSDKsePW": {
+          "name": "Slumber",
+          "description": "<p>Asleep until they take damage or the GM spends a Fear on their turn to clear this condition.</p>"
+        }
       }
     },
     "Book of Korvax": {
@@ -305,6 +367,11 @@
           "name": "Fireball",
           "description": "<p class=\"Card-Feature\">Make a <strong>Spellcast Roll</strong> against a target within Very Far range. On a success, hurl a sphere of fire toward them that explodes on impact. The target and all creatures within Very Close range of them must make a Reaction Roll (13). Targets who fail take<strong> d20+5</strong> magic damage using your Proficiency. Targets who succeed take half damage.</p><p>@Template[type:emanation|range:vc]</p>"
         }
+      },
+      "effects": {
+        "iPnT02apql16Zhjf": {
+          "name": "Mystic Tether"
+        }
       }
     },
     "Book of Ronin": {
@@ -318,6 +385,16 @@
         "h7i4ZuDYuYLnjze6": {
           "name": "Eternal Enervation",
           "description": "<p>Once per long rest, make a <strong>Spellcast Roll</strong> against a target within Close range. On a success, they become permanently <em>Vulnerable</em>. They can’t clear this condition by any means.</p>"
+        }
+      },
+      "effects": {
+        "ntQfpTcXyEL76vCK": {
+          "name": "Transform",
+          "description": "<p>You've transformed into an inanimate object no larger than twice your normal size. You can remain in this shape until you take damage.</p>"
+        },
+        "y44r3c91m06WKSiq": {
+          "name": "Eternal Enervation",
+          "description": "<p>Permanently <em>Vulnerable</em>. They can’t clear this condition by any means.</p>"
         }
       }
     },
@@ -336,6 +413,16 @@
         "rsyxORrTH5oU2DkV": {
           "name": "Illusion",
           "description": "<p class=\"Card-Feature\">Make a <strong>Spellcast Roll (14)</strong>. On a success, create a temporary visual illusion no larger than you within Close range that lasts for as long as you look at it. It holds up to scrutiny until an observer is within Melee range.</p>"
+        }
+      },
+      "effects": {
+        "klUaU5KeQCu7KCBI": {
+          "name": "Parallela",
+          "description": "<p>The next time you make an attack, you can hit an additional target within range that your attack roll would succeed against.</p>"
+        },
+        "wnrHSvvB6pydTVcC": {
+          "name": "Adjust Appearance",
+          "description": "<p>You magically shift your appearance and clothing to avoid recognition.</p>"
         }
       }
     },
@@ -387,6 +474,12 @@
           "name": "Shared Clarity",
           "description": "<p class=\"Card-Feature\">Once per long rest, <strong>spend a Hope</strong> to choose two willing creatures. When one of them would mark Stress, they can choose between the two of them who marks it. This spell lasts until their next rest.</p>"
         }
+      },
+      "effects": {
+        "6PPapwuwgKy23oHg": {
+          "name": "Shared Clarity",
+          "description": "<p class=\"Card-Feature\">Once per long rest, <strong>spend a Hope</strong> to choose two willing creatures. When one of them would mark Stress, they can choose between the two of them who marks it. This spell lasts until their next rest.</p>"
+        }
       }
     },
     "Book of Yarrow": {
@@ -400,6 +493,12 @@
         "ZcQfbtGet0KQWjWS": {
           "name": "Magic Immunity",
           "description": "<p class=\"Card-Feature\"><strong>Spend 5 Hope</strong> to become immune to magic damage until your next rest.</p>"
+        }
+      },
+      "effects": {
+        "HWJYhSegVLeAa3dE": {
+          "name": "Magic Immunity",
+          "description": "<p class=\"Card-Feature\"><strong>I</strong>mmune to magic damage until your next rest.</p>"
         }
       }
     },
@@ -415,7 +514,13 @@
     },
     "Brace": {
       "name": "Brace",
-      "description": "<p class=\"Body-Foundation\">When you mark an Armor Slot to reduce incoming damage, you can <strong>mark a Stress</strong> to mark an additional Armor Slot.</p>"
+      "description": "<p class=\"Body-Foundation\">When you mark an Armor Slot to reduce incoming damage, you can <strong>mark a Stress</strong> to mark an additional Armor Slot.</p>",
+      "effects": {
+        "xSjqLOHfi5lImDHS": {
+          "name": "Brace",
+          "description": "<p class=\"Body-Foundation\">When you mark an Armor Slot to reduce incoming damage, you can <strong>mark a Stress</strong> to mark an additional Armor Slot.</p>"
+        }
+      }
     },
     "Breaking Blow": {
       "name": "Breaking Blow",
@@ -424,6 +529,12 @@
         "aL83OMkU7hSQRlOA": {
           "name": "Mark Stress",
           "description": "<p class=\"Body-Foundation\">When you make a successful attack, you can <strong>mark a Stress</strong> to make the next successful attack against that same target deal an extra <strong>2d12</strong> damage.</p>"
+        }
+      },
+      "effects": {
+        "ETIeXRAib3DFBHpX": {
+          "name": "Breaking Blow",
+          "description": "<p class=\"Body-Foundation\">The next successful attack against this target deals an extra <strong>2d12</strong> damage.</p>"
         }
       }
     },
@@ -463,11 +574,17 @@
       "actions": {
         "QCMkze8rU0VB1VYL": {
           "name": "Pull into Chokehold",
-          "description": "<p>When you position yourself behind a creature who’s about your size, you can </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Stress</strong></span> to pull them into a chokehold, making them temporarily </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><em style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Vulnerable</em></span>.</p>"
+          "description": "<p>When you position yourself behind a creature who’s about your size, you can </span><span>mark a </span><span class=\"tooltip-convert\"><strong>Stress</strong></span> to pull them into a chokehold, making them temporarily </span><span class=\"tooltip-convert\"><em>Vulnerable</em></span>.</p>"
         },
         "IwiUBldoDTUgT6mh": {
           "name": "Damage",
           "description": "<p>When a creature attacks a target who is <em>Vulnerable</em> in this way, they deal an extra <strong>2d6</strong> damage.</p>"
+        }
+      },
+      "effects": {
+        "yzGem7IfViJdAv1H": {
+          "name": "Chokehold",
+          "description": "<p>Temporarily Vulnerable</p>"
         }
       }
     },
@@ -483,6 +600,12 @@
           "name": "On Fire: Damage",
           "description": "<p>When a creature acts while <em>On Fire</em>, they must take an extra <strong>2d6</strong> magic damage if they are still <em>On Fire</em> at the end of their action.</p>"
         }
+      },
+      "effects": {
+        "HNKkaWi507whJuYN": {
+          "name": "On Fire",
+          "description": "<p>When a creature acts while <em>On Fire</em>, they must take an extra <strong>2d6</strong> magic damage if they are still <em>On Fire</em> at the end of their action.</p>"
+        }
       }
     },
     "Cloaking Blast": {
@@ -491,6 +614,12 @@
       "actions": {
         "A12J0jyQrOaQoLf7": {
           "name": "Become Cloaked"
+        }
+      },
+      "effects": {
+        "twCBqXytmRkMz0kV": {
+          "name": "Cloaked",
+          "description": "<p>While <em>Cloaked</em>, you remain unseen if you are stationary when an adversary moves to where they would normally see you. When you move into or within an adversary’s line of sight or make an attack, you are no longer <em>Cloaked</em>.</p>"
         }
       }
     },
@@ -506,6 +635,12 @@
           "name": "Replace Card",
           "description": "<p>Once per rest, replace this card with any card from your vault without paying its Recall Cost.</p>"
         }
+      },
+      "effects": {
+        "oWs00mBY3onxGjF9": {
+          "name": "Codex-Touched",
+          "description": "<p>Add your Proficiency to a Spellcast Roll.</p>"
+        }
       }
     },
     "Confusing Aura": {
@@ -518,7 +653,7 @@
         },
         "oB5tyd2a7bmcJJmm": {
           "name": "Create Extra Layers",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Mark any number of Stress</span> to make that many additional layers. </p>"
+          "description": "<p><span>Mark any number of Stress</span> to make that many additional layers. </p>"
         }
       }
     },
@@ -529,6 +664,12 @@
         "xMIMyRto9jgYLN3S": {
           "name": "Conjure",
           "description": "<p class=\"Body-Foundation\"><strong>Spend any number of Hope</strong> to conjure that many magical steeds (such as horses, camels, or elephants) that you and your allies can ride until your next long rest or the steeds take any damage. The steeds double your land speed while traveling and, when in danger, allow you to move within Far range without having to roll. Creatures riding a steed gain a −2 penalty to attack rolls and a +2 bonus to damage rolls.</p>"
+        }
+      },
+      "effects": {
+        "cNSlGBGPKKBNnlH8": {
+          "name": "Riding",
+          "description": "<p><span>Creatures riding a steed gain a −2 penalty to </span><span class=\"tooltip-convert\">attack</span><span> rolls and a +2 bonus to damage rolls.</p>"
         }
       }
     },
@@ -547,6 +688,11 @@
         "nugW0yPOG08pqBAT": {
           "name": "Fire Flies: Cast",
           "description": "<p><em><strong>Fire Flies:</strong></em> Make a <strong>Spellcast Roll</strong> against all adversaries within Close range. <strong>Spend a Hope</strong> to deal <strong>2d8+3</strong> magic damage to targets you succeeded against.</p>"
+        }
+      },
+      "effects": {
+        "dImnF8ZT2rVybiIP": {
+          "name": "Reduced Damage"
         }
       }
     },
@@ -572,6 +718,12 @@
           "name": "Corrode",
           "description": "<p>Additionally, <strong>mark 2 or more Stress</strong> to make them permanently <em>Corroded</em>. While a target is <em>Corroded</em>, they gain a −1 penalty to their Difficulty for every 2 Stress you spent. This condition can stack.</p>"
         }
+      },
+      "effects": {
+        "zB95bjSSdVlApQnR": {
+          "name": "Corroded (1 stack)",
+          "description": "<p><span>While a target is </span><span>Corroded</span><span>, they gain a −1 penalty to their </span><span class=\"tooltip-convert\">Difficulty</span><span> for every 2 Stress you spent. This </span><span class=\"tooltip-convert\">condition</span><span> can stack.</p>"
+        }
       }
     },
     "Counterspell": {
@@ -596,7 +748,17 @@
     },
     "Cruel Precision": {
       "name": "Cruel Precision",
-      "description": "<p class=\"Body-Foundation\">When you make a successful attack with a weapon, gain a bonus to your damage roll equal to either your Finesse or Agility.</p>"
+      "description": "<p class=\"Body-Foundation\">When you make a successful attack with a weapon, gain a bonus to your damage roll equal to either your Finesse or Agility.</p>",
+      "effects": {
+        "t5D10AL2W9LMGsX4": {
+          "name": "Cruel Precision (Agi)",
+          "description": "<p class=\"Body-Foundation\">When you make a successful attack with a weapon, gain a bonus to your damage roll equal to either your Finesse or Agility.</p>"
+        },
+        "Ha7c4XgmN5zGMSHG": {
+          "name": "Cruel Precision (Fin)",
+          "description": "<p class=\"Body-Foundation\">When you make a successful attack with a weapon, gain a bonus to your damage roll equal to either your Finesse or Agility.</p>"
+        }
+      }
     },
     "Dark Whispers": {
       "name": "Dark Whispers",
@@ -614,6 +776,12 @@
         "xdNbP1ggDxpXZ1HP": {
           "name": "Focus",
           "description": "<p class=\"Body-Foundation\">Once per rest, you can apply all your focus toward a target of your choice. Until you attack another creature, you defeat the target, or the battle ends, gain a +1 bonus to your Proficiency.</p>"
+        }
+      },
+      "effects": {
+        "TFWiAUDCfGaax5MU": {
+          "name": "Deadly Focus",
+          "description": "<p class=\"Body-Foundation\">Until you attack another creature, you defeat the target, or the battle ends, gain a +1 bonus to your Proficiency.</p>"
         }
       }
     },
@@ -643,6 +811,17 @@
           "name": "Hit All Adversaries Between",
           "description": "<p class=\"Body-Foundation-No-BOLDITALIC\">Make a <strong>Spellcast Roll</strong> against a target within Close range and choose the following option:</p><ul><li class=\"vertical-card-list\"><p>All adversaries between you and the target must succeed on a Reaction Roll (13) or be hit by vines, taking <strong>3d6+2</strong> physical damage.</p></li></ul><p class=\"Body-Foundation-No-BOLDITALIC\">On a success, vines reach out from your hands, causing the chosen effect and temporarily <em>Restraining</em> the target.</p>"
         }
+      },
+      "effects": {
+        "wMXCIQxqLS9IbsEK": {
+          "name": "Restrained"
+        },
+        "bZ0xgZ6TT2099OYp": {
+          "name": "Restrained"
+        },
+        "Oe95zWWY41nH8y5l": {
+          "name": "Restrained"
+        }
       }
     },
     "Deft Deceiver": {
@@ -653,6 +832,12 @@
           "name": "Gain Advantage",
           "description": "<p><strong>Spend a Hope</strong> to gain advantage on a roll to deceive or trick someone into believing a lie you tell them</p>"
         }
+      },
+      "effects": {
+        "qtHDKXJ1pH8Cu7by": {
+          "name": "Deft Deceiver",
+          "description": "<p><span>Gain </span><span class=\"tooltip-convert\">advantage</span><span> on a roll to deceive or trick someone into believing a lie you tell them.</p>"
+        }
       }
     },
     "Deft Maneuvers": {
@@ -662,6 +847,12 @@
         "AKexQGjS5HwPTo19": {
           "name": "Mark Stress",
           "description": "<p class=\"Body-Foundation\">Once per rest,<strong> mark a Stress</strong> to sprint anywhere within Far range without making an Agility Roll to get there.</p><p class=\"Body-Foundation\">If you end this movement within Melee range of an adversary and immediately make an attack against them, gain a +1 bonus to the attack roll.</p>"
+        }
+      },
+      "effects": {
+        "gEDGcbsgWY2D2nOo": {
+          "name": "Deft Maneuvers",
+          "description": "<p>If you end this movement within Melee range of an adversary and immediately make an attack against them, gain a +1 bonus to the attack roll.</p>"
         }
       }
     },
@@ -693,6 +884,12 @@
           "name": "Cast",
           "description": "<p>Make a <strong>Spellcast Roll (16)</strong>. Once per rest on a success, all targets within Very Far range who aren’t flying must make a Reaction Roll (18). Targets who fail take <strong>3d10+8</strong> physical damage and are temporarily <em>Vulnerable</em>. Targets who succeed take half damage.</p><p>Additionally, when you succeed on the Spellcast Roll, all terrain within Very Far range becomes difficult to move through and structures within this range might sustain damage or crumble.</p>"
         }
+      },
+      "effects": {
+        "Z31XqmGUKWYcZdMY": {
+          "name": "Vulnerable",
+          "description": "<p><span>Temporarily </span><span>Vulnerable</span><span>.</p>"
+        }
       }
     },
     "Eclipse": {
@@ -705,6 +902,12 @@
         },
         "rvkNiqCr8N6t6KPo": {
           "name": "Target Marks Stress"
+        }
+      },
+      "effects": {
+        "ARMcw2FtKfaYr902": {
+          "name": "In the Eclipse",
+          "description": "<p><span class=\"tooltip-convert\">Attack rolls</span><span> have </span><span class=\"tooltip-convert\">disadvantage</span><span> when targeting you or an ally within this shadow.</p>"
         }
       }
     },
@@ -738,6 +941,12 @@
         "oJDiE9egDyfdLbR7": {
           "name": "Mark Stress",
           "description": "<p>Once per rest on a success, you can <strong>mark a Stress</strong> to force the <em>Enraptured</em> target to mark a Stress as well.</p>"
+        }
+      },
+      "effects": {
+        "EYG5dLImk6GkmfRd": {
+          "name": "Enraptured",
+          "description": "<p>While <em>Enraptured</em>, a target’s attention is fixed on you, narrowing their field of view and drowning out any sound but your voice.</p>"
         }
       }
     },
@@ -780,11 +989,17 @@
       "actions": {
         "sAE4ZDLyU9CmNzES": {
           "name": "Cast",
-          "description": "<p>Make a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll</strong></span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"> (15)</span>. On a success, place a number of tokens equal to your </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Agility</span> on this card (minimum 1).</p>"
+          "description": "<p>Make a </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span><span> (15)</span>. On a success, place a number of tokens equal to your </span><span class=\"tooltip-convert\">Agility</span> on this card (minimum 1).</p>"
         },
         "2wzlrOPefdowBtRr": {
           "name": "Spend Token",
           "description": "<p>When you make an action roll while flying, spend a token from this card. After the action that spends the last token is resolved, you descend to the ground directly below you.</p>"
+        }
+      },
+      "effects": {
+        "gd8crfrvMGWXLWGP": {
+          "name": "Flying",
+          "description": "<p><span>You can fly. When you make an action roll while flying, spend a token from this card. After the action that spends the last token is resolved, you descend to the ground directly below you.</p>"
         }
       }
     },
@@ -794,7 +1009,13 @@
       "actions": {
         "pO8E1Bf4GDAU0efI": {
           "name": "Create Orb",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Spend a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Hope</strong></span> to create a single, small floating orb that you can move anywhere within </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Very Far</span> range. While this spell is active, you can see through the orb as though you’re looking out from its position. You can transition between using your own senses and seeing through the orb freely. If the orb takes damage or moves out of range, the spell ends.</p>"
+          "description": "<p><span>Spend a </span><span class=\"tooltip-convert\"><strong>Hope</strong></span> to create a single, small floating orb that you can move anywhere within </span><span class=\"tooltip-convert\">Very Far</span> range. While this spell is active, you can see through the orb as though you’re looking out from its position. You can transition between using your own senses and seeing through the orb freely. If the orb takes damage or moves out of range, the spell ends.</p>"
+        }
+      },
+      "effects": {
+        "ahKlKAc9TuGgx9Zm": {
+          "name": "Floating Eye",
+          "description": "<p><span>While this spell is active, you can see through the orb as though you’re looking out from its position. You can transition between using your own senses and seeing through the orb freely. If the orb takes damage or moves out of range, the spell ends.</p>"
         }
       }
     },
@@ -818,6 +1039,12 @@
           "name": "4. Healing Vial (HP)",
           "description": "<ol start=\"4\"><li><p>A healing vial (Clear 2 Hit Points)</p></li></ol>"
         }
+      },
+      "effects": {
+        "cTf5gEem5Gt4fLS4": {
+          "name": "Arcane Rune",
+          "description": "<p><span>+2 to a </span><span class=\"tooltip-convert\">Spellcast Roll</p>"
+        }
       }
     },
     "Forceful Push": {
@@ -827,6 +1054,11 @@
         "LT5173FgPoF81v7o": {
           "name": "Spend Hope",
           "description": "<p class=\"Body-Foundation\">Make an attack with your primary weapon against a target within Melee range. On a success, you deal damage and knock them back to Close range. On a success with Hope, add a <strong>d6</strong> to your damage roll.</p><p>Additionally, you can <strong>spend a Hope</strong> to make them temporarily <em>Vulnerable</em>.</p>"
+        }
+      },
+      "effects": {
+        "95oX6QYPySdyyh2v": {
+          "name": "Forcefully Pushed"
         }
       }
     },
@@ -842,6 +1074,12 @@
           "name": "Spend Hope for Action",
           "description": "<p class=\"Body-Foundation\">Before you make an action roll, you must <strong>spend a Hope</strong>. If you can’t, you revert to your normal form.</p>"
         }
+      },
+      "effects": {
+        "ptBC882plZW39Ld9": {
+          "name": "Force of Nature",
+          "description": "<ul><li><p><span class=\"vertical-card-list\">When you succeed on an attack or Spellcast Roll, gain a +10 bonus to the damage roll.</p></li><li><p><span class=\"vertical-card-list\">When you deal enough damage to defeat a creature within Close range, you absorb them and clear an Armor Slot.</p></li><li><p><span class=\"vertical-card-list\">You can’t be <em>Restrained</em>.</p></li><li><p><span>Before you make an action roll, you must </span><span>spend a Hope</span><span>. If you can’t, you revert to your normal form.</p></li></ul>"
+        }
       }
     },
     "Forest Sprites": {
@@ -852,11 +1090,22 @@
           "name": "Cast",
           "description": "<p class=\"Body\">Make a <strong>Spellcast Roll (13)</strong>. On a success, <strong>spend any number of Hope</strong> to create an equal number of small forest sprites who appear at points you choose within Far range, providing the following benefits:</p><ul class=\"\"><li class=\"vertical-card-list\"><p>Your allies gain a +3 bonus to attack rolls against adversaries within Melee range of a sprite.</p></li><li class=\"vertical-card-list\"><p>An ally who marks an Armor Slot while within Melee range of a sprite can mark an additional Armor Slot.</p></li></ul><p class=\"Body\">A sprite vanishes after granting a benefit or taking any damage.</p>"
         }
+      },
+      "effects": {
+        "SuiUFAPyB37Qr6sO": {
+          "name": "Sprite",
+          "description": "<p><span class=\"vertical-card-list\">Gain a +3 bonus to attack rolls against adversaries within Melee range of a sprite.</p><p></p><p><span class=\"vertical-card-list\">An ally who marks an Armor Slot while within Melee range of a sprite can mark an additional Armor Slot.</p><p></p><p><span class=\"Body\">A sprite vanishes after granting a benefit or taking any damage.</p>"
+        }
       }
     },
     "Fortified Armor": {
       "name": "Fortified Armor",
-      "description": "<p class=\"Body\">While you are wearing armor, gain a +2 bonus to your damage thresholds.</p>"
+      "description": "<p class=\"Body\">While you are wearing armor, gain a +2 bonus to your damage thresholds.</p>",
+      "effects": {
+        "jx8KWAdyoPV2hV0s": {
+          "name": "Fortified Armor"
+        }
+      }
     },
     "Frenzy": {
       "name": "Frenzy",
@@ -864,6 +1113,12 @@
       "actions": {
         "xEpwnkNppHe3aoEs": {
           "name": "Frenzy"
+        }
+      },
+      "effects": {
+        "1POoAgObPOWDpUco": {
+          "name": "Frenzy",
+          "description": "<p class=\"Body-Foundation\">Once per long rest, you can go into a <em>Frenzy</em> until there are no more adversaries within sight.</p><p class=\"Body-Foundation\">While <em>Frenzied</em>, you can’t use Armor Slots, and you gain a +10 bonus to your damage rolls and a +8 bonus to your Severe damage threshold.</p>"
         }
       }
     },
@@ -875,11 +1130,23 @@
           "name": "Mark Stress",
           "description": "<p class=\"Body-Foundation\">Once per long rest, <strong>mark 3 Stress</strong> to push your body to its limits. Gain a +2 bonus to all of your character traits until your next rest.</p>"
         }
+      },
+      "effects": {
+        "H5q5iYImr69TfZcp": {
+          "name": "Full Surge",
+          "description": "<p><span>Gain a +2 bonus to all of your </span><span class=\"tooltip-convert\">character traits</span><span> until your next rest.</p>"
+        }
       }
     },
     "Get Back Up": {
       "name": "Get Back Up",
-      "description": "<p class=\"Body-Foundation\">When you take Severe damage, you can <strong>mark a Stress</strong> to reduce the severity by one threshold.</p>"
+      "description": "<p class=\"Body-Foundation\">When you take Severe damage, you can <strong>mark a Stress</strong> to reduce the severity by one threshold.</p>",
+      "effects": {
+        "aV3KUHtXXR86PRMh": {
+          "name": "Get Back Up",
+          "description": "<p class=\"Body-Foundation\">When you take Severe damage, you can <strong>mark a Stress</strong> to reduce the severity by one threshold.</p>"
+        }
+      }
     },
     "Gifted Tracker": {
       "name": "Gifted Tracker",
@@ -888,6 +1155,12 @@
         "7rHfF3ck1FuixcIC": {
           "name": "Ask Questions",
           "description": "<p>When you’re tracking a specific creature or group of creatures based on signs of their passage, you <strong>can spend any number of Hope</strong> and ask the GM that many questions from the following list.</p><ul><li class=\"vertical-card-list\">What direction did they go?</li><li class=\"vertical-card-list\">How long ago did they pass through?</li><li class=\"vertical-card-list\">What were they doing in this location?</li><li class=\"vertical-card-list\">How many of them were here?</li></ul><p class=\"Body-Foundation\">When you encounter creatures you’ve tracked in this way, gain a +1 bonus to your Evasion against them.</p>"
+        }
+      },
+      "effects": {
+        "47Oh2weCdmuvKHM9": {
+          "name": "Gifted Tracker",
+          "description": "<p><span>When you encounter creatures you’ve tracked in this way, gain a +1 bonus to your </span><span class=\"tooltip-convert\">Evasion</span><span> against them.</p>"
         }
       }
     },
@@ -909,6 +1182,16 @@
           "name": "Cast",
           "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll</strong> against a target within Very Close range. On a success, <strong>spend a Hope</strong> to conjure a dark glyph upon their body that exposes their weak points, temporarily reducing the target’s Difficulty by a value equal to your Knowledge (minimum 1).</p>"
         }
+      },
+      "effects": {
+        "st8Ji9ZNexvw64xM": {
+          "name": "Glyph of Nightfall",
+          "description": "<p><span>Conjure a dark glyph upon their body that exposes their weak points, temporarily reducing the target’s </span><span class=\"tooltip-convert\">Difficulty</span><span> by a value equal to your </span><span class=\"tooltip-convert\">Knowledge</span><span> (minimum 1).</p>"
+        },
+        "X2w3kRHaETs8YWLO": {
+          "name": "Glyph of Nightfall",
+          "description": "<p><span>Conjure a dark glyph upon their body that exposes their weak points, temporarily reducing the target’s </span><span class=\"tooltip-convert\">Difficulty</span><span> by a value equal to your </span><span class=\"tooltip-convert\">Knowledge</span><span> (minimum 1).</p>"
+        }
       }
     },
     "Goad Them On": {
@@ -918,6 +1201,12 @@
         "kiKrK30UMopx3izN": {
           "name": "Goad",
           "description": "<p class=\"Body-Foundation\">Describe how you taunt a target within Close range, then make a <strong>Presence Roll</strong> against them. On a success, the target must mark a Stress, and the next time the GM spotlights them, they must target you with an attack, which they make with disadvantage.</p>"
+        }
+      },
+      "effects": {
+        "Jccsuc48gmA6QAni": {
+          "name": "Goaded",
+          "description": "<p><span>The next time this Adversary is </span><span class=\"tooltip-convert\">spotlighted</span><span>, they must target the Goading Character with an attack, which they make with </span><span class=\"tooltip-convert\">disadvantage</span><span>.</p>"
         }
       }
     },
@@ -944,6 +1233,12 @@
         },
         "YzrQmUhNZoDYawo0": {
           "name": "Mark 1 Stress"
+        }
+      },
+      "effects": {
+        "KK5m2slpFuXDxFaL": {
+          "name": "Grace-Touched",
+          "description": "<p>When 4 or more of the domain cards in your loadout are from the Grace domain, gain the following benefits:</p><ul><li class=\"vertical-card-list-found\"><p>You can <strong>mark an Armor Slot</strong> instead of marking a Stress.</p></li><li class=\"vertical-card-list-found\"><p>When you would force a target to mark a number of Hit Points, you can choose instead to force them to mark that number of Stress.</p></li></ul>"
         }
       }
     },
@@ -981,19 +1276,25 @@
         },
         "vmWku5XYmakLdwX2": {
           "name": "Heal One Hit Point",
-          "description": "<p>On a failure, </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a Stress</span> to clear a Hit Point or a Stress on the target. You can’t heal the same target again until your next long rest.</p>"
+          "description": "<p>On a failure, </span><span>mark a Stress</span> to clear a Hit Point or a Stress on the target. You can’t heal the same target again until your next long rest.</p>"
         },
         "FYHLuVtFCR9A6Nvt": {
           "name": "Heal Two Hit Points",
-          "description": "<p>On a success, </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a Stress</span> to clear 2 Hit Points or 2 Stress on the target. You can’t heal the same target again until your next long rest.</p>"
+          "description": "<p>On a success, </span><span>mark a Stress</span> to clear 2 Hit Points or 2 Stress on the target. You can’t heal the same target again until your next long rest.</p>"
         },
         "8ElTYMjIM7YI6Kb8": {
           "name": "Heal One Stress",
-          "description": "<p>On a failure, </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a Stress</span> to clear a Hit Point or a Stress on the target. You can’t heal the same target again until your next long rest.</p>"
+          "description": "<p>On a failure, </span><span>mark a Stress</span> to clear a Hit Point or a Stress on the target. You can’t heal the same target again until your next long rest.</p>"
         },
         "lQMhidLodJn9Nj7e": {
           "name": "Heal Two Stress",
-          "description": "<p>On a success, </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a Stress</span> to clear 2 Hit Points or 2 Stress on the target.  You can’t heal the same target again until your next long rest.</p>"
+          "description": "<p>On a success, </span><span>mark a Stress</span> to clear 2 Hit Points or 2 Stress on the target.  You can’t heal the same target again until your next long rest.</p>"
+        }
+      },
+      "effects": {
+        "sd5liP4ZcVeTMAoW": {
+          "name": "Healed by Healing Hands",
+          "description": "<p><span>Can’t be healed again with Healing Hands by the caster of the Healing Hands until a long rest.</p>"
         }
       }
     },
@@ -1019,6 +1320,16 @@
           "name": "Restrain",
           "description": "<p class=\"Body-Foundation\">If an adversary moves within Very Close range, they’re pulled into Melee range and <em>Restrained.</em></p>"
         }
+      },
+      "effects": {
+        "y82y3nUStyL8DIJL": {
+          "name": "Hold the Line",
+          "description": "<p class=\"Body-Foundation\">If an adversary moves within Very Close range, they’re pulled into Melee range and <em>Restrained.</em></p><p class=\"Body-Foundation\">This condition lasts until you move or fail a roll with Fear, or the GM spends 2 Fear on their turn to clear it.</p>"
+        },
+        "WTYg0b8nE1XbnMiA": {
+          "name": "Hold the Line",
+          "description": "<p class=\"Body-Foundation\">If an adversary moves within Very Close range, they’re pulled into Melee range and <em>Restrained.</em></p>"
+        }
       }
     },
     "Hush": {
@@ -1028,6 +1339,16 @@
         "GrblHtCL5fOD2OQ7": {
           "name": "Cast",
           "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll</strong> against a target within Close range. On a success, <strong>spend a Hope</strong> to conjure suppressive magic around the target that encompasses everything within Very Close range of them and follows them as they move.</p><p class=\"Body-Foundation\">The target and anything within the area is <em>Silenced </em>until the GM spends a Fear on their turn to clear this condition, you cast Hush again, or you take Major damage. While <em>Silenced</em>, they can’t make noise and can’t cast spells.</p>"
+        }
+      },
+      "effects": {
+        "5hzzPTFccUSSNHgp": {
+          "name": "Silenced",
+          "description": "<p><span>Auppressive magic around the target that encompasses everything within Very Close range of them and follows them as they move. </span><span class=\"Body-Foundation\">The target and anything within the area is <em>Silenced </em>until the GM spends a Fear on their turn to clear this condition, you cast Hush again, or you take Major damage. While <em>Silenced</em>, they can’t make noise and can’t cast spells.</p>"
+        },
+        "pZ5YpjKidaj48IYF": {
+          "name": "Silenced",
+          "description": "<p><span>Suppressive magic around the target that encompasses everything within Very Close range of them and follows them as they move. </span><span class=\"Body-Foundation\">The target and anything within the area is <em>Silenced </em>until the GM spends a Fear on their turn to clear this condition, you cast Hush again, or you take Major damage. While <em>Silenced</em>, they can’t make noise and can’t cast spells.</p>"
         }
       }
     },
@@ -1039,11 +1360,23 @@
           "name": "Cast",
           "description": "<p>Make a <strong>Spellcast Roll</strong> against all adversaries in front of you within Close range. Once per rest on a success, create an illusion of flashing colors and lights that temporarily <em>Stuns</em> targets you succeed against and forces them to mark a Stress. While <em>Stunned</em>, they can’t use reactions and can’t take any other actions until they clear this condition.</p><p>@Template[type:infront|range:c]</p>"
         }
+      },
+      "effects": {
+        "xAG75UWUz3aDZH3m": {
+          "name": "Stunned",
+          "description": "<p><span>An illusion of flashing colors and lights that temporarily </span><span>Stuns</span><span> targets. While </span><span>Stunned</span><span>, they can’t use reactions and can’t take any other actions until they clear this </span><span class=\"tooltip-convert\">condition</span><span>.</p>"
+        }
       }
     },
     "Inevitable": {
       "name": "Inevitable",
-      "description": "<p class=\"Body-Foundation\">When you fail an action roll, your next action roll has advantage.</p>"
+      "description": "<p class=\"Body-Foundation\">When you fail an action roll, your next action roll has advantage.</p>",
+      "effects": {
+        "wX4BFGaM0bdzHPn2": {
+          "name": "Inevitable",
+          "description": "<p><span>When you fail an action roll, your next </span><span class=\"tooltip-convert\">action roll</span><span> has </span><span class=\"tooltip-convert\">advantage</span><span>.</p>"
+        }
+      }
     },
     "Inspirational Words": {
       "name": "Inspirational Words",
@@ -1055,11 +1388,11 @@
         },
         "QKS3vo3Nf5CK8rkF": {
           "name": "Clear Hitpoint",
-          "description": "<p>Spend a token from this card to give them the following:</p><ul class=\"\"><li class=\"vertical-card-list-found\"><p><span style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif\">Your ally clears a Hit Point.</p></li></ul>"
+          "description": "<p>Spend a token from this card to give them the following:</p><ul class=\"\"><li class=\"vertical-card-list-found\"><p><span>Your ally clears a Hit Point.</p></li></ul>"
         },
         "5xn70wYZW7k9aiVl": {
           "name": "Give Hope",
-          "description": "<p>Spend a token from this card to give them the following:</p><ul class=\"\"><li class=\"vertical-card-list-found\"><p><span style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif\">Your ally gains a Hope.</p></li></ul>"
+          "description": "<p>Spend a token from this card to give them the following:</p><ul class=\"\"><li class=\"vertical-card-list-found\"><p><span>Your ally gains a Hope.</p></li></ul>"
         }
       }
     },
@@ -1080,6 +1413,12 @@
         "aIERmFBWCRLVv184": {
           "name": "Cast",
           "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll (10)</strong>. On a success, <strong>mark a Stress</strong> and choose yourself or an ally within Melee range to become <em>Invisible</em>. An <em>Invisible</em> creature can’t be seen except through magical means and attack rolls against them are made with disadvantage. Place a number of tokens on this card equal to your Spellcast trait. When the <em>Invisible</em> creature takes an action, spend a token from this card. After the action that spends the last token is resolved, the effect ends.</p><p class=\"Body-Foundation\">You can only hold Invisibility on one creature at a time.</p>"
+        }
+      },
+      "effects": {
+        "bRJy0MoIPQEQOMzZ": {
+          "name": "Invisible",
+          "description": "<p><span>An </span><span>Invisible</span><span> creature can’t be seen except through magical means and </span><span class=\"tooltip-convert\">attack rolls</span><span> against them are made with </span><span class=\"tooltip-convert\">disadvantage</span><span>. Place a number of tokens on this card equal to your Spellcast trait. When the </span><span>Invisible</span><span> creature takes an action, spend a token from this card. After the action that spends the last token is resolved, the effect ends.</p>"
         }
       }
     },
@@ -1125,6 +1464,12 @@
           "name": "Mark Stress",
           "description": "<p class=\"Body-Foundation\">When you deal damage to an adversary, you can <strong>mark a Stress</strong> and describe how you encourage your allies. The next PC to make an attack against that adversary can clear a Stress or gain a Hope.</p>"
         }
+      },
+      "effects": {
+        "BbBs2XYXMsLwkHKh": {
+          "name": "Lead by Example",
+          "description": "<p class=\"Body-Foundation\">The next PC to make an attack against that adversary can clear a Stress or gain a Hope.</p>"
+        }
       }
     },
     "Lean on Me": {
@@ -1144,6 +1489,12 @@
         "i99aNWZqVC8PHAIx": {
           "name": "Mark with Sigil",
           "description": "<p><strong>Spend 3 Hope</strong> and choose an ally within Close range. They are marked with a glowing sigil of protection. When this ally would make a death move, they clear a Hit Point instead.</p><p class=\"Body-Foundation\">This effect ends when it saves the target from a death move, you cast Life Ward on another target, or you take a long rest.</p>"
+        }
+      },
+      "effects": {
+        "E7Ou4OMEy3TeK1Gf": {
+          "name": "Life Ward",
+          "description": "<p>Marked with a glowing sigil of protection. When this ally would make a death move, they clear a Hit Point instead.</p><p class=\"Body-Foundation\">This effect ends when it saves the target from a death move, you cast Life Ward on another target, or you take a long rest.</p>"
         }
       }
     },
@@ -1165,6 +1516,12 @@
           "name": "Cast",
           "description": "<p>When you have a few minutes of silence to focus, you can <strong>mark a Stress</strong> to change the appearance of all willing creatures within Close range. Their new forms must share a general body structure and size, and can be somebody or something you’ve seen before or entirely fabricated. A disguised creature has advantage on Presence Rolls to avoid scrutiny.</p><p class=\"Body-Foundation\">Activate a Countdown (8). It ticks down as a consequence the GM chooses. When it triggers, the disguise drops.</p>"
         }
+      },
+      "effects": {
+        "HgF4n0idPcdz8Bi7": {
+          "name": "Disguised",
+          "description": "<p><span>A disguised creature has advantage on </span><span class=\"tooltip-convert\">Presence</span><span> Rolls to avoid scrutiny.</p>"
+        }
       }
     },
     "Mass Enrapture": {
@@ -1179,6 +1536,12 @@
           "name": "Mark Stress",
           "description": "<p><strong>Mark a Stress</strong> to force all <em>Enraptured</em> targets to mark a Stress, ending this spell.</p>"
         }
+      },
+      "effects": {
+        "QNbnelRylVB0yCm0": {
+          "name": "Enraptured",
+          "description": "<p><span>While </span><span>Enraptured</span><span>, a target’s attention is fixed on you, narrowing their field of view and drowning out any sound but your voice.</p>"
+        }
       }
     },
     "Master of the Craft": {
@@ -1191,7 +1554,7 @@
       "actions": {
         "sDoL9p1cpIx8Vdbb": {
           "name": "Heal One Hitpoint",
-          "description": "<p>When you can take a few minutes to focus on the target you’re helping, you can </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">spend 2 Hope</span> to clear a Hit Point or a Stress on them.</p>"
+          "description": "<p>When you can take a few minutes to focus on the target you’re helping, you can </span><span>spend 2 Hope</span> to clear a Hit Point or a Stress on them.</p>"
         },
         "NCDSgZBLoq9fQvku": {
           "name": "Heal One Stress"
@@ -1212,11 +1575,11 @@
       "actions": {
         "BDKCP4FvntHkYqXp": {
           "name": "Summon Spirit",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Spend a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Hope</strong></span> to summon a humanoid-sized spirit that can move or carry things for you until your next rest.</p>"
+          "description": "<p><span>Spend a </span><span class=\"tooltip-convert\"><strong>Hope</strong></span> to summon a humanoid-sized spirit that can move or carry things for you until your next rest.</p>"
         },
         "YVSMa2Igxp6DhNpG": {
           "name": "Attack Adversary",
-          "description": "<p>You can also send it to attack an adversary. When you do, make a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll</strong></span> against a target within </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Very Far</span> range. On a success, the spirit moves into </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Melee</span> range with that target. Roll a number of </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">d6s</span> equal to your Spellcast trait and deal that much magic damage to the target. The spirit then dissipates. You can only have one spirit at a time.</p>"
+          "description": "<p>You can also send it to attack an adversary. When you do, make a </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span> against a target within </span><span class=\"tooltip-convert\">Very Far</span> range. On a success, the spirit moves into </span><span class=\"tooltip-convert\">Melee</span> range with that target. Roll a number of </span><span>d6s</span> equal to your Spellcast trait and deal that much magic damage to the target. The spirit then dissipates. You can only have one spirit at a time.</p>"
         }
       }
     },
@@ -1226,11 +1589,17 @@
       "actions": {
         "ksl1CcxcuwYxObiS": {
           "name": "Gain Hope",
-          "description": "<p><span class=\"vertical-card-list-found\" style=\"box-sizing: border-box; margin: 0px 0px 0.25rem; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif\">Once per rest, when you have 0 Hope and the GM would gain a Fear, you can gain a Hope instead.</p>"
+          "description": "<p><span class=\"vertical-card-list-found\">Once per rest, when you have 0 Hope and the GM would gain a Fear, you can gain a Hope instead.</p>"
         },
         "Ky5wcwBqgm5bJCK1": {
           "name": "Mark Stress",
-          "description": "<p><span class=\"vertical-card-list-found\" style=\"box-sizing: border-box; margin: 0px 0px 0.25rem; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif\">When you make a successful attack, you can <strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">mark a Stress</strong> to add the result of your Fear Die to your damage roll.</p>"
+          "description": "<p><span class=\"vertical-card-list-found\">When you make a successful attack, you can <strong>mark a Stress</strong> to add the result of your Fear Die to your damage roll.</p>"
+        }
+      },
+      "effects": {
+        "sNBuI2xIZAI4RgZy": {
+          "name": "Midnight-Touched",
+          "description": "<p class=\"Body-Foundation\">When 4 or more of the domain cards in your loadout are from the Midnight domain, gain the following benefits:</p><ul><li class=\"vertical-card-list-found\"><p>Once per rest, when you have 0 Hope and the GM would gain a Fear, you can gain a Hope instead.</p></li><li class=\"vertical-card-list-found\"><p>When you make a successful attack, you can <strong>mark a Stress</strong> to add the result of your Fear Die to your damage roll.</p></li></ul>"
         }
       }
     },
@@ -1250,6 +1619,11 @@
           "name": "See Through Eyes",
           "description": "<p><strong>Mark a Stress</strong> to see through their eyes.</p><p class=\"Body-Foundation\"></p>"
         }
+      },
+      "effects": {
+        "0BumAWKw2aK4A5al": {
+          "name": "Familiar Damage"
+        }
       }
     },
     "Nature’s Tongue": {
@@ -1263,6 +1637,11 @@
         "IIJC4HGdilVv3YMo": {
           "name": "Gain Bonus",
           "description": "<p>Additionally, before you make a Spellcast Roll while within a natural environment, you can <strong>spend a Hope</strong> to gain a +2 bonus to the roll.</p>"
+        }
+      },
+      "effects": {
+        "0JYDk5CQ66bHGQO0": {
+          "name": "Bonus to Spellcast"
         }
       }
     },
@@ -1286,6 +1665,24 @@
           "name": "Mark Stress (4 tokens)",
           "description": "<p>When you mark 1 or more Hit Points from an attack, you can <strong>mark a Stress</strong> to place a number of tokens equal to the number of Hit Points you marked on this card. On your next successful attack, gain a +5 bonus to your damage roll for each token on this card, then clear all tokens.</p>"
         }
+      },
+      "effects": {
+        "C6e1T2oEx6PFoRUP": {
+          "name": "Never Upstaged (1 token)",
+          "description": "<p><span>Gain a +5 bonus to your damage roll</p>"
+        },
+        "bMMxsBungVYB1rI8": {
+          "name": "Never Upstaged (2 tokens)",
+          "description": "<p><span>Gain a +10 bonus to your damage roll</p>"
+        },
+        "tsQRbrurzi8iqs0o": {
+          "name": "Never Upstaged (3 tokens)",
+          "description": "<p><span>Gain a +15 bonus to your damage roll</p>"
+        },
+        "3eTaSgHlmNDcymnW": {
+          "name": "Never Upstaged (4 tokens)",
+          "description": "<p><span>Gain a +20 bonus to your damage roll</p>"
+        }
       }
     },
     "Night Terror": {
@@ -1298,7 +1695,13 @@
         },
         "ELzQvftGxZigPkBH": {
           "name": "Steal Fear",
-          "description": "<p><span style=\"color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\">Steal a number of Fear from the GM equal to the number of targets that are </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Horrified</span><span style=\"color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\"> (up to the number of Fear in the GM’s pool). Roll a number of </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">d6s</span><span style=\"color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\"> equal to the number of stolen Fear and deal the total damage to each </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Horrified</span><span style=\"color: rgb(239, 230, 216); font-family: Signika, &#x27;Palatino Linotype&#x27;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\"> target. Discard the stolen Fear.</p>"
+          "description": "<p><span>Steal a number of Fear from the GM equal to the number of targets that are </span><span>Horrified</span><span> (up to the number of Fear in the GM’s pool). Roll a number of </span><span>d6s</span><span> equal to the number of stolen Fear and deal the total damage to each </span><span>Horrified</span><span> target. Discard the stolen Fear.</p>"
+        }
+      },
+      "effects": {
+        "32j3ZeNMMCk1QLlM": {
+          "name": "Horrified",
+          "description": "<p><span>While </span><span>Horrified</span><span>, they’re </span><span>Vulnerable</span><span>.</p>"
         }
       }
     },
@@ -1328,7 +1731,13 @@
     },
     "On the Brink": {
       "name": "On the Brink",
-      "description": "<p class=\"Body\">When you have 2 or fewer Hit Points unmarked, you don’t take Minor damage.</p>"
+      "description": "<p class=\"Body\">When you have 2 or fewer Hit Points unmarked, you don’t take Minor damage.</p>",
+      "effects": {
+        "UJTsJlnhi5Zi0XQ2": {
+          "name": "On The Brink",
+          "description": "<p class=\"Body\">When you have 2 or fewer Hit Points unmarked, you don’t take Minor damage.</p>"
+        }
+      }
     },
     "Overwhelming Aura": {
       "name": "Overwhelming Aura",
@@ -1336,7 +1745,13 @@
       "actions": {
         "r2XblKJyZyamOOXq": {
           "name": "Cast",
-          "description": "<p><span class=\"Body-Foundation\" style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif; color: rgb(239, 230, 216); font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Make a <strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll (15)</strong> to magically empower your aura. On a success, <strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">spend 2 Hope</strong> to make your Presence equal to your Spellcast trait until your next long rest.While this spell is active, an adversary must mark a Stress when they target you with an attack.</p>"
+          "description": "<p><span class=\"Body-Foundation\">Make a <strong>Spellcast Roll (15)</strong> to magically empower your aura. On a success, <strong>spend 2 Hope</strong> to make your Presence equal to your Spellcast trait until your next long rest.While this spell is active, an adversary must mark a Stress when they target you with an attack.</p>"
+        }
+      },
+      "effects": {
+        "ba9GO4NtQHYkaRR9": {
+          "name": "Overwhelming Aura",
+          "description": "<p>Your Presence is equal to your Spellcast trait until your next long rest.<br />While this spell is active, an adversary must mark a Stress when they target you with an attack.</p>"
         }
       }
     },
@@ -1346,7 +1761,7 @@
       "actions": {
         "SE2C9Andtlw3OQLL": {
           "name": "Activate",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Spend a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Hope</strong></span> to activate Phantom Retreat where you’re currently standing.</p>"
+          "description": "<p><span>Spend a </span><span class=\"tooltip-convert\"><strong>Hope</strong></span> to activate Phantom Retreat where you’re currently standing.</p>"
         },
         "1AJRAbFtDx8Pm26q": {
           "name": "Retreat",
@@ -1356,7 +1771,13 @@
     },
     "Pick and Pull": {
       "name": "Pick and Pull",
-      "description": "<p class=\"Body-Foundation\">You have advantage on action rolls to pick nonmagical locks, disarm nonmagical traps, or steal items from a target (either through stealth or by force).</p>"
+      "description": "<p class=\"Body-Foundation\">You have advantage on action rolls to pick nonmagical locks, disarm nonmagical traps, or steal items from a target (either through stealth or by force).</p>",
+      "effects": {
+        "6IkjF8qNR0NVvvv8": {
+          "name": "Pick and Pull",
+          "description": "<p><span>You have </span><span class=\"tooltip-convert\">advantage</span><span> on action rolls to pick nonmagical locks, disarm nonmagical traps, or steal items from a target (either through stealth or by force).</p>"
+        }
+      }
     },
     "Plant Dominion": {
       "name": "Plant Dominion",
@@ -1400,6 +1821,14 @@
           "name": "Mark 2 Stress",
           "description": "<p>You can <strong>mark a Stress</strong> to gain a bonus to your damage roll equal to twice your Strength.</p>"
         }
+      },
+      "effects": {
+        "bq1MhcmoP6Wo5CXF": {
+          "name": "Rage Up (1)"
+        },
+        "t6SIjQxB6UBUJ98f": {
+          "name": "Rage Up (2)"
+        }
       }
     },
     "Rain of Blades": {
@@ -1408,7 +1837,7 @@
       "actions": {
         "WTnjKQs2uI1TuF9r": {
           "name": "Cast",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Spend a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Hope</strong></span> to make a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll</strong></span> and conjure throwing blades that strike out at all targets within </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Very Close</span> range. Targets you succeed against take </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">d8+2</span> magic damage using your </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Proficiency</span>.</p><p>@Template[type:emanation|range:vc]</p>"
+          "description": "<p><span>Spend a </span><span class=\"tooltip-convert\"><strong>Hope</strong></span> to make a </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span> and conjure throwing blades that strike out at all targets within </span><span class=\"tooltip-convert\">Very Close</span> range. Targets you succeed against take </span><span>d8+2</span> magic damage using your </span><span class=\"tooltip-convert\">Proficiency</span>.</p><p>@Template[type:emanation|range:vc]</p>"
         },
         "CUKoYyDxQhNc0pLs": {
           "name": "Damage Against Vulnerable",
@@ -1464,6 +1893,16 @@
           "name": "Spend Hope",
           "description": "<p class=\"Body-Foundation\">During a short rest, you can choose a long rest downtime move instead. You can <strong>spend a Hope</strong> to let an ally do the same.</p>"
         }
+      },
+      "effects": {
+        "smTjINqIldErFD3q": {
+          "name": "Recovery (Ally)",
+          "description": "<p class=\"Body-Foundation\">During this short rest, you can choose a long rest downtime move instead.</p>"
+        },
+        "7GsHTQCtNB8PEVgr": {
+          "name": "Recovery",
+          "description": "<p class=\"Body-Foundation\">During a short rest, you can choose a long rest downtime move instead.</p>"
+        }
       }
     },
     "Redirect": {
@@ -1484,6 +1923,12 @@
           "name": "Cast",
           "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll (15)</strong>. Once per rest on a success, create a temporary barrier of protective energy around you at Very Close range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> Hit Points. While the barrier is up, you and all allies within have resistance to physical damage from outside the barrier.</p><p class=\"Body-Foundation\">When you move, the barrier follows you.</p><p>@Template[type:emanation|range:vc]</p>"
         }
+      },
+      "effects": {
+        "obul9k0P4CjFuxJD": {
+          "name": "Rejuvenation Barrier",
+          "description": "<p><span class=\"Body-Foundation\">While the barrier is up, the caster and all allies within have resistance to physical damage from outside the barrier. When the caster moves, the barrier follows them.</p>"
+        }
       }
     },
     "Restoration": {
@@ -1492,11 +1937,11 @@
       "actions": {
         "udmHKUtCDClxeB4h": {
           "name": "Heal Hitpoints",
-          "description": "<p>Touch a creature and spend any number of tokens to clear 2 </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Hit Points</span> or 2 </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Stress</span> for each token spent.</p>"
+          "description": "<p>Touch a creature and spend any number of tokens to clear 2 </span><span class=\"tooltip-convert\">Hit Points</span> or 2 </span><span class=\"tooltip-convert\">Stress</span> for each token spent.</p>"
         },
         "TvF88tS5x3Yof8Q1": {
           "name": "Reduce Stress",
-          "description": "<p>Touch a creature and spend any number of tokens to clear 2 </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Hit Points</span> or 2 </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Stress</span> for each token spent.</p>"
+          "description": "<p>Touch a creature and spend any number of tokens to clear 2 </span><span class=\"tooltip-convert\">Hit Points</span> or 2 </span><span class=\"tooltip-convert\">Stress</span> for each token spent.</p>"
         },
         "LFDgLQ2CjnBEoTH9": {
           "name": "Remove Condition",
@@ -1510,11 +1955,11 @@
       "actions": {
         "znSDInMjOlFZn7Vp": {
           "name": "Cast",
-          "description": "<p><span class=\"Body-Foundation\" style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif; color: rgb(239, 230, 216); font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Make a <strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll (20)</strong>. On a success, restore one creature who has been dead no longer than 100 years to full strength. </p>"
+          "description": "<p><span class=\"Body-Foundation\">Make a <strong>Spellcast Roll (20)</strong>. On a success, restore one creature who has been dead no longer than 100 years to full strength. </p>"
         },
         "NurXUfoPDSVptejR": {
           "name": "Keep Card",
-          "description": "<p><span class=\"Body-Foundation\" style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif; color: rgb(239, 230, 216); font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Then roll a <strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">d6</strong>. On a result of 5 or lower, place this card in your vault permanently. On a failure, you can’t cast Resurrection again for a week.</p>"
+          "description": "<p><span class=\"Body-Foundation\">Then roll a <strong>d6</strong>. On a result of 5 or lower, place this card in your vault permanently. On a failure, you can’t cast Resurrection again for a week.</p>"
         }
       }
     },
@@ -1535,6 +1980,12 @@
         "DAsnjDomrlupo1aw": {
           "name": "Clear Stress",
           "description": "<p class=\"Body-Foundation\">When you mark 1 or more Hit Points from an attack, clear a Stress.</p>"
+        }
+      },
+      "effects": {
+        "ulQpnnRFwW4BwMlE": {
+          "name": "Rise Up",
+          "description": "<p><span>Gain a bonus to your </span><span class=\"tooltip-convert\">Severe </span><span>threshold equal to your </span><span class=\"tooltip-convert\">Proficiency</span><span>.</p>"
         }
       }
     },
@@ -1566,6 +2017,12 @@
           "name": "Spend Hope",
           "description": "<p class=\"Body-Foundation\">When you have a few minutes of calm to focus, you can <strong>spend 2 Hope</strong> to summon your Safe Haven, a large interdimensional home where you and your allies can take shelter. When you do, a magical door appears somewhere within Close range. Only creatures of your choice can enter. Once inside, you can make the entrance invisible. You and anyone else inside can always exit. Once you leave, the doorway must be summoned again.</p><p class=\"Body-Foundation\">When you take a rest within your own Safe Haven, you can choose an additional downtime move.</p>"
         }
+      },
+      "effects": {
+        "UaqohKZnokIPLeYf": {
+          "name": "Safe Haven",
+          "description": "<p class=\"Body-Foundation\">When you take a rest within your own Safe Haven, you can choose an additional downtime move.</p>"
+        }
       }
     },
     "Sage-Touched": {
@@ -1579,6 +2036,19 @@
         "zdu8GkVWby3nz8Pa": {
           "name": "Double Instinct",
           "description": "<p>Once per rest, you can double your Agility or Instinct when making a roll that uses that trait. You must choose to do this before you roll.</p>"
+        }
+      },
+      "effects": {
+        "7zMpgedPII5GIYUl": {
+          "name": "Increase Spellcasting",
+          "description": "<p><span class=\"vertical-card-list\">While you’re in a natural environment, you gain a +2 bonus to your Spellcast Rolls.</p>"
+        },
+        "Mmax64mlLPYxJPB7": {
+          "name": "Double Agility"
+        },
+        "p03IjcyigL4b2WD1": {
+          "name": "Double Instinct",
+          "description": "<p><span class=\"vertical-card-list\">Once per rest, you can double your Agility or Instinct when making a roll that uses that trait. You must choose to do this before you roll.</p>"
         }
       }
     },
@@ -1633,11 +2103,25 @@
           "name": "Cast",
           "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll</strong> against all adversaries within Very Close range. Targets you succeed against are temporarily <em>Restrained</em> as their shadow binds them in place.</p><p>@Template[type:emanation|range:vc]</p>"
         }
+      },
+      "effects": {
+        "RFB4V0V4bDJ6vCL2": {
+          "name": "Restrained"
+        }
       }
     },
     "Shadowhunter": {
       "name": "Shadowhunter",
-      "description": "<p class=\"Body\">Your prowess is enhanced under the cover of shadow. While you’re shrouded in low light or darkness, you gain a +1 bonus to your Evasion and make attack rolls with advantage.</p>"
+      "description": "<p class=\"Body\">Your prowess is enhanced under the cover of shadow. While you’re shrouded in low light or darkness, you gain a +1 bonus to your Evasion and make attack rolls with advantage.</p>",
+      "effects": {
+        "A6gMv7TbMu3nV3NT": {
+          "name": "Shadowhunter Evasion",
+          "description": "<p><span>While you’re shrouded in low light or darkness, you gain a +1 bonus to your </span><span class=\"tooltip-convert\">Evasion</span><span> and make </span><span class=\"tooltip-convert\">attack rolls</span><span> with </span><span class=\"tooltip-convert\">advantage</span><span>.</p>"
+        },
+        "a1hDCNYDvF4dWt58": {
+          "name": "Shadowhunter Advantage Hint"
+        }
+      }
     },
     "Shape Material": {
       "name": "Shape Material",
@@ -1667,6 +2151,12 @@
           "name": "Cast Protective Aura",
           "description": "<p><strong>Mark a Stress</strong> to cast a protective aura on a target within Very Close range. When the target marks an Armor Slot, they reduce the severity of the attack by an additional threshold. If this spell causes a creature who would be damaged to instead mark no Hit Points, the effect ends.</p><p class=\"Body-Foundation\">You can only hold Shield Aura on one creature at a time.</p>"
         }
+      },
+      "effects": {
+        "OQreUqdAfIt3V6uq": {
+          "name": "Protective Aura",
+          "description": "<p><span>When the target marks an </span><span class=\"tooltip-convert\">Armor Slot</span><span>, they reduce the severity of the attack by an additional threshold. If this spell causes a creature who would be damaged to instead mark no </span><span class=\"tooltip-convert\">Hit Points</span><span>, the effect ends.</p>"
+        }
       }
     },
     "Shrug It Off": {
@@ -1675,6 +2165,12 @@
       "actions": {
         "h9odg7Tk94O0M5l1": {
           "name": "Roll d6",
+          "description": "<p class=\"Body-Foundation\">When you would take damage, you can <strong>mark a Stress</strong> to reduce the severity of the damage by one threshold. When you do, roll a <strong>d6</strong>. On a result of 3 or lower, place this card in your vault.</p>"
+        }
+      },
+      "effects": {
+        "5DTQDVU8Jy5Nnp5V": {
+          "name": "Shrug It Off",
           "description": "<p class=\"Body-Foundation\">When you would take damage, you can <strong>mark a Stress</strong> to reduce the severity of the damage by one threshold. When you do, roll a <strong>d6</strong>. On a result of 3 or lower, place this card in your vault.</p>"
         }
       }
@@ -1686,6 +2182,12 @@
         "Nhp93LBwnBg5DyY9": {
           "name": "Mark",
           "description": "<p class=\"Body-Foundation\">Mark an adversary within Close range with a sigil of retribution. The GM gains a Fear. When the marked adversary deals damage to you or your allies, place a <strong>d8</strong> on this card. You can hold a number of <strong>d8s</strong> equal to your level. When you successfully attack the marked adversary, roll the dice on this card and add the total to your damage roll, then clear the dice. This effect ends when the marked adversary is defeated or you cast Sigil of Retribution again.</p>"
+        }
+      },
+      "effects": {
+        "pJntjutNO7bYX6td": {
+          "name": "Sigil of Retribution",
+          "description": "<p class=\"Body-Foundation\">When the marked adversary deals damage to you or your allies, place a <strong>d8</strong> on this card. You can hold a number of <strong>d8s</strong> equal to your level. When you successfully attack the marked adversary, roll the dice on this card and add the total to your damage roll, then clear the dice. This effect ends when the marked adversary is defeated or you cast Sigil of Retribution again.</p>"
         }
       }
     },
@@ -1700,6 +2202,12 @@
         "GYEbUY5m30Uw8yf5": {
           "name": "Charge Smite",
           "description": "<p>Once per rest, <strong>spend 3 Hope</strong> to charge your powerful smite. When you next successfully attack with a weapon, double the result of your damage roll. This attack deals magic damage regardless of the weapon’s damage type.</p>"
+        }
+      },
+      "effects": {
+        "mqZSae8J9d7o3lon": {
+          "name": "Smite",
+          "description": "<p>When you next successfully attack with a weapon, double the result of your damage roll. This attack deals magic damage regardless of the weapon’s damage type.</p>"
         }
       }
     },
@@ -1723,7 +2231,12 @@
       "actions": {
         "K91pB8O1ak8fikUj": {
           "name": "Become Spectral",
-          "description": "<p><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Mark a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Stress</strong></span> to become </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Spectral </span>until you make an action roll targeting another creature. While </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Spectral</span>, you’re immune to </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">physical</span> damage and can float and pass through solid objects. Other creatures can still see you while you’re in this form.</p>"
+          "description": "<p><span>Mark a </span><span class=\"tooltip-convert\"><strong>Stress</strong></span> to become </span><span>Spectral </span>until you make an action roll targeting another creature. While </span><span>Spectral</span>, you’re immune to </span><span class=\"tooltip-convert\">physical</span> damage and can float and pass through solid objects. Other creatures can still see you while you’re in this form.</p>"
+        }
+      },
+      "effects": {
+        "d9bZJl0yZnvOe2f3": {
+          "name": "Spectral"
         }
       }
     },
@@ -1733,13 +2246,19 @@
       "actions": {
         "jCgZ0yCoIhSAVEw3": {
           "name": "Spend Tokens",
-          "description": "<p>When you make a successful attack against a target, you can spend any number of tokens to add a </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">d6</span> for each token spent to your </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">damage roll</span>.</p>"
+          "description": "<p>When you make a successful attack against a target, you can spend any number of tokens to add a </span><span>d6</span> for each token spent to your </span><span class=\"tooltip-convert\">damage roll</span>.</p>"
         }
       }
     },
     "Splendor-Touched": {
       "name": "Splendor-Touched",
-      "description": "<p><p class=\"Body-Foundation-No-BOLDITALIC\">When 4 or more of the domain cards in your <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"loadout-and-vault\" nexus=\"daggerheart\">loadout</tooltip> are from the Splendor domain, gain the following benefits:</p><ul class=\"\"><li class=\"vertical-card-list\">+3 bonus to your <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"severe-damage\" nexus=\"daggerheart\">Severe</tooltip> damage threshold</li><li class=\"vertical-card-list\">Once per <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"long-rest\" nexus=\"daggerheart\">long rest</tooltip>, when incoming damage would require you to mark a number of <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"hit-points\" nexus=\"daggerheart\">Hit Points</tooltip>, you can choose to mark that much <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"stress\" nexus=\"daggerheart\">Stress</tooltip> or spend that much <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"hope\" nexus=\"daggerheart\">Hope</tooltip> instead.</li></ul></p>"
+      "description": "<p><p class=\"Body-Foundation-No-BOLDITALIC\">When 4 or more of the domain cards in your <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"loadout-and-vault\" nexus=\"daggerheart\">loadout</tooltip> are from the Splendor domain, gain the following benefits:</p><ul class=\"\"><li class=\"vertical-card-list\">+3 bonus to your <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"severe-damage\" nexus=\"daggerheart\">Severe</tooltip> damage threshold</li><li class=\"vertical-card-list\">Once per <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"long-rest\" nexus=\"daggerheart\">long rest</tooltip>, when incoming damage would require you to mark a number of <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"hit-points\" nexus=\"daggerheart\">Hit Points</tooltip>, you can choose to mark that much <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"stress\" nexus=\"daggerheart\">Stress</tooltip> or spend that much <tooltip category=\"rule\" class=\"tooltip-convert\" element=\"hope\" nexus=\"daggerheart\">Hope</tooltip> instead.</li></ul></p>",
+      "effects": {
+        "u13fiOMD8B36PkiZ": {
+          "name": "Splendor-Touched",
+          "description": "<ul><li class=\"vertical-card-list\"><p>+3 bonus to your Severe damage threshold</p></li><li class=\"vertical-card-list\"><p>Once per long rest, when incoming damage would require you to mark a number of Hit Points, you can choose to mark that much Stress or spend that much Hope instead.</p></li></ul>"
+        }
+      }
     },
     "Splintering Strike": {
       "name": "Splintering Strike",
@@ -1781,6 +2300,12 @@
         "AI8sGbUXLw4gG8mW": {
           "name": "Damage on Successful Save",
           "description": "<p class=\"Body-Foundation\">Targets who succeed take <strong>3d20+3</strong> magic damage. </p>"
+        }
+      },
+      "effects": {
+        "kSLuGSI6FLhOJaGp": {
+          "name": "Stunning Sunlight",
+          "description": "<p>Temporarily Stunned. <span>While </span><span>Stunned</span><span>, they can’t use reactions and can’t take any other actions until they clear this </span><span class=\"tooltip-convert\">condition</span><span>.</p>"
         }
       }
     },
@@ -1844,6 +2369,12 @@
           "name": "Cast",
           "description": "<p>Make a <strong>Spellcast Roll </strong>against a target within Very Close range. On a success, they can’t lie to you while they remain within Close range, but they are not compelled to speak. If you ask them a question and they refuse to answer, they must mark a Stress and the effect ends. The target is typically unaware this spell has been cast on them until it causes them to utter the truth.</p>"
         }
+      },
+      "effects": {
+        "5L6fC80VfbPfGmcA": {
+          "name": "Can't Lie",
+          "description": "<p><span>Can’t lie to you while they remain within </span><span class=\"tooltip-convert\">Close</span><span> range, but they are not compelled to speak. If you ask them a question and they refuse to answer, they must mark a </span><span class=\"tooltip-convert\">Stress</span><span> and the effect ends. The target is typically unaware this spell has been cast on them until it causes them to utter the truth.</p>"
+        }
       }
     },
     "Tempest": {
@@ -1862,6 +2393,19 @@
           "name": "Sandstorm",
           "description": "<p class=\"Body-Foundation-No-BOLDITALIC\">Choose the following tempest and make a <strong>Spellcast Roll</strong> against all targets within Far range. Targets you succeed against experience its effects until the GM spends a Fear on their turn to end this spell.</p><ul class=\"\"><li class=\"vertical-card-list\"><p><em><strong>Sandstorm:</strong></em> Deal <strong>5d6+9</strong> magic damage. Attacks made from beyond Melee range have disadvantage.</p><p></p></li></ul>"
         }
+      },
+      "effects": {
+        "oqPY3I9oO9J6l5Aj": {
+          "name": "Vulnerable"
+        },
+        "tB7AyDy0pbE9q5hM": {
+          "name": "Wind",
+          "description": "<p><span>Targets can’t move against the wind.</p>"
+        },
+        "S4Vpgf3FMmq8MGrb": {
+          "name": "Sand",
+          "description": "<p><span>Attacks made from beyond </span><span class=\"tooltip-convert\">Melee</span><span> range have </span><span class=\"tooltip-convert\">disadvantage</span><span>.</p>"
+        }
       }
     },
     "Thorn Skin": {
@@ -1876,6 +2420,11 @@
           "name": "Use Tokens",
           "description": "<p>When you take damage, you can spend any number of tokens to roll that number of <strong>d6s</strong>. Add the results together and reduce the incoming damage by that amount. If you’re within Melee range of the attacker, deal that amount of damage back to them.</p><p class=\"Body-Foundation\">When you take a rest, clear all unspent tokens.</p>"
         }
+      },
+      "effects": {
+        "KPA1okccsR7AQH0x": {
+          "name": "Thorn Skin"
+        }
       }
     },
     "Thought Delver": {
@@ -1888,7 +2437,13 @@
         },
         "nuYCkANsYDtZJO6f": {
           "name": "Delve Deeper",
-          "description": "<p><span class=\"Body-Foundation\" style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif; color: rgb(239, 230, 216); font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Make a<strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\"> Spellcast Roll </strong>against the target to delve for deeper, more hidden thoughts. On a roll with Fear, the target might, at the GM’s discretion, become aware that you’re reading their thoughts.</p>"
+          "description": "<p><span class=\"Body-Foundation\">Make a<strong> Spellcast Roll </strong>against the target to delve for deeper, more hidden thoughts. On a roll with Fear, the target might, at the GM’s discretion, become aware that you’re reading their thoughts.</p>"
+        }
+      },
+      "effects": {
+        "obbNjDhwN60YhH1s": {
+          "name": "Mind Read",
+          "description": "<p><span>Read the vague surface thoughts of a target within </span><span class=\"tooltip-convert\">Far</span><span> range. Make a</span><span> </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span><span> </span><span>against the target to delve for deeper, more hidden thoughts.</p>"
         }
       }
     },
@@ -1899,6 +2454,12 @@
         "8ACwa5tqAGyNZ0sR": {
           "name": "Cast",
           "description": "<p>Choose a target within Very Far range. You can see through their eyes and hear through their ears. You can transition between using your own senses or the target’s freely until you cast another spell or until your next rest.</p>"
+        }
+      },
+      "effects": {
+        "TCOHV7tWpunCZDxn": {
+          "name": "Seeing, Hearing",
+          "description": "<p><span>Can see through their eyes and hear through their ears.</p>"
         }
       }
     },
@@ -1924,6 +2485,12 @@
           "name": "Spend Hope",
           "description": "<p class=\"Body-Foundation\">Once per long rest, <strong>spend 5 Hope</strong> to cast this spell on two or more willing creatures. Until your next rest, when a creature connected by this union would mark Stress or Hit Points, the connected creatures can choose who marks it.</p>"
         }
+      },
+      "effects": {
+        "kMcvp2QKmBP4uinB": {
+          "name": "Transcendent Union",
+          "description": "<p class=\"Body-Foundation\">Until your next rest, when a creature connected by this union would mark Stress or Hit Points, the connected creatures can choose who marks it.</p><p></p>"
+        }
       }
     },
     "Troublemaker": {
@@ -1942,7 +2509,12 @@
       "actions": {
         "hdMFgH17KyxENDAJ": {
           "name": "Spend Tokens",
-          "description": "<p><span class=\"Body-Foundation\" style=\"box-sizing: border-box; margin: 0px; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); font-family: Montserrat, sans-serif; color: rgb(239, 230, 216); font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">When you deal damage to this target, spend any number of tokens to add a<strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\"> d12</strong> for each token spent to your damage roll. You can only hold Twilight Toll on one creature at a time.When you choose a new target or take a rest, clear all unspent tokens.</p>"
+          "description": "<p><span class=\"Body-Foundation\">When you deal damage to this target, spend any number of tokens to add a<strong> d12</strong> for each token spent to your damage roll. You can only hold Twilight Toll on one creature at a time.When you choose a new target or take a rest, clear all unspent tokens.</p>"
+        }
+      },
+      "effects": {
+        "65UMKq0epBx5DbMC": {
+          "name": "Twilight Toll"
         }
       }
     },
@@ -1962,11 +2534,17 @@
       "actions": {
         "Rncq6VD6B9ugC0AO": {
           "name": "Don Facade",
-          "description": "<p>When you have a few minutes to prepare, you can </span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">mark a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Stress</strong></span> to don the facade of any humanoid you can picture clearly in your mind. While disguised, you have </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">advantage</span> on </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Presence</span> Rolls to avoid scrutiny.</p>"
+          "description": "<p>When you have a few minutes to prepare, you can </span><span>mark a </span><span class=\"tooltip-convert\"><strong>Stress</strong></span> to don the facade of any humanoid you can picture clearly in your mind. While disguised, you have </span><span class=\"tooltip-convert\">advantage</span> on </span><span class=\"tooltip-convert\">Presence</span> Rolls to avoid scrutiny.</p>"
         },
         "OoNND7VcWoBQdtFK": {
           "name": "Spend Token",
           "description": "<p>Place a number of tokens equal to your Spellcast trait on this card. When you take an action while disguised, spend a token from this card. After the action that spends the last token is resolved, the disguise drops.</p>"
+        }
+      },
+      "effects": {
+        "ZMDyDwI5RHe427O4": {
+          "name": "Disguised",
+          "description": "<p><span>Don the facade of any humanoid you can picture clearly in your mind. While disguised, you have </span><span class=\"tooltip-convert\">advantage</span><span> on </span><span class=\"tooltip-convert\">Presence</span><span> Rolls to avoid scrutiny.</p>"
         }
       }
     },
@@ -1976,17 +2554,28 @@
       "actions": {
         "MWvrKuwejWcQm7N1": {
           "name": "Cast",
-          "description": "<p>Make a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll</strong></span> against a target within </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Far</span> range and spend any number of tokens to channel raw energy from within yourself to unleash against them. On a success, roll a number of</span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"> d10s</span> equal to the tokens you spent and deal that much magic damage to the target.</p>"
+          "description": "<p>Make a </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span> against a target within </span><span class=\"tooltip-convert\">Far</span> range and spend any number of tokens to channel raw energy from within yourself to unleash against them. On a success, roll a number of</span><span> d10s</span> equal to the tokens you spent and deal that much magic damage to the target.</p>"
         },
         "MPBIzxemh61S9xDB": {
           "name": "Replenish Tokens",
           "description": "<p><strong>Mark a Stress</strong> to replenish this card with tokens (up to your Spellcast trait).</p>"
         }
+      },
+      "effects": {
+        "F2yHIwHeZmLlrkkS": {
+          "name": "Unleash Chaos"
+        }
       }
     },
     "Untouchable": {
       "name": "Untouchable",
-      "description": "<p class=\"Body-Foundation\">Gain a bonus to your Evasion equal to half your Agility.</p>"
+      "description": "<p class=\"Body-Foundation\">Gain a bonus to your Evasion equal to half your Agility.</p>",
+      "effects": {
+        "H8hazlQe4Wj4JFO6": {
+          "name": "Untouchable",
+          "description": "<p class=\"Body-Foundation\">Gain a bonus to your Evasion equal to half your Agility.</p>"
+        }
+      }
     },
     "Unyielding Armor": {
       "name": "Unyielding Armor",
@@ -2000,6 +2589,12 @@
           "name": "Clear Armor",
           "description": "<p>When you mark 1 or more Hit Points without marking an Armor Slot, clear an Armor Slot.</p>"
         }
+      },
+      "effects": {
+        "H9lgIqqp1imSNOv9": {
+          "name": "Valor-Touched",
+          "description": "<ul><li class=\"vertical-card-list-found\"><p>+1 bonus to your Armor Score</p></li><li class=\"vertical-card-list-found\"><p>When you mark 1 or more Hit Points without marking an Armor Slot, clear an Armor Slot.</p></li></ul>"
+        }
       }
     },
     "Vanishing Dodge": {
@@ -2010,6 +2605,12 @@
           "name": "Vanish",
           "description": "<p>When an attack made against you that would deal physical damage fails, you can <strong>spend a Hope</strong> to envelop yourself in shadow, becoming <em>Hidden</em> and teleporting to a point within Close range of the attacker. You remain <em>Hidden</em> until the next time you make an action roll.</p><p></p>"
         }
+      },
+      "effects": {
+        "kxal5WfDr3hTHYpb": {
+          "name": "Hidden",
+          "description": "<p><span>Envelop yourself in shadow, becoming </span><span>Hidden</span><span> and teleporting to a point within Close range of the attacker. You remain </span><span>Hidden</span><span> until the next time you make an action roll.</p>"
+        }
       }
     },
     "Veil of Night": {
@@ -2018,7 +2619,12 @@
       "actions": {
         "br6UQ0toK4ZYpP2s": {
           "name": "Cast",
-          "description": "<p>Make a </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Spellcast Roll</strong></span><span style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"> (13)</span>. On a success, you can create a temporary curtain of darkness between two points within </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Far</span> range. Only you can see through this darkness. You’re considered </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><em style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0);\">Hidden</em></span> to adversaries on the other side of the veil, and you have </span><span class=\"tooltip-convert\" style=\"box-sizing: border-box; scrollbar-width: thin; scrollbar-color: rgb(93, 20, 43) rgba(0, 0, 0, 0); color: rgb(239, 230, 216); font-family: Montserrat, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgba(24, 22, 46, 0.376); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">advantage</span> on attacks you make through the darkness. The veil remains until you cast another spell.</p>"
+          "description": "<p>Make a </span><span class=\"tooltip-convert\"><strong>Spellcast Roll</strong></span><span> (13)</span>. On a success, you can create a temporary curtain of darkness between two points within </span><span class=\"tooltip-convert\">Far</span> range. Only you can see through this darkness. You’re considered </span><span class=\"tooltip-convert\"><em>Hidden</em></span> to adversaries on the other side of the veil, and you have </span><span class=\"tooltip-convert\">advantage</span> on attacks you make through the darkness. The veil remains until you cast another spell.</p>"
+        }
+      },
+      "effects": {
+        "eSfBBZ7IP8qirLu7": {
+          "name": "Veiled"
         }
       }
     },
@@ -2044,6 +2650,14 @@
           "name": "Restrain Another",
           "description": "<p class=\"Body-Foundation\">Additionally on a success, you can <strong>spend a Hope</strong> to temporarily <em>Restrain</em> another adversary within Very Close range of your target.</p>"
         }
+      },
+      "effects": {
+        "Xh0wrgRUuYpwChBU": {
+          "name": "Restrained"
+        },
+        "2xzOqTaPJQzGqFJv": {
+          "name": "Restrained"
+        }
       }
     },
     "Vitality": {
@@ -2054,11 +2668,35 @@
           "name": "Apply Effect",
           "description": "<p>Choose from:</p><ul class=\"\"><li class=\"vertical-card-list-found\"><p>One Stress slot</p></li><li class=\"vertical-card-list-found\"><p>One Hit Point slot</p></li><li class=\"vertical-card-list-found\">+2 bonus to your damage thresholds</li></ul><p>(The effects are applied disabled. You have to manually enable two of them in your character sheet for now.</p><p></p>"
         }
+      },
+      "effects": {
+        "1jtgIyFvDpTb0asZ": {
+          "name": "Vitality (HP)",
+          "description": "<p>Permanenlty add one Hit Point slot</p>"
+        },
+        "vj9rm1tLqqsSFOXF": {
+          "name": "Vitality (Stress)",
+          "description": "<p>Permanently add one Stress slot</p>"
+        },
+        "BcqCG9yF6l1LRYqm": {
+          "name": "Vitality (Thresholds)",
+          "description": "<p>Permanently add a +2 bonus to your damage thresholds</p>"
+        }
       }
     },
     "Voice of Reason": {
       "name": "Voice of Reason",
-      "description": "<p class=\"Body-Foundation\">You speak with an unmatched power and authority. You have advantage on action rolls to de-escalate violent situations or convince someone to follow your lead.</p><p class=\"Body-Foundation\">Additionally, you’re emboldened in moments of duress. When all of your Stress slots are marked, you gain a +1 bonus to your Proficiency for damage rolls.</p>"
+      "description": "<p class=\"Body-Foundation\">You speak with an unmatched power and authority. You have advantage on action rolls to de-escalate violent situations or convince someone to follow your lead.</p><p class=\"Body-Foundation\">Additionally, you’re emboldened in moments of duress. When all of your Stress slots are marked, you gain a +1 bonus to your Proficiency for damage rolls.</p>",
+      "effects": {
+        "qWDojebJXMPIP629": {
+          "name": "Advantage",
+          "description": "<p><span>You have </span><span class=\"tooltip-convert\">advantage</span><span> on </span><span class=\"tooltip-convert\">action rolls</span><span> to de-escalate violent situations or convince someone to follow your lead.</p>"
+        },
+        "i5dnpOxTtWV1J46k": {
+          "name": "Emboldened (activate manually)",
+          "description": "<p><span>When all of your Stress slots are marked, you gain a +1 bonus to your Proficiency for damage rolls.</p>"
+        }
+      }
     },
     "Wall Walk": {
       "name": "Wall Walk",
@@ -2067,6 +2705,12 @@
         "iqFrWFRVPnR1fYf4": {
           "name": "Cast",
           "description": "<p><strong>Spend a Hope</strong> to allow a creature you can touch to climb on walls and ceilings as easily as walking on the ground. This lasts until the end of the scene or you cast Wall Walk again.</p>"
+        }
+      },
+      "effects": {
+        "s1q4O65vtoEDvvUF": {
+          "name": "Wall Walk",
+          "description": "<p>Can <span>climb on walls and ceilings as easily as walking on the ground. </span><span>This lasts until the end of the scene or you cast Wall Walk again.</p>"
         }
       }
     },
@@ -2108,6 +2752,12 @@
           "name": "Cast",
           "description": "<p>Whisper words of discord to an adversary within Melee range and make a <strong>Spellcast Roll (13)</strong>. On a success, the target must mark a Stress and make an attack against another adversary instead of against you or your allies.</p><p class=\"Body-Foundation\">Once this attack is over, the target realizes what happened. The next time you cast Words of Discord on them, gain a −5 penalty to the Spellcast Roll.</p>"
         }
+      },
+      "effects": {
+        "DGp7TSriFWotAvP6": {
+          "name": "Words of Discord",
+          "description": "<p><span class=\"Body-Foundation\">The target must make an attack against another adversary instead of against you or your allies. Once this attack is over, the target realizes what happened. The next time you cast Words of Discord on them, gain a −5 penalty to the Spellcast Roll.</p>"
+        }
       }
     },
     "Wrangle": {
@@ -2122,7 +2772,7 @@
     },
     "Zone of Protection": {
       "name": "Zone of Protection",
-      "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll (16)</strong>. Once per long rest on a success, choose a point within Far range and create a visible zone of protection there for all allies within Very Close range of that point. When you do, place a <strong>d6</strong> on this card with the 1 value facing up. When an ally in this zone takes damage, they reduce it by the die’s value. You then increase the die’s value by one. When the die’s value would exceed 6, this effect ends.</p><p><span style=\"color:oklab(0.952331 0.000418991 -0.00125992);font-family:'gg mono', 'Source Code Pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;font-size:13.6px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:left;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:pre-wrap;background-color:oklab(0.57738 0.0140701 -0.208587 / 0.0784314);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">@Template[type:emanation|range:vc]</p>",
+      "description": "<p class=\"Body-Foundation\">Make a <strong>Spellcast Roll (16)</strong>. Once per long rest on a success, choose a point within Far range and create a visible zone of protection there for all allies within Very Close range of that point. When you do, place a <strong>d6</strong> on this card with the 1 value facing up. When an ally in this zone takes damage, they reduce it by the die’s value. You then increase the die’s value by one. When the die’s value would exceed 6, this effect ends.</p><p><span>@Template[type:emanation|range:vc]</p>",
       "actions": {
         "U4faKrfbdN797zJm": {
           "name": "Cast",

@@ -23,7 +23,12 @@
         "Deceive",
         "Locate",
         "Sneak"
-      ]
+      ],
+      "effects": {
+        "ehfx2SUKMiM6f5Pd": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Aquatic Predator": {
       "name": "Aquatic Predator",
@@ -32,7 +37,12 @@
         "Attack",
         "Swim",
         "Track"
-      ]
+      ],
+      "effects": {
+        "7OTbmhQNtKhRAl59": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Aquatic Scout": {
       "name": "Aquatic Scout",
@@ -41,7 +51,12 @@
         "Navigate",
         "Sneak",
         "Swim"
-      ]
+      ],
+      "effects": {
+        "TsXyfEOCk0ma5tp9": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Armored Sentry": {
       "name": "Armored Sentry",
@@ -50,7 +65,12 @@
         "Dig",
         "Locate",
         "Protect"
-      ]
+      ],
+      "effects": {
+        "hd0uVl6ZZeyPJn9O": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Epic Aquatic Beast": {
       "name": "Epic Aquatic Beast",
@@ -60,7 +80,12 @@
         "Protect",
         "Scare",
         "Track"
-      ]
+      ],
+      "effects": {
+        "zYUexUr2e3k4kzhw": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Great Predator": {
       "name": "Great Predator",
@@ -69,7 +94,12 @@
         "Attack",
         "Sneak",
         "Sprint"
-      ]
+      ],
+      "effects": {
+        "TFzvHClwIAQUFxyP": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Great Winged Beast": {
       "name": "Great Winged Beast",
@@ -78,7 +108,12 @@
         "Deceive",
         "Distract",
         "Locate"
-      ]
+      ],
+      "effects": {
+        "qGSm1QpICpxRZxLn": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Household Friend": {
       "name": "Household Friend",
@@ -87,13 +122,30 @@
         "Climb",
         "Locate",
         "Protect"
-      ]
+      ],
+      "effects": {
+        "CzMAMg2q5gL15JrZ": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Legendary Beast": {
-      "name": "Legendary Beast"
+      "name": "Legendary Beast",
+      "effects": {
+        "cL4kH57pf2nGIxaK": {
+          "name": "Beastform Transformation",
+          "description": "<p>Pick a Tier 1 Beastform option and become a larger, more powerful version of that creature. While you’re in this form, you retain all traits and features from the original form and gain the following bonuses:</p><ul><li>A +6 bonus to the damage rolls</li><li>A +1 bonus to the trait used by this form</li><li>A +2 bonus to evasion</li></ul>"
+        }
+      }
     },
     "Legendary Hybrid": {
-      "name": "Legendary Hybrid"
+      "name": "Legendary Hybrid",
+      "effects": {
+        "RbZKFWATkfLZm67j": {
+          "name": "Beastform Transformation",
+          "description": "<p>To transform into this creature, <strong>mark an additional Stress</strong>. Choose any two Beastform options from Tiers 1–2. Choose a total of four advantages and two features from those options.</p>"
+        }
+      }
     },
     "Massive Behemoth": {
       "name": "Massive Behemoth",
@@ -103,7 +155,12 @@
         "Protect",
         "Scare",
         "Sprint"
-      ]
+      ],
+      "effects": {
+        "RR6ySJU5zaC7ws6A": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Mighty Lizard": {
       "name": "Mighty Lizard",
@@ -112,7 +169,12 @@
         "Attack",
         "Sneak",
         "Track"
-      ]
+      ],
+      "effects": {
+        "d13EzuP8Co04Jk8K": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Mighty Strider": {
       "name": "Mighty Strider",
@@ -121,7 +183,12 @@
         "Leap",
         "Navigate",
         "Sprint"
-      ]
+      ],
+      "effects": {
+        "IWg2cWUdvucUOLAL": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Mythic Aerial Hunter": {
       "name": "Mythic Aerial Hunter",
@@ -131,13 +198,30 @@
         "Deceive",
         "Locate",
         "Navigate"
-      ]
+      ],
+      "effects": {
+        "hnKnaOaswWJdaYmf": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Mythic Beast": {
-      "name": "Mythic Beast"
+      "name": "Mythic Beast",
+      "effects": {
+        "vhwbPQ2YT64qD1t1": {
+          "name": "Beastform Transformation",
+          "description": "<p>Pick a Tier 1 or Tier 2 Beastform option and become a larger, more powerful version of that creature. While you’re in this form, you retain all traits and features from the original form and gain the the following bonuses:</p><ul><li>A +9 bonus to damage rolls</li><li>A +2 bonus to the trait used by this form</li><li>A +3 bonus to Evasion</li><li>Your damage die increases by one size (d6 becomes d8, d8 becomes d10 etc.)</li></ul>"
+        }
+      }
     },
     "Mythic Hybrid": {
-      "name": "Mythic Hybrid"
+      "name": "Mythic Hybrid",
+      "effects": {
+        "HutJQ9HGtr1Eoibp": {
+          "name": "Beastform Transformation",
+          "description": "<p>To transform into this creature, <strong>mark 2 additional Stress</strong>. Choose any three Beastform options from Tiers 1–3. Choose a total of five advantages and three features from those options.</p>"
+        }
+      }
     },
     "Nimble Grazer": {
       "name": "Nimble Grazer",
@@ -146,7 +230,12 @@
         "Leap",
         "Sneak",
         "Sprint"
-      ]
+      ],
+      "effects": {
+        "lIbJFb5XQ98Eaauu": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Pack Predator": {
       "name": "Pack Predator",
@@ -155,7 +244,12 @@
         "Attack",
         "Sprint",
         "Track"
-      ]
+      ],
+      "effects": {
+        "amuFS9LlEnzZnaIN": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Pouncing Predator": {
       "name": "Pouncing Predator",
@@ -164,7 +258,12 @@
         "Attack",
         "Climb",
         "Sneak"
-      ]
+      ],
+      "effects": {
+        "GSmW6nJ3kyIoEK2H": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Powerful Beast": {
       "name": "Powerful Beast",
@@ -173,7 +272,12 @@
         "Navigate",
         "Protect",
         "Scare"
-      ]
+      ],
+      "effects": {
+        "AZGTvqzFVHa4wS1a": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Stalking Arachnid": {
       "name": "Stalking Arachnid",
@@ -182,7 +286,12 @@
         "Attack",
         "Climb",
         "Sneak"
-      ]
+      ],
+      "effects": {
+        "YkZX2yc2X0QDFPBG": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Striking Serpent": {
       "name": "Striking Serpent",
@@ -191,7 +300,12 @@
         "Climb",
         "Deceive",
         "Sprint"
-      ]
+      ],
+      "effects": {
+        "qGhLojWa5430zRd1": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Terrible Lizard": {
       "name": "Terrible Lizard",
@@ -201,7 +315,12 @@
         "Deceive",
         "Scare",
         "Track"
-      ]
+      ],
+      "effects": {
+        "qPtjZIkRVm68TGHN": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Winged Beast": {
       "name": "Winged Beast",
@@ -210,7 +329,12 @@
         "Deceive",
         "Locate",
         "Scare"
-      ]
+      ],
+      "effects": {
+        "Ln3atrxiqtPA0Wi6": {
+          "name": "Beastform Transformation"
+        }
+      }
     },
     "Agile": {
       "name": "Agile",
@@ -233,6 +357,16 @@
         "15XSCpCAZ2JLspmN": {
           "name": "Retract",
           "description": "<p><strong>Mark an Armor Slot</strong> to retract into your shell. While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can’t perform other actions without leaving this form.</p>"
+        }
+      },
+      "effects": {
+        "XFmEC0kDQJNrGbtr": {
+          "name": "Armored Shell",
+          "description": "<p>Your hardened exterior gives you resistance to physical damage.</p>"
+        },
+        "OY3lEB3vuDKNLzxv": {
+          "name": "Retracted",
+          "description": "<p>While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can’t perform other actions without leaving this form.</p>"
         }
       }
     },
@@ -280,6 +414,11 @@
           "name": "Attack",
           "description": "<p>Spend a Hope to move up to Far range in a straight line and make an attack against all targets within Melee range of the line. Targets you succeed against take d8+10 physical damage using your Proficiency and are temporarily Vulnerable.</p>"
         }
+      },
+      "effects": {
+        "FXdFgEgqVl5gIWJS": {
+          "name": "Demolished"
+        }
       }
     },
     "Devastating Strikes": {
@@ -324,11 +463,22 @@
           "name": "Mark Stress",
           "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>mark a Stress</strong> to make the target temporarily <em>Vulnerable</em>.</p>"
         }
+      },
+      "effects": {
+        "2kKkV9zhfvqA2vlt": {
+          "name": "Hobbling Strike"
+        }
       }
     },
     "Hollow Bones": {
       "name": "Hollow Bones",
-      "description": "<p>You gain a −2 penalty to your damage thresholds.</p>"
+      "description": "<p>You gain a −2 penalty to your damage thresholds.</p>",
+      "effects": {
+        "RM8wHu5GIF6zfF7V": {
+          "name": "Hollow Bones",
+          "description": "<p>You gain a −2 penalty to your damage thresholds.</p>"
+        }
+      }
     },
     "Massive Stride": {
       "name": "Massive Stride",
@@ -342,6 +492,11 @@
           "name": "Restrain",
           "description": "<p>When you succeed on an attack against a target within Melee range, you can temporarily <em>Restrain</em> them.</p>"
         }
+      },
+      "effects": {
+        "6GBczj8REkDmgX2Q": {
+          "name": "Ocean Master"
+        }
       }
     },
     "Pack Hunting": {
@@ -350,7 +505,13 @@
     },
     "Physical Defense": {
       "name": "Physical Defense",
-      "description": "<p>You gain a +3 bonus to your damage thresholds.</p>"
+      "description": "<p>You gain a +3 bonus to your damage thresholds.</p>",
+      "effects": {
+        "hs9vWE92QQQx15ET": {
+          "name": "Physical Defense",
+          "description": "<p>You gain a +3 bonus to your damage thresholds.</p>"
+        }
+      }
     },
     "Rampage": {
       "name": "Rampage",
@@ -358,6 +519,12 @@
       "actions": {
         "N7IoOHpqcvcJNsJQ": {
           "name": "Mark Stress",
+          "description": "<p>Before you make an attack roll, you can mark a Stress to gain a +1 bonus to your Proficiency for that attack.</p>"
+        }
+      },
+      "effects": {
+        "A7l4JEBC1FFQajsN": {
+          "name": "Rampage",
           "description": "<p>Before you make an attack roll, you can mark a Stress to gain a +1 bonus to your Proficiency for that attack.</p>"
         }
       }
@@ -370,6 +537,11 @@
           "name": "Spend Hope",
           "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>spend a Hope</strong> to clamp that opponent in your jaws, making them temporarily <em>Restrained</em> and <em>Vulnerable</em>.</p>"
         }
+      },
+      "effects": {
+        "y3EsJuInxE7juNXT": {
+          "name": "Snapping Strike"
+        }
       }
     },
     "Takedown": {
@@ -380,11 +552,23 @@
           "name": "Attack",
           "description": "<p><strong>Mark a Stress</strong> to move into Melee range of a target and make an attack roll against them. On a success, you gain a +2 bonus to your Proficiency for this attack and the target must mark a Stress.</p>"
         }
+      },
+      "effects": {
+        "hE6ciIusvKEtUQ8U": {
+          "name": "Takedown",
+          "description": "<p>You gain a +2 bonus to your Proficiency for this attack and the target must mark a Stress.</p>"
+        }
       }
     },
     "Thick Hide": {
       "name": "Thick Hide",
-      "description": "<p>You gain a +2 bonus to your damage thresholds.</p>"
+      "description": "<p>You gain a +2 bonus to your damage thresholds.</p>",
+      "effects": {
+        "ZoUJy8EOm9mVXuAw": {
+          "name": "Thick Hide",
+          "description": "<p>You gain a +2 bonus to your damage thresholds.</p>"
+        }
+      }
     },
     "Trample": {
       "name": "Trample",
@@ -394,11 +578,22 @@
           "name": "Attack",
           "description": "<p><strong>Mark a Stress</strong> to move up to Close range in a straight line and make an attack against all targets within Melee range of the line. Targets you succeed against take d8+1 physical damage using your Proficiency and are temporarily <em>Vulnerable</em>.</p>"
         }
+      },
+      "effects": {
+        "LkekG4IngVW9rFjI": {
+          "name": "Trampled"
+        }
       }
     },
     "Undaunted": {
       "name": "Undaunted",
-      "description": "<p>You gain a +2 bonus to all your damage thresholds.</p>"
+      "description": "<p>You gain a +2 bonus to all your damage thresholds.</p>",
+      "effects": {
+        "wVoUVQJ2Ik7CiUuV": {
+          "name": "Undaunted",
+          "description": "<p>You gain a +2 bonus to all your damage thresholds.</p>"
+        }
+      }
     },
     "Unyielding": {
       "name": "Unyielding",
@@ -418,6 +613,12 @@
           "name": "Poison",
           "description": "<p>When you succeed on an attack against a target within Melee range, the target becomes temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> direct physical damage each time they act.</p>"
         }
+      },
+      "effects": {
+        "TTyAKKoUCoYXSMs4": {
+          "name": "Poisoned",
+          "description": "<p><span>A Poisoned creature takes </span><span><strong>1d10</strong></span><span> direct physical damage each time they act.</span></p>"
+        }
       }
     },
     "Venomous Strike": {
@@ -428,6 +629,12 @@
           "name": "Attack",
           "description": "<p>Make an attack against any number of targets within Very Close range. On a success, a target is temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> physical direct damage each time they act.</p>"
         }
+      },
+      "effects": {
+        "1iQPj96LqUNkRaxE": {
+          "name": "Poisoned",
+          "description": "<p>A Poisoned creature takes <strong>1d10</strong> physical direct damage each time they act.</p>"
+        }
       }
     },
     "Vicious Maul": {
@@ -437,6 +644,11 @@
         "Cc53vyYz5ggKdIbx": {
           "name": "Spend Hope",
           "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>spend a Hope</strong> to clamp that opponent in your jaws, making them temporarily Restrained and Vulnerable.</p>"
+        }
+      },
+      "effects": {
+        "MIAh9XNwDXGDktCm": {
+          "name": "Mauled"
         }
       }
     },
@@ -457,6 +669,11 @@
         "vRU6xutkp3VYxZ0i": {
           "name": "Restrain",
           "description": "<p>You can temporarily <em>Restrain</em> a target within Close range by succeeding on a Finesse Roll against them.</p>"
+        }
+      },
+      "effects": {
+        "cBJueH89gNvvDKfQ": {
+          "name": "Webslinger"
         }
       }
     }

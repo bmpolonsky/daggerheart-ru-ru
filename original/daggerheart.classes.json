@@ -91,7 +91,13 @@
     },
     "Combat Training": {
       "name": "Combat Training",
-      "description": "<p>You ignore burden when equipping weapons. When you deal physical damage, you gain a bonus to your damage roll equal to your level.</p>"
+      "description": "<p>You ignore burden when equipping weapons. When you deal physical damage, you gain a bonus to your damage roll equal to your level.</p>",
+      "effects": {
+        "Y7sTM0tw0VpgU6pC": {
+          "name": "Combat Training",
+          "description": "<p>You ignore burden when equipping weapons. When you deal physical damage, you gain a bonus to your damage roll equal to your level.</p>"
+        }
+      }
     },
     "Evolution": {
       "name": "Evolution",
@@ -140,6 +146,11 @@
         "T6sfMJ9DRvF0IQZ4": {
           "name": "Spend Hope"
         }
+      },
+      "effects": {
+        "8G9zDv1gac6dEHmS": {
+          "name": "Make a Scene"
+        }
       }
     },
     "Minor Illusion": {
@@ -169,6 +180,12 @@
           "name": "Spend Hope",
           "description": "<p><strong>Spend 3 Hope</strong> to gain a +1 bonus to your attack rolls until your next rest.</p>"
         }
+      },
+      "effects": {
+        "XK4cCcz9sRGDJr0q": {
+          "name": "No Mercy",
+          "description": "<p><strong>G</strong>ain a +1 bonus to your attack rolls until your next rest.</p>"
+        }
       }
     },
     "Prayer Dice": {
@@ -186,6 +203,11 @@
         "vI4Fph3y9ygsya9e": {
           "name": "Rally your allies!"
         }
+      },
+      "effects": {
+        "FrSJH9vzDHkFGYQL": {
+          "name": "Rally"
+        }
       }
     },
     "Rally (Level 5)": {
@@ -194,6 +216,11 @@
       "actions": {
         "Z1KWFrpXOqZWuZD1": {
           "name": "Rally your Allies"
+        }
+      },
+      "effects": {
+        "8CFxYJV8zE6Wabwj": {
+          "name": "Rally (Level 5)"
         }
       }
     },
@@ -205,6 +232,12 @@
           "name": "Spend Hope",
           "description": "<p>Spend a Hope and make an attack against a target. On a success, deal your attack’s normal damage and temporarily make the attack’s target your Focus. Until this feature ends or you make a different creature your Focus, you gain the following benefits against your Focus:</p><ul><li><p>You know precisely what direction they are in.</p></li><li><p>When you deal damage to them, they must mark a Stress.</p></li><li><p>When you fail an attack against them, you can end your Ranger’s Focus feature to reroll your Duality Dice.</p></li></ul>"
         }
+      },
+      "effects": {
+        "SXi2dQWqpwY9fap4": {
+          "name": "Ranger's Focus",
+          "description": "<p>Until this feature ends or the ranger makes a different creature their Focus, they gain the following benefits against this adversary:</p><ul><li><p>They know precisely what direction they are in.</p></li><li><p>When they deal damage to them, the adverasry must mark a Stress.</p></li><li><p>When they fail an attack against them, they can end their Ranger’s Focus feature to reroll their Duality Dice.</p></li></ul>"
+        }
       }
     },
     "Rogue's Dodge": {
@@ -215,11 +248,23 @@
           "name": "Spend Hope",
           "description": "<p><strong>Spend 3 Hope</strong> to gain a +2 bonus to your Evasion until the next time an attack succeeds against you. Otherwise, this bonus lasts until your next rest.</p>"
         }
+      },
+      "effects": {
+        "hhVjBro2osGDTT5g": {
+          "name": "Rogue's Dodge",
+          "description": "<p><strong>Spend 3 Hope</strong> to gain a +2 bonus to your Evasion until the next time an attack succeeds against you. Otherwise, this bonus lasts until your next rest.</p>"
+        }
       }
     },
     "Sneak Attack": {
       "name": "Sneak Attack",
-      "description": "<p>When you succeed on an attack while Cloaked or while an ally is within Melee range of your target, add a number of d6s equal to your tier to your damage roll. </p><ul><li><p>Level 1 -&gt; Tier 1</p></li><li><p>Levels 2–4 -&gt; Tier 2 </p></li><li><p>Levels 5–7 -&gt; Tier 3 </p></li><li><p>Levels 8–10 -&gt; Tier 4</p></li></ul>"
+      "description": "<p>When you succeed on an attack while Cloaked or while an ally is within Melee range of your target, add a number of d6s equal to your tier to your damage roll. </p><ul><li><p>Level 1 -&gt; Tier 1</p></li><li><p>Levels 2–4 -&gt; Tier 2 </p></li><li><p>Levels 5–7 -&gt; Tier 3 </p></li><li><p>Levels 8–10 -&gt; Tier 4</p></li></ul>",
+      "effects": {
+        "380jFzw756qSy5ae": {
+          "name": "Sneak Attack",
+          "description": "<p>When you succeed on an attack while Cloaked or while an ally is within Melee range of your target, add a number of d6s equal to your tier to your damage roll.</p><ul><li><p>Level 1 -&gt; Tier 1</p></li><li><p>Levels 2–4 -&gt; Tier 2</p></li><li><p>Levels 5–7 -&gt; Tier 3</p></li><li><p>Levels 8–10 -&gt; Tier 4</p></li></ul>"
+        }
+      }
     },
     "Strange Patterns": {
       "name": "Strange Patterns",

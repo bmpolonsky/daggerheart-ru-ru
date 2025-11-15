@@ -23,12 +23,37 @@ Hooks.once('babele.init', (babele) => {
     }
   };
 
+  const updateEffectNode = (effect, translated) => {
+    if (!effect || !translated || typeof translated !== "object") {
+      return;
+    }
+    const { name, description } = translated;
+    if (name) {
+      effect.name = name;
+    }
+    if (description) {
+      effect.description = description;
+    }
+  };
+
   const applyActionTranslations = (actions, translatedActions) => {
     if (!actions || !translatedActions || typeof translatedActions !== "object") {
       return;
     }
     for (const [actionId, action] of Object.entries(actions)) {
       updateActionNode(action, translatedActions[actionId]);
+    }
+  };
+
+  const applyEffectTranslations = (effects, translatedEffects) => {
+    if (!Array.isArray(effects) || !translatedEffects || typeof translatedEffects !== "object") {
+      return;
+    }
+    for (const effect of effects) {
+      if (!effect) continue;
+      const effectId = typeof effect._id === "string" ? effect._id : null;
+      if (!effectId) continue;
+      updateEffectNode(effect, translatedEffects[effectId]);
     }
   };
 
@@ -61,6 +86,7 @@ Hooks.once('babele.init', (babele) => {
           system.description = desc;
         }
         applyActionTranslations(system.actions, translation.actions);
+        applyEffectTranslations(item.effects, translation.effects);
       }
       return origItems;
     },
@@ -72,6 +98,11 @@ Hooks.once('babele.init', (babele) => {
     "toActions": (origActions, transActions) => {
       applyActionTranslations(origActions, transActions);
       return origActions;
+    },
+
+    "toEffects": (origEffects, transEffects) => {
+      applyEffectTranslations(origEffects, transEffects);
+      return origEffects;
     },
 
     /**

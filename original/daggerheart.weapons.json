@@ -12,7 +12,15 @@
     "Secondary Weapons": "Secondary Weapons"
   },
   "mapping": {
-    "description": "system.description"
+    "description": "system.description",
+    "actions": {
+      "path": "system.actions",
+      "converter": "toActions"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "toEffects"
+    }
   },
   "entries": {
     "Black Powder Revolver": {

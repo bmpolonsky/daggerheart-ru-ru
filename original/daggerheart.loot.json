@@ -1,7 +1,15 @@
 {
   "label": "Loot",
   "mapping": {
-    "description": "system.description"
+    "description": "system.description",
+    "actions": {
+      "path": "system.actions",
+      "converter": "toActions"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "toEffects"
+    }
   },
   "entries": {
     "Airblade Charm": {

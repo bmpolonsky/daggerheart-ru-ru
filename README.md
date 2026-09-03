@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/bmpolonsky/fvtt-daggerheart-ru/main/module/mod
 ## Требования и совместимость
 
 * **Foundry VTT:** v14.364+ (проверено на v14.367)
-* **Система Daggerheart для Foundry (Foundryborne):** 2.5.0+ (проверено на 2.9.1)
+* **Система Daggerheart для Foundry (Foundryborne):** 2.9.1+ (проверено на 2.9.1)
 * **Модуль:** [Babele](https://foundryvtt.com/packages/babele) 2.7.5+
 
 > Модуль — это **локализация**, он ставится **поверх** установленной системы Daggerheart (Foundryborne). Саму систему Daggerheart необходимо установить отдельно.

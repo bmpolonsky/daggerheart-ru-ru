@@ -18,8 +18,8 @@ function createWorkspace() {
   return { tempRoot, moduleDir: tempModuleDir };
 }
 
-function runUpdater(moduleDir) {
-  execFileSync("node", ["../scripts/update_translations_full.js"], {
+function runUpdater(moduleDir, script = "update_translations_full.js") {
+  execFileSync("node", [`../scripts/${script}`], {
     cwd: moduleDir,
     env: {
       ...process.env,
@@ -215,6 +215,51 @@ test(
 );
 
 test(
+  "adversary damage lookup survives API literal formula",
+  withWorkspace(async ({ moduleDir }) => {
+    const adversaryPath = tmpDataPath(moduleDir, "adversary.json");
+    const adversaryData = readJson(adversaryPath);
+    const archerSquadron = adversaryData.data.find((item) => item.slug === "archer-squadron");
+    assert.ok(archerSquadron, "Archer Squadron exists");
+    archerSquadron.features[0].main_body =
+      "Когда отряд отмечает половину или более Ран, его стандартная атака наносит **9d9+9** физического урона.";
+    writeJson(adversaryPath, adversaryData);
+
+    for (const script of ["update_translations.js", "update_translations_full.js"]) {
+      runUpdater(moduleDir, script);
+
+      const adversaries = readJson(path.join(moduleDir, "translations", "daggerheart.adversaries.json"));
+      const description = adversaries.entries["Archer Squadron"].items.uPwtE9d63PHtQitG.description;
+      assert.ok(
+        description.includes("@Lookup[@system.attack.altDamageFormula]"),
+        `${script} must keep the dynamic damage formula`
+      );
+      assert.ok(
+        !description.includes("9d9+9"),
+        `${script} must not replace the lookup with literal API damage`
+      );
+    }
+  })
+);
+
+test(
+  "adversary item names drop dice and misspelled passive suffix",
+  withWorkspace(async ({ moduleDir }) => {
+    const adversaryPath = tmpDataPath(moduleDir, "adversary.json");
+    const adversaryData = readJson(adversaryPath);
+    const archerSquadron = adversaryData.data.find((item) => item.slug === "archer-squadron");
+    assert.ok(archerSquadron, "Archer Squadron exists");
+    archerSquadron.features[0].name = "Орда (9d9+9) - Пасивный";
+    writeJson(adversaryPath, adversaryData);
+
+    runUpdater(moduleDir);
+
+    const adversaries = readJson(path.join(moduleDir, "translations", "daggerheart.adversaries.json"));
+    assert.equal(adversaries.entries["Archer Squadron"].items.uPwtE9d63PHtQitG.name, "Орда");
+  })
+);
+
+test(
   "beastform advantage list is regenerated from ru API values",
   withWorkspace(async ({ moduleDir }) => {
     const beastPath = tmpDataPath(moduleDir, "beastform.json");
@@ -228,6 +273,33 @@ test(
 
     const beastforms = readJson(path.join(moduleDir, "translations", "daggerheart.beastforms.json"));
     assert.deepEqual(beastforms.entries["Agile Scout"].advantageOn, ["Полету", "Рывке"]);
+  })
+);
+
+test(
+  "official transformations update parent questions and feature text",
+  withWorkspace(async ({ moduleDir }) => {
+    const transformationPath = tmpDataPath(moduleDir, "transformation.json");
+    const transformationData = readJson(transformationPath);
+    const demigod = transformationData.data.find((item) => item.slug === "demigod");
+    assert.ok(demigod, "Demigod transformation must exist in cache");
+    const gifted = demigod.features.find((feature) => feature.id === 2120);
+    assert.ok(gifted, "Gifted transformation feature must exist in cache");
+    const featureMarker = "Тестовый текст свойства трансформации.";
+    const questionMarker = "Как проявился тестовый дар?";
+    gifted.main_body = featureMarker;
+    demigod.main_body = `${demigod.main_body}\n- ${questionMarker}`;
+    writeJson(transformationPath, transformationData);
+
+    for (const script of ["update_translations.js", "update_translations_full.js"]) {
+      runUpdater(moduleDir, script);
+      const transformations = readJson(
+        path.join(moduleDir, "translations", "daggerheart.transformations.json")
+      );
+      assert.equal(transformations.entries.Gifted.name, "Одарённый");
+      assert.ok(transformations.entries.Gifted.description.includes(featureMarker));
+      assert.ok(transformations.entries.Demigod.questions.includes(questionMarker));
+    }
   })
 );
 
@@ -246,6 +318,58 @@ test(
 
     const classes = readJson(path.join(moduleDir, "translations", "daggerheart.classes.json"));
     assert.ok(classes.entries["Bard"].description.includes(marker), "class description should refresh");
+  })
+);
+
+test(
+  "renamed Hope and Fear class features resolve to current API entries",
+  withWorkspace(async ({ moduleDir }) => {
+    const target = path.join(moduleDir, "translations", "daggerheart.classes.json");
+    const classes = readJson(target);
+    classes.entries["Combo Strike"] = { name: "Combo Strike" };
+    classes.entries["Patron's Pact"] = { name: "Patron's Pact" };
+    writeJson(target, classes);
+
+    for (const script of ["update_translations.js", "update_translations_full.js"]) {
+      runUpdater(moduleDir, script);
+      const updated = readJson(target);
+      assert.equal(updated.entries["Combo Strike"].name, "Комбо-удары");
+      assert.ok(updated.entries["Combo Strike"].description.includes("Кость Комбо"));
+      assert.equal(updated.entries["Patron's Pact"].name, "Покровитель колдуна");
+      assert.ok(updated.entries["Patron's Pact"].description.includes("покровителю"));
+    }
+  })
+);
+
+test(
+  "Hope and Fear martial stances are read from the subclass body",
+  withWorkspace(async ({ moduleDir }) => {
+    const subclassPath = tmpDataPath(moduleDir, "subclass.json");
+    const subclassData = readJson(subclassPath);
+    const martialArtist = subclassData.data.find(
+      (item) => item.slug === "playtest-martial-artist"
+    );
+    assert.ok(martialArtist, "Martial Artist subclass must exist in cache");
+    const marker = "Тестовый текст стойки.";
+    martialArtist.main_body = martialArtist.main_body.replace(
+      /(\*\*Избранная\*\*:\s*)[^\r\n]+/,
+      `$1${marker}`
+    );
+    writeJson(subclassPath, subclassData);
+
+    const target = path.join(moduleDir, "translations", "daggerheart.subclasses.json");
+    const subclasses = readJson(target);
+    subclasses.entries.Favored = { name: "Favored" };
+    subclasses.entries.Otherwordly = { name: "Otherwordly" };
+    writeJson(target, subclasses);
+
+    for (const script of ["update_translations.js", "update_translations_full.js"]) {
+      runUpdater(moduleDir, script);
+      const updated = readJson(target);
+      assert.equal(updated.entries.Favored.name, "Избранная");
+      assert.ok(updated.entries.Favored.description.includes(marker));
+      assert.equal(updated.entries.Otherwordly.name, "Неземная");
+    }
   })
 );
 
@@ -338,3 +462,36 @@ test(
     assert.ok(!actionHtml.includes(marker), "API marker text must not leak into overridden action");
   })
 );
+
+test("official Hope & Fear translations only reference current Foundry IDs", () => {
+  const files = [
+    "classes",
+    "subclasses",
+    "ancestries",
+    "communities",
+    "domains",
+    "transformations",
+    "adversaries",
+    "environments"
+  ];
+  const collections = ["items", "actions", "effects", "experiences", "potentialAdversaries"];
+
+  const checkNestedIds = (translated, original, location) => {
+    for (const collection of collections) {
+      for (const [id, node] of Object.entries(translated?.[collection] || {})) {
+        assert.ok(original?.[collection]?.[id], `${location}.${collection}.${id} is stale`);
+        checkNestedIds(node, original[collection][id], `${location}.${collection}.${id}`);
+      }
+    }
+  };
+
+  for (const name of files) {
+    const file = `daggerheart.${name}.json`;
+    const translated = readJson(path.join(PROJECT_ROOT, "module", "translations", file));
+    const original = readJson(path.join(PROJECT_ROOT, "original", file));
+    for (const [key, entry] of Object.entries(translated.entries)) {
+      assert.ok(original.entries[key], `${file}.${key} is not present in Foundryborne`);
+      checkNestedIds(entry, original.entries[key], `${file}.${key}`);
+    }
+  }
+});

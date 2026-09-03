@@ -55,6 +55,11 @@ const FILE_CONFIGS = [
     build: buildBeastformEntries
   },
   {
+    file: "daggerheart.transformations.json",
+    label: "Transformations",
+    build: buildTransformationEntries
+  },
+  {
     file: "daggerheart.adversaries.json",
     label: "Adversaries",
     build: buildAdversaryEntries
@@ -537,6 +542,18 @@ async function buildBeastformEntries() {
   });
   const features = await gatherEntries("beastforms", ["feature"], featureEntry);
   return { ...beastforms, ...features };
+}
+
+async function buildTransformationEntries() {
+  const transformations = await gatherEntries("transformations", ["transformation"], (entry) => {
+    const result = { name: entry.name };
+    addDescription(result, entry.system?.description);
+    const questions = sanitizeRichText(entry.system?.questions).trim();
+    if (questions) result.questions = questions;
+    return result;
+  });
+  const features = await gatherEntries("transformations", ["feature"], featureEntry);
+  return { ...transformations, ...features };
 }
 
 async function buildAdversaryEntries() {

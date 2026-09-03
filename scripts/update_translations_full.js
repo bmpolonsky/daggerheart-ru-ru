@@ -50,6 +50,7 @@ const CLASS_ITEM_OVERRIDES = {
   "Sigil of Your God": { name: "Символ вашего бога" },
   "Small Bag (Rocks & Bones)": { name: "Маленький мешочек с камнями и костями" },
   "Strange Dirty Penant": { name: "Странный кулон, найденный в грязи" },
+  "Strange Dirty Pendant": { name: "Странный кулон, найденный в грязи" },
   "Tiny Elemental Pet": {
     name: "Маленький питомец элементаль",
     description: "Маленький безобидный питомец элементаль"
@@ -60,7 +61,14 @@ const CLASS_ITEM_OVERRIDES = {
     name: "Непереведенная книга",
     description: "<p>Книга, которую вы пытаетесь перевести.</p>"
   },
-  "Broken Compass": { name: "Кажущийся сломанным компас" }
+  "Broken Compass": { name: "Кажущийся сломанным компас" },
+  "Combo Strike": { name: "Комбо-удары" },
+  "Patron's Pact": { name: "Покровитель колдуна" }
+};
+
+const CLASS_FEATURE_NAME_ALIASES = {
+  combostrike: "combostrikes",
+  patronspact: "warlockpatron"
 };
 
 /**
@@ -108,6 +116,7 @@ const ADVERSARY_FEATURE_RENDERERS = {
 // Алиасы для нормализации названий подклассов (исправление опечаток в API или системе).
 const SUBCLASS_NAME_ALIASES = {
   comaraderie: "camaraderie",
+  otherwordly: "otherworldly",
   partnerinarms: "partnersinarms",
   draininginvoaction: "draininginvocation"
 };
@@ -124,7 +133,25 @@ const FEATURE_NAME_ALIASES = {
 
 // Алиасы для записей трансформаций (расхождения имен в модуле и API).
 const TRANSFORMATION_ENTRY_ALIASES = {
-  demigodichorofthegod: "demigodichorofthegods"
+  demigodichorofthegod: "demigodgifted",
+  ghostspiritform: "ghostunfinishedbusiness",
+  reanimatedstitchup: "reanimatedwontstaydead",
+  werewolffrenzy: "werewolfhowlingrampage"
+};
+
+const TRANSFORMATION_NAME_OVERRIDES = {
+  "Change Shape": "Изменение облика",
+  Corpse: "Труп",
+  Ephemeral: "Эфемерный",
+  Fangs: "Клыки",
+  Feed: "Питание",
+  Gifted: "Одарённый",
+  "Howling Rampage": "Воющее безумие",
+  "Only Skin Deep": "Лишь кожа",
+  "Unfinished Business": "Незавершённое дело",
+  "Weight of Divinity": "Бремя божественности",
+  "Wolf Form": "Облик волка",
+  "Won't Stay Dead": "Смерти вопреки"
 };
 
 const MARTIAL_STANCE_LIST_SNIPPET =
@@ -148,9 +175,6 @@ const MANUAL_ENTRY_PATCHES = {
     }
   },
   subclasses: {
-    "Martial Artist": {
-      descriptionSuffix: MARTIAL_STANCE_LIST_SNIPPET
-    },
     "Martial Form": {
       descriptionReplacements: [
         {
@@ -179,6 +203,7 @@ const LEGACY_ANCESTRY_KEYS = new Set(["Fearless", "Unshakeable"]);
 const LABEL_OVERRIDES = {
   "daggerheart.ancestries.json": "Родословные",
   "daggerheart.beastforms.json": "Звериные формы",
+  "daggerheart.transformations.json": "Трансформации",
   "daggerheart.consumables.json": "Расходники",
   "daggerheart.environments.json": "Окружения"
 };
@@ -195,6 +220,7 @@ const TRANSLATION_FILES = {
   loot: "daggerheart.loot.json",
   consumables: "daggerheart.consumables.json",
   beastforms: "daggerheart.beastforms.json",
+  transformations: "daggerheart.transformations.json",
   adversaries: "daggerheart.adversaries.json",
   environments: "daggerheart.environments.json"
 };
@@ -611,6 +637,7 @@ function splitRestorationSegments(markdown) {
 
 // Регулярные выражения для поиска специфичных для Foundry VTT тегов.
 const TEMPLATE_TAG_RE = /@Template\[[^\]]+\]/gi; // @Template[type:cone|distance:30]
+const LOOKUP_TAG_RE = /@Lookup\[[^\]]+\]/gi; // @Lookup[@system.attack.damageFormula]
 const INLINE_ROLL_RE = /\[\[\/([a-z]+)\s*([^\]]+)\]\]/gi; // [[/r 1d6]]
 const UUID_TAG_RE = /@UUID\[([^\]]+)\]\{([^}]*)\}/gi; // @UUID[...]{label}
 const SECRET_SECTION_RE = /<section\b[^>]*class=['"][^'"]*\bsecret\b[^'"]*['"][^>]*>[\s\S]*?<\/section>/gi; // <section class="secret">...</section>
@@ -664,6 +691,67 @@ function insertAfterBlockIndex(html, blockIndex, snippet) {
     }
   }
   return null;
+}
+
+function replaceFirstMatchOutsideLookup(html, regex, replacement) {
+  if (!html) return html;
+  let replaced = false;
+  return html.replace(regex, (match, ...args) => {
+    if (replaced) return match;
+    const offset = args[args.length - 2];
+    const before = html.slice(0, offset);
+    if (before.lastIndexOf("@Lookup[") > before.lastIndexOf("]")) {
+      return match;
+    }
+    replaced = true;
+    return typeof replacement === "function" ? replacement(match, ...args) : replacement;
+  });
+}
+
+function mergeLookupFormulaTags(oldHtml, newHtml) {
+  if (!newHtml) return newHtml;
+  const source = oldHtml || "";
+  let result = newHtml;
+  const lookupMatches = Array.from(source.matchAll(LOOKUP_TAG_RE));
+  for (const match of lookupMatches) {
+    const tag = match[0];
+    if (!tag || result.includes(tag)) continue;
+    if (!/@system\.attack\.(?:altDamageFormula|damageFormula)/i.test(tag)) continue;
+
+    const sourceBefore = source.slice(0, match.index || 0);
+    const sourceAfter = source.slice((match.index || 0) + tag.length);
+    const wasStrong = /<strong[^>]*>\s*$/i.test(sourceBefore) && /^\s*<\/strong>/i.test(sourceAfter);
+    const replacement = wasStrong ? `<strong>${tag}</strong>` : tag;
+    const before = result;
+
+    result = replaceFirstMatchOutsideLookup(
+      result,
+      /<strong>\s*\d+d\d+(?:\s*[+-]\s*\d+)?\s*<\/strong>/i,
+      replacement
+    );
+    if (result !== before) continue;
+
+    result = replaceFirstMatchOutsideLookup(
+      result,
+      /\b\d+d\d+(?:\s*[+-]\s*\d+)?\b/i,
+      replacement
+    );
+    if (result !== before) continue;
+
+    result = replaceFirstMatchOutsideLookup(
+      result,
+      /\d+\s+единиц(?:а|у|ы)?/i,
+      replacement
+    );
+    if (result !== before) continue;
+
+    result = replaceFirstMatchOutsideLookup(
+      result,
+      /\b\d+(?=\s+(?:физическ|магическ))/i,
+      replacement
+    );
+  }
+  return result;
 }
 
 function extractPlainText(html) {
@@ -853,6 +941,7 @@ function mergeFoundryTags(oldHtml, newHtml) {
   if (!newHtml) return newHtml;
   const source = oldHtml || "";
   let result = newHtml;
+  result = mergeLookupFormulaTags(source, result);
 
   // Обработка тегов @Template
   // Логика: находит все @Template теги в старом тексте и, если их нет в новом,
@@ -1234,7 +1323,10 @@ function stripExperienceBonus(name) {
 
 function cleanAdversaryItemName(name) {
   if (!name) return name;
-  return name.replace(/\s*[-–—]\s*(?:action|reaction|passive|действие|реакция|пассив[^\s]*)$/iu, "").trim();
+  return name
+    .replace(/\s*[-–—]\s*(?:action|reaction|passive|действие|реакция|пас+ив[^\s]*)$/iu, "")
+    .replace(/\s*\(\s*\d+d\d+(?:\s*[+-]\s*\d+)?\s*\)\s*$/iu, "")
+    .trim();
 }
 
 function generateBulletActions(rawFeature) {
@@ -1527,6 +1619,24 @@ function buildFeatureMap(enEntries, ruBySlug, fields, sourceLabel, targetMap, fe
   }
 }
 
+function addMartialStanceFeatures(enEntries, ruEntries, targetMap) {
+  const enEntry = enEntries.find((entry) => entry.slug === "playtest-martial-artist");
+  const ruEntry = ruEntries.find((entry) => entry.slug === "playtest-martial-artist");
+  const parse = (body) =>
+    Array.from(String(body || "").matchAll(/^\s*-\s+\*\*([^*]+)\*\*:\s*(.+?)\s*$/gm));
+  const enStances = parse(enEntry?.main_body);
+  const ruStances = parse(ruEntry?.main_body);
+  if (!enStances.length || enStances.length !== ruStances.length) return;
+  enStances.forEach((stance, index) => {
+    const key = normalize(stance[1]);
+    if (!key) return;
+    targetMap[key] = {
+      name: sanitizeName(ruStances[index][1]),
+      description: markdownToHtml(ruStances[index][2])
+    };
+  });
+}
+
 function enFeatureName(feature) {
   return feature.name || "";
 }
@@ -1608,6 +1718,14 @@ function buildTransformationEntriesMap(enEntries, ruEntries) {
     }
     const shortDescription = ruEntry.short_description || "";
     const baseName = sanitizeName(ruEntry.name || enEntry.name || "") || "";
+    const parentNorm = normalize(enEntry.name);
+    if (parentNorm) {
+      map[parentNorm] = {
+        name: baseName,
+        description: markdownToHtml(shortDescription),
+        questions: extractTransformationQuestions(ruEntry.main_body)
+      };
+    }
     for (const feature of enEntry.features || []) {
       if (!feature || feature.id === undefined || feature.id === null) continue;
       const ruFeature = ruFeatures.get(feature.id);
@@ -1616,6 +1734,14 @@ function buildTransformationEntriesMap(enEntries, ruEntries) {
       const norm = normalize(keyName);
       if (!norm) continue;
       const featureName = sanitizeName(ruFeature.name || feature.name || "") || "";
+      const featureDescription = markdownToHtml(ruFeature.main_body || "");
+      const featureNorm = normalize(feature.name);
+      if (featureNorm) {
+        map[featureNorm] = {
+          name: featureName,
+          description: featureDescription
+        };
+      }
       map[norm] = {
         name: featureName ? `${baseName} - ${featureName}` : baseName,
         shortDescription,
@@ -1627,8 +1753,16 @@ function buildTransformationEntriesMap(enEntries, ruEntries) {
   return map;
 }
 
+function extractTransformationQuestions(mainBody) {
+  const match = String(mainBody || "").match(
+    /(?:^|\n)##\s+(?:Transformation Questions|Вопросы Трансформации)\s*\n([\s\S]*)$/i
+  );
+  return match ? markdownToHtml(match[1]).replace(/<\/ul><ul>/g, "") : "";
+}
+
 function renderTransformationDescription(info) {
   if (!info) return "";
+  if (info.description) return info.description;
   const sections = [];
   const shortHtml = markdownToHtml(info.shortDescription || "");
   if (shortHtml) {
@@ -1905,6 +2039,7 @@ async function main() {
 
   buildFeature(classData.en, classData.ru, ["features"], "class", scopedFeatureMaps.class);
   buildFeature(subclassData.en, subclassData.ru, ["foundation_features", "specialization_features", "mastery_features"], "subclass", scopedFeatureMaps.subclass);
+  addMartialStanceFeatures(subclassData.en, subclassData.ru, scopedFeatureMaps.subclass);
   buildFeature(ancestryData.en, ancestryData.ru, ["features"], "ancestry", scopedFeatureMaps.ancestry);
   buildFeature(communityData.en, communityData.ru, ["features"], "community", scopedFeatureMaps.community);
   buildFeature(domainData.en, domainData.ru, ["features"], "domain-card", scopedFeatureMaps["domain-card"]);
@@ -2171,7 +2306,7 @@ async function main() {
         handled = true;
       }
 
-      const featureInfo = featureMap[norm];
+      const featureInfo = featureMap[resolveAlias(norm, CLASS_FEATURE_NAME_ALIASES)];
       if (featureInfo) {
         if (featureInfo.name) entry.name = sanitizeName(featureInfo.name);
         if (featureInfo.description !== null && featureInfo.description !== undefined) {
@@ -2647,14 +2782,14 @@ async function main() {
   }
 
   async function updateTransformationsFile(path, { transformationEntries }, stats) {
-    return updateEntries(path, (norm, entry) => {
+    return updateEntries(path, (norm, entry, key) => {
       if (!norm) return false;
       const lookup = resolveAlias(norm, TRANSFORMATION_ENTRY_ALIASES);
       const info = transformationEntries[lookup];
       if (!info) return false;
 
       if (info.name) {
-        entry.name = sanitizeName(info.name);
+        entry.name = TRANSFORMATION_NAME_OVERRIDES[key] || sanitizeName(info.name);
       }
       const originalDescription = entry.description;
       let descriptionHtml = renderTransformationDescription(info);
@@ -2663,6 +2798,9 @@ async function main() {
         setHtmlField(entry, "description", descriptionHtml);
       } else {
         delete entry.description;
+      }
+      if (info.questions) {
+        setHtmlField(entry, "questions", info.questions);
       }
 
       translateTransformationActionNames(entry.actions);
@@ -2988,6 +3126,14 @@ async function main() {
           beastTop,
           featureMap: scopedFeatureMaps.beastform
         }, statsByFile.beastforms)
+    },
+    {
+      key: "transformations",
+      file: TRANSLATION_FILES.transformations,
+      run: () =>
+        updateTransformationsFile(filePaths.transformations, {
+          transformationEntries
+        }, statsByFile.transformations)
     },
     {
       key: "adversaries",

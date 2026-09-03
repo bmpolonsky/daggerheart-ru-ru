@@ -12,36 +12,6 @@
     }
   },
   "entries": {
-    "Loot": {
-      "name": "Loot",
-      "formulaName": "Common",
-      "altFormula": {
-        "hJJtajaMk14bYM4X": {
-          "name": "Uncommon"
-        },
-        "yDVeXdKpG7LzjHWa": {
-          "name": "Rare"
-        },
-        "qPHNIuUgWAHauI6V": {
-          "name": "Legendary"
-        }
-      }
-    },
-    "Consumables": {
-      "name": "Consumables",
-      "formulaName": "Common",
-      "altFormula": {
-        "uoUn5fRTUkyg6U2G": {
-          "name": "Uncommon"
-        },
-        "FGxM2yoxUUUd9Eov": {
-          "name": "Rare"
-        },
-        "HZ2hRBxu0k8IW0jC": {
-          "name": "Legendary"
-        }
-      }
-    },
     "Random Objectives": {
       "name": "Random Objectives",
       "formulaName": "Roll Formula",
@@ -58,6 +28,82 @@
         "10-10": "<p>Harass the opponent to deplete their resources or keep them occupied.</p>",
         "11-11": "<p>Destroy a piece of architecture, a statue, a shrine, or a weapon.</p>",
         "12-12": "<p>Investigate a situation to confirm or deny existing information.</p>"
+      }
+    },
+    "Additional Consumables": {
+      "name": "Additional Consumables",
+      "description": "<p>The following table includes the consumables from the Hope &amp; Fear Expansion Set.</p>",
+      "formulaName": "Common",
+      "altFormula": {
+        "RKxWr9XX7zRPQGDD": {
+          "name": "Common/Uncommon"
+        },
+        "XAVgCBgN4ituTp2H": {
+          "name": "Uncommon/Rare"
+        },
+        "MhStccGw337INEiH": {
+          "name": "Rare/Legendary"
+        },
+        "7cpKCeqcmuMniqQ3": {
+          "name": "Legendary"
+        }
+      }
+    },
+    "Additional Items": {
+      "name": "Additional Items",
+      "description": "<p>The following table includes the items from the Hope &amp; Fear Expansion Set.</p>",
+      "formulaName": "Common",
+      "altFormula": {
+        "vN7tM7NoAFOKp6lg": {
+          "name": "Common/Uncommon"
+        },
+        "WCBoCAi8GmQlqHln": {
+          "name": "Uncommon/Rare"
+        },
+        "2ju4ySAWXmyvb2Y5": {
+          "name": "Rare/Legendary"
+        },
+        "Pu1yAAOGuej37qcL": {
+          "name": "Legenary"
+        }
+      }
+    },
+    "Core Set Consumables": {
+      "name": "Core Set Consumables",
+      "description": "<p>The following table includes the consumables from the Daggerheart Core Set.</p>",
+      "formulaName": "Common",
+      "altFormula": {
+        "FGxM2yoxUUUd9Eov": {
+          "name": "Common/Uncommon"
+        },
+        "Gq6mOIPwSCiJDs9G": {
+          "name": "Uncommon/Rare"
+        },
+        "siQEVVIEI3QS0tjG": {
+          "name": "Rare/Legendary"
+        },
+        "0IzFB1jGWCR7TzTT": {
+          "name": "Legendary"
+        }
+      }
+    },
+    "Core Set Items": {
+      "name": "Core Set Items",
+      "description": "<p>The following table includes the items from the Daggerheart Core Set.</p>",
+      "formulaName": "Common",
+      "altFormula": {
+        "yDVeXdKpG7LzjHWa": {
+          "name": "Common/Uncommon"
+        },
+        "AfKdabeXI6EbeRuZ": {
+          "name": "Uncommon/Rare"
+        },
+        "DZdKW5ZD1HFhWrEh": {
+          "name": "Rare/Legendary"
+        },
+        "lbOwKKz4Bwl82khb": {
+          "name": "Legendary"
+        }
       }
     }
   }

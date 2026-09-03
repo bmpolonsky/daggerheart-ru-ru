@@ -12,36 +12,6 @@
     }
   },
   "entries": {
-    "Loot": {
-      "name": "Добыча",
-      "formulaName": "Обычные",
-      "altFormula": {
-        "hJJtajaMk14bYM4X": {
-          "name": "Необычные"
-        },
-        "yDVeXdKpG7LzjHWa": {
-          "name": "Редкие"
-        },
-        "qPHNIuUgWAHauI6V": {
-          "name": "Легендарные"
-        }
-      }
-    },
-    "Consumables": {
-      "name": "Расходники",
-      "formulaName": "Обычные",
-      "altFormula": {
-        "uoUn5fRTUkyg6U2G": {
-          "name": "Необычные"
-        },
-        "FGxM2yoxUUUd9Eov": {
-          "name": "Редкие"
-        },
-        "HZ2hRBxu0k8IW0jC": {
-          "name": "Легендарные"
-        }
-      }
-    },
     "Random Objectives": {
       "name": "Случайные цели",
       "formulaName": "Формула броска",
@@ -58,6 +28,82 @@
         "10-10": "<p>Изнурять противника, чтобы истощить его ресурсы или занять его.</p>",
         "11-11": "<p>Уничтожить часть архитектуры, статую, святилище или оружие.</p>",
         "12-12": "<p>Исследовать ситуацию, чтобы подтвердить или опровергнуть существующую информацию.</p>"
+      }
+    },
+    "Additional Consumables": {
+      "name": "Дополнительные расходники",
+      "description": "<p>В этой таблице представлены расходники из дополнения Hope &amp; Fear.</p>",
+      "formulaName": "Обычные",
+      "altFormula": {
+        "RKxWr9XX7zRPQGDD": {
+          "name": "Обычные/Необычные"
+        },
+        "XAVgCBgN4ituTp2H": {
+          "name": "Необычные/Редкие"
+        },
+        "MhStccGw337INEiH": {
+          "name": "Редкие/Легендарные"
+        },
+        "7cpKCeqcmuMniqQ3": {
+          "name": "Легендарные"
+        }
+      }
+    },
+    "Additional Items": {
+      "name": "Дополнительные предметы",
+      "description": "<p>В этой таблице представлены предметы из дополнения Hope &amp; Fear.</p>",
+      "formulaName": "Обычные",
+      "altFormula": {
+        "vN7tM7NoAFOKp6lg": {
+          "name": "Обычные/Необычные"
+        },
+        "WCBoCAi8GmQlqHln": {
+          "name": "Необычные/Редкие"
+        },
+        "2ju4ySAWXmyvb2Y5": {
+          "name": "Редкие/Легендарные"
+        },
+        "Pu1yAAOGuej37qcL": {
+          "name": "Легендарные"
+        }
+      }
+    },
+    "Core Set Consumables": {
+      "name": "Расходники основного набора",
+      "description": "<p>В этой таблице представлены расходники из основного набора Daggerheart.</p>",
+      "formulaName": "Обычные",
+      "altFormula": {
+        "FGxM2yoxUUUd9Eov": {
+          "name": "Обычные/Необычные"
+        },
+        "Gq6mOIPwSCiJDs9G": {
+          "name": "Необычные/Редкие"
+        },
+        "siQEVVIEI3QS0tjG": {
+          "name": "Редкие/Легендарные"
+        },
+        "0IzFB1jGWCR7TzTT": {
+          "name": "Легендарные"
+        }
+      }
+    },
+    "Core Set Items": {
+      "name": "Предметы основного набора",
+      "description": "<p>В этой таблице представлены предметы из основного набора Daggerheart.</p>",
+      "formulaName": "Обычные",
+      "altFormula": {
+        "yDVeXdKpG7LzjHWa": {
+          "name": "Обычные/Необычные"
+        },
+        "AfKdabeXI6EbeRuZ": {
+          "name": "Необычные/Редкие"
+        },
+        "DZdKW5ZD1HFhWrEh": {
+          "name": "Редкие/Легендарные"
+        },
+        "lbOwKKz4Bwl82khb": {
+          "name": "Легендарные"
+        }
       }
     }
   }

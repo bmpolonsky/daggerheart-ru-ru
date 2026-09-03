@@ -13,47 +13,46 @@
   "entries": {
     "Highborne": {
       "name": "Highborne",
-      "description": "<p>Being part of a highborne community means you’re accustomed to a life of elegance, opulence, and prestige within the upper echelons of society. Traditionally, members of a highborne community possess incredible material wealth. While this can take a variety of forms depending on the community—including gold and other minerals, land, or controlling the means of production—this status always comes with power and influence. Highborne place great value on titles and possessions, and there is little social mobility within their ranks. Members of a highborne community often control the political and economic status of the areas in which they live due to their ability to influence people and the economy with their substantial wealth. The health and safety of the less affluent people who live in these locations often hinges on the ability of this highborne ruling class to prioritize the well-being of their subjects over profit.</p><p class=\"green Body-Styles_Body\"><em>Highborne are often amiable, candid, conniving, enterprising, ostentatious, and unflappable.</em></p>"
+      "description": "<p>Being part of a highborne community means you're accustomed to a life of elegance, opulence, and prestige within the upper echelons of society.</p>"
     },
     "Loreborne": {
       "name": "Loreborne",
-      "description": "<p>Being part of a loreborne community means you’re from a society that favors strong academic or political prowess. Loreborne communities highly value knowledge, frequently in the form of historical preservation, political advancement, scientific study, skill development, or lore and mythology compilation. Most members of these communities research in institutions built in bastions of civilization, while some eclectic few thrive in gathering information from the natural world. Some may be isolationists, operating in smaller enclaves, schools, or guilds and following their own unique ethos. Others still wield their knowledge on a larger scale, making deft political maneuvers across governmental landscapes.</p><p class=\"green Body-Styles_Body\"><em>Loreborne are often direct, eloquent, inquisitive, patient, rhapsodic, and witty.</em></p>"
+      "description": "<p>Being part of a loreborne community means you're from a society that favors strong academic or political prowess.</p>"
     },
     "Orderborne": {
       "name": "Orderborne",
-      "description": "<p>Being part of an orderborne community means you’re from a collective that focuses on discipline or faith, and you uphold a set of principles that reflect your experience there. Orderborne are frequently some of the most powerful among the surrounding communities. By aligning the members of their society around a common value or goal, such as a god, doctrine, ethos, or even a shared business or trade, the ruling bodies of these enclaves are able to mobilize larger populations with less effort. While orderborne communities take a variety of forms—some even profoundly pacifistic—perhaps the most feared are those that structure themselves around military prowess. In such a case, it’s not uncommon for orderborne to provide soldiers for hire to other cities or countries.</p><p class=\"green Body-Styles_Body\"><em>Orderborne are often ambitious, benevolent, pensive, prudent, sardonic, and stoic.</em></p>"
+      "description": "<p>Being part of an orderborne community means you're from a collective that focuses on discipline or faith, and you uphold a set of principles that reflect your experience there.</p>"
     },
     "Ridgeborne": {
       "name": "Ridgeborne",
-      "description": "<p>Being part of a ridgeborne community means you’ve called the rocky peaks and sharp cliffs of the mountainside home. Those who’ve lived in the mountains often consider themselves hardier than most because they’ve thrived among the most dangerous terrain many continents have to offer. These groups are adept at adaptation, developing unique technologies and equipment to move both people and products across difficult terrain. As such, ridgeborne grow up scrambling and climbing, making them sturdy and strong-willed. Ridgeborne localities appear in a variety of forms—some cities carve out entire cliff faces, others construct castles of stone, and still more live in small homes on windblown peaks. Outside forces often struggle to attack ridgeborne groups, as the small militias and large military forces of the mountains are adept at utilizing their high-ground advantage.</p><p class=\"green Body-Styles_Body\"><em>Ridgeborne are often bold, hardy, indomitable, loyal, reserved, and stubborn.</em></p>"
+      "description": "<p>Being part of a ridgeborne community means you've called the rocky peaks and sharp cliffs of the mountainside home.</p>"
     },
     "Seaborne": {
       "name": "Seaborne",
-      "description": "<p>Being part of a seaborne community means you lived on or near a large body of water. Seaborne communities are built, both physically and culturally, around the specific waters they call home. Some of these groups live along the shore, constructing ports for locals and travelers alike. These harbors function as centers of commerce, tourist attractions, or even just a safe place to lay down one’s head after weeks of travel. Other seaborne live on the water in small boats or large ships, with the idea of “home” comprising a ship and its crew, rather than any one landmass. No matter their exact location, seaborne communities are closely tied to the ocean tides and the creatures who inhabit them. Seaborne learn to fish at a young age, and train from birth to hold their breath and swim in even the most tumultuous waters. Individuals from these groups are highly sought after for their sailing skills, and many become captains of vessels, whether within their own community, working for another, or even at the helm of a powerful naval operation.</p><p class=\"green Body-Styles_Body\"><em>Seaborne are often candid, cooperative, exuberant, fierce, resolute, and weathered.</em></p>"
+      "description": "<p>Being part of a seaborne community means you lived on or near a large body of water.</p>"
     },
     "Slyborne": {
       "name": "Slyborne",
-      "description": "<p>Being part of a slyborne community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists. Being part of a slyborne community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists. Members of slyborne communities are brought together by their disreputable goals and their clever means of achieving them. Many people in these communities have an array of unscrupulous skills: forging, thievery, smuggling, and violence. People of any social class can be slyborne, from those who have garnered vast wealth and influence to those without a coin to their name. To the outside eye, slyborne might appear to be ruffians with no loyalty, but these communities possess some of the strictest codes of honor which, when broken, can result in a terrifying end for the transgressor.</p><p class=\"green Body-Styles_Body\"><em>Slyborne are often calculating, clever, formidable, perceptive, shrewd, and tenacious.</em></p>"
+      "description": "<p>Being part of a slyborne community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists.</p>"
     },
     "Underborne": {
       "name": "Underborne",
-      "description": "<p>Being part of an underborne community means you’re from a subterranean society. Many underborne live right beneath the cities and villages of other collectives, while some live much deeper. These communities range from small family groups in burrows to massive metropolises in caverns of stone. In many locales, underborne are recognized for their incredible boldness and skill that enable great feats of architecture and engineering. Underborne are regularly hired for their bravery, as even the least daring among them has likely encountered formidable belowground beasts, and learning to dispatch such creatures is common practice amongst these societies. Because of the dangers of their environment, many underborne communities develop unique nonverbal languages that prove equally useful on the surface.</p><p class=\"green Body-Styles_Body\"><em>Underborne are often composed, elusive, indomitable, innovative, resourceful, and unpretentious.</em></p>"
+      "description": "<p>Being part of an underborne community means you're from a subterranean society.</p>"
     },
     "Wanderborne": {
       "name": "Wanderborne",
-      "description": "<p>Being part of a wanderborne community means you’ve lived as a nomad, forgoing a permanent home and experiencing a wide variety of cultures. Unlike many communities that are defined by their locale, wanderborne are defined by their traveling lifestyle. Because of their frequent migration, wanderborne put less value on the accumulation of material possessions in favor of acquiring information, skills, and connections. While some wanderborne are allied by a common ethos, such as a religion or a set of political or economic values, others come together after shared tragedy, such as the loss of their home or land. No matter the reason, the dangers posed by life on the road and the choice to continue down that road together mean that wanderborne are known for their unwavering loyalty.</p><p class=\"green Body-Styles_Body\"><em>Wanderborne are often inscrutable, magnanimous, mirthful, reliable, savvy, and unorthodox.</em></p>"
+      "description": "<p>Being part of a wanderborne community means you've lived as a nomad, forgoing a permanent home and experiencing a wide variety of cultures.</p>"
     },
     "Wildborne": {
       "name": "Wildborne",
-      "description": "<p>Being part of a wildborne community means you lived deep within the forest. Wildborne communities are defined by their dedication to the conservation of their homelands, and many have strong religious or cultural ties to the fauna they live among. This results in unique architectural and technological advancements that favor sustainability over short-term, high-yield results. It is a hallmark of wildborne societies to integrate their villages and cities with the natural environment and avoid disturbing the lives of the plants and animals. While some construct their lodgings high in the branches of trees, others establish their homes on the ground beneath the forest canopy. It’s not uncommon for wildborne to remain reclusive and hidden within their woodland homes.</p><p class=\"green Body-Styles_Body\"><em>Wildborne are often hardy, loyal, nurturing, reclusive, sagacious, and vibrant.</em></p>"
+      "description": "<p>Being part of a wildborne community means you lived deep within the forest.</p>"
     },
     "Dedicated": {
       "name": "Dedicated",
-      "description": "<p>Record three sayings or values your upbringing instilled in you. Once per rest, when you describe how you’re embodying one of these principles through your current action, you can roll a d20 as your Hope Die</p>",
+      "description": "<p>Record three sayings or values your upbringing instilled in you. Once per rest, when you describe how you're embodying one of these principles through your current action, you can roll a d20 as your Hope Die</p>",
       "actions": {
         "ZBVqSlsDUKf8uGrI": {
-          "name": "Use",
-          "description": "<p>Record three sayings or values your upbringing instilled in you. Once per rest, when you describe how you’re embodying one of these principles through your current action, you can roll a d20 as your Hope Die</p>"
+          "name": "Use"
         }
       }
     },
@@ -72,25 +71,23 @@
       "effects": {
         "4my9X5XC3uwDSx7B": {
           "name": "Lightfoot",
-          "advantageSources": {
-            "Move without being heard.": "Move without being heard."
-          }
+          "description": "<p>Your movement is naturally silent. You have advantage on rolls to move without being heard.</p>"
         }
       }
     },
     "Low-Light Living": {
       "name": "Low-Light Living",
-      "description": "<p>When you’re in an area with low light or heavy shadow, you have advantage on rolls to hide, investigate, or perceive details within that area.</p>",
+      "description": "<p>When you're in an area with low light or heavy shadow, you have advantage on rolls to hide, investigate, or perceive details within that area.</p>",
       "effects": {
         "pCp32u7UwqxCI4WW": {
           "name": "Low-Light Living",
-          "description": "<p>When you’re in an area with low light or heavy shadow, you have advantage on rolls to hide, investigate, or perceive details within that area.</p>"
+          "description": "<p>When you're in an area with low light or heavy shadow, you have advantage on rolls to hide, investigate, or perceive details within that area.</p>"
         }
       }
     },
     "Nomadic Pack": {
       "name": "Nomadic Pack",
-      "description": "<p>Add a Nomadic Pack to your inventory. Once per session, you can spend a Hope to reach into this pack and pull out a mundane item that’s useful to your situation. Work with the GM to figure out what item you take out.</p>",
+      "description": "<p>Add a Nomadic Pack to your inventory. Once per session, you can spend a Hope to reach into this pack and pull out a mundane item that's useful to your situation. Work with the GM to figure out what item you take out.</p>",
       "actions": {
         "Jd9uVincqkIMAXgU": {
           "name": "Pull Item"
@@ -103,11 +100,7 @@
       "effects": {
         "xgtjykfgvg142urA": {
           "name": "Privilege",
-          "advantageSources": {
-            "Consort with nobles": "Consort with nobles",
-            "Negotiate prices": "Negotiate prices",
-            "Leverage your reputation to get what you want": "Leverage your reputation to get what you want"
-          }
+          "description": "<p>You have advantage on rolls to consort with nobles, negotiate prices, or leverage your reputation to get what you want.</p>"
         }
       }
     },
@@ -117,11 +110,7 @@
       "effects": {
         "snkYmZ22Q8HHLY9M": {
           "name": "Scoundrel",
-          "advantageSources": {
-            "Negotiate with criminals": "Negotiate with criminals",
-            "Detect lies": "Detect lies",
-            "Find a safe place to hide": "Find a safe place to hide"
-          }
+          "description": "<p>You have advantage on rolls to negotiate with criminals, detect lies, or find a safe place to hide.</p>"
         }
       }
     },
@@ -131,11 +120,7 @@
       "effects": {
         "QDf9LD8Mhd0Cw0CB": {
           "name": "Steady",
-          "advantageSources": {
-            "Traverse dangerous cliffs and ledges": "Traverse dangerous cliffs and ledges",
-            "Navigate harsh environment": "Navigate harsh environment",
-            "Use your survival knowledge": "Use your survival knowledge"
-          }
+          "description": "<p>You have advantage on rolls to traverse dangerous cliffs and ledges, navigate harsh environments, and use your survival knowledge.</p>"
         }
       }
     },
@@ -145,9 +130,75 @@
       "effects": {
         "RwhxYOAAKKlYZiz0": {
           "name": "Well-Read",
-          "advantageSources": {
-            "History, culture, or politics of a prominent person or place": "History, culture, or politics of a prominent person or place"
-          }
+          "description": "<p>You have advantage on rolls that involve the history, culture, or politics of a prominent person or place.</p>"
+        }
+      }
+    },
+    "Duneborne": {
+      "name": "Duneborne",
+      "description": "<p>Being part of a duneborne community means you've made a home among the shifting sands and arid climate of the desert.</p>"
+    },
+    "Freeborne": {
+      "name": "Freeborne",
+      "description": "<p>Being part of a freeborne community means you're from a collective that once lived under tyrannical rule but is now liberated.</p>"
+    },
+    "Frostborne": {
+      "name": "Frostborne",
+      "description": "<p>Being part of a frostborne community means you come from a place of snow and ice.</p>"
+    },
+    "Hearthborne": {
+      "name": "Hearthborne",
+      "description": "<p>Being part of a hearthborne community means you come from humble origins, having lived in a modest village or quaint countryside.</p>"
+    },
+    "Reborne": {
+      "name": "Reborne",
+      "description": "<p>You were once a member of a different community that you're no longer part of.</p>"
+    },
+    "Warborne": {
+      "name": "Warborne",
+      "description": "<p>Being part of a warborne community means you come from a place that is, or was, ravaged by war.</p>"
+    },
+    "Brave Face": {
+      "name": "Brave Face",
+      "description": "<p>Once per session when you would be forced to mark a Stress, you can <strong>spend a Hope</strong> instead.</p>",
+      "actions": {
+        "sguCcIhnp8FjwVZd": {
+          "name": "Spend Hope"
+        }
+      }
+    },
+    "Close-Knit": {
+      "name": "Close-Knit",
+      "description": "<p>Once per long rest, you can <strong>spend any number of Hope</strong> to grant an ally within Far range an equal number of Hope.</p>",
+      "actions": {
+        "OmflNw0H1vsGAQVp": {
+          "name": "Give Hope"
+        }
+      }
+    },
+    "Found Family": {
+      "name": "Found Family",
+      "description": "<p>Once per rest, you can <strong>spend a Hope</strong> to use an ally's Experience as if it were your own. When you do so, describe how your time with that ally prepared you for this moment.</p><p>When you join a new community or rediscover your old one, you can permanently trade this card for that one instead.</p>",
+      "actions": {
+        "jt9gOu3FQLcW1TFC": {
+          "name": "Spend Hope"
+        }
+      }
+    },
+    "Hardy": {
+      "name": "Hardy",
+      "description": "<p>When you take a rest, you clear a Hit Point.</p>"
+    },
+    "Oasis": {
+      "name": "Oasis",
+      "description": "<p>During a short rest, you or an ally can reroll a die used for a downtime move and take the higher result.</p>"
+    },
+    "Unbound": {
+      "name": "Unbound",
+      "description": "<p>Once per session when you roll with Fear, you can change it into a roll with Hope instead.</p>",
+      "actions": {
+        "L03g0jA9msxRiuXL": {
+          "name": "Fear To Hope"
         }
       }
     }

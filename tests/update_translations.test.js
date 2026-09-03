@@ -55,8 +55,8 @@ function tmpDataPath(moduleDir, file, lang = "ru") {
 }
 
 function withWorkspace(testFn) {
-  const { tempRoot, moduleDir } = createWorkspace();
   return async (t) => {
+    const { tempRoot, moduleDir } = createWorkspace();
     t.after(() => fs.rmSync(tempRoot, { recursive: true, force: true }));
     await testFn({ moduleDir });
   };
@@ -476,16 +476,29 @@ test("official Hope & Fear translations only reference current Foundry IDs", () 
     "loot",
     "consumables",
     "beastforms",
+    "rolltables",
     "adversaries",
     "environments"
   ];
-  const collections = ["items", "actions", "effects", "experiences", "potentialAdversaries"];
+  const collections = ["items", "actions", "effects", "experiences", "potentialAdversaries", "altFormula"];
 
   const checkNestedIds = (translated, original, location) => {
     for (const collection of collections) {
       for (const [id, node] of Object.entries(translated?.[collection] || {})) {
         assert.ok(original?.[collection]?.[id], `${location}.${collection}.${id} is stale`);
         checkNestedIds(node, original[collection][id], `${location}.${collection}.${id}`);
+      }
+    }
+  };
+
+  const checkNestedCoverage = (original, translated, location) => {
+    for (const field of ["name", "description"]) {
+      if (field in original) assert.ok(translated?.[field], `${location}.${field} is not translated`);
+    }
+    for (const collection of collections) {
+      for (const [id, node] of Object.entries(original?.[collection] || {})) {
+        assert.ok(translated?.[collection]?.[id], `${location}.${collection}.${id} is not translated`);
+        checkNestedCoverage(node, translated[collection][id], `${location}.${collection}.${id}`);
       }
     }
   };
@@ -498,5 +511,25 @@ test("official Hope & Fear translations only reference current Foundry IDs", () 
       assert.ok(original.entries[key], `${file}.${key} is not present in Foundryborne`);
       checkNestedIds(entry, original.entries[key], `${file}.${key}`);
     }
+    if (new Set(["ancestries", "classes", "communities", "domains", "subclasses"]).has(name)) {
+      for (const [key, entry] of Object.entries(original.entries)) {
+        checkNestedCoverage(entry, translated.entries[key], `${file}.${key}`);
+      }
+    }
   }
+});
+
+test("system UI translation mirrors current Foundry key structure", () => {
+  const leaves = (value, prefix = "", result = []) => {
+    for (const [key, child] of Object.entries(value)) {
+      const path = prefix ? `${prefix}.${key}` : key;
+      if (child && typeof child === "object" && !Array.isArray(child)) leaves(child, path, result);
+      else result.push(path);
+    }
+    return result.sort();
+  };
+
+  const original = readJson(path.join(PROJECT_ROOT, "original", "lang", "en.json"));
+  const translated = readJson(path.join(PROJECT_ROOT, "module", "i18n", "systems", "daggerheart.json"));
+  assert.deepEqual(leaves(translated), leaves(original));
 });

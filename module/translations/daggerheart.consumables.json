@@ -26,9 +26,8 @@
       "name": "Доспешный Сшиватель",
       "description": "<p>Вы можете использовать этот швейный аппарат, чтобы потратить любое количество Надежды и очистить столько же Ячеек Брони.</p>",
       "actions": {
-        "htoGx8qrv8trds81": {
-          "name": "Зашить",
-          "description": "<p>Вы можете использовать этот сшиватель, чтобы потратить любое количество Надежды и очистить столько же Ячеек Брони.</p>"
+        "abD6jRVvOJnKUQaE": {
+          "name": "Spend Hope"
         }
       }
     },
@@ -289,22 +288,6 @@
         "O5MYyHpkiEz9uf6A": {
           "name": "Выпить",
           "description": "<p>Очистите 1d4+1 Ран.</p>"
-        }
-      }
-    },
-    "Homet’s Secret Potion": {
-      "name": "Секретное зелье Хомета",
-      "description": "<p>После выпивания этого зелья следующий успешный бросок на атаку вместо этого получает критический успех</p>",
-      "actions": {
-        "NCcqIcPhEsUnFh7S": {
-          "name": "Выпить",
-          "description": "<p>После того, как вы выпьете это зелье, ваша следующая успешная атака становится критически успешной.</p>"
-        }
-      },
-      "effects": {
-        "QyzXAnvho7lVQQtP": {
-          "name": "Секретное зелье Хомета",
-          "description": "<p><span>Ваша следующая успешная атака становится критически успешной.</span></p>"
         }
       }
     },
@@ -766,6 +749,753 @@
         "80F8gAn7ejhhNL7R": {
           "name": "Крылокорень",
           "description": "<p><span>Вы получаете волшебные крылья, которые позволяют вам летать в течение количества минут, равного вашему уровню.</span></p>"
+        }
+      }
+    },
+    "Arcticite Shard": {
+      "name": "Arcticite Shard",
+      "description": "<p>Choose a point within Far range. All targets within Close range of that point must succeed on a Reaction Roll (16) or take 3d6 magic damage and become temporarily Restrained by ice.</p>",
+      "actions": {
+        "u61vq2eNNTNpTvGb": {
+          "name": "Use"
+        }
+      },
+      "effects": {
+        "koocjgxyH9j8N58M": {
+          "name": "Iced"
+        }
+      }
+    },
+    "Berserker's Brew": {
+      "name": "Berserker's Brew",
+      "description": "<p>When you drink this dram of liquid, you gain a bonus to your Strength and a penalty to your Finesse and Knowledge equal to your Instinct (minimum 1). This effect lasts until you make a death move or until your next rest.</p>",
+      "actions": {
+        "nwZQuJ6aY0i7EerN": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "lniOwCkDKynTi4bw": {
+          "name": "Berserk",
+          "description": "<p>When you drink this dram of liquid, you gain a bonus to your Strength and a penalty to your Finesse and Knowledge equal to your Instinct (minimum 1). This effect lasts until you make a death move or until your next rest.</p>"
+        }
+      }
+    },
+    "Bundle of Spiderlegs": {
+      "name": "Bundle of Spiderlegs",
+      "description": "<p>You can eat these spiderlegs to walk on walls until your next rest.</p>",
+      "actions": {
+        "PvaegGLkYV7DRR8F": {
+          "name": "Eat"
+        }
+      },
+      "effects": {
+        "x7FTsmzljd0t5trC": {
+          "name": "Spiderwalking",
+          "description": "<p>You can eat these spiderlegs to walk on walls until your next rest.</p>"
+        }
+      }
+    },
+    "Cacophonous Concoction": {
+      "name": "Cacophonous Concoction",
+      "description": "<p>When you drink this potion, anything you say or do in the next hour becomes impossible for a witness to recount. Any attempts they make to communicate what they saw, heard, or otherwise sensed comes out garbled or nonsensical.</p>",
+      "actions": {
+        "YTku2CwfIvhaO74n": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Z1WDQBtKdwfOqrGH": {
+          "name": "Cacophonous",
+          "description": "<p>When you drink this potion, anything you say or do in the next hour becomes impossible for a witness to recount. Any attempts they make to communicate what they saw, heard, or otherwise sensed comes out garbled or nonsensical.</p>"
+        }
+      }
+    },
+    "Chimeric Saliva": {
+      "name": "Chimeric Saliva",
+      "description": "<p>You can apply this saliva to a weapon that deals physical damage to change its damage type to magic until your next rest.</p>",
+      "actions": {
+        "COnklgpCjVWRqgSz": {
+          "name": "Appky"
+        }
+      },
+      "effects": {
+        "7FPuCdj1fB3utrnw": {
+          "name": "Chimeric Saliva",
+          "description": "<p>You can apply this saliva to a weapon that deals physical damage to change its damage type to magic until your next rest.</p>"
+        }
+      }
+    },
+    "Ciscan Fog Bottle": {
+      "name": "Ciscan Fog Bottle",
+      "description": "<p>You can break this jar to fill the area within Close range with magical mist. A creature who enters the mist clears a Stress and becomes Hidden.</p>",
+      "actions": {
+        "3uoMUFXhffsn6XGm": {
+          "name": "Break"
+        }
+      }
+    },
+    "Cockerel Claw Tea": {
+      "name": "Cockerel Claw Tea",
+      "description": "<p>You can drink this tea to refresh your features as if you had taken a long rest.</p>",
+      "actions": {
+        "DsF1KOn8OlHyio9V": {
+          "name": "Drink"
+        }
+      }
+    },
+    "Concoction": {
+      "name": "Concoction",
+      "description": "<p>You can drink this potion to discover the deepest fear of the next person you make eye contact with.</p>"
+    },
+    "Cupbearer's Bezoar": {
+      "name": "Cupbearer's Bezoar",
+      "description": "<p>You can swallow this bezoar to become immune to poisons until your next long rest.</p>",
+      "actions": {
+        "0vtn2lGnZ5td2ScU": {
+          "name": "Swallow"
+        }
+      },
+      "effects": {
+        "zEo9puBV6VSHcG9d": {
+          "name": "Cupbearer's Bezoar",
+          "description": "<p>You can swallow this bezoar to become immune to poisons until your next long rest.</p>"
+        }
+      }
+    },
+    "Deathseer's Powder": {
+      "name": "Deathseer's Powder",
+      "description": "<p>You can sprinkle this powder over a recently deceased corpse to conjure a spectral reprise of their final minute of life.</p>",
+      "actions": {
+        "dCR3Zm361WUZz4Zf": {
+          "name": "Sprinkle"
+        }
+      }
+    },
+    "Demiurge's Draught": {
+      "name": "Demiurge's Draught",
+      "description": "<p>You can drink this draught to gain a +1 bonus to your Proficiency for your next successful attack roll.</p>",
+      "actions": {
+        "NtsZfglcGGEAOV49": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "MiXqv9zMmL9T6lEr": {
+          "name": "Demiurge's Draught",
+          "description": "<p>You can drink this draught to gain a +1 bonus to your Proficiency for your next successful attack roll.</p>"
+        }
+      }
+    },
+    "Displacement Token": {
+      "name": "Displacement Token",
+      "description": "<p>You can swallow this token to conjure two illusions of yourself that you can control. Each illusion lasts until it takes damage or until your next rest.</p>",
+      "actions": {
+        "CFvo1SWGb6ekNsJr": {
+          "name": "Swallow"
+        }
+      },
+      "effects": {
+        "AlJJnO4ct2xmzt93": {
+          "name": "Displaced",
+          "description": "<p>You can swallow this token to conjure two illusions of yourself that you can control. Each illusion lasts until it takes damage or until your next rest.</p>"
+        }
+      }
+    },
+    "Drakemantle": {
+      "name": "Drakemantle",
+      "description": "<p>You can use this enchanted ancient dragon hide to gain draconic characteristics until the end of the scene, when the hide falls aways in tatters. Until then, you can fly and gain a +5 bonus to your damage thresholds and a +1 bonus to your Proficiency.</p>",
+      "actions": {
+        "0QgmfGle8IJYkWv7": {
+          "name": "Use"
+        }
+      },
+      "effects": {
+        "7z9abeZBZ0KzU4jV": {
+          "name": "Drakeform",
+          "description": "<p>Until the end of the scene, you can fly and gain a +5 bonus to your damage thresholds and a +1 bonus to your Proficiency.</p>"
+        }
+      }
+    },
+    "Emberite Shard": {
+      "name": "Emberite Shard",
+      "description": "<p>Choose a point within Far range. All targets within Close range of that point must succeed on a Reaction Roll (16) or take 3d6 magic damage and become temporarily Ablaze. While Ablaze, a creature must roll a d4 whenever they make an action roll. On a result of 1, they mark a Hit Point. On a result of 4, they clear the Ablaze condition.</p>",
+      "actions": {
+        "Vn84rygVCeQ2wt4S": {
+          "name": "Use"
+        }
+      },
+      "effects": {
+        "H8wg8ZbvK3EY9UXd": {
+          "name": "Ablaze",
+          "description": "<p>While Ablaze, a creature must roll a d4 whenever they make an action roll. On a result of 1, they mark a Hit Point. On a result of 4, they clear the Ablaze condition.</p>"
+        }
+      }
+    },
+    "Featherstep Potion": {
+      "name": "Featherstep Potion",
+      "description": "<p>You can drink this potion to sprout small wings from your ankles that give you a bonus to your Evasion equal to your tier until your next rest.</p>",
+      "actions": {
+        "Dslc1QsuuYEAgSAo": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "GVmJh6VwcqKS7uwm": {
+          "name": "New Effect",
+          "description": "<p>You can drink this potion to sprout small wings from your ankles that give you a bonus to your Evasion equal to your tier until your next rest.</p>"
+        }
+      }
+    },
+    "Formoid Serum": {
+      "name": "Formoid Serum",
+      "description": "<p>You can drink this potion to become a swarm of 16 million ants until the end of the scene. You keep and have access to all equipment, loot, and features.</p>",
+      "actions": {
+        "KVlbv22mTH5AO3Ab": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "TOS3bFpbQWATZcew": {
+          "name": "Formoid Serum",
+          "description": "<p>You can drink this potion to become a swarm of 16 million ants until the end of the scene. You keep and have access to all equipment, loot, and features.</p>"
+        }
+      }
+    },
+    "Fulgurite Shard": {
+      "name": "Fulgurite Shard",
+      "description": "<p>Choose a point within Far range. All targets within Close range of that point must succeed on a Reaction Roll (16) or take 3d6 magic damage and mark 1d4 Stress as lightning crackles through the area.</p>",
+      "actions": {
+        "EhwvyDwxvg44bKCq": {
+          "name": "Use"
+        }
+      }
+    },
+    "Gambler's Fallacy": {
+      "name": "Gambler's Fallacy",
+      "description": "<p>You can spend any number of handfuls of gold by placing them into this slotted ceramic jar shaped like a pig. When you throw the jar at a point within Far range, it explodes and deals 1d20 magic damage for each handful of gold spent to all creatures within Close range of that point. All gold within the jar is destroyed.</p>",
+      "actions": {
+        "SLZn5uUrsucH90rQ": {
+          "name": "Throw"
+        }
+      }
+    },
+    "Glowmoss Mushroom": {
+      "name": "Glowmoss Mushroom",
+      "description": "<p>You can break this mushroom into pieces, causing it to glow bright blue until your next long rest.</p>",
+      "actions": {
+        "ZRKQmLZ709uJmwME": {
+          "name": "Use"
+        }
+      }
+    },
+    "Godling's Pomelo": {
+      "name": "Godling's Pomelo",
+      "description": "<p>You can eat this citrus fruit to clear all Hit Points and Stress.</p>",
+      "actions": {
+        "KYnbdh2UTxw5Xr9f": {
+          "name": "Eat"
+        }
+      }
+    },
+    "Gossip Flower": {
+      "name": "Gossip Flower",
+      "description": "<p>You can plant this seed in soil. It instantly grows into a small flower that records everything it hears for up to one week. When plucked, the flower recites what it recorded in real time, then withers.</p>",
+      "actions": {
+        "s9KcCCsBG2OvWpfu": {
+          "name": "Plant"
+        }
+      }
+    },
+    "Gravity Bomb": {
+      "name": "Gravity Bomb",
+      "description": "<p>You can throw this peach-sized mechanical orb at a point within Far range. It implodes and pulls all creatures and objects within Close range of that point into Melee range with it.</p>",
+      "actions": {
+        "DlpFeXegeuolZMNQ": {
+          "name": "Throw"
+        }
+      }
+    },
+    "Green Ooze Oil": {
+      "name": "Green Ooze Oil",
+      "description": "<p>You can coat your weapon in this oil. The next successful attack you make with this weapon deals an extra 1d8 magic damage and temporarily Corrodes the target. While Corroded, the target gains a -2 penalty to their damage thresholds.</p>",
+      "actions": {
+        "w8gPYG7TDSU3P0tJ": {
+          "name": "Coat"
+        },
+        "Dt901UQjOONozDdc": {
+          "name": "Apply Corroded"
+        }
+      },
+      "effects": {
+        "0tVi0WsfLu3YzxeE": {
+          "name": "Green Ooze Oil",
+          "description": "<p>You can coat your weapon in this oil. The next successful attack you make with this weapon deals an extra 1d8 magic damage and temporarily Corrodes the target.</p>"
+        },
+        "X0gyRnn8BECGV6P4": {
+          "name": "Corroded",
+          "description": "<p>While Corroded, the target gains a -2 penalty to their damage thresholds.</p>"
+        }
+      }
+    },
+    "Homet's Secret Potion": {
+      "name": "Секретное зелье Хомета",
+      "description": "<p>После выпивания этого зелья следующий успешный бросок на атаку вместо этого получает критический успех</p>",
+      "actions": {
+        "NCcqIcPhEsUnFh7S": {
+          "name": "Выпить",
+          "description": "<p>После того, как вы выпьете это зелье, ваша следующая успешная атака становится критически успешной.</p>"
+        }
+      },
+      "effects": {
+        "QyzXAnvho7lVQQtP": {
+          "name": "Секретное зелье Хомета",
+          "description": "<p><span>Ваша следующая успешная атака становится критически успешной.</span></p>"
+        }
+      }
+    },
+    "Instant Camp": {
+      "name": "Instant Camp",
+      "description": "<p>You can unfold this small mechanical box into a camping tent large enough to safely house six people. The tent collapses at the end of your next long rest.</p>",
+      "actions": {
+        "1UhyM1dgkuxYdcZB": {
+          "name": "Use"
+        }
+      }
+    },
+    "Invisibility Potion": {
+      "name": "Invisibility Potion",
+      "description": "<p>You are Hidden until you deal damage to another creature or until your next rest.</p>",
+      "actions": {
+        "6UjrzTOZRPHoV2cY": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "WjiPNLu2ps0qWTJ1": {
+          "name": "Invisibility",
+          "description": "<p>You are Hidden until you deal damage to another creature or until your next rest.</p>"
+        }
+      }
+    },
+    "Iridian Dust": {
+      "name": "Iridian Dust",
+      "description": "<p>This multicolored powder sticks to everything and prevents creatures covered in it from becoming Hidden.</p>",
+      "actions": {
+        "6XX75r85cvvUD1bz": {
+          "name": "Use"
+        }
+      },
+      "effects": {
+        "EncnEGvH7ME9zNgP": {
+          "name": "Iridian Dust",
+          "description": "<p>This multicolored powder sticks to everything and prevents creatures covered in it from becoming Hidden.</p>"
+        }
+      }
+    },
+    "Lionheart Tonic": {
+      "name": "Lionheart Tonic",
+      "description": "<p>You can drink this tonic to gain a +1 bonus to your Proficiency until you roll with Fear.</p>",
+      "actions": {
+        "hn1FjWi0ii1DXv2N": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "tCvHGzF8uJF1ciCQ": {
+          "name": "Lionhearted",
+          "description": "<p>You can drink this tonic to gain a +1 bonus to your Proficiency until you roll with Fear.</p>"
+        }
+      }
+    },
+    "Lyrebird Lozenge": {
+      "name": "Lyrebird Lozenge",
+      "description": "<p>You can dissolve this lozenge in your mouth to perfectly mimic any voice you've heard until the end of the scene.</p>",
+      "effects": {
+        "b0lldg6nQ598gF8F": {
+          "name": "Lyrebird",
+          "description": "<p>You can dissolve this lozenge in your mouth to perfectly mimic any voice you've heard until the end of the scene.</p>"
+        }
+      }
+    },
+    "Magic-User's Malison": {
+      "name": "Magic-User's Malison",
+      "description": "<p>When you release this spellcaster's trapped soul, you can cast one spell from a card in your vault as if it were in your loadout. This doesn't work for permanently vaulted cards.</p>",
+      "actions": {
+        "I9CPyBfAsQibn5PR": {
+          "name": "Use"
+        }
+      }
+    },
+    "Mask of the Echoed Self": {
+      "name": "Mask of the Echoed Self",
+      "description": "<p>You can wear this mask during your next level up to swap the values of any of your traits. When you do, the mask becomes your permanent face.</p>",
+      "actions": {
+        "PAq1qXNxaJSLhaDZ": {
+          "name": "Use"
+        }
+      }
+    },
+    "Mesmer's Tonic": {
+      "name": "Mesmer's Tonic",
+      "description": "<p>When you drink this tonic, the only thing you can hear until your next rest are the surface thoughts of creatures within Very Close range.</p>",
+      "actions": {
+        "Phn88PDC41cdVDfi": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "i0aZGk4NPFEvEz8A": {
+          "name": "Mesmer's Tonic",
+          "description": "<p>When you drink this tonic, the only thing you can hear until your next rest are the surface thoughts of creatures within Very Close range.</p>"
+        }
+      }
+    },
+    "Midas Flask": {
+      "name": "Midas Flask",
+      "description": "<p>You can pour this small flask of alchemical liquid over a mundane item to instantly transmute it into a handful of gold.</p>",
+      "actions": {
+        "x95WATbyPt8gmmHT": {
+          "name": "Pour"
+        }
+      }
+    },
+    "Mnemonic Potion": {
+      "name": "Mnemonic Potion",
+      "description": "<p>You can drink this potion to Utilize an Experience without spending a Hope.</p>",
+      "actions": {
+        "k5WiotZKqgqnIhA2": {
+          "name": "Drink"
+        }
+      }
+    },
+    "Moonlight Orb": {
+      "name": "Moonlight Orb",
+      "description": "<p>You can shatter this orb to make the area within Very Far range appear as though it's moonlit nighttime for the next 24 hours.</p>",
+      "actions": {
+        "1U6wvIFjYqA34md4": {
+          "name": "Shatter"
+        }
+      }
+    },
+    "Mossmantle Potion": {
+      "name": "Mossmantle Potion",
+      "description": "<p>You can drink this tea to perfectly blend into natural environments until your next rest.</p>",
+      "effects": {
+        "sD8E0UwaDP0eWKdC": {
+          "name": "Blending In",
+          "description": "<p>You can drink this tea to perfectly blend into natural environments until your next rest.</p>"
+        }
+      }
+    },
+    "Necroprancer's Bell": {
+      "name": "Necroprancer's Bell",
+      "description": "<p>You can break this rusted, clapperless bell against the ground to summon a skeletal steed that climbs out of the earth and serves you until the next sunrise.</p>",
+      "actions": {
+        "pcvtxqrsExvk81Cc": {
+          "name": "Break"
+        }
+      },
+      "effects": {
+        "Oihi5Ky4bcPQnKDI": {
+          "name": "Necroprancer's Bell",
+          "description": "<p>You can break this rusted, clapperless bell against the ground to summon a skeletal steed that climbs out of the earth and serves you until the next sunrise.</p>"
+        }
+      }
+    },
+    "Night Hag's Dust": {
+      "name": "Night Hag's Dust",
+      "description": "<p>You can blow this dust in an adversary's face to prevent them from clearing Stress until your next long rest.</p>",
+      "actions": {
+        "8ElDwnjDsJop9qRi": {
+          "name": "Use"
+        }
+      },
+      "effects": {
+        "jha2Ky9tdadIpZ7T": {
+          "name": "Night Hag's Dust",
+          "description": "<p>You can blow this dust in an adversary's face to prevent them from clearing Stress until your next long rest.</p>"
+        }
+      }
+    },
+    "Nightmare Mead": {
+      "name": "Nightmare Mead",
+      "description": "<p>You can drink this potion to discover the deepest fear of the next person you make eye contact with. When you do, the GM gains a Fear.</p>",
+      "actions": {
+        "rW0fiHW8nt8ZRbXm": {
+          "name": "Drink"
+        }
+      }
+    },
+    "Packet of Space Dust": {
+      "name": "Packet of Space Dust",
+      "description": "<p>This dust causes anything it covers to become lighter than air. One packet contains enough dust to cover the contents of a picnic basket, and the effects last for an hour.</p>",
+      "actions": {
+        "bVXuZXEmYW6RJwLh": {
+          "name": "Use"
+        }
+      },
+      "effects": {
+        "GqjpFGEyO7V4w0C7": {
+          "name": "Space Dusted",
+          "description": "<p>This dust causes anything it covers to become lighter than air, and the effects last for an hour.</p>"
+        }
+      }
+    },
+    "Phial of Deep Ink": {
+      "name": "Phial of Deep Ink",
+      "description": "<p>You can drink this bottle of ink to transform into a cephalopod of roughly your size for the next hour. You gain rubbery skin, soft bones, the ability to breathe underwater, and new limbs until you have eight total.</p>",
+      "actions": {
+        "w4GSznmO2AyEuVgY": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "9HHlvGuxhvOqe4JX": {
+          "name": "Phial Of deep Ink",
+          "description": "<p>You can drink this bottle of ink to transform into a cephalopod of roughly your size for the next hour. You gain rubbery skin, soft bones, the ability to breathe underwater, and new limbs until you have eight total.</p>"
+        }
+      }
+    },
+    "Pipeweed": {
+      "name": "Pipeweed",
+      "description": "<p>When you choose the Clear Stress downtime move during a short rest, you can smoke this non-intoxicating leaf to clear an additional Stress. Any other PCs who chose the Clear Stress downtime move also gain this benefit.</p>",
+      "actions": {
+        "z1s1NGbVvRiRFpER": {
+          "name": "Smoke"
+        }
+      }
+    },
+    "Potion of Vigilance": {
+      "name": "Potion of Vigilance",
+      "description": "<p>You can drink this potion to gain a +1 bonus to your Evasion until you mark a Hit Point.</p>",
+      "actions": {
+        "OyzV63XMO4ndOH0w": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "G0wMnYEtCryop6IX": {
+          "name": "Vigilant",
+          "description": "<p>You can drink this potion to gain a +1 bonus to your Evasion until you mark a Hit Point.</p>"
+        }
+      }
+    },
+    "Psychopomp's Shroud": {
+      "name": "Psychopomp's Shroud",
+      "description": "<p>You can place this shroud over the corpse of a recently deceased creature. The creature's spirit enters the shroud and becomes your spectral assistant until the next sunrise, when they pass through the veil of death and take the shroud with them.</p>",
+      "actions": {
+        "FrzmFgaqCApbu3Km": {
+          "name": "Use"
+        }
+      }
+    },
+    "Quintessential Severant": {
+      "name": "Quintessential Severant",
+      "description": "<p>You can use this magic blade to cut one magical or metaphysical bond, such as an enchantment, contract, magical tether, or divine oath. When you do, the blade shatters.</p>",
+      "actions": {
+        "vlPzHqlUT2JLoeKz": {
+          "name": "Use"
+        }
+      }
+    },
+    "Red Ooze Oil": {
+      "name": "Red Ooze Oil",
+      "description": "<p>You can coat your weapon in this oil. The next successful attack you make with this weapon deals an extra 1d8 magic damage and temporarily Ignites the target. While Ignited, the target takes 1d4 magic damage when they take the spotlight.</p>",
+      "actions": {
+        "eqXBNr0DbYAIVGS9": {
+          "name": "Apply"
+        },
+        "jD3LZE5YeVjfTAtU": {
+          "name": "Ignite",
+          "description": "<p>While Ignited, the target takes 1d4 magic damage when they take the spotlight.</p>"
+        }
+      },
+      "effects": {
+        "x3sGgfLR0gkXxw5f": {
+          "name": "Red Ooze Oil",
+          "description": "<p>You can coat your weapon in this oil. The next successful attack you make with this weapon deals an extra 1d8 magic damage and temporarily Ignites the target.</p>"
+        },
+        "f7f3BWAGe5vkkruK": {
+          "name": "Ignited",
+          "description": "<p>While Ignited, the target takes 1d4 magic damage when they take the spotlight.</p>"
+        }
+      }
+    },
+    "Salamander Salve": {
+      "name": "Salamander Salve",
+      "description": "<p>You can apply this salve to your skin to make yourself immune to heat until your next rest.</p>",
+      "actions": {
+        "Hz6U04pXtOYBDQ2L": {
+          "name": "Apply"
+        }
+      },
+      "effects": {
+        "rlsDpkLoqhBbHxUk": {
+          "name": "Salamaner Salve",
+          "description": "<p>You can apply this salve to your skin to make yourself immune to heat until your next rest.</p>"
+        }
+      }
+    },
+    "Self-Sewing Thread": {
+      "name": "Self-Sewing Thread",
+      "description": "<p>You can use this thread to clear either a Hit Point or 2 Armor Slots.</p>",
+      "actions": {
+        "Smq9zj8nNK64CS62": {
+          "name": "Clear Hit Point"
+        },
+        "dE5BTVbmJ4Yuoy0M": {
+          "name": "Clear Armor"
+        }
+      }
+    },
+    "Slayer's Salt": {
+      "name": "Slayer's Salt",
+      "description": "<p>You can spread this salt in a line along windowsills or thresholds to create a magical barrier that undead creatures can't cross until the line is broken.</p>",
+      "actions": {
+        "3IALZdyYjIgAbgea": {
+          "name": "Use"
+        }
+      }
+    },
+    "Snakeskin Spirit": {
+      "name": "Snakeskin Spirit",
+      "description": "<p>You can drink this potion to slough off your outer layer of skin and heal a scar.</p>",
+      "actions": {
+        "773SxjjdjRsxoroZ": {
+          "name": "Drink"
+        }
+      }
+    },
+    "Snapthorn Seed": {
+      "name": "Snapthorn Seed",
+      "description": "<p>You can throw this seed at a point you can see. It explodes into a tangle of binding vines that temporarily Restrains all creatures within Close range of that point.</p>",
+      "actions": {
+        "hGKzpxGdX4F8Ff4h": {
+          "name": "Throw"
+        }
+      },
+      "effects": {
+        "Zi97S6oahSHgWD96": {
+          "name": "Thorned"
+        }
+      }
+    },
+    "Sprite Bottle": {
+      "name": "Sprite Bottle",
+      "description": "<p>When you mark your last Hit Point, this bottle shatters to release the Sprite inside. The Sprite clears all your Hit Points before fading from the Mortal Realm.</p>",
+      "actions": {
+        "OaeTodiubEfIhiZe": {
+          "name": "Use"
+        }
+      }
+    },
+    "Staff of Reversal": {
+      "name": "Staff of Reversal",
+      "description": "<p>You can break this staff against the ground to reverse one magical transformation or effect within Far range.</p>",
+      "actions": {
+        "TgL2lMYlKXuHxXIq": {
+          "name": "Break"
+        }
+      }
+    },
+    "Stake of Abjuration": {
+      "name": "Stake of Abjuration",
+      "description": "<p>You can hammer this stake into the ground and make a proclamation. Until your next rest, a creature within Far range of the stake who transgresses that proclamation must mark a Stress. The stake lasts until your next rest, then it shatters.</p>",
+      "actions": {
+        "he7oP28pyrltNq7I": {
+          "name": "Use"
+        }
+      }
+    },
+    "Steelskin Salve": {
+      "name": "Steelskin Salve",
+      "description": "<p>You can apply this salve to your skin to gain a bonus to your damage thresholds equal to your tier until the end of the scene.</p>",
+      "actions": {
+        "MnlcijQlwEDHPPLW": {
+          "name": "Apply"
+        }
+      },
+      "effects": {
+        "5QULYy5qOtKlgCrC": {
+          "name": "Steelskin",
+          "description": "<p>You can apply this salve to your skin to gain a bonus to your damage thresholds equal to your tier until the end of the scene.</p>"
+        }
+      }
+    },
+    "Stonemason's Fortune": {
+      "name": "Stonemason's Fortune",
+      "description": "<p>When you throw this gray brick on the ground, it immediately grows into a 6-foot-tall, 10-foot-wide, and 2-foot-deep wall of solid stone.</p>",
+      "actions": {
+        "E3rM3gMAWFF727g9": {
+          "name": "Throw"
+        }
+      }
+    },
+    "Sunlight Orb": {
+      "name": "Sunlight Orb",
+      "description": "<p>You can shatter this orb to make the area within Very Far range appear as though it's sunlit daytime for the next 24 hours.</p>",
+      "actions": {
+        "oIj5dyEurCiLVWmx": {
+          "name": "Shatter"
+        }
+      }
+    },
+    "Tears of the Undying Hero": {
+      "name": "Tears of the Undying Hero",
+      "description": "<p>When you drink this potion, death can't touch you until your next long rest. When you would mark your last Hit Point, instead of making a death move, you make one final action roll before falling into a dreamless slumber until an ally chooses the Tend to Wounds downtime move to clear your Hit Points.</p>",
+      "actions": {
+        "gNMQ40LnJLRNnXfH": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "yTtc0DSPzG9uSVp8": {
+          "name": "Undying",
+          "description": "<p>When you drink this potion, death can't touch you until your next long rest. When you would mark your last Hit Point, instead of making a death move, you make one final action roll before falling into a dreamless slumber until an ally chooses the Tend to Wounds downtime move to clear your Hit Points.</p>"
+        }
+      }
+    },
+    "Verglasian Seed": {
+      "name": "Verglasian Seed",
+      "description": "<p>You can use this ice shard to instantly freeze an area of water up to Close range.</p>"
+    },
+    "Vial of Featherfall": {
+      "name": "Vial of Featherfall",
+      "description": "<p>You can drink this potion to ignore damage from falling for the next 10 minutes.</p>",
+      "actions": {
+        "MDhdI3fzO6awr9Dp": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "hjMkahGPmDxo8Fu1": {
+          "name": "Featherfalling",
+          "description": "<p>You ignore damage from falling for the next 10 minutes.</p>"
+        }
+      }
+    },
+    "Warding Candle": {
+      "name": "Warding Candle",
+      "description": "<p>You can light this candle to fill an area within Close range with a halo of light. A creature outside the halo can't enter it if they have ill intent toward a creature within it. The candle burns for an hour.</p>",
+      "actions": {
+        "qKYY5VnmyONGrMTO": {
+          "name": "Use"
+        }
+      }
+    },
+    "Yakamel Milk": {
+      "name": "Yakamel Milk",
+      "description": "<p>After consuming this milk, the next time you clear 1 or more Hit Points, you clear an additional Hit Point.</p>",
+      "actions": {
+        "goGJk7IIgbOvrTVZ": {
+          "name": "Consume"
+        }
+      },
+      "effects": {
+        "oTTGr4S9AS5BJEZY": {
+          "name": "Yakamel Milk",
+          "description": "<p>After consuming this milk, the next time you clear 1 or more Hit Points, you clear an additional Hit Point.</p>"
         }
       }
     }

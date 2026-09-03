@@ -86,31 +86,13 @@
       }
     },
     "Dragonscale Armor": {
-      "name": "Dragonscale Armor",
-      "actions": {
-        "J1MCpcfXByKaSSgx": {
-          "name": "Impenetrable",
-          "description": "Once per short rest, when you would mark your last Hit Point, you can instead mark a Stress."
-        }
-      }
+      "name": "Dragonscale Armor"
     },
     "Dunamis Silkchain": {
-      "name": "Dunamis Silkchain",
-      "actions": {
-        "8PD5JQuS05IA6HJT": {
-          "name": "Slow Time",
-          "description": "Mark an Armor Slot to roll a d4 and add its result as a bonus to your Evasion against an incoming attack."
-        }
-      }
+      "name": "Dunamis Silkchain"
     },
     "Emberwoven Armor": {
-      "name": "Emberwoven Armor",
-      "actions": {
-        "L8mHf4A8SylyxsMH": {
-          "name": "Burn",
-          "description": "When an adversary attacks you within Melee range, they mark a Stress."
-        }
-      }
+      "name": "Emberwoven Armor"
     },
     "Full Fortified Armor": {
       "name": "Full Fortified Armor",
@@ -140,13 +122,7 @@
       }
     },
     "Harrowbone Armor": {
-      "name": "Harrowbone Armor",
-      "actions": {
-        "IzM88FIxQ35P5VB2": {
-          "name": "Resilient",
-          "description": "Before you mark your last Armor Slot, roll a d6. On a result of 6, reduce the severity by one threshold without marking an Armor Slot."
-        }
-      }
+      "name": "Harrowbone Armor"
     },
     "Improved Chainmail Armor": {
       "name": "Improved Chainmail Armor",
@@ -230,31 +206,13 @@
       }
     },
     "Rosewild Armor": {
-      "name": "Rosewild Armor",
-      "actions": {
-        "QRTnCYxJfuJHdnyV": {
-          "name": "Hope",
-          "description": "When you would spend a Hope, you can mark an Armor Slot instead."
-        }
-      }
+      "name": "Rosewild Armor"
     },
     "Runes of Fortification": {
-      "name": "Runes of Fortification",
-      "actions": {
-        "37KLF2bim9nRdPTU": {
-          "name": "Pain",
-          "description": "Each time you mark an Armor Slot, you must mark a Stress."
-        }
-      }
+      "name": "Runes of Fortification"
     },
     "Runetan Floating Armor": {
-      "name": "Runetan Floating Armor",
-      "actions": {
-        "Nn33zCIcWe6LQMDH": {
-          "name": "Shift",
-          "description": "When you are targeted for an attack, you can mark an Armor Slot to give the attack roll against you disadvantage."
-        }
-      }
+      "name": "Runetan Floating Armor"
     },
     "Savior Chainmail": {
       "name": "Savior Chainmail",
@@ -275,22 +233,10 @@
       }
     },
     "Tyris Soft Armor": {
-      "name": "Tyris Soft Armor",
-      "actions": {
-        "Ch6IhuPewBeseGez": {
-          "name": "Quiet",
-          "description": "You gain a +2 bonus to rolls you make to move silently."
-        }
-      }
+      "name": "Tyris Soft Armor"
     },
     "Veritas Opal Armor": {
-      "name": "Veritas Opal Armor",
-      "actions": {
-        "sY3W5JYspN5Du5ag": {
-          "name": "Truthseeking",
-          "description": "This armor glows when another creature within Close range tells a lie."
-        }
-      }
+      "name": "Veritas Opal Armor"
     },
     "Elundrian Chain Armor": {
       "name": "Elundrian Chain Armor",
@@ -298,6 +244,327 @@
         "xGxqTCO8MjNq5Cw6": {
           "name": "Warded",
           "description": "You reduce incoming magic damage by your Armor Score before applying it to your damage thresholds."
+        }
+      }
+    },
+    "Advanced Banded Armor": {
+      "name": "Advanced Banded Armor",
+      "effects": {
+        "clo7We2aUibWdsmD": {
+          "name": "Bulky",
+          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+        }
+      }
+    },
+    "Advanced Brigandine Armor": {
+      "name": "Advanced Brigandine Armor",
+      "effects": {
+        "Z1MLDyOdXJvYA0sr": {
+          "name": "Lined",
+          "description": "Mark a Stress to negate Minor damage."
+        }
+      }
+    },
+    "Advanced Mage Robes": {
+      "name": "Advanced Mage Robes",
+      "effects": {
+        "FdkTFA6u4HAKrwa2": {
+          "name": "Enchanted",
+          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+        }
+      }
+    },
+    "Advanced Scale Mail Armor": {
+      "name": "Advanced Scale Mail Armor",
+      "effects": {
+        "2uaDK1adL1aVP1Pg": {
+          "name": "Cumbersome",
+          "description": "-1 to Finesse"
+        }
+      }
+    },
+    "Astral Raiment": {
+      "name": "Astral Raiment",
+      "actions": {
+        "1xXZfSn4U37AgDRB": {
+          "name": "Stellar",
+          "description": "Mark a Stress to gain advantage on a Spellcast roll."
+        }
+      }
+    },
+    "Banded Armor": {
+      "name": "Banded Armor",
+      "effects": {
+        "JkRfeN3ioW857m1p": {
+          "name": "Bulky",
+          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+        }
+      }
+    },
+    "Bloodstone Plate Armor": {
+      "name": "Bloodstone Plate Armor",
+      "actions": {
+        "LoUjBJNX5nvhKyZM": {
+          "name": "Clear Hitpoint",
+          "description": "When you critically succeed on a weapon attack within Melee range, clear a Hit Point."
+        }
+      }
+    },
+    "Brigandine Armor": {
+      "name": "Brigandine Armor",
+      "effects": {
+        "Qqdax2Dl4UHB9TxB": {
+          "name": "Lined",
+          "description": "Mark a Stress to negate Minor damage."
+        }
+      }
+    },
+    "Circle-Forged Dreadplate": {
+      "name": "Circle-Forged Dreadplate",
+      "actions": {
+        "3io8jJeWVrwcKBcF": {
+          "name": "Accursed",
+          "description": "When you mark any number of Hit Points from an attack, roll a d4. On a result of 4, the attacker must mark an equal number of Stress."
+        }
+      }
+    },
+    "Cloverweave Cloak": {
+      "name": "Cloverweave Cloak",
+      "actions": {
+        "0JzAOuMyJDSdEpy3": {
+          "name": "Fortune-Favored",
+          "description": "Once per scene, you can change a failure with Hope into a success with Fear."
+        }
+      }
+    },
+    "Darkweave Shroud": {
+      "name": "Darkweave Shroud",
+      "actions": {
+        "5Hq0OZmmnGykxe6H": {
+          "name": "Ghostwalker",
+          "description": "Once per rest, mark a Stress to move up to Close range through solid objects."
+        }
+      }
+    },
+    "Deep-Forged Coral Armor": {
+      "name": "Deep-Forged Coral Armor",
+      "effects": {
+        "3lzAYwHLDaq0HiMs": {
+          "name": "Aquatic",
+          "description": "You can breathe underwater and gain advantage on Agility Rolls while submerged."
+        }
+      }
+    },
+    "Enchanter's Robes": {
+      "name": "Enchanter's Robes",
+      "actions": {
+        "SqJwukvzZAPDgCJy": {
+          "name": "Mnemonic",
+          "description": "Once per scene, you can recall a domain card from your vault without paying its Recall Cost."
+        }
+      }
+    },
+    "Gilded Sunplate": {
+      "name": "Gilded Sunplate",
+      "actions": {
+        "d9r7VK4r3fb7KHMu": {
+          "name": "Resplendent",
+          "description": "Once per scene when you spend Hope, you can clear an Armor Slot."
+        }
+      }
+    },
+    "Godbound Laminar": {
+      "name": "Godbound Laminar",
+      "actions": {
+        "h7BCDsiPhLZxwllM": {
+          "name": "Gain Hope",
+          "description": "When you mark an Armor Slot, gain a Hope."
+        }
+      }
+    },
+    "Granminster's Finery": {
+      "name": "Granminster's Finery",
+      "effects": {
+        "zvc1X0O4HyQE9yfV": {
+          "name": "Magnificent",
+          "description": "Gain a bonus to your Armor Score equal to your Presence."
+        }
+      }
+    },
+    "Hallowed Heroplate": {
+      "name": "Hallowed Heroplate",
+      "actions": {
+        "BI0HMrVMByFTti3u": {
+          "name": "Blessed",
+          "description": "Once per long rest, you can spend any number of Hope before you make the Risk It All death move. You gain a bonus to the result of your Hope Die equal to the number of Hope spent."
+        }
+      }
+    },
+    "Hawkguard's Mantle": {
+      "name": "Hawkguard's Mantle",
+      "actions": {
+        "DlCbxmVa5udw4wLA": {
+          "name": "Gliding",
+          "description": "You can glide up to Far range and are immune to damage from falling."
+        }
+      }
+    },
+    "Improved Banded Armor": {
+      "name": "Improved Banded Armor",
+      "effects": {
+        "ItHCEXGyY7KY3ODo": {
+          "name": "Bulky",
+          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+        }
+      }
+    },
+    "Improved Brigandine Armor": {
+      "name": "Improved Brigandine Armor",
+      "effects": {
+        "qtuLYIIbHcUzeVpq": {
+          "name": "Lined",
+          "description": "Mark a Stress to negate Minor damage."
+        }
+      }
+    },
+    "Improved Mage Robes": {
+      "name": "Improved Mage Robes",
+      "effects": {
+        "68KNvbicN2lASHIo": {
+          "name": "Enchanted",
+          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+        }
+      }
+    },
+    "Improved Scale Mail Armor": {
+      "name": "Improved Scale Mail Armor",
+      "effects": {
+        "bE8TfDWmibDVXlDK": {
+          "name": "Cumbersome",
+          "description": "-1 to Finesse"
+        }
+      }
+    },
+    "Legendary Banded Armor": {
+      "name": "Legendary Banded Armor",
+      "effects": {
+        "jTiOZCLUWkOdkkts": {
+          "name": "Bulky",
+          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+        }
+      }
+    },
+    "Legendary Brigandine Armor": {
+      "name": "Legendary Brigandine Armor",
+      "effects": {
+        "QOqo9BxoI3zEqakL": {
+          "name": "Lined",
+          "description": "Mark a Stress to negate Minor damage."
+        }
+      }
+    },
+    "Legendary Mage Robes": {
+      "name": "Legendary Mage Robes",
+      "effects": {
+        "YEg4fgH21uRnKW7f": {
+          "name": "Enchanted",
+          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+        }
+      }
+    },
+    "Legendary Scale Mail Armor": {
+      "name": "Legendary Scale Mail Armor",
+      "effects": {
+        "yYHxeQ0YPiVl8Cbc": {
+          "name": "Cumbersome",
+          "description": "-1 to Finesse"
+        }
+      }
+    },
+    "Mage Robes": {
+      "name": "Mage Robes",
+      "effects": {
+        "wYHVkzegSmeXOsmn": {
+          "name": "Enchanted",
+          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+        }
+      }
+    },
+    "Resonant Harness": {
+      "name": "Resonant Harness",
+      "actions": {
+        "iTv5QVsZaJ6KYEv3": {
+          "name": "Vitreous",
+          "description": "When you would take Severe or greater damage, you can mark 2 Armor Slots to negate that damage. If you do, you gain a -5 penalty to your damage thresholds until you choose to repair your armor as a downtime move."
+        }
+      },
+      "effects": {
+        "dzGZkBgtJjQh3JH1": {
+          "name": "Vitreous",
+          "description": "You have a -5 penalty to your damage thresholds until you choose to repair your armor as a downtime move"
+        }
+      }
+    },
+    "Rune-Forged Exosuit": {
+      "name": "Rune-Forged Exosuit",
+      "effects": {
+        "VSuoGIo7GpK3JLfA": {
+          "name": "Attuned",
+          "description": "The maximum number of domain cards in your loadout is reduced by one, but you gain a bonus to your damage thresholds equal to your tier."
+        }
+      }
+    },
+    "Scale Mail Armor": {
+      "name": "Scale Mail Armor",
+      "effects": {
+        "2wGrVqcFO8jiTuDv": {
+          "name": "Cumbersome",
+          "description": "-1 to Finesse"
+        }
+      }
+    },
+    "Skywarden's Lamellar": {
+      "name": "Skywarden's Lamellar",
+      "effects": {
+        "P1bG8YNaWOUkRbn7": {
+          "name": "Vigilant",
+          "description": "+2 to Evasion."
+        }
+      }
+    },
+    "Spidersilk Tunic": {
+      "name": "Spidersilk Tunic",
+      "effects": {
+        "a1I284B2QCnVEs7e": {
+          "name": "Wall-Crawling",
+          "description": "+1 Evasion; you can walk on walls as easily as on the ground."
+        }
+      }
+    },
+    "Stormthread Habit": {
+      "name": "Stormthread Habit",
+      "actions": {
+        "yOf6C8teHAmMhIF1": {
+          "name": "Clear Armor",
+          "description": "Once per scene when you take magic damage, you can clear an Armor Slot."
+        }
+      }
+    },
+    "Trollhide Cuirass": {
+      "name": "Trollhide Cuirass",
+      "actions": {
+        "3KVzpGEV8ThH4jhu": {
+          "name": "Self-Healing",
+          "description": "When you take a rest, clear an Armor Slot."
+        }
+      }
+    },
+    "Wyrdwood Splint Armor": {
+      "name": "Wyrdwood Splint Armor",
+      "actions": {
+        "ajgzKFQYH5aUzmZk": {
+          "name": "Quick-Striding",
+          "description": "You can't be Restrained and can move up to Far range as part of an action roll."
         }
       }
     }

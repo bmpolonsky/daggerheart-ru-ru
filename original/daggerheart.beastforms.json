@@ -142,7 +142,7 @@
       "effects": {
         "cL4kH57pf2nGIxaK": {
           "name": "Beastform Transformation",
-          "description": "<p>Pick a Tier 1 Beastform option and become a larger, more powerful version of that creature. While you’re in this form, you retain all traits and features from the original form and gain the following bonuses:</p><ul><li>A +6 bonus to the damage rolls</li><li>A +1 bonus to the trait used by this form</li><li>A +2 bonus to evasion</li></ul>"
+          "description": "<p>Pick a Tier 1 Beastform option and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the following bonuses:</p><ul><li><p>A +6 bonus to the damage rolls</p></li><li><p>A +1 bonus to the trait used by this form</p></li><li><p>A +2 bonus to evasion</p></li></ul>"
         }
       }
     },
@@ -218,7 +218,7 @@
       "effects": {
         "vhwbPQ2YT64qD1t1": {
           "name": "Beastform Transformation",
-          "description": "<p>Pick a Tier 1 or Tier 2 Beastform option and become a larger, more powerful version of that creature. While you’re in this form, you retain all traits and features from the original form and gain the the following bonuses:</p><ul><li>A +9 bonus to damage rolls</li><li>A +2 bonus to the trait used by this form</li><li>A +3 bonus to Evasion</li><li>Your damage die increases by one size (d6 becomes d8, d8 becomes d10 etc.)</li></ul>"
+          "description": "<p>Pick a Tier 1 or Tier 2 Beastform option and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the the following bonuses:</p><ul><li><p>A +9 bonus to damage rolls</p></li><li><p>A +2 bonus to the trait used by this form</p></li><li><p>A +3 bonus to Evasion</p></li><li><p>Your damage die increases by one size (d6 becomes d8, d8 becomes d10 etc.)</p></li></ul>"
         }
       }
     },
@@ -360,11 +360,11 @@
     },
     "Armored Shell": {
       "name": "Armored Shell",
-      "description": "<p>Your hardened exterior gives you resistance to physical damage. Additionally, <strong>mark an Armor Slot</strong> to retract into your shell. While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can’t perform other actions without leaving this form.</p>",
+      "description": "<p>Your hardened exterior gives you resistance to physical damage. Additionally, <strong>mark an Armor Slot</strong> to retract into your shell. While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can't perform other actions without leaving this form.</p>",
       "actions": {
         "15XSCpCAZ2JLspmN": {
           "name": "Retract",
-          "description": "<p><strong>Mark an Armor Slot</strong> to retract into your shell. While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can’t perform other actions without leaving this form.</p>"
+          "description": "<p><strong>Mark an Armor Slot</strong> to retract into your shell. While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can't perform other actions without leaving this form.</p>"
         }
       },
       "effects": {
@@ -374,7 +374,7 @@
         },
         "OY3lEB3vuDKNLzxv": {
           "name": "Retracted",
-          "description": "<p>While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can’t perform other actions without leaving this form.</p>"
+          "description": "<p>While in your shell, physical damage is reduced by a number equal to your Armor Score (after applying resistance), but you can't perform other actions without leaving this form.</p>"
         }
       }
     },
@@ -390,11 +390,11 @@
     },
     "Cannonball": {
       "name": "Cannonball",
-      "description": "<p><strong>Mark a Stress</strong> to allow an ally to throw or launch you at an adversary. To do so, the ally makes an attack roll using Agility or Strength (their choice) against a target within Close range. On a success, the adversary takes <strong>d12+2</strong> physical damage using the thrower’s Proficiency. You can <strong>spend a Hope</strong> to target an additional adversary within Very Close range of the first. The second target takes half the damage dealt to the first target.</p>",
+      "description": "<p><strong>Mark a Stress</strong> to allow an ally to throw or launch you at an adversary. To do so, the ally makes an attack roll using Agility or Strength (their choice) against a target within Close range. On a success, the adversary takes <strong>d12+2</strong> physical damage using the thrower's Proficiency. You can <strong>spend a Hope</strong> to target an additional adversary within Very Close range of the first. The second target takes half the damage dealt to the first target.</p>",
       "actions": {
         "5Vxm8LyBHE1GYbsv": {
           "name": "Cannonball",
-          "description": "<p><strong>Mark a Stress</strong> to allow an ally to throw or launch you at an adversary. To do so, the ally makes an attack roll using Agility or Strength (their choice) against a target within Close range. On a success, the adversary takes <strong>d12+2</strong> physical damage using the thrower’s Proficiency.</p>"
+          "description": "<p><strong>Mark a Stress</strong> to allow an ally to throw or launch you at an adversary. To do so, the ally makes an attack roll using Agility or Strength (their choice) against a target within Close range. On a success, the adversary takes <strong>d12+2</strong> physical damage using the thrower's Proficiency.</p>"
         },
         "QCQzArBrajYi2D2I": {
           "name": "Spend Hope",
@@ -433,9 +433,8 @@
       "name": "Devastating Strikes",
       "description": "<p>When you deal Severe damage to a target within Melee range, you can <strong>mark a Stress</strong> to force them to mark an additional Hit Point.</p>",
       "actions": {
-        "Il2C9zALU6a1gGrg": {
-          "name": "Mark Stress",
-          "description": "<p>When you deal Severe damage to a target within Melee range, you can <strong>mark a Stress</strong> to force them to mark an additional Hit Point.</p>"
+        "EvdZLuP0wunF5cmq": {
+          "name": "Mark Stress"
         }
       }
     },
@@ -444,8 +443,7 @@
       "description": "<p>When an attack roll against you would succeed, you can <strong>mark a Stress</strong> and roll a <strong>d4</strong>. Add the result to your Evasion against this attack.</p>",
       "actions": {
         "9lvrqQKTEB3NRwvM": {
-          "name": "Mark Stress",
-          "description": "<p>When an attack roll against you would succeed, you can <strong>mark a Stress</strong> and roll a <strong>d4</strong>. Add the result to your Evasion against this attack.</p>"
+          "name": "Mark Stress"
         }
       }
     },
@@ -454,8 +452,7 @@
       "description": "<p><strong>Spend a Hope</strong> to move up to Far range without rolling.</p>",
       "actions": {
         "pn5p2ocVvVPzDyAX": {
-          "name": "Move",
-          "description": "<p><strong>Spend a Hope</strong> to move up to Far range without rolling.</p>"
+          "name": "Move"
         }
       }
     },
@@ -468,8 +465,7 @@
       "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>mark a Stress</strong> to make the target temporarily <em>Vulnerable</em>.</p>",
       "actions": {
         "p8DESOMGA6dLwEMz": {
-          "name": "Mark Stress",
-          "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>mark a Stress</strong> to make the target temporarily <em>Vulnerable</em>.</p>"
+          "name": "Mark Stress"
         }
       },
       "effects": {
@@ -480,17 +476,17 @@
     },
     "Hollow Bones": {
       "name": "Hollow Bones",
-      "description": "<p>You gain a −2 penalty to your damage thresholds.</p>",
+      "description": "<p>You gain a -2 penalty to your damage thresholds.</p>",
       "effects": {
         "RM8wHu5GIF6zfF7V": {
           "name": "Hollow Bones",
-          "description": "<p>You gain a −2 penalty to your damage thresholds.</p>"
+          "description": "<p>You gain a -2 penalty to your damage thresholds.</p>"
         }
       }
     },
     "Massive Stride": {
       "name": "Massive Stride",
-      "description": "<p>You can move up to Far range without rolling. You ignore rough terrain (at the GM’s discretion) due to your size.</p>"
+      "description": "<p>You can move up to Far range without rolling. You ignore rough terrain (at the GM's discretion) due to your size.</p>"
     },
     "Ocean Master": {
       "name": "Ocean Master",
@@ -542,8 +538,7 @@
       "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>spend a Hope</strong> to clamp that opponent in your jaws, making them temporarily <em>Restrained</em> and <em>Vulnerable</em>.</p>",
       "actions": {
         "ib94yYJ1HA0dm0VC": {
-          "name": "Spend Hope",
-          "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>spend a Hope</strong> to clamp that opponent in your jaws, making them temporarily <em>Restrained</em> and <em>Vulnerable</em>.</p>"
+          "name": "Spend Hope"
         }
       },
       "effects": {
@@ -555,12 +550,6 @@
     "Takedown": {
       "name": "Takedown",
       "description": "<p><strong>Mark a Stress</strong> to move into Melee range of a target and make an attack roll against them. On a success, you gain a +2 bonus to your Proficiency for this attack and the target must mark a Stress.</p>",
-      "actions": {
-        "DKorr1QzvtBz7d9y": {
-          "name": "Attack",
-          "description": "<p><strong>Mark a Stress</strong> to move into Melee range of a target and make an attack roll against them. On a success, you gain a +2 bonus to your Proficiency for this attack and the target must mark a Stress.</p>"
-        }
-      },
       "effects": {
         "hE6ciIusvKEtUQ8U": {
           "name": "Takedown",
@@ -608,8 +597,7 @@
       "description": "<p>When you would mark an Armor Slot, roll a <strong>d6</strong>. On a result of 5 or higher, reduce the severity by one threshold without marking an Armor Slot.</p>",
       "actions": {
         "hiGZCQpdTVqE5W4B": {
-          "name": "Roll d6",
-          "description": "<p>When you would mark an Armor Slot, roll a <strong>d6</strong>. On a result of 5 or higher, reduce the severity by one threshold without marking an Armor Slot.</p>"
+          "name": "Roll d6"
         }
       }
     },
@@ -618,14 +606,13 @@
       "description": "<p>When you succeed on an attack against a target within Melee range, the target becomes temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> direct physical damage each time they act.</p>",
       "actions": {
         "eow90DYK6cUWOk7g": {
-          "name": "Poison",
-          "description": "<p>When you succeed on an attack against a target within Melee range, the target becomes temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> direct physical damage each time they act.</p>"
+          "name": "Poison"
         }
       },
       "effects": {
         "TTyAKKoUCoYXSMs4": {
           "name": "Poisoned",
-          "description": "<p><span>A Poisoned creature takes </span><span><strong>1d10</strong></span><span> direct physical damage each time they act.</span></p>"
+          "description": "<p>A Poisoned creature takes <strong>1d10</strong> direct physical damage each time they act.</p>"
         }
       }
     },
@@ -634,8 +621,7 @@
       "description": "<p>Make an attack against any number of targets within Very Close range. On a success, a target is temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> physical direct damage each time they act.</p>",
       "actions": {
         "igRoXxgaTT9tBQS7": {
-          "name": "Attack",
-          "description": "<p>Make an attack against any number of targets within Very Close range. On a success, a target is temporarily Poisoned. A Poisoned creature takes <strong>1d10</strong> physical direct damage each time they act.</p>"
+          "name": "Attack"
         }
       },
       "effects": {
@@ -648,12 +634,6 @@
     "Vicious Maul": {
       "name": "Vicious Maul",
       "description": "<p>When you succeed on an attack against a target, you can <strong>spend a Hope</strong> to make them temporarily Vulnerable and gain a +1 bonus to your Proficiency for this attack.</p>",
-      "actions": {
-        "Cc53vyYz5ggKdIbx": {
-          "name": "Spend Hope",
-          "description": "<p>When you succeed on an attack against a target within Melee range, you can <strong>spend a Hope</strong> to clamp that opponent in your jaws, making them temporarily Restrained and Vulnerable.</p>"
-        }
-      },
       "effects": {
         "MIAh9XNwDXGDktCm": {
           "name": "Mauled"
@@ -665,8 +645,7 @@
       "description": "<p><strong>Mark a Stress</strong> to force any number of targets within Melee range to move back to Very Close range.</p>",
       "actions": {
         "D9YmUP1aeiCzNxcC": {
-          "name": "Mark Stress",
-          "description": "<p><strong>Mark a Stress</strong> to force any number of targets within Melee range to move back to Very Close range.</p>"
+          "name": "Mark Stress"
         }
       }
     },

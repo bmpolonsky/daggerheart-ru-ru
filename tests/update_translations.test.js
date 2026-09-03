@@ -471,6 +471,11 @@ test("official Hope & Fear translations only reference current Foundry IDs", () 
     "communities",
     "domains",
     "transformations",
+    "weapons",
+    "armors",
+    "loot",
+    "consumables",
+    "beastforms",
     "adversaries",
     "environments"
   ];

@@ -1374,9 +1374,27 @@ function applyFeatureToItemEntry(itemEntry, feature) {
       : markdownToHtml(feature.main_body || "");
   if (body) {
     setHtmlField(itemEntry, "description", body);
-  } else {
-    delete itemEntry.description;
   }
+}
+
+function matchActorFeatures(items, ruFeatures, enEntry, originalEntry) {
+  if (!originalEntry?.items) {
+    // Legacy packs without a source snapshot retain their positional mapping.
+    return Object.values(items).map((item, index) => [item, ruFeatures[index]])
+      .filter(([item, feature]) => item && feature);
+  }
+  const ruById = new Map(ruFeatures.filter((feature) => feature?.id != null)
+    .map((feature) => [feature.id, feature]));
+  const byName = new Map();
+  for (const feature of enEntry?.features || []) {
+    if (feature?.id == null) continue;
+    const key = normalize(cleanAdversaryItemName(feature.name || ""));
+    if (key) byName.set(key, byName.has(key) ? null : ruById.get(feature.id));
+  }
+  // Missing/reordered API features must not overwrite a different Foundry item.
+  return Object.entries(items).map(([id, item]) => [
+    item, byName.get(normalize(cleanAdversaryItemName(originalEntry.items[id]?.name || "")))
+  ]).filter(([item, feature]) => item && feature);
 }
 
 function applyBattleBoxOverrides(entry, raw) {
@@ -1951,18 +1969,20 @@ async function main() {
   const voidTranslationSpecs = await detectVoidTranslationFiles();
 
   const originalAdversariesByKey = new Map();
-  try {
-    const originalPath = path.join(ORIGINAL_DIR, TRANSLATION_FILES.adversaries);
-    const raw = JSON.parse(await fs.readFile(originalPath, "utf-8"));
-    for (const [key, entry] of Object.entries((raw && raw.entries) || {})) {
-      const norm = normalize(key);
-      if (norm) {
-        originalAdversariesByKey.set(norm, entry);
+  const originalEnvironmentsByKey = new Map();
+  for (const [pack, target] of [["adversaries", originalAdversariesByKey], ["environments", originalEnvironmentsByKey]]) {
+    try {
+      const originalPath = path.join(ORIGINAL_DIR, TRANSLATION_FILES[pack]);
+      const raw = JSON.parse(await fs.readFile(originalPath, "utf-8"));
+      for (const [key, entry] of Object.entries((raw && raw.entries) || {})) {
+        const norm = normalize(key);
+        if (norm) target.set(norm, entry);
       }
+    } catch (err) {
+      // Optional: original snapshots may be missing in some setups.
     }
-  } catch (err) {
-    // Optional: original snapshots may be missing in some setups.
   }
+  const environmentEnBySlug = new Map(environmentData.en.map((entry) => [entry.slug, entry]));
 
   const adversaryEnBySlug = new Map();
   for (const entry of adversaryData.en || []) {
@@ -2824,8 +2844,6 @@ async function main() {
       const desc = markdownToHtml(raw.short_description || raw.main_body || "");
       if (desc) {
         setHtmlField(entry, "description", desc);
-      } else {
-        delete entry.description;
       }
       if (raw.motives) setHtmlField(entry, "motivesAndTactics", raw.motives);
       if (raw.weapon_name) entry.attack = sanitizeName(raw.weapon_name);
@@ -2847,55 +2865,8 @@ async function main() {
       } else {
         const enEntry = raw && raw.slug && enBySlug ? enBySlug.get(raw.slug) : null;
         const originalEntry = originalByKey ? originalByKey.get(norm) : null;
-
-        if (
-          enEntry &&
-          originalEntry &&
-          originalEntry.items &&
-          ruFeatures.length &&
-          Array.isArray(enEntry.features) &&
-          enEntry.features.length
-        ) {
-          const ruById = new Map();
-          for (const feature of ruFeatures) {
-            if (!feature || feature.id === undefined || feature.id === null) continue;
-            ruById.set(feature.id, feature);
-          }
-
-          const enNameToRuFeature = new Map();
-          for (const enFeature of enEntry.features) {
-            if (!enFeature || enFeature.id === undefined || enFeature.id === null) continue;
-            const ruFeature = ruById.get(enFeature.id);
-            if (!ruFeature) continue;
-            const key = normalize(cleanAdversaryItemName(enFeature.name || ""));
-            if (key && !enNameToRuFeature.has(key)) {
-              enNameToRuFeature.set(key, ruFeature);
-            }
-          }
-
-          const remaining = ruFeatures.slice();
-          for (const [itemId, itemEntry] of Object.entries(items)) {
-            if (!itemEntry) continue;
-            const originalItem = originalEntry.items[itemId];
-            const originalName = originalItem && originalItem.name ? originalItem.name : "";
-            const key = normalize(cleanAdversaryItemName(originalName));
-            let nextFeature = key ? enNameToRuFeature.get(key) : null;
-            if (!nextFeature) {
-              nextFeature = remaining.shift() || null;
-            } else {
-              const idx = remaining.indexOf(nextFeature);
-              if (idx >= 0) remaining.splice(idx, 1);
-            }
-            if (!nextFeature) break;
-            applyFeatureToItemEntry(itemEntry, nextFeature);
-          }
-        } else {
-          const featureList = ruFeatures.slice();
-          for (const itemEntry of Object.values(items)) {
-            const nextFeature = featureList.shift();
-            if (!nextFeature) break;
-            applyFeatureToItemEntry(itemEntry, nextFeature);
-          }
+        for (const [itemEntry, feature] of matchActorFeatures(items, ruFeatures, enEntry, originalEntry)) {
+          applyFeatureToItemEntry(itemEntry, feature);
         }
       }
       applyActionOverrides(entry);
@@ -2911,7 +2882,7 @@ async function main() {
     return false;
   }
 
-  function translateEnvironmentEntry(norm, entry, environmentTop, featureMap, potentialLabels) {
+  function translateEnvironmentEntry(norm, entry, environmentTop, featureMap, potentialLabels, { enBySlug, originalByKey } = {}) {
     if (!norm) return false;
     const info = environmentTop[norm];
     if (info) {
@@ -2920,16 +2891,13 @@ async function main() {
       const desc = markdownToHtml(raw.short_description || raw.main_body || "");
       if (desc) {
         setHtmlField(entry, "description", desc);
-      } else {
-        delete entry.description;
       }
       const ruFeatures = raw.features || [];
       const items = entry.items || {};
       if (ruFeatures.length && Object.keys(items).length) {
-        const featureList = ruFeatures.slice();
-        for (const [itemId, itemEntry] of Object.entries(items)) {
-          const feature = featureList.shift();
-          if (!feature) break;
+        const enEntry = enBySlug?.get(raw.slug);
+        const originalEntry = originalByKey?.get(norm);
+        for (const [itemEntry, feature] of matchActorFeatures(items, ruFeatures, enEntry, originalEntry)) {
           const markdownSource = feature.main_body || "";
           let body = markdownToHtml(markdownSource);
           const previousDescription = itemEntry.description;
@@ -2952,14 +2920,13 @@ async function main() {
               }
             }
           }
-          itemEntry.name = sanitizeName(cleanAdversaryItemName(feature.name || ""));
+          const name = sanitizeName(cleanAdversaryItemName(feature.name || ""));
+          if (name) itemEntry.name = name;
           if (body) {
             setHtmlField(itemEntry, "description", body);
             if (itemEntry.description) {
               itemEntry.description = dedupeSecretContent(itemEntry.description);
             }
-          } else {
-            delete itemEntry.description;
           }
         }
       }
@@ -3003,10 +2970,10 @@ async function main() {
     );
   }
 
-  async function updateEnvironmentsFile(path, { environmentTop, featureMap, potentialLabels }, stats) {
+  async function updateEnvironmentsFile(path, { environmentTop, featureMap, potentialLabels, enBySlug, originalByKey }, stats) {
     return updateEntries(
       path,
-      (norm, entry) => translateEnvironmentEntry(norm, entry, environmentTop, featureMap, potentialLabels),
+      (norm, entry) => translateEnvironmentEntry(norm, entry, environmentTop, featureMap, potentialLabels, { enBySlug, originalByKey }),
       { stats }
     );
   }
@@ -3153,7 +3120,9 @@ async function main() {
         updateEnvironmentsFile(filePaths.environments, {
           environmentTop,
           featureMap: scopedFeatureMaps.environment,
-          potentialLabels: environmentPotentialLabels
+          potentialLabels: environmentPotentialLabels,
+          enBySlug: environmentEnBySlug,
+          originalByKey: originalEnvironmentsByKey
         }, statsByFile.environments)
     },
     {

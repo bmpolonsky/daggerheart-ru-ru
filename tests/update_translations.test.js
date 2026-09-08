@@ -519,6 +519,120 @@ test("official Hope & Fear translations only reference current Foundry IDs", () 
   }
 });
 
+test(
+  "temporary Hope and Fear translations survive missing API text and yield to matched website features",
+  withWorkspace(async ({ moduleDir }) => {
+    const packs = {
+      adversaries: [
+        "Cephilith Priest", "Chimera", "Doppelhound", "Dragon Knight", "Fellmounted Shadow King",
+        "Gargoyle", "Gobstalker", "Hallowed Choir", "Lamplight Beguiler", "Mountain Troll",
+        "Owl Witch", "Rabble Mawb", "Redcap Butcher", "Redcap Candlemaker", "Whisper Wraith",
+        "Xero The Castle Killer"
+      ],
+      environments: ["Convergence, The City Of Portals", "Crystal Wasteland", "Grand Feast", "Heist"]
+    };
+    const before = {};
+    for (const [pack, names] of Object.entries(packs)) {
+      const translated = readJson(path.join(moduleDir, "translations", `daggerheart.${pack}.json`));
+      before[pack] = Object.fromEntries(names.map((name) => [name, translated.entries[name]]));
+    }
+    runUpdater(moduleDir);
+    for (const [pack, entries] of Object.entries(before)) {
+      const translated = readJson(path.join(moduleDir, "translations", `daggerheart.${pack}.json`));
+      for (const [name, entry] of Object.entries(entries)) {
+        assert.deepEqual(translated.entries[name], entry, `${name}: absent API entry preserves temporary text`);
+      }
+    }
+
+    // Simulate publication without fetching or changing the real cache. API order is not Foundry order.
+    for (const [pack, names] of Object.entries(packs)) {
+      const endpoint = pack === "adversaries" ? "adversary" : "environment";
+      const original = readJson(path.join(moduleDir, "..", "original", `daggerheart.${pack}.json`));
+      for (const lang of ["en", "ru"]) {
+        const apiPath = tmpDataPath(moduleDir, `${endpoint}.json`, lang);
+        const api = readJson(apiPath);
+        for (const name of names) {
+          const source = original.entries[name];
+          api.data.push({
+            slug: `test-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+            name: lang === "en" ? name : `Перевод сайта ${name}`,
+            short_description: name === names[0] ? "" : lang === "en" ? name : `Описание сайта ${name}`,
+            features: Object.entries(source.items).reverse().map(([id, item], index) => ({
+              id: `test-${id}`,
+              name: lang === "en" ? `${item.name} - Passive` : `Свойство сайта ${id}`,
+              // A partially published feature must not erase the existing description.
+              main_body: index === 0 ? "" : lang === "en" ? item.description : `Текст сайта ${id}`
+            })).filter((feature, index) => lang === "en" || index !== 1)
+          });
+        }
+        writeJson(apiPath, api);
+      }
+    }
+    runUpdater(moduleDir);
+    for (const [pack, names] of Object.entries(packs)) {
+      const translated = readJson(path.join(moduleDir, "translations", `daggerheart.${pack}.json`));
+      const original = readJson(path.join(moduleDir, "..", "original", `daggerheart.${pack}.json`));
+      for (const name of names) {
+        const entry = translated.entries[name];
+        assert.equal(entry.name, `Перевод сайта ${name}`);
+        if (name === names[0]) assert.equal(entry.description, before[pack][name].description);
+        else assert.ok(entry.description.includes(`Описание сайта ${name}`));
+        assert.deepEqual(Object.keys(entry.items), Object.keys(before[pack][name].items));
+        const emptyId = Object.keys(original.entries[name].items).at(-1);
+        const missingId = Object.keys(original.entries[name].items).at(-2);
+        for (const [id, item] of Object.entries(entry.items)) {
+          const previous = before[pack][name].items[id];
+          if (id === emptyId || id === missingId) {
+            assert.equal(item.description, previous.description, `${name}.${id}: empty API body keeps fallback`);
+            if (id === missingId) assert.deepEqual(item, previous, `${name}.${id}: unmatched feature stays intact`);
+          } else {
+            assert.equal(item.name, `Свойство сайта ${id}`, `${name}.${id}: match by source identity, not order`);
+            assert.ok(item.description.includes(`Текст сайта ${id}`), `${name}.${id}: website replaces fallback`);
+            if (previous.description) assert.ok(!item.description.includes(previous.description),
+              `${name}.${id}: temporary description must not be appended to the website text`);
+          }
+          assert.deepEqual(item.actions, previous.actions, `${name}.${id}: preserve Foundry actions`);
+          assert.deepEqual(item.effects, previous.effects, `${name}.${id}: preserve Foundry effects`);
+        }
+      }
+    }
+  })
+);
+
+test("migrated Void adversary damage dice match current Foundry text", () => {
+  const original = readJson(path.join(PROJECT_ROOT, "original", "daggerheart.adversaries.json"));
+  const translated = readJson(path.join(PROJECT_ROOT, "module", "translations", "daggerheart.adversaries.json"));
+  const migrated = [
+    "Cephilith Priest", "Chimera", "Doppelhound", "Dragon Knight", "Fellmounted Shadow King",
+    "Gargoyle", "Gobstalker", "Hallowed Choir", "Lamplight Beguiler", "Mountain Troll",
+    "Owl Witch", "Rabble Mawb", "Redcap Butcher", "Redcap Candlemaker", "Whisper Wraith",
+    "Xero The Castle Killer"
+  ];
+  const dice = (text = "") => [...new Set((text.match(/\b\d*d\d+(?:\+\d+)?\b/g) || [])
+    .map((formula) => formula.replace(/^d/, "1d")))].sort();
+
+  for (const key of migrated) {
+    for (const [id, item] of Object.entries(translated.entries[key].items)) {
+      assert.deepEqual(dice(item.description), dice(original.entries[key].items[id].description),
+        `${key}.${id}: translated damage dice differ from current rules`);
+    }
+  }
+});
+
+test("equipment action and effect labels use Russian instead of generic English fallbacks", () => {
+  const genericNames = new Set(["Spend Hope", "Mark Stress", "Use", "Drink", "Eat", "Activate"]);
+  for (const pack of ["weapons", "armors", "loot", "consumables"]) {
+    const translated = readJson(path.join(PROJECT_ROOT, "module", "translations", `daggerheart.${pack}.json`));
+    for (const [key, item] of Object.entries(translated.entries)) {
+      for (const collection of ["actions", "effects"]) {
+        for (const [id, node] of Object.entries(item[collection] || {})) {
+          assert.ok(!genericNames.has(node.name), `${pack}.${key}.${collection}.${id}: ${node.name}`);
+        }
+      }
+    }
+  }
+});
+
 test("system UI translation mirrors current Foundry key structure", () => {
   const leaves = (value, prefix = "", result = []) => {
     for (const [key, child] of Object.entries(value)) {

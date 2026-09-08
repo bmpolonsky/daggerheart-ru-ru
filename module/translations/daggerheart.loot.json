@@ -449,7 +449,7 @@
       "description": "<p>Once per long rest, you can activate your Hope feature without spending Hope. You can carry only one relic.</p>",
       "actions": {
         "liWsgZGKy0Jk9BVb": {
-          "name": "Activate"
+          "name": "Активировать"
         }
       }
     },
@@ -478,7 +478,7 @@
       "description": "<p>You can spread these caltrops in a Very Close area around you. A creature hastening through that area must mark a Stress.</p>",
       "actions": {
         "6vD0Gcej6Xn0s7Do": {
-          "name": "Spread Caltrops"
+          "name": "Рассыпать чеснок"
         }
       }
     },
@@ -487,7 +487,7 @@
       "description": "<p>When you flip this coin, you can spend a Hope to determine which side it lands on.</p>",
       "actions": {
         "UlWs1OJaoBtyhF2b": {
-          "name": "Cheat"
+          "name": "Сжульничать"
         }
       }
     },
@@ -504,7 +504,7 @@
       "description": "<p>Once per rest, you can spend a Hope to use an ally's Experience as if it were your own. You can carry only one relic.</p>",
       "actions": {
         "f9OftUibtcsKJv94": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       }
     },
@@ -513,7 +513,7 @@
       "description": "<p>These eyeglasses reveal weak points in objects and creatures. Three times per rest, you can spend a Hope to gain advantage on an attack roll.</p>",
       "actions": {
         "pOrtB09wEkZiihkg": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       }
     },
@@ -526,19 +526,19 @@
       "description": "<p>Once per rest, [[/r 1d2]]{flip a coin.} On heads, you gain a +1 bonus to attack rolls until your next successful attack. On tails, you gain +1 to your Evasion until an attack fails against you.</p>",
       "actions": {
         "82pnPzZykFw7Xhci": {
-          "name": "Heads"
+          "name": "Орёл"
         },
         "zOi26P1bxyLh8S39": {
-          "name": "Tails"
+          "name": "Решка"
         }
       },
       "effects": {
         "1thJk2e2snAmyvq3": {
-          "name": "Heads",
+          "name": "Орёл",
           "description": "<p>+1 bonus to attack rolls until your next successful attack.</p>"
         },
         "oGs7nvr3uO52GVTI": {
-          "name": "Tails",
+          "name": "Решка",
           "description": "<p>+1 to your Evasion until an attack fails against you.</p>"
         }
       }
@@ -556,7 +556,7 @@
       "description": "<p>Once per long rest, you can command this fist-sized silver orb to capture an omnidirectional image of its surroundings on its surface. This image lasts until your next long rest.</p>",
       "effects": {
         "V5vAUbBIXfaUmMKi": {
-          "name": "Captured Image",
+          "name": "Запечатлённый образ",
           "description": "<p>This image lasts until your next long rest.</p>"
         }
       }
@@ -570,7 +570,7 @@
       "description": "<p>Once per rest, you can produce [[/r 2d20]] harmless, cat-sized fur creatures of indeterminate origin and species from this bag.</p>",
       "actions": {
         "bIr96Iej1iMgJ1cw": {
-          "name": "Produce Creatures"
+          "name": "Создать существ"
         }
       }
     },
@@ -579,7 +579,7 @@
       "description": "<p>Once per rest, you can spend a Hope to conjure a mundane item up to a cubic foot in size inside this satchel.</p>",
       "actions": {
         "ERENWVE5XQzIUQfz": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       }
     },
@@ -614,7 +614,7 @@
       "description": "<p>When you critically succeed on an attack, all allies within Close range gain a Hope.</p>",
       "actions": {
         "SpZw1xs8sk4c8Hn9": {
-          "name": "Give Hope"
+          "name": "Передать Надежду"
         }
       }
     },
@@ -627,7 +627,7 @@
       "description": "<p>When you take a rest without clearing Hit Points or Stress, you gain a +2 bonus to attack and damage rolls until your next rest.</p>",
       "actions": {
         "c4teM6lMrHR7170V": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -642,7 +642,7 @@
       "description": "<p>Once per long rest, you can spend a Hope to tell the pendant a creature's name. The pendant gently pulls you toward that creature's current location until your next long rest.</p>",
       "actions": {
         "yLsPSAceq9zCOWbV": {
-          "name": "Activate"
+          "name": "Активировать"
         }
       },
       "effects": {
@@ -681,7 +681,7 @@
       "description": "<p>Spend a Hope to swim through earth as if it were water for the next 10 minutes.</p>",
       "actions": {
         "SzsYjhQY2sZ7VdtD": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       },
       "effects": {
@@ -696,7 +696,7 @@
       "description": "<p>Once per session, you can roll this set of runic dice to reveal the full name of the last person you touched.</p>",
       "actions": {
         "M3YbDPW9w7rIXZG1": {
-          "name": "Roll Dice"
+          "name": "Бросить кости"
         }
       }
     },
@@ -705,7 +705,7 @@
       "description": "<p>Spend a Hope to activate the gemstone in this ring until the end of the scene. While active, the gemstone changes color to indicate the wearer's proximity to hidden treasure: warm colors for near, cool colors for far.</p>",
       "actions": {
         "dZni6lym19ljT67O": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       },
       "effects": {
@@ -729,7 +729,7 @@
       "description": "<p>When the GM spends a Fear, roll a d4. Once per scene on a result of 4, you clear a Stress.</p>",
       "actions": {
         "2s4ofx7L65OGBX6I": {
-          "name": "Roll d4"
+          "name": "Бросить d4"
         }
       }
     },
@@ -742,7 +742,7 @@
       "description": "<p>If an adversary attacks you within Melee range, they must succeed on a Reaction Roll (12) or mark a Hit Point.</p>",
       "actions": {
         "bOTGYms5yiburnW8": {
-          "name": "Reaction Roll"
+          "name": "Бросок Реакции"
         }
       }
     },
@@ -759,7 +759,7 @@
       "description": "<p>Two creatures can wear this pair of rose gold rings. Once per session, you can initiate a Tag Team Roll with whoever is wearing the other ring without spending Hope or counting against your session limit for Tag Team Rolls.</p>",
       "actions": {
         "maCcwSIizfVArFmH": {
-          "name": "Activate"
+          "name": "Активировать"
         }
       }
     },
@@ -784,7 +784,7 @@
       "description": "<p>This conical blue hat is covered in silver stars. Once per rest, you can cast a spell from your vault with a Recall Cost equal to or less than your tier. This doesn't work for permanently vaulted cards.</p>",
       "actions": {
         "GqZbEhbCJOCok3Ph": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -793,7 +793,7 @@
       "description": "<p>Two creatures can wear this pair of circlets. You can spend a Hope to switch places with whoever is wearing the other circlet.</p>",
       "actions": {
         "2a8CN94tQarhPBO7": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       }
     },
@@ -826,12 +826,12 @@
       "description": "<p>Once per scene, you can activate this girdle to gain a +1 bonus to your Proficiency for your next attack.</p>",
       "actions": {
         "bdJqnWHYKhzkQg7j": {
-          "name": "Activate Girdle"
+          "name": "Активировать пояс"
         }
       },
       "effects": {
         "YQFUsFB2APojHKbh": {
-          "name": "Active Girdle",
+          "name": "Активный пояс",
           "description": "<p>+1 bonus to your Proficiency for your next attack.</p>"
         }
       }
@@ -841,7 +841,7 @@
       "description": "<p>Once per long rest, you can ring this bell to magically open the shortest safe path through rough terrain for 1 hour.</p>",
       "actions": {
         "U3U0FAL95FouCQ8P": {
-          "name": "Ring Bell"
+          "name": "Позвонить в колокольчик"
         }
       }
     },
@@ -850,19 +850,19 @@
       "description": "<p>Once per rest, [[/r 1d2]]{flip a coin}. On heads, you become immune to the next physical damage you take. On tails, you become immune to the next magic damage you take.</p>",
       "actions": {
         "jO0d2urVgS7Sam8O": {
-          "name": "Heads"
+          "name": "Орёл"
         },
         "MFe6wYWZt1D95fIU": {
-          "name": "Tails"
+          "name": "Решка"
         }
       },
       "effects": {
         "v4B2AXAw5ipJ3KG6": {
-          "name": "Heads",
+          "name": "Орёл",
           "description": "<p>On heads, you become immune to the next physical damage you take.</p>"
         },
         "pxrbpDOlTozFmTnr": {
-          "name": "Tails",
+          "name": "Решка",
           "description": "<p>On tails, you become immune to the next magic damage you take.</p>"
         }
       }
@@ -872,7 +872,7 @@
       "description": "<p>Once per rest, mark a Stress to teleport to a location you can clearly see.</p>",
       "actions": {
         "B1xcdTjpaoK4TxI5": {
-          "name": "Mark Stress"
+          "name": "Отметить Стресс"
         }
       }
     },

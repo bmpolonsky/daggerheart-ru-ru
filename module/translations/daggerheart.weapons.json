@@ -1297,13 +1297,13 @@
       "name": "Adder's Fang",
       "actions": {
         "1nmjsSNRC9uHl2j4": {
-          "name": "Venomous",
-          "description": "When you deal Major or greater damage with this weapon, the target becomes temporarily Vulnerable."
+          "name": "Отравляющее",
+          "description": "Когда вы наносите этим оружием Ощутимый или больший урон, цель временно становится Уязвимой."
         }
       },
       "effects": {
         "t6Qu6nt3bGnkTlXP": {
-          "name": "Venomous"
+          "name": "Отравляющее"
         }
       },
       "attack": "Атака"
@@ -1312,8 +1312,8 @@
       "name": "Advanced Arcane Rifle",
       "actions": {
         "LlGYNCSjPpaHCgkl": {
-          "name": "Aimed",
-          "description": "Your attack has disadvantage if the target is within Very Close range of you or within Melee range of one of your allies. You can mark a Stress to ignore this penalty."
+          "name": "Прицельное",
+          "description": "Ваша атака совершается с помехой, если цель находится от вас в пределах Близкой дистанции или Вплотную к одному из ваших союзников. Вы можете отметить Стресс, чтобы игнорировать этот штраф."
         }
       },
       "attack": "Атака"
@@ -1334,8 +1334,8 @@
       "name": "Advanced Enchanted Chakram",
       "actions": {
         "avUWKAVzjRuqSuxx": {
-          "name": "Ricochet",
-          "description": "When you make an attack, you can mark a Stress to target another creature within Very Close range of the first target with that attack."
+          "name": "Рикошет",
+          "description": "Совершая атаку, вы можете отметить Стресс, чтобы этой же атакой выбрать целью ещё одно существо в пределах Близкой дистанции от первой цели."
         }
       },
       "attack": "Атака"
@@ -1344,8 +1344,8 @@
       "name": "Advanced Fighting Cloak",
       "effects": {
         "sqvQgVCVUFwF7iEK": {
-          "name": "Padded",
-          "description": "@Resolve[@item.tier + 1|sign]{+2} to damage thresholds."
+          "name": "Мягкое",
+          "description": "@Resolve[@item.tier + 1|sign]{+2} к порогам урона."
         }
       },
       "attack": "Атака"
@@ -1354,8 +1354,8 @@
       "name": "Advanced Focus Runes",
       "effects": {
         "O9SelXMg3PlMtcnf": {
-          "name": "Focused",
-          "description": "+1 to primary weapon damage to targets within Very Close range."
+          "name": "Сосредоточенное",
+          "description": "+1 к урону основного оружия по целям в пределах Близкой дистанции."
         }
       },
       "attack": "Атака"
@@ -1364,14 +1364,14 @@
       "name": "Advanced Hatchet",
       "actions": {
         "OJJqzMNKy1sbybJP": {
-          "name": "Follow-Up",
-          "description": "On a successful attack with your primary weapon within Melee range, you can mark a Stress to gain a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "При успешной атаке основным оружием Вплотную вы можете отметить Стресс, чтобы получить бонус +1 к Мастерству для этой атаки."
         }
       },
       "effects": {
         "cDcxHJl36AncOJbg": {
-          "name": "Follow-Up",
-          "description": "You have a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "Вы получаете бонус +1 к Мастерству для этой атаки."
         }
       },
       "attack": "Атака"
@@ -1380,8 +1380,8 @@
       "name": "Advanced Katana",
       "actions": {
         "ioC63eYWrrjhf6fW": {
-          "name": "Quick",
-          "description": "When you make an attack, you can mark a Stress to target another creature within range."
+          "name": "Быстрое",
+          "description": "Совершая атаку, вы можете отметить стресс, чтобы выбрать целью другое существо в пределах досягаемости."
         }
       },
       "attack": "Атака"
@@ -1390,8 +1390,8 @@
       "name": "Advanced Offhand Brass Knuckles",
       "effects": {
         "fwIRv0JhgzaawDwF": {
-          "name": "Paired",
-          "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
+          "name": "Парное",
+          "description": "Добавьте уровень этого вспомогательного оружия + 1 к вашему основному оружию против целей на дистанции Вплотную"
         }
       },
       "attack": "Атака"
@@ -1404,8 +1404,8 @@
       "name": "Advanced Rune Shield",
       "effects": {
         "TqOWmUMXr5RnE8fY": {
-          "name": "Protective",
-          "description": "Add the item's Tier to your Armor Score"
+          "name": "Защитное",
+          "description": "Добавьте уровень предмета к вашему показателю брони"
         }
       },
       "attack": "Атака"
@@ -1414,8 +1414,8 @@
       "name": "Advanced Runelock Pistol",
       "actions": {
         "a8XXgkfe64zMOY6R": {
-          "name": "Reload",
-          "description": "After you make an attack, roll a d6. On a result of 1, you must mark a Stress to reload this weapon before you can fire it again."
+          "name": "Перезарядка",
+          "description": "После атаки бросьте d6. При результате 1 вы должны отметить стресс, чтобы перезарядить это оружие, прежде чем сможете выстрелить из него снова."
         }
       },
       "attack": "Атака"
@@ -1444,8 +1444,8 @@
       "name": "Arc Wand",
       "actions": {
         "WbMKifYfcRQpDiP8": {
-          "name": "Bounce",
-          "description": "Mark 1 or more Stress to hit that many targets in range of the attack."
+          "name": "Рикошет",
+          "description": "Отметьте 1 или более стресса, чтобы поразить столько же целей в пределах досягаемости атаки."
         }
       },
       "attack": "Атака"
@@ -1454,8 +1454,8 @@
       "name": "Arcane Rifle",
       "actions": {
         "0BlWvjZi8EgnT6ln": {
-          "name": "Aimed",
-          "description": "Your attack has disadvantage if the target is within Very Close range of you or within Melee range of one of your allies. You can mark a Stress to ignore this penalty."
+          "name": "Прицельное",
+          "description": "Ваша атака совершается с помехой, если цель находится от вас в пределах Близкой дистанции или Вплотную к одному из ваших союзников. Вы можете отметить Стресс, чтобы игнорировать этот штраф."
         }
       },
       "attack": "Атака"
@@ -1464,8 +1464,8 @@
       "name": "Arquebus",
       "actions": {
         "t1BgFF5IT0L1QHGM": {
-          "name": "Reload",
-          "description": "After you make an attack, roll a d6. On a result of 1, you must mark a Stress to reload this weapon before you can fire it again."
+          "name": "Перезарядка",
+          "description": "После атаки бросьте d6. При результате 1 вы должны отметить стресс, чтобы перезарядить это оружие, прежде чем сможете выстрелить из него снова."
         }
       },
       "attack": "Атака"
@@ -1474,8 +1474,8 @@
       "name": "Bec de Corbin",
       "actions": {
         "hsPKe9xRQlcMwR9v": {
-          "name": "Devastate",
-          "description": "Before you make an attack roll, you can mark a Stress to use a d20 as your damage die."
+          "name": "Опустошение",
+          "description": "Перед броском атаки вы можете отметить Стресс, чтобы использовать d20 в качестве кости урона."
         }
       },
       "attack": "Атака"
@@ -1484,14 +1484,14 @@
       "name": "Black Powder Serpentine",
       "actions": {
         "pkg1z8LU5URZsQIe": {
-          "name": "Incendiary",
-          "description": "On a successful attack, all creatures within Very Close range of the target must mark a Hit Point."
+          "name": "Зажигательное",
+          "description": "При успешной атаке все существа в пределах Близкой дистанции от цели должны отметить Рану."
         }
       },
       "effects": {
         "DQcdvMkGHEUycaBv": {
-          "name": "Incendiary",
-          "description": "-1 to Agility."
+          "name": "Зажигательное",
+          "description": "−1 к Проворности."
         }
       },
       "attack": "Атака"
@@ -1504,8 +1504,8 @@
       "name": "Bladed Fan",
       "actions": {
         "KrXsIpyvPDci7gXH": {
-          "name": "Parry",
-          "description": "When you are attacked, roll this weapon's damage dice. If any of the attacker's damage dice rolled the same value as your dice, the matching results are discarded from the attacker's damage dice before the damage you take is totaled."
+          "name": "Парирование",
+          "description": "Когда вас атакуют, бросьте кости урона этого оружия. Если на какой-либо из костей урона атакующего выпало то же значение, что и на вашей кости, совпадающие результаты удаляются из костей урона атакующего до подсчёта общего получаемого вами урона."
         }
       },
       "attack": "Атака"
@@ -1518,14 +1518,14 @@
       "name": "Blitz Hammer",
       "actions": {
         "1KG5ZPmXmH5X7GVe": {
-          "name": "Accelerator",
-          "description": "Once per scene, mark a Stress to move to Far range then make an attack. Gain a +1 bonus to your Proficiency on this attack."
+          "name": "Ускоряющее",
+          "description": "Раз за сцену отметьте Стресс, чтобы переместиться на Далёкую дистанцию, а затем совершить атаку. Вы получаете бонус +1 к Мастерству для этой атаки."
         }
       },
       "effects": {
         "pAY6jFShsLHNjnRg": {
-          "name": "Accelerator",
-          "description": "Gain a +1 bonus to your Proficiency on this attack."
+          "name": "Ускоряющее",
+          "description": "Вы получаете бонус +1 к Мастерству для этой атаки."
         }
       },
       "attack": "Атака"
@@ -1550,8 +1550,8 @@
       "name": "Chained Scythe",
       "actions": {
         "oS1KZo6N8KzUMxgt": {
-          "name": "Quick",
-          "description": "When you make an attack, you can mark a Stress to target another creature within range."
+          "name": "Быстрое",
+          "description": "Совершая атаку, вы можете отметить стресс, чтобы выбрать целью другое существо в пределах досягаемости."
         }
       },
       "attack": "Атака"
@@ -1560,8 +1560,8 @@
       "name": "Clockwork Crossbow",
       "actions": {
         "L7gm9rLjSswDoeg6": {
-          "name": "Quick",
-          "description": "When you make an attack, you can mark a Stress to target another creature within range."
+          "name": "Быстрое",
+          "description": "Совершая атаку, вы можете отметить стресс, чтобы выбрать целью другое существо в пределах досягаемости."
         }
       },
       "attack": "Атака"
@@ -1578,8 +1578,8 @@
       "name": "Cyrurgien's Scalpel",
       "actions": {
         "mmsWOr3NPsbUM4TB": {
-          "name": "Scare",
-          "description": "On a successful attack, the target must mark a Stress."
+          "name": "Напугать",
+          "description": "При успешной атаке цель должна отметить стресс."
         }
       },
       "attack": "Атака"
@@ -1588,8 +1588,8 @@
       "name": "Demon's Edge",
       "actions": {
         "HZfWsLRQkSlCt8iV": {
-          "name": "Disturbing",
-          "description": "When you defeat a creature with this weapon, all adversaries within Close range must mark a Stress."
+          "name": "Тревожащее",
+          "description": "Когда вы побеждаете существо этим оружием, все противники в пределах Средней дистанции должны отметить Стресс."
         }
       },
       "attack": "Атака"
@@ -1602,8 +1602,8 @@
       "name": "Echo Blade",
       "actions": {
         "NO0cfOXGO0Z3vTwd": {
-          "name": "Double Up",
-          "description": "When you make an attack with your primary weapon, you can deal damage to another target within Melee range."
+          "name": "Двойной удар",
+          "description": "Когда вы атакуете основным оружием, вы можете нанести урон ещё одной цели Вплотную."
         }
       },
       "attack": "Атака"
@@ -1612,14 +1612,14 @@
       "name": "Eldritch Vambrace",
       "actions": {
         "B3PW3yWLtXAN2bZq": {
-          "name": "Deflect",
-          "description": "When you are attacked, you can mark an Armor Slot to gain a bonus to your Evasion equal to your Armor Score against the attack."
+          "name": "Отклонить",
+          "description": "Когда вас атакуют, вы можете отметить ячейку брони, чтобы получить бонус к уклонению, равный вашему показателю брони, против этой атаки."
         }
       },
       "effects": {
         "lWlxUPj4Ma4TPkqb": {
-          "name": "Deflecting",
-          "description": "Gain a bonus to your Evasion equal to your Armor Score against the attack"
+          "name": "Отклоняющее",
+          "description": "Получите бонус к уклонению, равный вашему показателю брони, против этой атаки"
         }
       },
       "attack": "Атака"
@@ -1628,8 +1628,8 @@
       "name": "Enchanted Chakram",
       "actions": {
         "oK1CHBxZLcmM37jR": {
-          "name": "Ricochet",
-          "description": "When you make an attack, you can mark a Stress to target another creature within Very Close range of the first target with that attack."
+          "name": "Рикошет",
+          "description": "Совершая атаку, вы можете отметить Стресс, чтобы этой же атакой выбрать целью ещё одно существо в пределах Близкой дистанции от первой цели."
         }
       },
       "attack": "Атака"
@@ -1638,8 +1638,8 @@
       "name": "Enchanted Lute",
       "actions": {
         "EIwNjlroQWthm07Q": {
-          "name": "Invigorate",
-          "description": "On a successful attack, roll a d4. On a result of 4, clear a Stress."
+          "name": "Ободрение",
+          "description": "При успешной атаке бросьте d4. При результате 4 снимите один Стресс."
         }
       },
       "attack": "Атака"
@@ -1648,8 +1648,8 @@
       "name": "Enchanted Shillelagh",
       "effects": {
         "87ChuNUSDjwmYMda": {
-          "name": "Protective",
-          "description": "Add the item's Tier to your Armor Score"
+          "name": "Защитное",
+          "description": "Добавьте уровень предмета к вашему показателю брони"
         }
       },
       "attack": "Атака"
@@ -1658,14 +1658,14 @@
       "name": "Ethereal Zweihänder",
       "actions": {
         "XdQBnYfIX5Km5KqU": {
-          "name": "Ethereal",
-          "description": "You must mark a Stress to conjure this weapon. It lasts until the end of the scene."
+          "name": "Эфирное",
+          "description": "Чтобы призвать это оружие, вы должны отметить Стресс. Оно существует до конца сцены."
         }
       },
       "effects": {
         "MnQKsDs3DCwlqUQs": {
-          "name": "Ethereal",
-          "description": "This weapon lasts until the end of the scene."
+          "name": "Эфирное",
+          "description": "Это оружие существует до конца сцены."
         }
       },
       "attack": "Атака"
@@ -1674,8 +1674,8 @@
       "name": "Fighting Cloak",
       "effects": {
         "CxilXxOVfmo18wTL": {
-          "name": "Padded",
-          "description": "@Resolve[@item.tier + 1|sign]{+2} to damage thresholds."
+          "name": "Мягкое",
+          "description": "@Resolve[@item.tier + 1|sign]{+2} к порогам урона."
         }
       },
       "attack": "Атака"
@@ -1684,8 +1684,8 @@
       "name": "Focus Runes",
       "effects": {
         "vJzsPmp4JkV4QTDm": {
-          "name": "Focused",
-          "description": "+1 to primary weapon damage to targets within Very Close range."
+          "name": "Сосредоточенное",
+          "description": "+1 к урону основного оружия по целям в пределах Близкой дистанции."
         }
       },
       "attack": "Атака"
@@ -1694,8 +1694,8 @@
       "name": "Fury Gem",
       "actions": {
         "XpE38Dn617zBvsiX": {
-          "name": "Burn",
-          "description": "When you roll a 6 on a damage die, the target must mark a Stress."
+          "name": "Поджог",
+          "description": "Когда на кости урона выпадает 6, цель должна отметить стресс."
         }
       },
       "attack": "Атака"
@@ -1704,8 +1704,8 @@
       "name": "Gravity Arbalest",
       "actions": {
         "R0DsdoMfAJNfGLy5": {
-          "name": "Magnetic",
-          "description": "When you make an attack with this weapon, you can spend a Hope to force all adversaries within Very Close range of the target to make a Reaction Roll (16). Creatures who fail must mark a Stress and are pulled into Melee range of the target."
+          "name": "Магнитное",
+          "description": "Когда вы совершаете атаку этим оружием, вы можете потратить Надежду, чтобы заставить всех противников в пределах Близкой дистанции от цели совершить Бросок Реакции (16). Провалившие бросок существа отмечают Стресс и притягиваются Вплотную к цели."
         }
       },
       "attack": "Атака"
@@ -1718,14 +1718,14 @@
       "name": "Hatchet",
       "actions": {
         "TkHF6grGo3mzktTj": {
-          "name": "Follow-Up",
-          "description": "On a successful attack with your primary weapon within Melee range, you can mark a Stress to gain a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "При успешной атаке основным оружием Вплотную вы можете отметить Стресс, чтобы получить бонус +1 к Мастерству для этой атаки."
         }
       },
       "effects": {
         "8ro1grZebS5lvFGN": {
-          "name": "Follow-Up",
-          "description": "You have a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "Вы получаете бонус +1 к Мастерству для этой атаки."
         }
       },
       "attack": "Атака"
@@ -1734,8 +1734,8 @@
       "name": "Improved Arcane Rifle",
       "actions": {
         "wfUJ95m1Numktbyc": {
-          "name": "Aimed",
-          "description": "Your attack has disadvantage if the target is within Very Close range of you or within Melee range of one of your allies. You can mark a Stress to ignore this penalty."
+          "name": "Прицельное",
+          "description": "Ваша атака совершается с помехой, если цель находится от вас в пределах Близкой дистанции или Вплотную к одному из ваших союзников. Вы можете отметить Стресс, чтобы игнорировать этот штраф."
         }
       },
       "attack": "Атака"
@@ -1756,8 +1756,8 @@
       "name": "Improved Enchanted Chakram",
       "actions": {
         "63LHxPGiZnKndZ6C": {
-          "name": "Ricochet",
-          "description": "When you make an attack, you can mark a Stress to target another creature within Very Close range of the first target with that attack."
+          "name": "Рикошет",
+          "description": "Совершая атаку, вы можете отметить Стресс, чтобы этой же атакой выбрать целью ещё одно существо в пределах Близкой дистанции от первой цели."
         }
       },
       "attack": "Атака"
@@ -1766,8 +1766,8 @@
       "name": "Improved Fighting Cloak",
       "effects": {
         "CodCGSBBAQufpUJ4": {
-          "name": "Padded",
-          "description": "<p>@Resolve[@item.tier + 1|sign]{+2} to damage thresholds.</p>"
+          "name": "Мягкое",
+          "description": "<p>@Resolve[@item.tier + 1|sign]{+2} к порогам урона.</p>"
         }
       },
       "attack": "Атака"
@@ -1776,8 +1776,8 @@
       "name": "Improved Focus Runes",
       "effects": {
         "EBYlSiZrmwPd5G2J": {
-          "name": "Focused",
-          "description": "+1 to primary weapon damage to targets within Very Close range."
+          "name": "Сосредоточенное",
+          "description": "+1 к урону основного оружия по целям в пределах Близкой дистанции."
         }
       },
       "attack": "Атака"
@@ -1786,14 +1786,14 @@
       "name": "Improved Hatchet",
       "actions": {
         "tNDnQH0WVjdVzyQz": {
-          "name": "Follow-Up",
-          "description": "On a successful attack with your primary weapon within Melee range, you can mark a Stress to gain a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "При успешной атаке основным оружием Вплотную вы можете отметить Стресс, чтобы получить бонус +1 к Мастерству для этой атаки."
         }
       },
       "effects": {
         "OY1Vt95H1btCLcQN": {
-          "name": "Follow-Up",
-          "description": "You have a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "Вы получаете бонус +1 к Мастерству для этой атаки."
         }
       },
       "attack": "Атака"
@@ -1802,8 +1802,8 @@
       "name": "Improved Katana",
       "actions": {
         "Ph7QtVYXhBfHFl0D": {
-          "name": "Quick",
-          "description": "When you make an attack, you can mark a Stress to target another creature within range."
+          "name": "Быстрое",
+          "description": "Совершая атаку, вы можете отметить стресс, чтобы выбрать целью другое существо в пределах досягаемости."
         }
       },
       "attack": "Атака"
@@ -1812,8 +1812,8 @@
       "name": "Improved Offhand Brass Knuckles",
       "effects": {
         "K54TvFYeqh9tvGSS": {
-          "name": "Paired",
-          "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
+          "name": "Парное",
+          "description": "Добавьте уровень этого вспомогательного оружия + 1 к вашему основному оружию против целей на дистанции Вплотную"
         }
       },
       "attack": "Атака"
@@ -1826,8 +1826,8 @@
       "name": "Improved Rune Shield",
       "effects": {
         "2GJFRy7hXnzFe0Rz": {
-          "name": "Protective",
-          "description": "Add the item's Tier to your Armor Score"
+          "name": "Защитное",
+          "description": "Добавьте уровень предмета к вашему показателю брони"
         }
       },
       "attack": "Атака"
@@ -1836,8 +1836,8 @@
       "name": "Improved Runelock Pistol",
       "actions": {
         "PP0Je3qdGdhYu53K": {
-          "name": "Reload",
-          "description": "After you make an attack, roll a d6. On a result of 1, you must mark a Stress to reload this weapon before you can fire it again."
+          "name": "Перезарядка",
+          "description": "После атаки бросьте d6. При результате 1 вы должны отметить стресс, чтобы перезарядить это оружие, прежде чем сможете выстрелить из него снова."
         }
       },
       "attack": "Атака"
@@ -1874,8 +1874,8 @@
       "name": "Katana",
       "actions": {
         "gvtWBJWDlKyv1XyC": {
-          "name": "Quick",
-          "description": "When you make an attack, you can mark a Stress to target another creature within range."
+          "name": "Быстрое",
+          "description": "Совершая атаку, вы можете отметить стресс, чтобы выбрать целью другое существо в пределах досягаемости."
         }
       },
       "attack": "Атака"
@@ -1884,8 +1884,8 @@
       "name": "Lance",
       "effects": {
         "zj1ddWCXh6TuGr3c": {
-          "name": "Cumbersome",
-          "description": "-1 to Finesse"
+          "name": "Громоздкое",
+          "description": "-1 к Искусности"
         }
       },
       "attack": "Атака"
@@ -1894,8 +1894,8 @@
       "name": "Legendary Arcane Rifle",
       "actions": {
         "hYAHv9sRJB8FhWyF": {
-          "name": "Aimed",
-          "description": "Your attack has disadvantage if the target is within Very Close range of you or within Melee range of one of your allies. You can mark a Stress to ignore this penalty."
+          "name": "Прицельное",
+          "description": "Ваша атака совершается с помехой, если цель находится от вас в пределах Близкой дистанции или Вплотную к одному из ваших союзников. Вы можете отметить Стресс, чтобы игнорировать этот штраф."
         }
       },
       "attack": "Атака"
@@ -1916,8 +1916,8 @@
       "name": "Legendary Enchanted Chakram",
       "actions": {
         "DgcClkP4KaQpNhUD": {
-          "name": "Ricochet",
-          "description": "When you make an attack, you can mark a Stress to target another creature within Very Close range of the first target with that attack."
+          "name": "Рикошет",
+          "description": "Совершая атаку, вы можете отметить Стресс, чтобы этой же атакой выбрать целью ещё одно существо в пределах Близкой дистанции от первой цели."
         }
       },
       "attack": "Атака"
@@ -1926,8 +1926,8 @@
       "name": "Legendary Fighting Cloak",
       "effects": {
         "GrtsRfCZH1IOkgje": {
-          "name": "Padded",
-          "description": "@Resolve[@item.tier + 1|sign]{+2} to damage thresholds."
+          "name": "Мягкое",
+          "description": "@Resolve[@item.tier + 1|sign]{+2} к порогам урона."
         }
       },
       "attack": "Атака"
@@ -1936,8 +1936,8 @@
       "name": "Legendary Focus Runes",
       "effects": {
         "urUpY16MvP1UGWyK": {
-          "name": "Focused",
-          "description": "+1 to primary weapon damage to targets within Very Close range."
+          "name": "Сосредоточенное",
+          "description": "+1 к урону основного оружия по целям в пределах Близкой дистанции."
         }
       },
       "attack": "Атака"
@@ -1946,14 +1946,14 @@
       "name": "Legendary Hatchet",
       "actions": {
         "34yvGDZAT7vkFa0t": {
-          "name": "Follow-Up",
-          "description": "On a successful attack with your primary weapon within Melee range, you can mark a Stress to gain a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "При успешной атаке основным оружием Вплотную вы можете отметить Стресс, чтобы получить бонус +1 к Мастерству для этой атаки."
         }
       },
       "effects": {
         "A5rQQbMPkkQzJncG": {
-          "name": "Follow-Up",
-          "description": "You have a +1 bonus to your Proficiency for this attack."
+          "name": "Добивающее",
+          "description": "Вы получаете бонус +1 к Мастерству для этой атаки."
         }
       },
       "attack": "Атака"
@@ -1962,8 +1962,8 @@
       "name": "Legendary Katana",
       "actions": {
         "VJCNMcl7MoJWwuFl": {
-          "name": "Quick",
-          "description": "When you make an attack, you can mark a Stress to target another creature within range."
+          "name": "Быстрое",
+          "description": "Совершая атаку, вы можете отметить стресс, чтобы выбрать целью другое существо в пределах досягаемости."
         }
       },
       "attack": "Атака"
@@ -1972,8 +1972,8 @@
       "name": "Legendary Offhand Brass Knuckles",
       "effects": {
         "5vwZnbIvZmUi4tZM": {
-          "name": "Paired",
-          "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
+          "name": "Парное",
+          "description": "Добавьте уровень этого вспомогательного оружия + 1 к вашему основному оружию против целей на дистанции Вплотную"
         }
       },
       "attack": "Атака"
@@ -1986,8 +1986,8 @@
       "name": "Legendary Rune Shield",
       "effects": {
         "rTFu4NUuHm9UiJr6": {
-          "name": "Protective",
-          "description": "Add the item's Tier to your Armor Score"
+          "name": "Защитное",
+          "description": "Добавьте уровень предмета к вашему показателю брони"
         }
       },
       "attack": "Атака"
@@ -1996,8 +1996,8 @@
       "name": "Legendary Runelock Pistol",
       "actions": {
         "F5YMvafEsSwp8pqU": {
-          "name": "Reload",
-          "description": "After you make an attack, roll a d6. On a result of 1, you must mark a Stress to reload this weapon before you can fire it again."
+          "name": "Перезарядка",
+          "description": "После атаки бросьте d6. При результате 1 вы должны отметить стресс, чтобы перезарядить это оружие, прежде чем сможете выстрелить из него снова."
         }
       },
       "attack": "Атака"
@@ -2030,8 +2030,8 @@
       "name": "Offhand Brass Knuckles",
       "effects": {
         "I3wflHo4lw4LE4Gu": {
-          "name": "Paired",
-          "description": "Add this Secondary Weapon's tier + 1 to your primary weapon against targets within Melee range"
+          "name": "Парное",
+          "description": "Добавьте уровень этого вспомогательного оружия + 1 к вашему основному оружию против целей на дистанции Вплотную"
         }
       },
       "attack": "Атака"
@@ -2044,13 +2044,13 @@
       "name": "Razor Wire",
       "actions": {
         "WEj9asBFTeuvpcgu": {
-          "name": "Entangling",
-          "description": "On a successful attack with your primary weapon against a target within Very Close range, you can spend a Hope to make the target temporarily Vulnerable."
+          "name": "Опутывающее",
+          "description": "При успешной атаке основным оружием против цели в пределах Близкой дистанции вы можете потратить Надежду, чтобы временно сделать цель Уязвимой."
         }
       },
       "effects": {
         "HzbHFY6UixXLRSNu": {
-          "name": "Entangling"
+          "name": "Опутывающее"
         }
       },
       "attack": "Атака"
@@ -2059,13 +2059,13 @@
       "name": "Rime Scepter",
       "actions": {
         "LYqVHYFcuJlf6omC": {
-          "name": "Freezing",
-          "description": "When an attack from this weapon causes a target to mark 2 or more HP, they become temporarily Restrained."
+          "name": "Замораживающее",
+          "description": "Когда атака этим оружием заставляет цель отметить 2 или более Ран, цель временно становится Обездвиженной."
         }
       },
       "effects": {
         "2iYaP8XdKTfwBw6A": {
-          "name": "Freezing"
+          "name": "Замораживающее"
         }
       },
       "attack": "Атака"
@@ -2074,8 +2074,8 @@
       "name": "Rocket Maul",
       "actions": {
         "xd2N3IRFkGcy9byh": {
-          "name": "Concuss",
-          "description": "On a successful attack, you can spend a Hope to knock the target back to Far range."
+          "name": "Сотрясающее",
+          "description": "При успешной атаке вы можете потратить надежду, чтобы отбросить цель на Далекую дистанцию."
         }
       },
       "attack": "Атака"
@@ -2088,8 +2088,8 @@
       "name": "Rune Shield",
       "effects": {
         "fvnsHVPTnaKhNLjH": {
-          "name": "Protective",
-          "description": "Add the item's Tier to your Armor Score"
+          "name": "Защитное",
+          "description": "Добавьте уровень предмета к вашему показателю брони"
         }
       },
       "attack": "Атака"
@@ -2098,8 +2098,8 @@
       "name": "Runelock Pistol",
       "actions": {
         "BSjjwnxjP7knntm9": {
-          "name": "Reload",
-          "description": "After you make an attack, roll a d6. On a result of 1, you must mark a Stress to reload this weapon before you can fire it again."
+          "name": "Перезарядка",
+          "description": "После атаки бросьте d6. При результате 1 вы должны отметить стресс, чтобы перезарядить это оружие, прежде чем сможете выстрелить из него снова."
         }
       },
       "attack": "Атака"
@@ -2112,12 +2112,12 @@
       "name": "Segmented Staff",
       "effects": {
         "RjiPqWRWAqJWZ7Eb": {
-          "name": "Double Duty",
-          "description": "+1 to Armor Score; +1 to primary weapon damage within Melee range"
+          "name": "Двойная Служба",
+          "description": "+1 к Показателю Брони; +1 к урону основного оружия по целям Вплотную к вам"
         },
         "BZAZ0C3f923xCa9J": {
-          "name": "Double Duty",
-          "description": "+1 to Armor Score; +1 to primary weapon damage within Melee range"
+          "name": "Двойная Служба",
+          "description": "+1 к Показателю Брони; +1 к урону основного оружия по целям Вплотную к вам"
         }
       },
       "attack": "Атака"
@@ -2126,14 +2126,14 @@
       "name": "Severed Dragon Claw",
       "actions": {
         "bWNQYdjog9uNuNfL": {
-          "name": "Destruction",
-          "description": "On a successful attack, all adversaries within Very Close range must mark a Stress."
+          "name": "Разрушение",
+          "description": "При успешной атаке все противники в пределах Вплотную должны отметить стресс."
         }
       },
       "effects": {
         "vQJCrV4wxxhGUcBX": {
-          "name": "Destructive",
-          "description": "DAGGERHEART.CONFIG.WeaponFeature.destructive.effects.agility"
+          "name": "Разрушительное",
+          "description": "-1 к Проворности"
         }
       },
       "attack": "Атака"
@@ -2146,8 +2146,8 @@
       "name": "Singing Sword",
       "actions": {
         "tD3OR33TwHpqDyGy": {
-          "name": "Bolstering",
-          "description": "When you critically succeed on an attack, all PCs within Close range gain a Hope."
+          "name": "Воодушевляющее",
+          "description": "Когда вы получаете критический успех при атаке, все персонажи игроков в пределах Средней дистанции получают Надежду."
         }
       },
       "attack": "Атака"
@@ -2156,8 +2156,8 @@
       "name": "Soldier's Pike",
       "actions": {
         "Y5HGiYOQ5Nd3W4zo": {
-          "name": "Braced",
-          "description": "When an adversary within this weapon's range deals damage to you, you can mark 2 Stress to force them to mark a Hit Point."
+          "name": "Упорное",
+          "description": "Когда противник в пределах дистанции этого оружия наносит вам урон, вы можете отметить 2 Стресса, чтобы заставить его отметить Рану."
         }
       },
       "attack": "Атака"
@@ -2166,8 +2166,8 @@
       "name": "Soul Chain",
       "actions": {
         "cGTB3G8sp5XZhucX": {
-          "name": "Draining",
-          "description": "On a successful attack, you can spend a Hope to force the target to mark a Stress. If they do, you clear a Stress."
+          "name": "Истощающее",
+          "description": "При успешной атаке вы можете потратить Надежду, чтобы заставить цель отметить Стресс. Если она это делает, вы очищаете Стресс."
         }
       },
       "attack": "Атака"
@@ -2184,14 +2184,14 @@
       "name": "Staff of Augma",
       "actions": {
         "fdXtuFA7Sy6r2GOw": {
-          "name": "Catalytic",
-          "description": "On a successful attack, you can mark a Stress to give an ally within Close range a +3 bonus to their next attack roll."
+          "name": "Катализирующее",
+          "description": "При успешной атаке вы можете отметить Стресс, чтобы дать союзнику в пределах Средней дистанции бонус +3 к его следующему броску атаки."
         }
       },
       "effects": {
         "Nqr49MytiiDO6mRq": {
-          "name": "Catalytic",
-          "description": "You have a +3 bonus to your next attack roll."
+          "name": "Катализирующее",
+          "description": "Вы получаете бонус +3 к следующему броску атаки."
         }
       },
       "attack": "Атака"
@@ -2200,8 +2200,8 @@
       "name": "Starmetal Blade",
       "effects": {
         "l3sq4oU9PFSf3voP": {
-          "name": "Serrated",
-          "description": "When you roll a 1 on a damage die, it deals 8 damage instead."
+          "name": "Зубчатое",
+          "description": "Когда на кости урона выпадает 1, вместо этого наносится 8 урона."
         }
       },
       "attack": "Атака"
@@ -2210,8 +2210,8 @@
       "name": "Storm God's Greataxe",
       "actions": {
         "go6bchi8pFs20jTQ": {
-          "name": "Bounce",
-          "description": "Mark 1 or more Stress to hit that many targets in range of the attack."
+          "name": "Рикошет",
+          "description": "Отметьте 1 или более стресса, чтобы поразить столько же целей в пределах досягаемости атаки."
         }
       },
       "attack": "Атака"
@@ -2224,8 +2224,8 @@
       "name": "Tinker's Hammer",
       "effects": {
         "RuT7WwcbaHVqK6it": {
-          "name": "Trusty",
-          "description": "+1 to attack rolls made with your primary weapon."
+          "name": "Верное",
+          "description": "+1 к броскам атаки основным оружием."
         }
       },
       "attack": "Атака"
@@ -2242,8 +2242,8 @@
       "name": "Vorpal Shard",
       "actions": {
         "lwtLR9xWsREAonue": {
-          "name": "Targeted",
-          "description": "When you fail a weapon attack, you can spend a Hope to succeed on your next weapon attack."
+          "name": "Наводящее",
+          "description": "После провала атаки оружием вы можете потратить Надежду, чтобы ваша следующая атака оружием стала успешной."
         }
       },
       "attack": "Атака"
@@ -2256,8 +2256,8 @@
       "name": "War Pick",
       "actions": {
         "cLnI9hFkRUgW3VlN": {
-          "name": "Deadly",
-          "description": "When you deal Severe damage, the target must mark an additional HP."
+          "name": "Смертоносное",
+          "description": "Когда вы наносите тяжёлый урон, цель должна отметить дополнительную Рану."
         }
       },
       "attack": "Атака"

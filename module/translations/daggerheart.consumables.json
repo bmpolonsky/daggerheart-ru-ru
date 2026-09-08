@@ -27,7 +27,7 @@
       "description": "<p>Вы можете использовать этот швейный аппарат, чтобы потратить любое количество Надежды и очистить столько же Ячеек Брони.</p>",
       "actions": {
         "abD6jRVvOJnKUQaE": {
-          "name": "Spend Hope"
+          "name": "Потратить Надежду"
         }
       }
     },
@@ -757,7 +757,7 @@
       "description": "<p>Choose a point within Far range. All targets within Close range of that point must succeed on a Reaction Roll (16) or take 3d6 magic damage and become temporarily Restrained by ice.</p>",
       "actions": {
         "u61vq2eNNTNpTvGb": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -771,7 +771,7 @@
       "description": "<p>When you drink this dram of liquid, you gain a bonus to your Strength and a penalty to your Finesse and Knowledge equal to your Instinct (minimum 1). This effect lasts until you make a death move or until your next rest.</p>",
       "actions": {
         "nwZQuJ6aY0i7EerN": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -786,7 +786,7 @@
       "description": "<p>You can eat these spiderlegs to walk on walls until your next rest.</p>",
       "actions": {
         "PvaegGLkYV7DRR8F": {
-          "name": "Eat"
+          "name": "Съесть"
         }
       },
       "effects": {
@@ -801,7 +801,7 @@
       "description": "<p>When you drink this potion, anything you say or do in the next hour becomes impossible for a witness to recount. Any attempts they make to communicate what they saw, heard, or otherwise sensed comes out garbled or nonsensical.</p>",
       "actions": {
         "YTku2CwfIvhaO74n": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -816,7 +816,7 @@
       "description": "<p>You can apply this saliva to a weapon that deals physical damage to change its damage type to magic until your next rest.</p>",
       "actions": {
         "COnklgpCjVWRqgSz": {
-          "name": "Appky"
+          "name": "Нанести"
         }
       },
       "effects": {
@@ -831,7 +831,7 @@
       "description": "<p>You can break this jar to fill the area within Close range with magical mist. A creature who enters the mist clears a Stress and becomes Hidden.</p>",
       "actions": {
         "3uoMUFXhffsn6XGm": {
-          "name": "Break"
+          "name": "Разбить"
         }
       }
     },
@@ -840,7 +840,7 @@
       "description": "<p>You can drink this tea to refresh your features as if you had taken a long rest.</p>",
       "actions": {
         "DsF1KOn8OlHyio9V": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       }
     },
@@ -853,7 +853,7 @@
       "description": "<p>You can swallow this bezoar to become immune to poisons until your next long rest.</p>",
       "actions": {
         "0vtn2lGnZ5td2ScU": {
-          "name": "Swallow"
+          "name": "Проглотить"
         }
       },
       "effects": {
@@ -868,7 +868,7 @@
       "description": "<p>You can sprinkle this powder over a recently deceased corpse to conjure a spectral reprise of their final minute of life.</p>",
       "actions": {
         "dCR3Zm361WUZz4Zf": {
-          "name": "Sprinkle"
+          "name": "Посыпать"
         }
       }
     },
@@ -877,7 +877,7 @@
       "description": "<p>You can drink this draught to gain a +1 bonus to your Proficiency for your next successful attack roll.</p>",
       "actions": {
         "NtsZfglcGGEAOV49": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -892,7 +892,7 @@
       "description": "<p>You can swallow this token to conjure two illusions of yourself that you can control. Each illusion lasts until it takes damage or until your next rest.</p>",
       "actions": {
         "CFvo1SWGb6ekNsJr": {
-          "name": "Swallow"
+          "name": "Проглотить"
         }
       },
       "effects": {
@@ -907,7 +907,7 @@
       "description": "<p>You can use this enchanted ancient dragon hide to gain draconic characteristics until the end of the scene, when the hide falls aways in tatters. Until then, you can fly and gain a +5 bonus to your damage thresholds and a +1 bonus to your Proficiency.</p>",
       "actions": {
         "0QgmfGle8IJYkWv7": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -922,7 +922,7 @@
       "description": "<p>Choose a point within Far range. All targets within Close range of that point must succeed on a Reaction Roll (16) or take 3d6 magic damage and become temporarily Ablaze. While Ablaze, a creature must roll a d4 whenever they make an action roll. On a result of 1, they mark a Hit Point. On a result of 4, they clear the Ablaze condition.</p>",
       "actions": {
         "Vn84rygVCeQ2wt4S": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -937,7 +937,7 @@
       "description": "<p>You can drink this potion to sprout small wings from your ankles that give you a bonus to your Evasion equal to your tier until your next rest.</p>",
       "actions": {
         "Dslc1QsuuYEAgSAo": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -952,7 +952,7 @@
       "description": "<p>You can drink this potion to become a swarm of 16 million ants until the end of the scene. You keep and have access to all equipment, loot, and features.</p>",
       "actions": {
         "KVlbv22mTH5AO3Ab": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -967,7 +967,7 @@
       "description": "<p>Choose a point within Far range. All targets within Close range of that point must succeed on a Reaction Roll (16) or take 3d6 magic damage and mark 1d4 Stress as lightning crackles through the area.</p>",
       "actions": {
         "EhwvyDwxvg44bKCq": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -976,7 +976,7 @@
       "description": "<p>You can spend any number of handfuls of gold by placing them into this slotted ceramic jar shaped like a pig. When you throw the jar at a point within Far range, it explodes and deals 1d20 magic damage for each handful of gold spent to all creatures within Close range of that point. All gold within the jar is destroyed.</p>",
       "actions": {
         "SLZn5uUrsucH90rQ": {
-          "name": "Throw"
+          "name": "Бросить"
         }
       }
     },
@@ -985,7 +985,7 @@
       "description": "<p>You can break this mushroom into pieces, causing it to glow bright blue until your next long rest.</p>",
       "actions": {
         "ZRKQmLZ709uJmwME": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -994,7 +994,7 @@
       "description": "<p>You can eat this citrus fruit to clear all Hit Points and Stress.</p>",
       "actions": {
         "KYnbdh2UTxw5Xr9f": {
-          "name": "Eat"
+          "name": "Съесть"
         }
       }
     },
@@ -1003,7 +1003,7 @@
       "description": "<p>You can plant this seed in soil. It instantly grows into a small flower that records everything it hears for up to one week. When plucked, the flower recites what it recorded in real time, then withers.</p>",
       "actions": {
         "s9KcCCsBG2OvWpfu": {
-          "name": "Plant"
+          "name": "Посадить"
         }
       }
     },
@@ -1012,7 +1012,7 @@
       "description": "<p>You can throw this peach-sized mechanical orb at a point within Far range. It implodes and pulls all creatures and objects within Close range of that point into Melee range with it.</p>",
       "actions": {
         "DlpFeXegeuolZMNQ": {
-          "name": "Throw"
+          "name": "Бросить"
         }
       }
     },
@@ -1021,10 +1021,10 @@
       "description": "<p>You can coat your weapon in this oil. The next successful attack you make with this weapon deals an extra 1d8 magic damage and temporarily Corrodes the target. While Corroded, the target gains a -2 penalty to their damage thresholds.</p>",
       "actions": {
         "w8gPYG7TDSU3P0tJ": {
-          "name": "Coat"
+          "name": "Покрыть"
         },
         "Dt901UQjOONozDdc": {
-          "name": "Apply Corroded"
+          "name": "Наложить коррозию"
         }
       },
       "effects": {
@@ -1059,7 +1059,7 @@
       "description": "<p>You can unfold this small mechanical box into a camping tent large enough to safely house six people. The tent collapses at the end of your next long rest.</p>",
       "actions": {
         "1UhyM1dgkuxYdcZB": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1068,7 +1068,7 @@
       "description": "<p>You are Hidden until you deal damage to another creature or until your next rest.</p>",
       "actions": {
         "6UjrzTOZRPHoV2cY": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1083,7 +1083,7 @@
       "description": "<p>This multicolored powder sticks to everything and prevents creatures covered in it from becoming Hidden.</p>",
       "actions": {
         "6XX75r85cvvUD1bz": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -1098,7 +1098,7 @@
       "description": "<p>You can drink this tonic to gain a +1 bonus to your Proficiency until you roll with Fear.</p>",
       "actions": {
         "hn1FjWi0ii1DXv2N": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1123,7 +1123,7 @@
       "description": "<p>When you release this spellcaster's trapped soul, you can cast one spell from a card in your vault as if it were in your loadout. This doesn't work for permanently vaulted cards.</p>",
       "actions": {
         "I9CPyBfAsQibn5PR": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1132,7 +1132,7 @@
       "description": "<p>You can wear this mask during your next level up to swap the values of any of your traits. When you do, the mask becomes your permanent face.</p>",
       "actions": {
         "PAq1qXNxaJSLhaDZ": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1141,7 +1141,7 @@
       "description": "<p>When you drink this tonic, the only thing you can hear until your next rest are the surface thoughts of creatures within Very Close range.</p>",
       "actions": {
         "Phn88PDC41cdVDfi": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1156,7 +1156,7 @@
       "description": "<p>You can pour this small flask of alchemical liquid over a mundane item to instantly transmute it into a handful of gold.</p>",
       "actions": {
         "x95WATbyPt8gmmHT": {
-          "name": "Pour"
+          "name": "Вылить"
         }
       }
     },
@@ -1165,7 +1165,7 @@
       "description": "<p>You can drink this potion to Utilize an Experience without spending a Hope.</p>",
       "actions": {
         "k5WiotZKqgqnIhA2": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       }
     },
@@ -1174,7 +1174,7 @@
       "description": "<p>You can shatter this orb to make the area within Very Far range appear as though it's moonlit nighttime for the next 24 hours.</p>",
       "actions": {
         "1U6wvIFjYqA34md4": {
-          "name": "Shatter"
+          "name": "Разбить"
         }
       }
     },
@@ -1193,7 +1193,7 @@
       "description": "<p>You can break this rusted, clapperless bell against the ground to summon a skeletal steed that climbs out of the earth and serves you until the next sunrise.</p>",
       "actions": {
         "pcvtxqrsExvk81Cc": {
-          "name": "Break"
+          "name": "Разбить"
         }
       },
       "effects": {
@@ -1208,7 +1208,7 @@
       "description": "<p>You can blow this dust in an adversary's face to prevent them from clearing Stress until your next long rest.</p>",
       "actions": {
         "8ElDwnjDsJop9qRi": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -1223,7 +1223,7 @@
       "description": "<p>You can drink this potion to discover the deepest fear of the next person you make eye contact with. When you do, the GM gains a Fear.</p>",
       "actions": {
         "rW0fiHW8nt8ZRbXm": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       }
     },
@@ -1232,7 +1232,7 @@
       "description": "<p>This dust causes anything it covers to become lighter than air. One packet contains enough dust to cover the contents of a picnic basket, and the effects last for an hour.</p>",
       "actions": {
         "bVXuZXEmYW6RJwLh": {
-          "name": "Use"
+          "name": "Использовать"
         }
       },
       "effects": {
@@ -1247,7 +1247,7 @@
       "description": "<p>You can drink this bottle of ink to transform into a cephalopod of roughly your size for the next hour. You gain rubbery skin, soft bones, the ability to breathe underwater, and new limbs until you have eight total.</p>",
       "actions": {
         "w4GSznmO2AyEuVgY": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1262,7 +1262,7 @@
       "description": "<p>When you choose the Clear Stress downtime move during a short rest, you can smoke this non-intoxicating leaf to clear an additional Stress. Any other PCs who chose the Clear Stress downtime move also gain this benefit.</p>",
       "actions": {
         "z1s1NGbVvRiRFpER": {
-          "name": "Smoke"
+          "name": "Выкурить"
         }
       }
     },
@@ -1271,7 +1271,7 @@
       "description": "<p>You can drink this potion to gain a +1 bonus to your Evasion until you mark a Hit Point.</p>",
       "actions": {
         "OyzV63XMO4ndOH0w": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1286,7 +1286,7 @@
       "description": "<p>You can place this shroud over the corpse of a recently deceased creature. The creature's spirit enters the shroud and becomes your spectral assistant until the next sunrise, when they pass through the veil of death and take the shroud with them.</p>",
       "actions": {
         "FrzmFgaqCApbu3Km": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1295,7 +1295,7 @@
       "description": "<p>You can use this magic blade to cut one magical or metaphysical bond, such as an enchantment, contract, magical tether, or divine oath. When you do, the blade shatters.</p>",
       "actions": {
         "vlPzHqlUT2JLoeKz": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1304,10 +1304,10 @@
       "description": "<p>You can coat your weapon in this oil. The next successful attack you make with this weapon deals an extra 1d8 magic damage and temporarily Ignites the target. While Ignited, the target takes 1d4 magic damage when they take the spotlight.</p>",
       "actions": {
         "eqXBNr0DbYAIVGS9": {
-          "name": "Apply"
+          "name": "Нанести"
         },
         "jD3LZE5YeVjfTAtU": {
-          "name": "Ignite",
+          "name": "Поджечь",
           "description": "<p>While Ignited, the target takes 1d4 magic damage when they take the spotlight.</p>"
         }
       },
@@ -1327,7 +1327,7 @@
       "description": "<p>You can apply this salve to your skin to make yourself immune to heat until your next rest.</p>",
       "actions": {
         "Hz6U04pXtOYBDQ2L": {
-          "name": "Apply"
+          "name": "Нанести"
         }
       },
       "effects": {
@@ -1342,10 +1342,10 @@
       "description": "<p>You can use this thread to clear either a Hit Point or 2 Armor Slots.</p>",
       "actions": {
         "Smq9zj8nNK64CS62": {
-          "name": "Clear Hit Point"
+          "name": "Очистить Рану"
         },
         "dE5BTVbmJ4Yuoy0M": {
-          "name": "Clear Armor"
+          "name": "Очистить Броню"
         }
       }
     },
@@ -1354,7 +1354,7 @@
       "description": "<p>You can spread this salt in a line along windowsills or thresholds to create a magical barrier that undead creatures can't cross until the line is broken.</p>",
       "actions": {
         "3IALZdyYjIgAbgea": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1363,7 +1363,7 @@
       "description": "<p>You can drink this potion to slough off your outer layer of skin and heal a scar.</p>",
       "actions": {
         "773SxjjdjRsxoroZ": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       }
     },
@@ -1372,7 +1372,7 @@
       "description": "<p>You can throw this seed at a point you can see. It explodes into a tangle of binding vines that temporarily Restrains all creatures within Close range of that point.</p>",
       "actions": {
         "hGKzpxGdX4F8Ff4h": {
-          "name": "Throw"
+          "name": "Бросить"
         }
       },
       "effects": {
@@ -1386,7 +1386,7 @@
       "description": "<p>When you mark your last Hit Point, this bottle shatters to release the Sprite inside. The Sprite clears all your Hit Points before fading from the Mortal Realm.</p>",
       "actions": {
         "OaeTodiubEfIhiZe": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1395,7 +1395,7 @@
       "description": "<p>You can break this staff against the ground to reverse one magical transformation or effect within Far range.</p>",
       "actions": {
         "TgL2lMYlKXuHxXIq": {
-          "name": "Break"
+          "name": "Разбить"
         }
       }
     },
@@ -1404,7 +1404,7 @@
       "description": "<p>You can hammer this stake into the ground and make a proclamation. Until your next rest, a creature within Far range of the stake who transgresses that proclamation must mark a Stress. The stake lasts until your next rest, then it shatters.</p>",
       "actions": {
         "he7oP28pyrltNq7I": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1413,7 +1413,7 @@
       "description": "<p>You can apply this salve to your skin to gain a bonus to your damage thresholds equal to your tier until the end of the scene.</p>",
       "actions": {
         "MnlcijQlwEDHPPLW": {
-          "name": "Apply"
+          "name": "Нанести"
         }
       },
       "effects": {
@@ -1428,7 +1428,7 @@
       "description": "<p>When you throw this gray brick on the ground, it immediately grows into a 6-foot-tall, 10-foot-wide, and 2-foot-deep wall of solid stone.</p>",
       "actions": {
         "E3rM3gMAWFF727g9": {
-          "name": "Throw"
+          "name": "Бросить"
         }
       }
     },
@@ -1437,7 +1437,7 @@
       "description": "<p>You can shatter this orb to make the area within Very Far range appear as though it's sunlit daytime for the next 24 hours.</p>",
       "actions": {
         "oIj5dyEurCiLVWmx": {
-          "name": "Shatter"
+          "name": "Разбить"
         }
       }
     },
@@ -1446,7 +1446,7 @@
       "description": "<p>When you drink this potion, death can't touch you until your next long rest. When you would mark your last Hit Point, instead of making a death move, you make one final action roll before falling into a dreamless slumber until an ally chooses the Tend to Wounds downtime move to clear your Hit Points.</p>",
       "actions": {
         "gNMQ40LnJLRNnXfH": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1465,7 +1465,7 @@
       "description": "<p>You can drink this potion to ignore damage from falling for the next 10 minutes.</p>",
       "actions": {
         "MDhdI3fzO6awr9Dp": {
-          "name": "Drink"
+          "name": "Выпить"
         }
       },
       "effects": {
@@ -1480,7 +1480,7 @@
       "description": "<p>You can light this candle to fill an area within Close range with a halo of light. A creature outside the halo can't enter it if they have ill intent toward a creature within it. The candle burns for an hour.</p>",
       "actions": {
         "qKYY5VnmyONGrMTO": {
-          "name": "Use"
+          "name": "Использовать"
         }
       }
     },
@@ -1489,7 +1489,7 @@
       "description": "<p>After consuming this milk, the next time you clear 1 or more Hit Points, you clear an additional Hit Point.</p>",
       "actions": {
         "goGJk7IIgbOvrTVZ": {
-          "name": "Consume"
+          "name": "Употребить"
         }
       },
       "effects": {

@@ -251,8 +251,8 @@
       "name": "Advanced Banded Armor",
       "effects": {
         "clo7We2aUibWdsmD": {
-          "name": "Bulky",
-          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+          "name": "Громоздкое",
+          "description": "-1 к Уклонению; когда вы получаете Тяжёлый урон, вы должны отметить Стресс."
         }
       }
     },
@@ -260,8 +260,8 @@
       "name": "Advanced Brigandine Armor",
       "effects": {
         "Z1MLDyOdXJvYA0sr": {
-          "name": "Lined",
-          "description": "Mark a Stress to negate Minor damage."
+          "name": "Подбитое",
+          "description": "Отметьте Стресс, чтобы избежать Лёгкого урона."
         }
       }
     },
@@ -269,8 +269,8 @@
       "name": "Advanced Mage Robes",
       "effects": {
         "FdkTFA6u4HAKrwa2": {
-          "name": "Enchanted",
-          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+          "name": "Зачарованное",
+          "description": "Получите бонус к порогам урона, равный значению вашей Характеристики Заклинателя."
         }
       }
     },
@@ -278,8 +278,8 @@
       "name": "Advanced Scale Mail Armor",
       "effects": {
         "2uaDK1adL1aVP1Pg": {
-          "name": "Cumbersome",
-          "description": "-1 to Finesse"
+          "name": "Громоздкое",
+          "description": "-1 к Искусности"
         }
       }
     },
@@ -287,8 +287,8 @@
       "name": "Astral Raiment",
       "actions": {
         "1xXZfSn4U37AgDRB": {
-          "name": "Stellar",
-          "description": "Mark a Stress to gain advantage on a Spellcast roll."
+          "name": "Звёздное",
+          "description": "Отметьте Стресс, чтобы получить преимущество на Бросок Заклинания."
         }
       }
     },
@@ -296,8 +296,8 @@
       "name": "Banded Armor",
       "effects": {
         "JkRfeN3ioW857m1p": {
-          "name": "Bulky",
-          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+          "name": "Громоздкое",
+          "description": "-1 к Уклонению; когда вы получаете Тяжёлый урон, вы должны отметить Стресс."
         }
       }
     },
@@ -305,8 +305,8 @@
       "name": "Bloodstone Plate Armor",
       "actions": {
         "LoUjBJNX5nvhKyZM": {
-          "name": "Clear Hitpoint",
-          "description": "When you critically succeed on a weapon attack within Melee range, clear a Hit Point."
+          "name": "Очистить Рану",
+          "description": "Когда вы получаете критический успех при атаке оружием Вплотную, очистите Рану."
         }
       }
     },
@@ -314,8 +314,8 @@
       "name": "Brigandine Armor",
       "effects": {
         "Qqdax2Dl4UHB9TxB": {
-          "name": "Lined",
-          "description": "Mark a Stress to negate Minor damage."
+          "name": "Подбитое",
+          "description": "Отметьте Стресс, чтобы избежать Лёгкого урона."
         }
       }
     },
@@ -323,8 +323,8 @@
       "name": "Circle-Forged Dreadplate",
       "actions": {
         "3io8jJeWVrwcKBcF": {
-          "name": "Accursed",
-          "description": "When you mark any number of Hit Points from an attack, roll a d4. On a result of 4, the attacker must mark an equal number of Stress."
+          "name": "Проклятое",
+          "description": "Когда вы отмечаете любое количество Ран от атаки, бросьте d4. При результате 4 атакующий должен отметить столько же Стресса."
         }
       }
     },
@@ -332,8 +332,8 @@
       "name": "Cloverweave Cloak",
       "actions": {
         "0JzAOuMyJDSdEpy3": {
-          "name": "Fortune-Favored",
-          "description": "Once per scene, you can change a failure with Hope into a success with Fear."
+          "name": "Любимое удачей",
+          "description": "Раз за сцену вы можете превратить провал с Надеждой в успех со Страхом."
         }
       }
     },
@@ -341,8 +341,8 @@
       "name": "Darkweave Shroud",
       "actions": {
         "5Hq0OZmmnGykxe6H": {
-          "name": "Ghostwalker",
-          "description": "Once per rest, mark a Stress to move up to Close range through solid objects."
+          "name": "Призрачное",
+          "description": "Раз за отдых отметьте Стресс, чтобы переместиться на Среднюю дистанцию сквозь твёрдые предметы."
         }
       }
     },
@@ -350,8 +350,8 @@
       "name": "Deep-Forged Coral Armor",
       "effects": {
         "3lzAYwHLDaq0HiMs": {
-          "name": "Aquatic",
-          "description": "You can breathe underwater and gain advantage on Agility Rolls while submerged."
+          "name": "Водное",
+          "description": "Вы можете дышать под водой и получаете преимущество на Броски Проворности, пока находитесь под водой."
         }
       }
     },
@@ -359,8 +359,8 @@
       "name": "Enchanter's Robes",
       "actions": {
         "SqJwukvzZAPDgCJy": {
-          "name": "Mnemonic",
-          "description": "Once per scene, you can recall a domain card from your vault without paying its Recall Cost."
+          "name": "Мнемоническое",
+          "description": "Раз за сцену вы можете вернуть карту домена из Хранилища, не оплачивая её Стоимость Призыва."
         }
       }
     },
@@ -368,8 +368,8 @@
       "name": "Gilded Sunplate",
       "actions": {
         "d9r7VK4r3fb7KHMu": {
-          "name": "Resplendent",
-          "description": "Once per scene when you spend Hope, you can clear an Armor Slot."
+          "name": "Сияющее",
+          "description": "Раз за сцену, когда вы тратите Надежду, вы можете очистить Ячейку Брони."
         }
       }
     },
@@ -377,8 +377,8 @@
       "name": "Godbound Laminar",
       "actions": {
         "h7BCDsiPhLZxwllM": {
-          "name": "Gain Hope",
-          "description": "When you mark an Armor Slot, gain a Hope."
+          "name": "Получить Надежду",
+          "description": "Когда вы отмечаете Ячейку Брони, получите Надежду."
         }
       }
     },
@@ -386,8 +386,8 @@
       "name": "Granminster's Finery",
       "effects": {
         "zvc1X0O4HyQE9yfV": {
-          "name": "Magnificent",
-          "description": "Gain a bonus to your Armor Score equal to your Presence."
+          "name": "Великолепное",
+          "description": "Получите бонус к Показателю Брони, равный вашему Влиянию."
         }
       }
     },
@@ -395,8 +395,8 @@
       "name": "Hallowed Heroplate",
       "actions": {
         "BI0HMrVMByFTti3u": {
-          "name": "Blessed",
-          "description": "Once per long rest, you can spend any number of Hope before you make the Risk It All death move. You gain a bonus to the result of your Hope Die equal to the number of Hope spent."
+          "name": "Благословенное",
+          "description": "Раз за продолжительный отдых перед предсмертным ходом «Рискнуть всем» вы можете потратить любое количество Надежды. Добавьте к результату Кости Надежды бонус, равный количеству потраченной Надежды."
         }
       }
     },
@@ -404,8 +404,8 @@
       "name": "Hawkguard's Mantle",
       "actions": {
         "DlCbxmVa5udw4wLA": {
-          "name": "Gliding",
-          "description": "You can glide up to Far range and are immune to damage from falling."
+          "name": "Планирующее",
+          "description": "Вы можете планировать на Далёкую дистанцию и невосприимчивы к урону от падения."
         }
       }
     },
@@ -413,8 +413,8 @@
       "name": "Improved Banded Armor",
       "effects": {
         "ItHCEXGyY7KY3ODo": {
-          "name": "Bulky",
-          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+          "name": "Громоздкое",
+          "description": "-1 к Уклонению; когда вы получаете Тяжёлый урон, вы должны отметить Стресс."
         }
       }
     },
@@ -422,8 +422,8 @@
       "name": "Improved Brigandine Armor",
       "effects": {
         "qtuLYIIbHcUzeVpq": {
-          "name": "Lined",
-          "description": "Mark a Stress to negate Minor damage."
+          "name": "Подбитое",
+          "description": "Отметьте Стресс, чтобы избежать Лёгкого урона."
         }
       }
     },
@@ -431,8 +431,8 @@
       "name": "Improved Mage Robes",
       "effects": {
         "68KNvbicN2lASHIo": {
-          "name": "Enchanted",
-          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+          "name": "Зачарованное",
+          "description": "Получите бонус к порогам урона, равный значению вашей Характеристики Заклинателя."
         }
       }
     },
@@ -440,8 +440,8 @@
       "name": "Improved Scale Mail Armor",
       "effects": {
         "bE8TfDWmibDVXlDK": {
-          "name": "Cumbersome",
-          "description": "-1 to Finesse"
+          "name": "Громоздкое",
+          "description": "-1 к Искусности"
         }
       }
     },
@@ -449,8 +449,8 @@
       "name": "Legendary Banded Armor",
       "effects": {
         "jTiOZCLUWkOdkkts": {
-          "name": "Bulky",
-          "description": "-1 to Evasion; when you take Severe damage, you must mark a Stress."
+          "name": "Громоздкое",
+          "description": "-1 к Уклонению; когда вы получаете Тяжёлый урон, вы должны отметить Стресс."
         }
       }
     },
@@ -458,8 +458,8 @@
       "name": "Legendary Brigandine Armor",
       "effects": {
         "QOqo9BxoI3zEqakL": {
-          "name": "Lined",
-          "description": "Mark a Stress to negate Minor damage."
+          "name": "Подбитое",
+          "description": "Отметьте Стресс, чтобы избежать Лёгкого урона."
         }
       }
     },
@@ -467,8 +467,8 @@
       "name": "Legendary Mage Robes",
       "effects": {
         "YEg4fgH21uRnKW7f": {
-          "name": "Enchanted",
-          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+          "name": "Зачарованное",
+          "description": "Получите бонус к порогам урона, равный значению вашей Характеристики Заклинателя."
         }
       }
     },
@@ -476,8 +476,8 @@
       "name": "Legendary Scale Mail Armor",
       "effects": {
         "yYHxeQ0YPiVl8Cbc": {
-          "name": "Cumbersome",
-          "description": "-1 to Finesse"
+          "name": "Громоздкое",
+          "description": "-1 к Искусности"
         }
       }
     },
@@ -485,8 +485,8 @@
       "name": "Mage Robes",
       "effects": {
         "wYHVkzegSmeXOsmn": {
-          "name": "Enchanted",
-          "description": "Gain a bonus to your damage thresholds equal to your Spellcast trait."
+          "name": "Зачарованное",
+          "description": "Получите бонус к порогам урона, равный значению вашей Характеристики Заклинателя."
         }
       }
     },
@@ -494,14 +494,14 @@
       "name": "Resonant Harness",
       "actions": {
         "iTv5QVsZaJ6KYEv3": {
-          "name": "Vitreous",
-          "description": "When you would take Severe or greater damage, you can mark 2 Armor Slots to negate that damage. If you do, you gain a -5 penalty to your damage thresholds until you choose to repair your armor as a downtime move."
+          "name": "Стеклянное",
+          "description": "Когда вы должны получить Тяжёлый или больший урон, вы можете отметить 2 Ячейки Брони, чтобы избежать этого урона. В таком случае вы получаете штраф −5 к порогам урона, пока не выберете ремонт брони в качестве хода отдыха."
         }
       },
       "effects": {
         "dzGZkBgtJjQh3JH1": {
-          "name": "Vitreous",
-          "description": "You have a -5 penalty to your damage thresholds until you choose to repair your armor as a downtime move"
+          "name": "Стеклянное",
+          "description": "Вы получаете штраф −5 к порогам урона, пока не выберете ремонт брони в качестве хода отдыха."
         }
       }
     },
@@ -509,8 +509,8 @@
       "name": "Rune-Forged Exosuit",
       "effects": {
         "VSuoGIo7GpK3JLfA": {
-          "name": "Attuned",
-          "description": "The maximum number of domain cards in your loadout is reduced by one, but you gain a bonus to your damage thresholds equal to your tier."
+          "name": "Настроенное",
+          "description": "Максимальное количество карт домена в вашей Руке уменьшается на одну, но вы получаете бонус к порогам урона, равный вашему рангу."
         }
       }
     },
@@ -518,8 +518,8 @@
       "name": "Scale Mail Armor",
       "effects": {
         "2wGrVqcFO8jiTuDv": {
-          "name": "Cumbersome",
-          "description": "-1 to Finesse"
+          "name": "Громоздкое",
+          "description": "-1 к Искусности"
         }
       }
     },
@@ -527,8 +527,8 @@
       "name": "Skywarden's Lamellar",
       "effects": {
         "P1bG8YNaWOUkRbn7": {
-          "name": "Vigilant",
-          "description": "+2 to Evasion."
+          "name": "Бдительное",
+          "description": "+2 к Уклонению."
         }
       }
     },
@@ -536,8 +536,8 @@
       "name": "Spidersilk Tunic",
       "effects": {
         "a1I284B2QCnVEs7e": {
-          "name": "Wall-Crawling",
-          "description": "+1 Evasion; you can walk on walls as easily as on the ground."
+          "name": "Стенолазное",
+          "description": "+1 к Уклонению; вы можете ходить по стенам так же легко, как по земле."
         }
       }
     },
@@ -545,8 +545,8 @@
       "name": "Stormthread Habit",
       "actions": {
         "yOf6C8teHAmMhIF1": {
-          "name": "Clear Armor",
-          "description": "Once per scene when you take magic damage, you can clear an Armor Slot."
+          "name": "Очистить Броню",
+          "description": "Раз за сцену, когда вы получаете магический урон, вы можете очистить Ячейку Брони."
         }
       }
     },
@@ -554,8 +554,8 @@
       "name": "Trollhide Cuirass",
       "actions": {
         "3KVzpGEV8ThH4jhu": {
-          "name": "Self-Healing",
-          "description": "When you take a rest, clear an Armor Slot."
+          "name": "Самовосстанавливающееся",
+          "description": "Во время отдыха очистите Ячейку Брони."
         }
       }
     },
@@ -563,8 +563,8 @@
       "name": "Wyrdwood Splint Armor",
       "actions": {
         "ajgzKFQYH5aUzmZk": {
-          "name": "Quick-Striding",
-          "description": "You can't be Restrained and can move up to Far range as part of an action roll."
+          "name": "Быстроходное",
+          "description": "Вы не можете быть Обездвижены и можете переместиться на Далёкую дистанцию как часть броска действия."
         }
       }
     }
